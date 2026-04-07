@@ -6,21 +6,21 @@ import Link from "next/link";
 const awardList = [
   {
     id: 1,
-    awardName: "Microsoft Copilot",
-    contest: "AI Certification",
-    year: "2023",
+    awardName: "AI Chatbot Integration",
+    contest: "Web & Social Media",
+    year: "2025",
   },
   {
     id: 2,
     awardName: "18+ Projects Delivered",
-    contest: "Web Development",
-    year: "2024",
+    contest: "Landing Pages & Web Apps",
+    year: "2025",
   },
   {
     id: 3,
     awardName: "5.0 Star Rating",
     contest: "Google Reviews",
-    year: "2024",
+    year: "2025",
   },
   {
     id: 4,
