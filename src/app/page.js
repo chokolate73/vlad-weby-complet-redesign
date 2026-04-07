@@ -20,15 +20,13 @@ const Home = () => {
       <MarqueeWapper direction="right" images={images2} />
       <Awards />
       <Projects />
+      <Metting />
+      <Services isHeading={true} />
       <div id="pricing">
         <Pricing />
       </div>
-      <Services isHeading={true} />
       <WorkeProcess />
       <Testimonial />
-      <div id="contact">
-        <Metting />
-      </div>
       <Blogs />
     </>
   );

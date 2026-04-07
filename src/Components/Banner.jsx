@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { Instagram, Envelope, Whatsapp, Telephone, ArrowUpRight, PlayFill } from "react-bootstrap-icons";
+import { Instagram, Envelope, Whatsapp, Telephone, PlayFill, ArrowUpRight } from "react-bootstrap-icons";
 import VideoPlay from "./Shared/VideoPlay";
 
 const socalIcon = [
@@ -26,22 +26,14 @@ const socalIcon = [
     icon: <Telephone />,
   },
 ];
-
-const rotatingWords = ["sell", "convert", "grow", "earn"];
-
 const Banner = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [position, setPosition] = useState(false);
-  const [wordIndex, setWordIndex] = useState(0);
 
   useEffect(() => {
     if (!position) {
-      setPosition(true);
+      setPosition(true)
     }
-    const interval = setInterval(() => {
-      setWordIndex((prev) => (prev + 1) % rotatingWords.length);
-    }, 2000);
-    return () => clearInterval(interval);
   }, []);
 
   const openLightbox = () => {
@@ -54,53 +46,31 @@ const Banner = () => {
         <div className="grid md:grid-cols-[70%_auto] gap-5">
           <div>
             <div className="xl:pt-[145px] xl:pb-[180px] lg:pt-[120px] lg:pb-[150px] md:pt-[90px] md:pb-[100px] sm:pt-[80px] sm:pb-[85px] py-[60px] xl:pl-10 pl-0">
-              <div className="flex items-center gap-3 md:mb-[50px] mb-6">
-                <span className="bg-clr_base text-clr_title text-sm font-bold px-3 py-1 rounded-full uppercase">New</span>
-                <span className="text-clr_white md:text-lg text-sm">AI & ChatGPT Shopping integrations</span>
-              </div>
-              <h1 className="lg:text-[116px] md:text-[68px] sm:text-[48px] text-[34px] font-semibold sm:mb-[30px] mb-[20px] leading-[120%]">
-                <span className="text-clr_white">I build websites</span>
+              <Link href={"https://calendar.app.google/uvuY4SVfiJS92eRB6"} target="_blank" className="md:text-[24px] text-base leading-[140%] md:mb-[50px] mb-6  border-b border-b-clr_white text-clr_white inline-block pb-4 hover:text-clr_base hover:border-b-clr_base capitalize">
                 <span className="block">
-                  <span className="text-clr_white">that </span>
-                  <span className="designers text-clr_base" data-text={rotatingWords[wordIndex]}>
-                    {rotatingWords[wordIndex]}
-                  </span>
+                  Available for projects — free consultation
+                </span>
+                <span className="flex gap-4 items-center">
+                  worldwide
+                  <i className="">
+                    <ArrowUpRight />
+                  </i>
+                </span>
+              </Link>
+              <h1 className="lg:text-[116px] md:text-[68px] sm:text-[48px] text-[34px] font-semibold sm:mb-[50px] mb-[30px] leading-[120%]">
+                <span className="text-clr_white"> I Build Websites</span>
+                <span className="block designers" data-text="That Earn">
+                  That Earn
                 </span>
               </h1>
-              <p className="text-clr_pra md:text-xl text-base mb-[40px] max-w-[600px] leading-relaxed">
-                From first call to finished website in 3–5 days. Mobile-optimized, SEO-ready. Fair pricing, no agency fees.
-              </p>
-              <div className="flex items-center gap-4 flex-wrap">
-                <Link
-                  href="https://calendar.app.google/uvuY4SVfiJS92eRB6"
-                  target="_blank"
-                  className="flex items-center gap-2 font-medium px-[30px] py-5 text-lg capitalize bg-clr_base overflow-hidden rounded-[5px] duration-500 text-clr_subtitle hover:bg-[#aad302]"
-                >
-                  Free Consultation
-                  <ArrowUpRight />
-                </Link>
-                <Link
-                  href="#portfolio"
-                  className="flex items-center gap-2 font-medium px-[30px] py-5 text-lg capitalize border border-clr_white rounded-[5px] duration-500 text-clr_white hover:bg-clr_base hover:text-clr_title hover:border-clr_base"
-                >
-                  View My Work
-                </Link>
-              </div>
-              <div className="flex items-center gap-8 mt-[50px]">
-                <div className="text-center">
-                  <span className="text-clr_base text-3xl font-bold block">18+</span>
-                  <span className="text-clr_pra text-sm">Projects</span>
+              <div className="flex items-center gap-6">
+                <img src={"/img/banner/bn-arrow.png"} alt="img" />
+                <div onClick={openLightbox} className="cursor-pointer relative xl:w-20 xl:h-20 sm:w-[60px] sm:h-[60px] w-[50px] h-[50px] flex justify-center items-center rounded-full border border-clr_white before:absolute before:border-2 before:border-clr_white before:w-full before:h-full before:content:[''] before:rounded-full before:animate-scales  ">
+                  <i className="text-clr_white sm:text-[42px] text-[30px]">
+                    <PlayFill />
+                  </i>
                 </div>
-                <div className="w-[1px] h-[40px] bg-clr_cusborder"></div>
-                <div className="text-center">
-                  <span className="text-clr_base text-3xl font-bold block">3–5</span>
-                  <span className="text-clr_pra text-sm">Day delivery</span>
-                </div>
-                <div className="w-[1px] h-[40px] bg-clr_cusborder"></div>
-                <div className="text-center">
-                  <span className="text-clr_base text-3xl font-bold block">5.0</span>
-                  <span className="text-clr_pra text-sm">Star rating</span>
-                </div>
+                <span className="sm:text-xl text-base text-clr_white w-[67px]">Work Process</span>
               </div>
             </div>
           </div>
@@ -108,6 +78,7 @@ const Banner = () => {
             <div
               className={`absolute xxl:left-[calc(50%--120px)] left-[calc(50%--80px)] bottom-0 ${position ? "right_up_animat" : "right_up"
                 }`}
+
             >
               <img src={"/img/banner/banner-man.png"} alt="Vladislav Khvorov" className="w-full" />
             </div>

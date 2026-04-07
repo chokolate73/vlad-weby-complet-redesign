@@ -5,7 +5,7 @@ import TitleSecond from "./Shared/TitleSecond";
 
 const Metting = () => {
   return (
-    <section className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden  pt_120 pb_120">
+    <section id="contact" className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden  pt_120 pb_120">
       <div className="container">
         <div className="grid lg:grid-cols-[58%_auto] gap-20 items-center">
           <div>
