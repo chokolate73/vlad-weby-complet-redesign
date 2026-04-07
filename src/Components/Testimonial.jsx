@@ -123,13 +123,13 @@ const Testimonial = () => {
             <img src={"/img/testimonial/quote.png"} alt="img" />
           </div>
           <div className="absolute top-5 left-5 opacity-10 lg:opacity-100 w-[60px] sm:w-auto">
-            <img src={"/img/testimonial/man1.png"} alt="img" className="w-full sm:w-auto" />
+            <img src={"/img/testimonial/man1.jpg"} alt="img" className="w-full sm:w-auto" />
           </div>
           <div className="absolute left-5 bottom-5 opacity-10 lg:opacity-100 w-[60px] sm:w-auto">
-            <img src={"/img/testimonial/man3.png"} alt="img" className="w-full sm:w-auto" />
+            <img src={"/img/testimonial/man3.jpg"} alt="img" className="w-full sm:w-auto" />
           </div>
           <div className="absolute top-5 right-5 opacity-10 lg:opacity-100 w-[60px] sm:w-auto">
-            <img src={"/img/testimonial/man2.png"} alt="img" className="w-full sm:w-auto" />
+            <img src={"/img/testimonial/man2.jpg"} alt="img" className="w-full sm:w-auto" />
           </div>
           <div className="absolute lg:bottom-[50px] lg:right-[50px] bottom-[15px] right-[15px] sm:block hidden ">
             <img src={"/img/testimonial/testi-arrow.png"} alt="img" />
