@@ -9,7 +9,7 @@ const Experience = ({ isTabActive }) => {
       <AboutCard
         title={"My Experience"}
         para={
-          "3+ years of hands-on experience building modern websites and AI integrations for businesses across Slovakia, Germany, and Austria."
+          "18+ websites and AI integrations delivered for businesses across Slovakia, Germany, and Austria."
         }
         info={[
           {
@@ -18,13 +18,13 @@ const Experience = ({ isTabActive }) => {
             instition: "Web Developer & AI Specialist",
           },
           {
-            date: "2023",
-            position: "Microsoft Certified",
-            instition: "Copilot Certification",
+            date: "2024",
+            position: "Web & Social Media Integration",
+            instition: "First AI Chatbot Deployed",
           },
           {
             date: "2022",
-            position: "SK · EN · DE · RU markets",
+            position: "Freelance · 4 markets",
             instition: "Vlad Weby Founded",
           },
         ]}
