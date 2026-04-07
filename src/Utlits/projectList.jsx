@@ -2,43 +2,43 @@ export const projectList = [
     {
       id: 1,
       image: "/img/project/pro1.png",
-      heading: "Product Design",
-      subHeading: "Brand Identity & Motion Design",
-      category:["branding_app", "website", "all"]
+      heading: "Web Design",
+      subHeading: "Dobry Vodar — Professional plumber website",
+      category:["services", "website", "all"]
     },
     {
       id: 2,
       image: "/img/project/pro3.png",
-      heading: "Product Design",
-      subHeading: "Design & Branding Mokeup",
-      category:["los_app", "landing_page", "all"]
+      heading: "Web Design",
+      subHeading: "ManzelPro — Handyman services in Slovakia",
+      category:["services", "landing_page", "all"]
     },
     {
       id: 3,
       image: "/img/project/pro5.png",
-      heading: "UI/UX Design",
-      subHeading: "Mobile Application Development",
-      category:["website", "branding_app", "all"],
+      heading: "Web Development",
+      subHeading: "TopSicher Umzug — Relocation services in Germany",
+      category:["website", "services", "all"],
     },
     {
       id: 4,
       image: "/img/project/pro2.png",
-      heading: "UI/UX Design",
-      subHeading: "Mobile Application Development",
-      category:["los_app", "landing_page", "all"]
+      heading: "Landing Page",
+      subHeading: "Dobry Vodar — 24/7 Emergency Service Landing",
+      category:["landing_page", "website", "all"]
     },
     {
       id: 5,
       image: "/img/project/pro4.png",
-      heading: "UI/UX Design",
-      subHeading: "Mobile Application Development",
-      category:["branding_app", "website", "all"]
+      heading: "AI Integration",
+      subHeading: "AI Chatbot — Web & Social Media",
+      category:["services", "website", "all"]
     },
     {
       id: 6,
       image: "/img/project/pro6.png",
-      heading: "UI/UX Design",
-      subHeading: "Mobile Application Development",
+      heading: "Web Design",
+      subHeading: "ManzelPro — Multilingual Service Website",
       category:["landing_page", "website", "all"]
     },
   ];

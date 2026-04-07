@@ -23,28 +23,26 @@ const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
           <img src={"/img/logo/logo.png"} alt="img" />
         </Link>
         <p className="text-sm mb-10 text-clr_pra break-words leading-normal">
-          Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-          consectetur, aliquam quaerats voluptatem. Ut enim ad minima veniam,
-          exercitationem laboriosam, nisi ut aliquid ex ea autem velit esse quam
-          nihil
+          Web developer & AI specialist based in Bratislava. Modern websites
+          that earn — not just look good. Fast delivery, fair pricing.
         </p>
         <div className="grid gap-6 mb-10">
           <div>
             <div>
               <span className="block mb-2 uppercase text-clr_pra font-bold text-sm"> address </span>
-              <span className="textp capitalize text-white font-medium leading-[120%]"> Victoria Street London, </span>
+              <span className="textp capitalize text-white font-medium leading-[120%]"> Bottova 2A, Bratislava </span>
             </div>
           </div>
           <div>
             <div>
               <span className="block mb-2 uppercase text-clr_pra font-bold text-sm"> email </span>
-              <Link href={"#"} className="textp capitalize text-white font-medium leading-[120%]"> matias999@.com </Link>
+              <Link href={"mailto:v.hvorov73@gmail.com"} className="textp capitalize text-white font-medium leading-[120%]"> v.hvorov73@gmail.com </Link>
             </div>
           </div>
           <div>
             <div>
               <span className="block mb-2 uppercase text-clr_pra font-bold text-sm"> call now </span>
-              <Link href={"#"} className="textp capitalize text-white font-medium leading-[120%]"> +98 4758 2154 021 </Link>
+              <Link href={"tel:+421919208426"} className="textp capitalize text-white font-medium leading-[120%]"> +421 919 208 426 </Link>
             </div>
           </div>
         </div>

@@ -5,43 +5,43 @@ import Title from "../Shared/Title";
 const planData = [
   {
     id: 1,
-    planName: "Basic Plan",
-    price: "$35",
-    time: "per month",
+    planName: "Landing Page",
+    price: "€390",
+    time: "one-time",
     fetcher: [
-      " Web Development",
-      " Mobile Development",
-      "Advetising",
-      "Graphic design",
-      "Project management",
+      "Custom One-Page Design",
+      "SEO Optimization",
+      "Fast Speed",
+      "Contact Form",
+      "Mobile Responsive",
     ],
     image: "/img/project/basic.png",
   },
   {
     id: 2,
-    planName: "Ultra Plan",
-    price: "$65",
-    time: "per month",
+    planName: "Multi-Page Website",
+    price: "€599",
+    time: "Best Value",
     fetcher: [
-      " Web Development",
-      " Mobile Development",
-      "Advetising",
-      "Graphic design",
-      "Project management",
+      "Up to 5 Custom Pages",
+      "Advanced SEO",
+      "CMS for Easy Editing",
+      "Blog / News Section",
+      "Google Maps & Analytics",
     ],
     image: "/img/project/warranty.png",
   },
   {
     id: 3,
-    planName: "Gold Plan",
-    price: "$95",
-    time: "per month",
+    planName: "AI Growth Engine",
+    price: "€999",
+    time: "AI Powered",
     fetcher: [
-      " Web Development",
-      " Mobile Development",
-      "Advetising",
-      "Graphic design",
-      "Project management",
+      "Everything in Multi-Page",
+      "Custom AI Chatbot",
+      "Client Conversions",
+      "Web & Social Media",
+      "Auto-Booking System",
     ],
     image: "/img/project/premium-quality.png",
   },
@@ -52,8 +52,8 @@ const Pricing = () => {
     <section className="pt_120 pb_120">
       <div className="container">
         <Title
-          mainTitle={"The best pricing plans to get your best"}
-          sortTitle={"Choose Your Plan"}
+          mainTitle={"Transparent pricing. High ROI. No hidden agency fees."}
+          sortTitle={"Invest in Your Growth"}
         />
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
           {planData.map(({ id, image, planName, fetcher, price, time }) => (

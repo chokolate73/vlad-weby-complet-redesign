@@ -16,11 +16,11 @@ const Projects = () => {
   };
 
   return (
-    <section className="pt_120 pb_120" id="projects">
+    <section className="pt_120 pb_120" id="portfolio">
       <div className="container">
         <Title
-          mainTitle={"Look at my portfolio and give me your feedback"}
-          sortTitle={"Complete Project"}
+          mainTitle={"Examples of the quality you will get."}
+          sortTitle={"Recent Work & Demos"}
         />
 
         <div

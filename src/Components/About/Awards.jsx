@@ -6,27 +6,27 @@ import Link from "next/link";
 const awardList = [
   {
     id: 1,
-    awardName: "Site Of The Day",
-    contest: "Css & Animation",
-    year: "2018",
+    awardName: "AI Chatbot Integration",
+    contest: "Web & Social Media",
+    year: "2025",
   },
   {
     id: 2,
-    awardName: "Best Business Model",
-    contest: "New Strategy",
-    year: "2019",
+    awardName: "18+ Projects Delivered",
+    contest: "Landing Pages & Web Apps",
+    year: "2025",
   },
   {
     id: 3,
-    awardName: "Motion Graphic	",
-    contest: "3D & Visual Effect	",
-    year: "2020",
+    awardName: "5.0 Star Rating",
+    contest: "Google Reviews",
+    year: "2025",
   },
   {
     id: 4,
-    awardName: "Video Design	",
-    contest: "Css & Animation",
-    year: "2022",
+    awardName: "4 Markets Served",
+    contest: "SK · DE · AT · UA",
+    year: "2025",
   },
 ];
 const Awards = () => {
@@ -42,7 +42,7 @@ const Awards = () => {
             <tbody>
               <tr>
                 <td className="bg-transparent lg:text-xl md:text-lg text-base font-medium text-white py-[30px] border-b border-b-[#2c3030]">
-                  <span className="md:text-[42px] sm:text-[28px] text-lg">Our Awards</span>
+                  <span className="md:text-[42px] sm:text-[28px] text-lg">Achievements</span>
                 </td>
                 <td className="bg-transparent lg:text-xl md:text-lg text-base font-medium text-white py-[30px] border-b border-b-[#2c3030]"></td>
                 <td className="text-end bg-transparent lg:text-xl md:text-lg text-base font-medium text-white py-[30px] border-b border-b-[#2c3030]">

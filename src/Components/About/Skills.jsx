@@ -3,26 +3,26 @@ import React from "react";
 const skillsList = [
   {
     id: 1,
-    skill: "Figma",
-    percentage: "90%",
+    skill: "React / Next.js",
+    percentage: "95%",
     image: "/img/about/figma.png",
   },
   {
     id: 2,
-    skill: "Wordpress",
+    skill: "Tailwind CSS",
     percentage: "95%",
-    image: "/img/about/word.png",
-  },
-  {
-    id: 3,
-    skill: "Figma",
-    percentage: "85%",
     image: "/img/about/html.png",
   },
   {
+    id: 3,
+    skill: "AI / ChatGPT",
+    percentage: "90%",
+    image: "/img/about/word.png",
+  },
+  {
     id: 4,
-    skill: "Bootstrap",
-    percentage: "97%",
+    skill: "SEO & Analytics",
+    percentage: "85%",
     image: "/img/about/boot.png",
   },
 ];
@@ -40,10 +40,9 @@ const Skills = ({ isTabActive }) => {
             <div>
               <h2 className="text-[42px] font-semibold text-clr_white mb-5">My Skills</h2>
               <p className="text-lg text-clr_pra mb-0">
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                consectetur, aliquam quaerats voluptatem. Ut enim ad minima
-                veniam, exercitationem laboriosam, nisi ut aliquid ex ea autem
-                velit esse quam nihil
+                Modern tech stack for fast, SEO-optimized websites. React, Next.js,
+                Tailwind — clean code, fast websites, easy updates. Plus AI
+                integrations that give your business a competitive edge.
               </p>
               <div className="mt-10">
                 <div className="grid xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 grid-cols-1 justify-between  gap-6">
