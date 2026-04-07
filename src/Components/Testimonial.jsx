@@ -122,13 +122,13 @@ const Testimonial = () => {
           <div className="absolute top-[99px] xl:left-[291px] lg:left-60 lg:block hidden">
             <img src={"/img/testimonial/quote.png"} alt="img" />
           </div>
-          <div className="absolute top-5 left-5 opacity-10 lg:opacity-100 w-[60px] sm:w-[120px] overflow-hidden rounded-full">
+          <div className="absolute top-5 left-5 opacity-10 lg:opacity-100 w-[60px] sm:w-[120px] h-[60px] sm:h-[120px] overflow-hidden rounded-full border-[3px] border-white">
             <img src={"/img/testimonial/man1.jpg"} alt="img" className="w-full h-full object-cover" />
           </div>
-          <div className="absolute left-5 bottom-5 opacity-10 lg:opacity-100 w-[60px] sm:w-[184px] overflow-hidden rounded-lg">
+          <div className="absolute left-5 bottom-5 opacity-10 lg:opacity-100 w-[60px] sm:w-[160px] h-[80px] sm:h-[210px] overflow-hidden rounded-[20px]">
             <img src={"/img/testimonial/man3.jpg"} alt="img" className="w-full h-full object-cover" />
           </div>
-          <div className="absolute top-5 right-5 opacity-10 lg:opacity-100 w-[60px] sm:w-[184px] overflow-hidden rounded-lg">
+          <div className="absolute top-5 right-5 opacity-10 lg:opacity-100 w-[60px] sm:w-[160px] h-[80px] sm:h-[210px] overflow-hidden rounded-[20px]">
             <img src={"/img/testimonial/man2.jpg"} alt="img" className="w-full h-full object-cover" />
           </div>
           <div className="absolute lg:bottom-[50px] lg:right-[50px] bottom-[15px] right-[15px] sm:block hidden ">
