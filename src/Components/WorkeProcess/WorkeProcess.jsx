@@ -5,42 +5,42 @@ import WorkProcessCard from "./WorkProcessCard";
 const processList = [
   {
     id: 1,
-    title: "Concept",
-    info: "Nemo enim ipsam voluptatem voluptas sit aspernatur aut odit aut fugit",
+    title: "Pricing",
+    info: "Do I have to pay monthly fees?",
     list: [
-      "Reviewing any existing branding",
-      "Target audience and competitors research",
-      "Developing a strategy",
+      "Website design is a one-time fee",
+      "Optional Care Package: €25/month",
+      "Covers updates, security & hosting",
     ],
   },
   {
     id: 2,
-    title: "Design",
-    info: "Nemo enim ipsam voluptatem voluptas sit aspernatur aut odit aut fugit",
+    title: "Changes",
+    info: "What if I need to change text or photos later?",
     list: [
-      "Developing wireframes and mockup",
-      "Choosing typography, color palettes,",
-      "Refining the design",
+      "Care Package: we handle it for you",
+      "Just send a message with changes",
+      "Stock photos & text included free",
     ],
   },
   {
     id: 3,
-    title: "Webflow",
-    info: "Nemo enim ipsam voluptatem voluptas sit aspernatur aut odit aut fugit",
+    title: "Speed",
+    info: "How fast will it be ready?",
     list: [
-      "Testing the website thoroughly launch",
-      "Choosing typography, color palettes,",
-      "Refining the design",
+      "Typically 3 to 5 business days",
+      "Full setup and content handled",
+      "Mobile-first, works on every device",
     ],
   },
 ];
 const WorkeProcess = () => {
   return (
-    <section className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden sm:p-[60px] py-[30px] px-[10px] pt_120 pb_120">
+    <section id="faq" className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden sm:p-[60px] py-[30px] px-[10px] pt_120 pb_120">
       <div className="container">
         <Title
-          mainTitle="Your Dream Website In Just Few Steps"
-          sortTitle="Working Process"
+          mainTitle="Answers to Common Questions"
+          sortTitle="FAQ"
         />
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
           {processList.map(({ id, info, list, title }) => (

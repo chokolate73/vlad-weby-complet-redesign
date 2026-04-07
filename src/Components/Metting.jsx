@@ -12,8 +12,8 @@ const Metting = () => {
             <div>
               <div className="border-b border-b-[rgb(39,38,38)] hover:border-b-clr_base duration-500 transition-all">
                 <TitleSecond
-                  mainTitle={"Let's work together. fixed a meeting"}
-                  sortTitle={" Need a Project?"}
+                  mainTitle={"Let's build something that earns for you."}
+                  sortTitle={"Need a Website?"}
                 />
               </div>
               <div
@@ -34,7 +34,7 @@ const Metting = () => {
                     className="text-white md:text-xl text-base font-medium"
                   >
                     {" "}
-                    davidmatias333@gmail.com{" "}
+                    v.hvorov73@gmail.com{" "}
                   </Link>
                 </span>
               </div>
@@ -56,7 +56,7 @@ const Metting = () => {
                     className="text-white md:text-xl text-base font-medium"
                   >
                     {" "}
-                    Victoria Street London, England{" "}
+                    Bottova 2A, 811 09 Bratislava, Slovakia{" "}
                   </Link>
                 </span>
               </div>

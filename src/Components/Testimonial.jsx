@@ -14,36 +14,33 @@ import "swiper/css/navigation";
 const reviewList = [
   {
     id: 1,
-    name: "Shawn Beltran",
-    position: "Business Owner",
-    review: `There are many variations of passages of Lorem Ipsum
-    available, by injected humour, or randomised words which
-    don't look even slightly believable. If you are going to
-    use a passage of Lorem Ipsum, you need to be hidden in
-    middle of text. All the Lorem Ipsum generators`,
+    name: "Stanislav Zavydniak",
+    position: "Local Guide · Slovakia 🇸🇰",
+    review: `Good experience. Website done in 3 days. Nice price compared
+    to others. Recommend.`,
     stars: 5,
   },
   {
     id: 2,
-    name: "John Methcel",
-    position: "Business Owner",
-    review: `There are many variations of passages of Lorem Ipsum
-    available, by injected humour, or randomised words which
-    don't look even slightly believable. If you are going to
-    use a passage of Lorem Ipsum, you need to be hidden in
-    middle of text. All the Lorem Ipsum generators`,
-    stars: 4.5,
+    name: "Tsapenko Oleg",
+    position: "Slovakia 🇸🇰",
+    review: `Huge thanks to Vlad! He built our website and helped promote
+    the company — the result exceeded all expectations. Vlad is a true
+    professional, attentive to details, always available and ready to
+    offer the best solutions. Very happy with the collaboration,
+    definitely recommend!`,
+    stars: 5,
   },
   {
     id: 3,
-    name: "Nethon Jr",
-    position: "Business Owner",
-    review: `There are many variations of passages of Lorem Ipsum
-    available, by injected humour, or randomised words which
-    don't look even slightly believable. If you are going to
-    use a passage of Lorem Ipsum, you need to be hidden in
-    middle of text. All the Lorem Ipsum generators`,
-    stars: 4,
+    name: "Katerina Fetisova",
+    position: "Germany 🇩🇪",
+    review: `Came to Vlad with a complex request. Vlad was very patient
+    with all my ideas, implemented quickly, suggested his own options,
+    made corrections. Vlad will remain my reliable partner, as he proved
+    himself a professional ready to responsibly and quickly solve tasks.
+    Thank you from the bottom of my heart!`,
+    stars: 5,
   },
 ];
 
@@ -69,7 +66,7 @@ const Testimonial = () => {
             data-aos="fade-down"
             data-aos-duration="1000"
           >
-            Happy Words From Happy Customer
+            What Clients Say
           </h2>
         </div>
         <div

@@ -10,7 +10,7 @@ const Blogs = () => {
       <div className="container">
         <div className="grid xl:grid-cols-[33%_auto] lg:grid-cols-[28%_auto] grid-cols-1 gap-12">
           <div>
-            <TitleSecond mainTitle={"Recent Posts"} sortTitle={"My Blogs"} />
+            <TitleSecond mainTitle={"Latest Articles"} sortTitle={"Blog"} />
             <CircleBox />
           </div>
           <div>

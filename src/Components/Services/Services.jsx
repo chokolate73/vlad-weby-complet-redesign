@@ -5,33 +5,39 @@ import Title from "../Shared/Title";
 const serviceList = [
   {
     id: "01",
-    heading: "Illustration Design",
-    subHeading: "Designer",
-    para: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. sunt in culpa qui officia deserunt mollit",
+    heading: "AI & Automation",
+    subHeading: "Competitive edge",
+    para: "ChatGPT Shopping, AI chatbots, n8n workflows — not just static websites. Give your business a competitive edge with smart automation.",
   },
   {
     id: "02",
-    heading: "Business Branding",
-    subHeading: "Branding",
-    para: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. sunt in culpa qui officia deserunt mollit",
+    heading: "4 Languages, 3+ Markets",
+    subHeading: "SK · EN · DE · RU",
+    para: "Multilingual websites for the Central European market. Reach customers in Slovakia, Germany, Austria, and beyond.",
   },
   {
     id: "03",
-    heading: "Web UI/UX Design",
-    subHeading: "UI/UX Design",
-    para: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. sunt in culpa qui officia deserunt mollit",
+    heading: "Delivery in 3–5 Days",
+    subHeading: "Express delivery",
+    para: "No month-long waits. Fast delivery without compromising quality. From first call to finished website in days, not weeks.",
   },
   {
     id: "04",
-    heading: "Application Design",
-    subHeading: " Web Design",
-    para: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. sunt in culpa qui officia deserunt mollit",
+    heading: "Data-Driven Approach",
+    subHeading: "Measurable results",
+    para: "SEO, PageSpeed, analytics — measurable results, not just pretty design. Every decision backed by data.",
   },
   {
     id: "05",
-    heading: " Digital Marketing",
-    subHeading: "SEO Analytics",
-    para: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. sunt in culpa qui officia deserunt mollit",
+    heading: "Direct Communication",
+    subHeading: "No middlemen",
+    para: "No account manager. You talk directly with the person building your website. One contact, zero overhead.",
+  },
+  {
+    id: "06",
+    heading: "Modern Tech Stack",
+    subHeading: "Production-ready code",
+    para: "React, Next.js, Tailwind — clean code, fast websites, easy updates. Built for performance and scalability.",
   },
 ];
 
@@ -44,8 +50,8 @@ const Services = ({ isHeading }) => {
       <div className="container">
         {isHeading && (
           <Title
-            mainTitle="My Special Service For Your Business Development"
-            sortTitle="Services That i Provide"
+            mainTitle="Business thinking, AI expertise, and freelance flexibility — at a fair price."
+            sortTitle="I'm not another web agency"
           />
         )}
 

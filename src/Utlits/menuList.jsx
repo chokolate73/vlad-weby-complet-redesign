@@ -7,14 +7,14 @@ export const menuList = [
     {
         id: 2,
         path: "/",
-        section: "#about",
-        name: "About",
+        section: "#portfolio",
+        name: "Portfolio",
     },
     {
         id: 3,
         path: "/",
-        section: "#projects",
-        name: "Work",
+        section: "#pricing",
+        name: "Pricing",
     },
     {
         id: 4,
@@ -25,20 +25,20 @@ export const menuList = [
             {
                 id: 1,
                 path: "/all-services",
-                name: "Services",
+                name: "Web Design",
             },
             {
                 id: 2,
                 path: "/service-details",
-                name: "Service Details",
+                name: "AI Chatbot",
             },
         ],
     },
     {
         id: 5,
         path: "/",
-        section: "#testimonial",
-        name: "Testimonial",
+        section: "#faq",
+        name: "FAQ",
     },
     {
         id: 6,
@@ -49,7 +49,7 @@ export const menuList = [
             {
                 id: 1,
                 path: "/all-blog",
-                name: "Blog",
+                name: "All Articles",
             },
             {
                 id: 2,
@@ -60,7 +60,8 @@ export const menuList = [
     },
     {
         id: 7,
-        path: "/contact",
+        path: "/",
+        section: "#contact",
         name: "Contact",
     },
 ];

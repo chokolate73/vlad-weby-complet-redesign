@@ -9,6 +9,7 @@ import Testimonial from "../Components/Testimonial";
 import Blogs from "../Components/Blogs/Blogs";
 import MarqueeWapper from "../Components/Shared/MarqueeWapper";
 import Awards from "../Components/About/Awards";
+import Pricing from "../Components/Pricing/Pricing";
 
 
 const Home = () => {
@@ -19,10 +20,15 @@ const Home = () => {
       <MarqueeWapper direction="right" images={images2} />
       <Awards />
       <Projects />
-      <Metting />
+      <div id="pricing">
+        <Pricing />
+      </div>
       <Services isHeading={true} />
       <WorkeProcess />
       <Testimonial />
+      <div id="contact">
+        <Metting />
+      </div>
       <Blogs />
     </>
   );

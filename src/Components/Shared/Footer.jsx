@@ -5,23 +5,27 @@ import { ArrowUpShort, ArrowRight } from "react-bootstrap-icons";
 const socalList = [
   {
     id: 1,
-    platfrom: "Facebook",
+    platfrom: "Instagram",
     icon: <ArrowRight />,
+    link: "https://www.instagram.com/vladislav.als",
   },
   {
     id: 2,
-    platfrom: "Instagram",
+    platfrom: "WhatsApp",
     icon: <ArrowRight />,
+    link: "https://wa.me/421919208426",
   },
   {
     id: 3,
-    platfrom: "Dribble",
+    platfrom: "Email",
     icon: <ArrowRight />,
+    link: "mailto:v.hvorov73@gmail.com",
   },
   {
     id: 4,
-    platfrom: "Webflow",
+    platfrom: "Calendar",
     icon: <ArrowRight />,
+    link: "https://calendar.app.google/uvuY4SVfiJS92eRB6",
   },
 ];
 const Footer = () => {
@@ -40,14 +44,14 @@ const Footer = () => {
             <div className="basis-1/2 shrink">
               <div>
                 <p className="xl:mb-[60px] lg:mb-10 mb-[10px]  lg:text-2xl sm:text-lg text-[17px] text-white max-w-lg">
-                  Hello, I’m David Matias, Website & User Interface Designer
-                  based in London.
+                  Helping local businesses grow with modern, high-performance
+                  websites. Based in Bratislava.
                 </p>
                 <Link
                   href={""}
                   className="text-white lg:text-4xl sm:text-[28px] text-lg underline capitalize"
                 >
-                  davidmatias333@gmail.com
+                  v.hvorov73@gmail.com
                 </Link>
               </div>
             </div>
@@ -77,9 +81,9 @@ const Footer = () => {
         <div className="container">
           <div className="flex flex-col lg:flex-row items-center justify-between py-[34px] lg:flex-nowrap  gap-4 ">
             <p className="text-white text-lg">
-              Copyright © 2025{" "}
+              © 2025{" "}
               <Link href={"/"} className="text-clr_base">
-                Matias.
+                VladWeby.
               </Link>{" "}
               All rights reserved.
             </p>

@@ -38,7 +38,7 @@ const Partner = () => {
           data-aos="fade-down"
           data-aos-duration="1000"
         >
-          More than 100+ companies trusted us worldwide
+          Serving clients across Slovakia 🇸🇰 Germany 🇩🇪 Austria 🇦🇹 Ukraine 🇺🇦
         </h4>
         <div className="swiper justify-between">
           <Swiper

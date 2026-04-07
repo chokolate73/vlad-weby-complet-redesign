@@ -18,7 +18,7 @@ const tabList = [
   },
   {
     id: 3,
-    name: "Education",
+    name: "Languages",
     value: "education",
   },
   {
@@ -52,9 +52,9 @@ const About = () => {
               data-aos="fade-up"
               data-aos-duration="1500"
             >
-              I'm David Matias, I'm a Brand & Webflow Designer, Currently
-              residing in the lush Victoria Street London, Matias operates
-              globally and is ready to take on any design challenge.
+              I build websites that earn — not just look good. Modern development,
+              AI tools, and measurable results at a price that doesn't require
+              agency budgets.
             </p>
           </div>
           <div>

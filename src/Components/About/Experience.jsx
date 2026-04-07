@@ -9,23 +9,23 @@ const Experience = ({ isTabActive }) => {
       <AboutCard
         title={"My Experience"}
         para={
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur, aliquam quaerats voluptatem. Ut enim ad minima veniam, exercitationem laboriosam, nisi ut aliquid ex ea autem velit esse quam nihil"
+          "3+ years of hands-on experience building modern websites and AI integrations for businesses across Slovakia, Germany, and Austria."
         }
         info={[
           {
-            date: "In 2013",
-            position: "UI Head & Manager",
-            instition: "Software Engineer",
+            date: "2022–Now",
+            position: "Freelance · Bratislava",
+            instition: "Web Developer & AI Specialist",
           },
           {
-            date: "In 2016",
-            position: " Head of Department",
-            instition: "Product Designer",
+            date: "2023",
+            position: "Microsoft Certified",
+            instition: "Copilot Certification",
           },
           {
-            date: "In 2019",
-            position: "Fiverr.com",
-            instition: "Senior UI Designer",
+            date: "2022",
+            position: "SK · EN · DE · RU markets",
+            instition: "Vlad Weby Founded",
           },
         ]}
       />
