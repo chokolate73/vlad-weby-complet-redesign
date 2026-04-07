@@ -11,19 +11,24 @@ const Education = ({ isTabActive }) => {
         }
         info={[
           {
-            date: "Native",
-            position: "Fluent",
-            instition: "Slovak & Russian",
+            date: "SK",
+            position: "",
+            instition: "Slovak",
           },
           {
-            date: "Professional",
-            position: "Business fluent",
+            date: "EN",
+            position: "",
             instition: "English",
           },
           {
-            date: "Professional",
-            position: "Business fluent",
+            date: "DE",
+            position: "",
             instition: "German",
+          },
+          {
+            date: "RU",
+            position: "",
+            instition: "Russian",
           },
         ]}
       />
