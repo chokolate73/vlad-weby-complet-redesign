@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
-
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React from "react";
+import { ArrowRight } from "react-bootstrap-icons";
+import Link from "next/link";
 
 
 const awardList = [
@@ -32,41 +31,37 @@ const awardList = [
 ];
 const Awards = () => {
 
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
   return (
-    <div className="awoard__section">
+    <div className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden xxl:py-[120px] xl:py-[100px] py-[60px] ">
       <div className="container">
         <div
-          className="award__wraper table-responsive"
           data-aos="fade-up"
           data-aos-duration="2000"
         >
-          <table className="table w-100">
+          <table className="w-full">
             <tbody>
               <tr>
-                <td>
-                  <span className="table__title">Our Awards</span>
+                <td className="bg-transparent lg:text-xl md:text-lg text-base font-medium text-white py-[30px] border-b border-b-[#2c3030]">
+                  <span className="md:text-[42px] sm:text-[28px] text-lg">Our Awards</span>
                 </td>
-                <td className="cusnoe"></td>
-                <td className="text-end">
-                  <a
-                    href="#0"
-                    className="d-flex table__view justify-content-end align-items-center base gap-2"
+                <td className="bg-transparent lg:text-xl md:text-lg text-base font-medium text-white py-[30px] border-b border-b-[#2c3030]"></td>
+                <td className="text-end bg-transparent lg:text-xl md:text-lg text-base font-medium text-white py-[30px] border-b border-b-[#2c3030]">
+                  <Link href={""}
+                    className="md:text-lg sm:text-base text-sm  flex justify-end items-center text-clr_base gap-2"
                   >
-                    <span>View My Work</span>
-                    <i className="bi bi-arrow-right"></i>
-                  </a>
+                    <span className="whitespace-nowrap">View My Work</span>
+                    <i>
+                      <ArrowRight />
+                    </i>
+                  </Link>
                 </td>
               </tr>
               {awardList.map(({ contest, id, year, awardName }) => {
                 return (
                   <tr key={id}>
-                    <td>{awardName}</td>
-                    <td>{contest}</td>
-                    <td className="text-end">{year}</td>
+                    <td className="bg-transparent lg:text-xl md:text-lg sm:text-base text-sm font-medium text-white py-[30px] border-b border-b-[#2c3030]">{awardName}</td>
+                    <td className="bg-transparent lg:text-xl md:text-lg sm:text-base text-sm font-medium text-white py-[30px] border-b border-b-[#2c3030]">{contest}</td>
+                    <td className="text-end bg-transparent lg:text-xl md:text-lg sm:text-base text-sm font-medium text-white py-[30px] border-b border-b-[#2c3030]">{year}</td>
                   </tr>
                 );
               })}

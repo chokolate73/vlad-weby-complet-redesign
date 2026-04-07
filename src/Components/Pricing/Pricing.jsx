@@ -1,9 +1,7 @@
 import React from "react";
-import basic from "../../assets/img/project/basic.png";
-import warranty from "../../assets/img/project/warranty.png";
-import premium from "../../assets/img/project/premium-quality.png";
 import Price from "./Price";
-import Title from "../Shared/Title/Title";
+import Title from "../Shared/Title";
+
 const planData = [
   {
     id: 1,
@@ -17,7 +15,7 @@ const planData = [
       "Graphic design",
       "Project management",
     ],
-    image: basic,
+    image: "/img/project/basic.png",
   },
   {
     id: 2,
@@ -31,7 +29,7 @@ const planData = [
       "Graphic design",
       "Project management",
     ],
-    image: warranty,
+    image: "/img/project/warranty.png",
   },
   {
     id: 3,
@@ -45,18 +43,19 @@ const planData = [
       "Graphic design",
       "Project management",
     ],
-    image: premium,
+    image: "/img/project/premium-quality.png",
   },
 ];
+
 const Pricing = () => {
   return (
-    <section className="pricing__section pt-120 pb-120">
+    <section className="pt_120 pb_120">
       <div className="container">
         <Title
           mainTitle={"The best pricing plans to get your best"}
           sortTitle={"Choose Your Plan"}
         />
-        <div className="row g-4 justify-content-center">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
           {planData.map(({ id, image, planName, fetcher, price, time }) => (
             <Price
               key={id}

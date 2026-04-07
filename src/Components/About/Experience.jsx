@@ -1,52 +1,34 @@
 import React from "react";
-import personalInfothumb from "../../assets/img/about/personal-infothumb.png"
+import AboutCard from "./AboutCard";
 
-const Experience = ({isTabActive}) => {
+const Experience = ({ isTabActive }) => {
   return (
-    <div className={`tabitem ${isTabActive === "experience" ? "active":""} `}>
-      <div className="about__v1wrap">
-        <div className="row g-4 align-items-lg-start align-items-center">
-          <div className="col-lg-5">
-            <div className="about__onethumb">
-              <img src={personalInfothumb} alt="img" />
-            </div>
-          </div>
-          <div className="col-lg-7">
-            <div className="about__onecontent">
-              <h2>My Experience</h2>
-              <p>
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit
-                consectetur, aliquam quaerats voluptatem. Ut enim ad minima
-                veniam, exercitationem laboriosam, nisi ut aliquid ex ea autem
-                velit esse quam nihil
-              </p>
-              <div className="exprience__box mt-30">
-                <div className="exri__item">
-                  <span className="fz-18 fw-500 base">In 2011</span>
-                  <div className="expri__cont">
-                    <h4 className="mb-15 text-white">Software Engineer</h4>
-                    <p className="fz-18 pra d-block">UI Head & Manager</p>
-                  </div>
-                </div>
-                <div className="exri__item">
-                  <span className="fz-18 fw-500 base">In 2016</span>
-                  <div className="expri__cont">
-                    <h4 className="mb-15 text-white">Product Designer</h4>
-                    <p className="fz-18 pra d-block">Head of Department</p>
-                  </div>
-                </div>
-                <div className="exri__item">
-                  <span className="fz-18 fw-500 base">In 2023</span>
-                  <div className="expri__cont">
-                    <h4 className="mb-15 text-white">Senior UI Designer</h4>
-                    <p className="fz-18 pra d-block">Fiverr.com</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div
+      className={`w-full duration-700 ${isTabActive === "experience" ? "z-10 opacity-100 translate-y-0" : "translate-y-20 -z-10 opacity-0 absolute  top-0 "} `}
+    >
+      <AboutCard
+        title={"My Experience"}
+        para={
+          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit consectetur, aliquam quaerats voluptatem. Ut enim ad minima veniam, exercitationem laboriosam, nisi ut aliquid ex ea autem velit esse quam nihil"
+        }
+        info={[
+          {
+            date: "In 2013",
+            position: "UI Head & Manager",
+            instition: "Software Engineer",
+          },
+          {
+            date: "In 2016",
+            position: " Head of Department",
+            instition: "Product Designer",
+          },
+          {
+            date: "In 2019",
+            position: "Fiverr.com",
+            instition: "Senior UI Designer",
+          },
+        ]}
+      />
     </div>
   );
 };

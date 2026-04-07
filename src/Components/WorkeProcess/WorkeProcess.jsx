@@ -1,5 +1,5 @@
 import React from "react";
-import Title from "../Shared/Title/Title";
+import Title from "../Shared/Title";
 import WorkProcessCard from "./WorkProcessCard";
 
 const processList = [
@@ -36,13 +36,13 @@ const processList = [
 ];
 const WorkeProcess = () => {
   return (
-    <section className="process__section pt-120 pb-120">
+    <section className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden sm:p-[60px] py-[30px] px-[10px] pt_120 pb_120">
       <div className="container">
         <Title
           mainTitle="Your Dream Website In Just Few Steps"
           sortTitle="Working Process"
         />
-        <div className="row g-4">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7">
           {processList.map(({ id, info, list, title }) => (
             <WorkProcessCard key={id} info={info} list={list} title={title} />
           ))}

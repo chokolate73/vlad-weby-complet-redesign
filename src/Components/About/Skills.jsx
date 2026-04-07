@@ -1,67 +1,62 @@
 import React from "react";
-import personalInfothumb from "../../assets/img/about/personal-infothumb.png";
-import figma from "../../assets/img/about/figma.png";
-import word from "../../assets/img/about/word.png";
-import html from "../../assets/img/about/html.png";
-import boot from "../../assets/img/about/boot.png";
 
 const skillsList = [
   {
     id: 1,
     skill: "Figma",
     percentage: "90%",
-    image: figma,
+    image: "/img/about/figma.png",
   },
   {
     id: 2,
     skill: "Wordpress",
     percentage: "95%",
-    image: word,
+    image: "/img/about/word.png",
   },
   {
     id: 3,
     skill: "Figma",
     percentage: "85%",
-    image: html,
+    image: "/img/about/html.png",
   },
   {
     id: 4,
     skill: "Bootstrap",
     percentage: "97%",
-    image: boot,
+    image: "/img/about/boot.png",
   },
 ];
 const Skills = ({ isTabActive }) => {
   return (
-    <div className={`tabitem ${isTabActive === "skills" ? "active" : ""} `}>
-      <div className="about__v1wrap">
-        <div className="row g-4 align-items-lg-start align-items-center">
-          <div className="col-lg-5">
-            <div className="about__onethumb">
-              <img src={personalInfothumb} alt="img" />
+    <div className={`w-full duration-700 ${isTabActive === "skills" ? "z-10 opacity-100 translate-y-0" : "translate-y-20 -z-10 opacity-0 absolute  top-0 "} `}>
+      <div className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden sm:p-[60px] py-[30px] px-[10px]">
+        <div className="grid lg:grid-cols-[41%_auto] gap-6 lg:items-start items-center">
+          <div>
+            <div>
+              <img src={"/img/about/personal-infothumb.png"} alt="img" />
             </div>
           </div>
-          <div className="col-lg-7">
-            <div className="about__onecontent">
-              <h2>My Skills</h2>
-              <p>
+          <div>
+            <div>
+              <h2 className="text-[42px] font-semibold text-clr_white mb-5">My Skills</h2>
+              <p className="text-lg text-clr_pra mb-0">
                 Neque porro quisquam est, qui dolorem ipsum quia dolor sit
                 consectetur, aliquam quaerats voluptatem. Ut enim ad minima
                 veniam, exercitationem laboriosam, nisi ut aliquid ex ea autem
                 velit esse quam nihil
               </p>
-              <div className="about__contactwrap">
-                <div className="row g-4">
+              <div className="mt-10">
+                <div className="grid xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 grid-cols-1 justify-between  gap-6">
                   {skillsList.map(({id, skill, image, percentage}) => {
                     return (
-                      <div key={id} className="col-xxl-6 col-xl-6 col-lg-12 col-md-6">
-                        <div className="abox myskill__item">
-                          <div className="thumb">
+                      <div key={id} className="rounded-[10px] bg-[#1D1D1D] p-[35px] border border-[#1D1D1D] duration-500 hover:border-clr_base">
+                        <div className="flex items-center gap-6">
+                          <div>
                             <img src={image} alt="img" />
                           </div>
-                          <div className="mys">
-                            <span className="ptext fz-18 mb-15 d-block">{skill}</span>
-                            <h1 className="fw-600">{percentage}</h1>
+                          <div>
+                            <span className="md:text-lg text-base lg:mb-[15px] mb-[10px] block text-clr_pra">{skill}</span>
+                            <h1 className="font-semibold text-5xl text-clr_white">{percentage}</h1>
                           </div>
                         </div>
                       </div>

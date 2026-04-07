@@ -1,70 +1,61 @@
-import ts1 from "../assets/img/banner/ts1.png";
-import ts2 from "../assets/img/banner/ts2.png";
-import ts3 from "../assets/img/banner/ts3.png";
-import ts4 from "../assets/img/banner/ts4.png";
-import ts5 from "../assets/img/banner/ts5.png";
-import ts6 from "../assets/img/banner/ts6.png";
-import ts7 from "../assets/img/banner/ts7.png";
-import ts8 from "../assets/img/banner/ts8.png";
-
 export const images = [
   {
     id: 1,
-    image: ts1,
+    image: "/img/banner/ts1.png",
   },
   {
     id: 2,
-    image: ts2,
+    image: "/img/banner/ts2.png",
   },
   {
     id: 3,
-    image: ts3,
+    image: "/img/banner/ts3.png",
   },
   {
     id: 4,
-    image: ts4,
+    image: "/img/banner/ts4.png",
   },
   {
     id: 5,
-    image: ts3,
+    image: "/img/banner/ts5.png",
   },
   {
     id: 6,
-    image: ts1,
+    image: "/img/banner/ts1.png",
   },
   {
     id: 7,
-    image: ts4,
+    image: "/img/banner/ts4.png",
   },
 ];
 
 export const images2 = [
   {
     id: 1,
-    image: ts5,
+    image: "/img/banner/ts5.png",
   },
   {
     id: 2,
-    image: ts6,
+    image: "/img/banner/ts6.png",
   },
   {
     id: 3,
-    image: ts7,
+    image: "/img/banner/ts7.png",
   },
   {
     id: 4,
-    image: ts8,
+    image: "/img/banner/ts8.png",
   },
   {
     id: 5,
-    image: ts5,
+    image: "/img/banner/ts5.png",
   },
   {
     id: 6,
-    image: ts7,
+    image: "/img/banner/ts7.png",
   },
   {
     id: 8,
-    image: ts8,
+    image: "/img/banner/ts8.png",
   },
 ];

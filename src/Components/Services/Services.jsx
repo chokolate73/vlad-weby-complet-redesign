@@ -1,6 +1,6 @@
 import React from "react";
 import Service from "./Service";
-import Title from "../Shared/Title/Title";
+import Title from "../Shared/Title";
 
 const serviceList = [
   {
@@ -34,11 +34,12 @@ const serviceList = [
     para: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. sunt in culpa qui officia deserunt mollit",
   },
 ];
+
 const Services = ({ isHeading }) => {
   return (
     <section
       id="services"
-      className={`service__section overhid ${isHeading && "pt-120"}  pb-120`}
+      className={`${isHeading && "pt_120"}  pb_120`}
     >
       <div className="container">
         {isHeading && (
@@ -48,7 +49,7 @@ const Services = ({ isHeading }) => {
           />
         )}
 
-        <div className={`service__uniquewrap `}>
+        <div>
           {serviceList.map(({ id, heading, subHeading, para }) => (
             <Service
               key={id}
