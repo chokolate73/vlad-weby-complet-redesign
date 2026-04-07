@@ -58,9 +58,9 @@ const Banner = () => {
                 </span>
               </Link>
               <h1 className="lg:text-[116px] md:text-[68px] sm:text-[48px] text-[34px] font-semibold sm:mb-[50px] mb-[30px] leading-[120%]">
-                <span className="text-clr_white"> I Build Websites</span>
-                <span className="block designers" data-text="That Earn">
-                  That Earn
+                <span className="text-clr_white"> Websites That</span>
+                <span className="block designers" data-text="Earn">
+                  Earn
                 </span>
               </h1>
               <div className="flex items-center gap-6">
