@@ -9,7 +9,6 @@ import Testimonial from "../Components/Testimonial";
 import Blogs from "../Components/Blogs/Blogs";
 import MarqueeWapper from "../Components/Shared/MarqueeWapper";
 import Awards from "../Components/About/Awards";
-import Pricing from "../Components/Pricing/Pricing";
 
 
 const Home = () => {
@@ -22,10 +21,7 @@ const Home = () => {
       <Projects />
       <Metting />
       <Services isHeading={true} />
-      <div id="pricing">
-        <Pricing />
-      </div>
-      <WorkeProcess />
+<WorkeProcess />
       <Testimonial />
       <Blogs />
     </>
