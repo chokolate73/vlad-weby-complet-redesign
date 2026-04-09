@@ -28,9 +28,9 @@ const Partner = () => {
           {doubled.map(({ name, image }, index) => (
             <div
               key={index}
-              className="flex-shrink-0 sm:w-[150px] sm:h-[60px] w-[120px] h-[50px] rounded-lg bg-[#1e1e1e] border border-[#333] flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-500 cursor-default"
+              className="flex-shrink-0 sm:w-[300px] sm:h-[120px] w-[240px] h-[100px] flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-500 cursor-default"
             >
-              <img src={image} alt={name} className="max-w-[120px] max-h-[40px] object-contain" />
+              <img src={image} alt={name} className="max-w-[240px] max-h-[80px] object-contain grayscale brightness-200 hover:grayscale-0 hover:brightness-100 transition-all duration-500" />
             </div>
           ))}
         </div>
