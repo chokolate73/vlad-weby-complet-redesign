@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { Envelope, Telephone } from "react-bootstrap-icons";
+import { Envelope, Telephone, Clock, ChatDots } from "react-bootstrap-icons";
 import TitleSecond from "./Shared/TitleSecond";
 
 const Metting = () => {
@@ -9,6 +9,7 @@ const Metting = () => {
     name: "",
     email: "",
     phone: "",
+    service: "",
     message: "",
   });
 
@@ -18,10 +19,10 @@ const Metting = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { name, email, phone, message } = formData;
+    const { name, email, phone, service, message } = formData;
     const subject = encodeURIComponent(`Contact from ${name}`);
     const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "N/A"}\n\nMessage:\n${message}`
+      `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "N/A"}\nService: ${service || "N/A"}\n\nMessage:\n${message}`
     );
     window.location.href = `mailto:v.hvorov73@gmail.com?subject=${subject}&body=${body}`;
   };
@@ -82,6 +83,40 @@ const Metting = () => {
                   </Link>
                 </span>
               </div>
+              <div
+                className="hover:border-b hover:border-b-clr_base flex items-center md:gap-5 gap-4 duration-500 border-b border-b-[rgb(38_37_37)] lg:pb-[30px] pb-5 lg:pt-[30px] pt-[20px]"
+                data-aos="fade-up"
+                data-aos-duration="1800"
+              >
+                <span className="w-[60px] h-[60px] rounded-full bg-clr_base flex justify-center items-center shrink-0">
+                  <Clock className="text-[26px] text-clr_title" />
+                </span>
+                <span>
+                  <span className="text-clr_pra md:text-lg text-base mb-1 block">
+                    Response Time
+                  </span>
+                  <span className="text-white md:text-xl text-base font-medium">
+                    Reply within 24 hours
+                  </span>
+                </span>
+              </div>
+              <div
+                className="flex items-center md:gap-5 gap-4 lg:pt-[30px] pt-[20px]"
+                data-aos="fade-up"
+                data-aos-duration="2000"
+              >
+                <span className="w-[60px] h-[60px] rounded-full bg-clr_base flex justify-center items-center shrink-0">
+                  <ChatDots className="text-[26px] text-clr_title" />
+                </span>
+                <span>
+                  <span className="text-clr_pra md:text-lg text-base mb-1 block">
+                    Free Consultation
+                  </span>
+                  <span className="text-white md:text-xl text-base font-medium">
+                    Free initial consultation
+                  </span>
+                </span>
+              </div>
             </div>
           </div>
 
@@ -117,6 +152,24 @@ const Metting = () => {
                 onChange={handleChange}
                 className="w-full bg-[rgb(20,20,20)] border border-[rgb(50,50,50)] rounded-lg px-5 py-4 text-white placeholder:text-[#666] text-base outline-none focus:border-clr_base transition-colors duration-300"
               />
+              <select
+                name="service"
+                value={formData.service}
+                onChange={handleChange}
+                className="w-full bg-[rgb(20,20,20)] border border-[rgb(50,50,50)] rounded-lg px-5 py-4 text-white text-base outline-none focus:border-clr_base transition-colors duration-300 appearance-none"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "right 20px center",
+                }}
+              >
+                <option value="" disabled className="text-[#666]">What do you need?</option>
+                <option value="landing">Landing page</option>
+                <option value="website">Full website</option>
+                <option value="ai">AI chatbot / automation</option>
+                <option value="seo">SEO &amp; optimization</option>
+                <option value="other">Other</option>
+              </select>
               <textarea
                 name="message"
                 placeholder="Your Message"
@@ -130,7 +183,7 @@ const Metting = () => {
                 type="submit"
                 className="w-full bg-clr_base text-clr_title font-semibold text-lg py-4 rounded-lg hover:opacity-90 transition-opacity duration-300 mt-1"
               >
-                Send Message
+                Get My Free Quote
               </button>
             </form>
           </div>
