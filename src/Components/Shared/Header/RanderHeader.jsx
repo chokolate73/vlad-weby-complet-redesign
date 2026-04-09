@@ -36,7 +36,7 @@ const RanderHeader = () => {
   return (
     <header
       className={` ${fixdHeader ? "fixed top-0 left-0 z-50 bg-black" : "relative"
-        } w-full border-b border-b-clr_cusborder z-10  xxl:after:block after:hidden after:absolute after:right-[calc(20%-30px)] after:top-0 after:w-[1px] after:h-full after:content:[''] after:bg-clr_cusborder  xxl:before:block before:hidden before:absolute before:left-[calc(15%-40px)] before:top-0 before:w-[1px] before:h-full before:content:[''] before:bg-clr_cusborder`}
+        } w-full z-10`}
     >
       <div className="xxl:max-w-[1805px] container mx-auto px-3">
         <div className="flex justify-between items-center w-full relative py-5">

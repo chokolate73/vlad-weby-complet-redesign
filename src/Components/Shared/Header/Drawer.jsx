@@ -36,7 +36,7 @@ const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
           <div>
             <div>
               <span className="block mb-2 uppercase text-clr_pra font-bold text-sm"> email </span>
-              <Link href={"mailto:v.hvorov73@gmail.com"} className="textp capitalize text-white font-medium leading-[120%]"> v.hvorov73@gmail.com </Link>
+              <Link href={"mailto:v.hvorov73@gmail.com"} className="textp text-white font-medium leading-[120%]"> v.hvorov73@gmail.com </Link>
             </div>
           </div>
           <div>

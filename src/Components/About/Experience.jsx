@@ -7,20 +7,25 @@ const Experience = ({ isTabActive }) => {
       className={`w-full duration-700 ${isTabActive === "experience" ? "z-10 opacity-100 translate-y-0" : "translate-y-20 -z-10 opacity-0 absolute  top-0 "} `}
     >
       <AboutCard
-        title={"My Experience"}
+        title={"Professional Experience"}
         para={
-          "18+ websites and AI integrations delivered for businesses across Slovakia, Germany, and Austria."
+          "AI automation and high-performance web development for businesses across Central Europe."
         }
         info={[
           {
-            date: "2022–Now",
-            position: "Freelance · Bratislava",
-            instition: "Web Developer & AI Specialist",
+            date: "2024–Now",
+            position: "Lenovo · Bratislava",
+            instition: "AI Automation Analyst",
           },
           {
             date: "2024",
-            position: "Web & Social Media Integration",
+            position: "Web & Social Media",
             instition: "First AI Chatbot Deployed",
+          },
+          {
+            date: "2022–Now",
+            position: "vlad-weby.sk · 18+ projects",
+            instition: "Freelance Web Developer",
           },
           {
             date: "2022",
