@@ -9,8 +9,8 @@ export const projectList = [
     {
       id: 2,
       image: "/img/project/pro3.png",
-      heading: "Web Design",
-      subHeading: "ManzelPro - Handyman services in Slovakia",
+      heading: "AI & Payment Integration",
+      subHeading: "Beauty in Perfection - AI & Payment System Integration",
       category:["services", "landing_page", "all"]
     },
     {
