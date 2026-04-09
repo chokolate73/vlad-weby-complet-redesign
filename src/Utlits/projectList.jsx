@@ -24,7 +24,7 @@ export const projectList = [
       id: 4,
       image: "/img/project/pro2.png",
       heading: "Landing Page",
-      subHeading: "Dobry Vodar - 24/7 Emergency Service Landing",
+      subHeading: "OstWesttravel - Travel Agency Service Landing",
       category:["landing_page", "website", "all"]
     },
     {
