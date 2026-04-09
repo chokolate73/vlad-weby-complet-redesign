@@ -1,31 +1,20 @@
 import React from "react";
 
-const skillsList = [
+const skillGroups = [
   {
-    id: 1,
-    skill: "React / Next.js",
-    percentage: "95%",
-    image: "/img/about/figma.png",
+    label: "Web Development",
+    tags: ["Next.js", "React", "Tailwind CSS", "Supabase", "Stripe"],
   },
   {
-    id: 2,
-    skill: "Tailwind CSS",
-    percentage: "95%",
-    image: "/img/about/html.png",
+    label: "AI & Automation",
+    tags: ["Claude API", "OpenAI API", "n8n", "Power Automate", "Pinecone"],
   },
   {
-    id: 3,
-    skill: "AI / ChatGPT",
-    percentage: "90%",
-    image: "/img/about/word.png",
-  },
-  {
-    id: 4,
-    skill: "SEO & Analytics",
-    percentage: "85%",
-    image: "/img/about/boot.png",
+    label: "SEO & Tools",
+    tags: ["Google Analytics", "SEO", "HubSpot", "Vercel"],
   },
 ];
+
 const Skills = ({ isTabActive }) => {
   return (
     <div className={`w-full duration-700 ${isTabActive === "skills" ? "z-10 opacity-100 translate-y-0" : "translate-y-20 -z-10 opacity-0 absolute  top-0 "} `}>
@@ -38,31 +27,28 @@ const Skills = ({ isTabActive }) => {
           </div>
           <div>
             <div>
-              <h2 className="text-[42px] font-semibold text-clr_white mb-5">My Skills</h2>
+              <h2 className="text-[42px] font-semibold text-clr_white mb-5">Tech Stack</h2>
               <p className="text-lg text-clr_pra mb-0">
-                Modern tech stack for fast, SEO-optimized websites. React, Next.js,
-                Tailwind — clean code, fast websites, easy updates. Plus AI
-                integrations that give your business a competitive edge.
+                Modern stack for high-performance websites and AI-powered automation.
               </p>
-              <div className="mt-10">
-                <div className="grid xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 grid-cols-1 justify-between  gap-6">
-                  {skillsList.map(({id, skill, image, percentage}) => {
-                    return (
-                      <div key={id} className="rounded-[10px] bg-[#1D1D1D] p-[35px] border border-[#1D1D1D] duration-500 hover:border-clr_base">
-                        <div className="flex items-center gap-6">
-                          <div>
-                            <img src={image} alt="img" />
-                          </div>
-                          <div>
-                            <span className="md:text-lg text-base lg:mb-[15px] mb-[10px] block text-clr_pra">{skill}</span>
-                            <h1 className="font-semibold text-5xl text-clr_white">{percentage}</h1>
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-
-                </div>
+              <div className="mt-10 flex flex-col gap-8">
+                {skillGroups.map(({ label, tags }) => (
+                  <div key={label}>
+                    <span className="text-clr_base font-medium text-base mb-3 block">
+                      {label}
+                    </span>
+                    <div className="flex flex-wrap gap-3">
+                      {tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-sm text-gray-300 border border-[#333] bg-[#1e1e1e] rounded-full px-4 py-[6px]"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
