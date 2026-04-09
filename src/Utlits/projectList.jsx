@@ -30,8 +30,8 @@ export const projectList = [
     {
       id: 5,
       image: "/img/project/pro4.png",
-      heading: "AI Integration",
-      subHeading: "AI Chatbot - Web & Social Media",
+      heading: "Tech Services",
+      subHeading: "Irsava Tech - Expert Mobile & Laptop Repair with BGA Soldering",
       category:["services", "website", "all"]
     },
     {
