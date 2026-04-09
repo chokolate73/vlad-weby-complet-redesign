@@ -6,7 +6,7 @@ import Header from "@/Components/Shared/Header/Header";
 
 export const metadata = {
   title: "Vlad Weby",
-  description: "Web developer & AI specialist based in Bratislava. Modern websites that earn — not just look good.",
+  description: "Web developer & AI specialist based in Bratislava. Modern websites that earn - not just look good.",
 };
 
 export default function RootLayout({ children }) {

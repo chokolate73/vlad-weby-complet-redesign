@@ -54,8 +54,8 @@ const AboutMe = ({ isTabActive }) => {
                 data-aos="fade-up"
                 data-aos-duration="500"
               >
-                I handle every project personally — from the first call to launch.
-                A good website isn't about pixels — it's about how many customers
+                I handle every project personally - from the first call to launch.
+                A good website isn't about pixels - it's about how many customers
                 it brings you. Four languages, one contact, zero overhead.
               </p>
               <div className="mt-10">
