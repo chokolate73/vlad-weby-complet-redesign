@@ -49,7 +49,7 @@ const Footer = () => {
                 </p>
                 <Link
                   href={""}
-                  className="text-white lg:text-4xl sm:text-[28px] text-lg underline capitalize"
+                  className="text-white lg:text-4xl sm:text-[28px] text-lg underline"
                 >
                   v.hvorov73@gmail.com
                 </Link>
