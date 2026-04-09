@@ -1,11 +1,14 @@
 'use client'
 import React from "react";
+import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "react-bootstrap-icons";
 
-const Blog = ({ category, date, readTime, heading, para }) => {
+const Blog = ({ slug, category, date, readTime, heading, para }) => {
+  const href = slug ? `/blog/${slug}` : "#";
   return (
-    <div
-      className="lg:pb-8 pb-6 lg:pt-8 pt-6 group duration-500 border-b border-b-[rgb(38_37_37)] hover:border-b-clr_base first:border-t first:border-t-[rgb(38_37_37)] hover:first:border-t-clr_base px-6"
+    <Link
+      href={href}
+      className="block lg:pb-8 pb-6 lg:pt-8 pt-6 group duration-500 border-b border-b-[rgb(38_37_37)] hover:border-b-clr_base first:border-t first:border-t-[rgb(38_37_37)] hover:first:border-t-clr_base px-6"
       data-aos="fade-up"
       data-aos-duration="1000"
     >
@@ -35,7 +38,7 @@ const Blog = ({ category, date, readTime, heading, para }) => {
           <ArrowRight className="text-white text-xl duration-500 group-hover:text-clr_base" />
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

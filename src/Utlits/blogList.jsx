@@ -1,6 +1,7 @@
 export const blogsList = [
   {
     id: 1,
+    slug: "improve-website-seo",
     category: "SEO",
     date: "February 12, 2026",
     readTime: "9 min",
@@ -9,6 +10,7 @@ export const blogsList = [
   },
   {
     id: 2,
+    slug: "ai-chatbot-for-business",
     category: "AI",
     date: "February 12, 2026",
     readTime: "8 min",
@@ -17,10 +19,29 @@ export const blogsList = [
   },
   {
     id: 3,
+    slug: "website-cost-2025",
     category: "Pricing",
     date: "February 12, 2026",
     readTime: "8 min",
     heading: "How Much Does a Website Cost in 2025?",
     para: "A complete overview of website pricing in Slovakia. Comparison of agencies, freelancers, and website builders. Find out how much you should invest.",
+  },
+  {
+    id: 4,
+    slug: "website-for-entrepreneurs",
+    category: "Guides",
+    date: "February 12, 2026",
+    readTime: "10 min",
+    heading: "Website for Entrepreneurs — Complete Guide",
+    para: "A practical guide for entrepreneurs and small businesses. What your website should include, how much to invest, and how to get started.",
+  },
+  {
+    id: 5,
+    slug: "wordpress-vs-modern-website",
+    category: "Technology",
+    date: "February 12, 2026",
+    readTime: "7 min",
+    heading: "WordPress vs Modern Website — What's Better for Small Business?",
+    para: "A comparison of WordPress with modern technologies. Advantages, disadvantages, and which solution is ideal for whom.",
   },
 ];
