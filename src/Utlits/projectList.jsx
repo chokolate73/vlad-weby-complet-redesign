@@ -10,7 +10,7 @@ export const projectList = [
       id: 2,
       image: "/img/project/pro3.png",
       heading: "Web Design",
-      subHeading: "ManzelPro - Handyman services in Slovakia",
+      subHeading: "Julia's Bavarian Bloom - Floral Design Studio",
       category:["services", "landing_page", "all"]
     },
     {
@@ -23,8 +23,8 @@ export const projectList = [
     {
       id: 4,
       image: "/img/project/pro2.png",
-      heading: "Landing Page",
-      subHeading: "Dobry Vodar - 24/7 Emergency Service Landing",
+      heading: "AI & Payment Integration",
+      subHeading: "Beauty in Perfection - AI & Payment System Integration",
       category:["landing_page", "website", "all"]
     },
     {
