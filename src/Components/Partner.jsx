@@ -38,7 +38,7 @@ const Partner = () => {
           data-aos="fade-down"
           data-aos-duration="1000"
         >
-          Serving clients across Slovakia 🇸🇰 Germany 🇩🇪 Austria 🇦🇹 Ukraine 🇺🇦
+          Serving clients across the world
         </h4>
         <div className="swiper justify-between">
           <Swiper
