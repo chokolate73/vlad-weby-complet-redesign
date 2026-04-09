@@ -30,10 +30,7 @@ const Partner = () => {
               key={index}
               className="flex-shrink-0 sm:w-[150px] sm:h-[60px] w-[120px] h-[50px] rounded-lg bg-[#1e1e1e] border border-[#333] flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-500 cursor-default"
             >
-              {/* Replace placeholder with <img src={image} alt={name} className="max-w-[120px] max-h-[40px] object-contain" /> when logos are ready */}
-              <span className="text-[#666] text-xs sm:text-sm font-medium text-center px-2 select-none">
-                {name}
-              </span>
+              <img src={image} alt={name} className="max-w-[120px] max-h-[40px] object-contain" />
             </div>
           ))}
         </div>
