@@ -139,7 +139,7 @@ const Metting = () => {
                 name="service"
                 value={formData.service}
                 onChange={handleChange}
-                className="w-full bg-[rgb(20,20,20)] border border-[rgb(50,50,50)] rounded-lg px-5 py-4 text-white text-base outline-none focus:border-clr_base transition-colors duration-300 appearance-none"
+                className={`w-full bg-[rgb(20,20,20)] border border-[rgb(50,50,50)] rounded-lg px-5 py-4 ${formData.service ? "text-white" : "text-[#666]"} text-base outline-none focus:border-clr_base transition-colors duration-300 appearance-none`}
                 style={{
                   backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E")`,
                   backgroundRepeat: "no-repeat",
