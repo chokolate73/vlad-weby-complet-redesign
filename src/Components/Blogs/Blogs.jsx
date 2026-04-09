@@ -18,13 +18,14 @@ const Blogs = () => {
               <div>
                 {blogsList
                   .slice(0, 3)
-                  .map(({ id, date, image, heading }, index) => (
+                  .map(({ id, category, date, readTime, heading, para }) => (
                     <Blog
                       key={id}
+                      category={category}
                       date={date}
-                      image={image}
+                      readTime={readTime}
                       heading={heading}
-                      index={index}
+                      para={para}
                     />
                   ))}
               </div>
