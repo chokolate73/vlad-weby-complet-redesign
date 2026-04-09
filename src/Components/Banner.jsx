@@ -51,7 +51,6 @@ const Banner = () => {
                   Available for projects — free consultation
                 </span>
                 <span className="flex gap-4 items-center">
-                  worldwide
                   <i className="">
                     <ArrowUpRight />
                   </i>
