@@ -10,7 +10,7 @@ export const projectList = [
       id: 2,
       image: "/img/project/pro3.png",
       heading: "Web Design",
-      subHeading: "Julia's Bavarian Bloom - Floral Design Studio",
+      subHeading: "Anti-Aging Massage & Holistic Bodywork in Traunstein",
       category:["services", "landing_page", "all"]
     },
     {
@@ -31,7 +31,7 @@ export const projectList = [
       id: 5,
       image: "/img/project/pro4.png",
       heading: "Tech Services",
-      subHeading: "Irsava Tech - Expert Mobile & Laptop Repair with BGA Soldering",
+      subHeading: "Irsava Tech - Expert Mobile & Laptop Repair",
       category:["services", "website", "all"]
     },
     {
