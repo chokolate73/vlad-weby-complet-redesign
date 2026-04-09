@@ -6,8 +6,8 @@ const serviceList = [
   {
     id: "01",
     heading: "AI & Automation",
-    subHeading: "Competitive edge",
-    para: "ChatGPT Shopping, AI chatbots, n8n workflows - not just static websites. Give your business a competitive edge with smart automation.",
+    subHeading: "Your competitive edge",
+    para: "AI chatbots that handle customer inquiries, workflow automation that eliminates repetitive tasks, and API integrations that connect your tools. Less manual work, more clients, faster growth.",
   },
   {
     id: "02",
@@ -17,15 +17,15 @@ const serviceList = [
   },
   {
     id: "03",
-    heading: "Delivery in 3–5 Days",
-    subHeading: "Express delivery",
-    para: "No month-long waits. Fast delivery without compromising quality. From first call to finished website in days, not weeks.",
+    heading: "Weeks, Not Months",
+    subHeading: "Fast turnaround",
+    para: "Landing pages launch in days. Full websites go live in 1–2 weeks. Fast because the process is efficient — not because corners are cut.",
   },
   {
     id: "04",
-    heading: "Data-Driven Approach",
-    subHeading: "Measurable results",
-    para: "SEO, PageSpeed, analytics - measurable results, not just pretty design. Every decision backed by data.",
+    heading: "SEO & Performance Built In",
+    subHeading: "Found on Google",
+    para: "Every site is built for search engines from day one — fast loading, mobile-first, proper structure. Not an afterthought, not an upsell.",
   },
   {
     id: "05",
@@ -35,9 +35,9 @@ const serviceList = [
   },
   {
     id: "06",
-    heading: "Modern Tech Stack",
-    subHeading: "Production-ready code",
-    para: "React, Next.js, Tailwind - clean code, fast websites, easy updates. Built for performance and scalability.",
+    heading: "Websites That Earn",
+    subHeading: "Not just pretty design",
+    para: "Landing pages, business websites, web apps — designed to convert visitors into customers. Clean design that works for your business, not just looks good in a portfolio.",
   },
 ];
 
