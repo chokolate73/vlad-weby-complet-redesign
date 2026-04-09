@@ -9,8 +9,8 @@ export const projectList = [
     {
       id: 2,
       image: "/img/project/pro3.png",
-      heading: "AI & Payment Integration",
-      subHeading: "Beauty in Perfection - AI & Payment System Integration",
+      heading: "Web Design",
+      subHeading: "Julia's Bavarian Bloom - Floral Design Studio",
       category:["services", "landing_page", "all"]
     },
     {
