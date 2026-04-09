@@ -3,9 +3,11 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { blogsList } from "../../../Utlits/blogList";
 import AiChatbotArticle from "../../../Components/Articles/AiChatbotArticle";
+import SeoArticle from "../../../Components/Articles/SeoArticle";
 
 const articleComponents = {
   "ai-chatbot-for-business": AiChatbotArticle,
+  "improve-website-seo": SeoArticle,
 };
 
 export function generateStaticParams() {
