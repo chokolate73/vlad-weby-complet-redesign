@@ -24,7 +24,7 @@ const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
         </Link>
         <p className="text-sm mb-10 text-clr_pra break-words leading-normal">
           Web developer & AI specialist based in Bratislava. Modern websites
-          that earn — not just look good. Fast delivery, fair pricing.
+          that earn - not just look good. Fast delivery, fair pricing.
         </p>
         <div className="grid gap-6 mb-10">
           <div>

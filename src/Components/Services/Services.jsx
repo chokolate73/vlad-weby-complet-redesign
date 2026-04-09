@@ -7,7 +7,7 @@ const serviceList = [
     id: "01",
     heading: "AI & Automation",
     subHeading: "Competitive edge",
-    para: "ChatGPT Shopping, AI chatbots, n8n workflows — not just static websites. Give your business a competitive edge with smart automation.",
+    para: "ChatGPT Shopping, AI chatbots, n8n workflows - not just static websites. Give your business a competitive edge with smart automation.",
   },
   {
     id: "02",
@@ -25,7 +25,7 @@ const serviceList = [
     id: "04",
     heading: "Data-Driven Approach",
     subHeading: "Measurable results",
-    para: "SEO, PageSpeed, analytics — measurable results, not just pretty design. Every decision backed by data.",
+    para: "SEO, PageSpeed, analytics - measurable results, not just pretty design. Every decision backed by data.",
   },
   {
     id: "05",
@@ -37,7 +37,7 @@ const serviceList = [
     id: "06",
     heading: "Modern Tech Stack",
     subHeading: "Production-ready code",
-    para: "React, Next.js, Tailwind — clean code, fast websites, easy updates. Built for performance and scalability.",
+    para: "React, Next.js, Tailwind - clean code, fast websites, easy updates. Built for performance and scalability.",
   },
 ];
 
@@ -50,7 +50,7 @@ const Services = ({ isHeading }) => {
       <div className="container">
         {isHeading && (
           <Title
-            mainTitle="Business thinking, AI expertise, and freelance flexibility — at a fair price."
+            mainTitle="Business thinking, AI expertise, and freelance flexibility - at a fair price."
             sortTitle="I'm not another web agency"
           />
         )}

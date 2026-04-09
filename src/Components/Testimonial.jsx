@@ -25,7 +25,7 @@ const reviewList = [
     name: "Tsapenko Oleg",
     position: "Slovakia 🇸🇰",
     review: `Huge thanks to Vlad! He built our website and helped promote
-    the company — the result exceeded all expectations. Vlad is a true
+    the company - the result exceeded all expectations. Vlad is a true
     professional, attentive to details, always available and ready to
     offer the best solutions. Very happy with the collaboration,
     definitely recommend!`,

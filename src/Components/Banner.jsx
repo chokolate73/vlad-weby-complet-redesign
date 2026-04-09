@@ -47,13 +47,9 @@ const Banner = () => {
           <div>
             <div className="xl:pt-[145px] xl:pb-[180px] lg:pt-[120px] lg:pb-[150px] md:pt-[90px] md:pb-[100px] sm:pt-[80px] sm:pb-[85px] py-[60px] xl:pl-10 pl-0">
               <Link href={"https://calendar.app.google/uvuY4SVfiJS92eRB6"} target="_blank" className="md:text-[24px] text-base leading-[140%] md:mb-[50px] mb-6  border-b border-b-clr_white text-clr_white inline-block pb-4 hover:text-clr_base hover:border-b-clr_base capitalize">
-                <span className="block">
-                  Available for projects — free consultation
-                </span>
-                <span className="flex gap-4 items-center">
-                  <i className="">
-                    <ArrowUpRight />
-                  </i>
+                <span className="inline-flex items-center gap-2">
+                  Available for projects - free consultation
+                  <ArrowUpRight />
                 </span>
               </Link>
               <h1 className="lg:text-[116px] md:text-[68px] sm:text-[48px] text-[34px] font-semibold sm:mb-[50px] mb-[30px] leading-[120%]">

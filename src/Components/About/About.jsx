@@ -52,7 +52,7 @@ const About = () => {
               data-aos="fade-up"
               data-aos-duration="1500"
             >
-              I build websites that earn — not just look good. Modern development,
+              I build websites that earn - not just look good. Modern development,
               AI tools, and measurable results at a price that doesn't require
               agency budgets.
             </p>
