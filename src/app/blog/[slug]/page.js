@@ -1,7 +1,12 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import PageHeader from "../../../Components/Shared/PageHeader";
+import Link from "next/link";
 import { blogsList } from "../../../Utlits/blogList";
+import AiChatbotArticle from "../../../Components/Articles/AiChatbotArticle";
+
+const articleComponents = {
+  "ai-chatbot-for-business": AiChatbotArticle,
+};
 
 export function generateStaticParams() {
   return blogsList.map((blog) => ({ slug: blog.slug }));
@@ -14,25 +19,39 @@ const BlogArticle = ({ params }) => {
     notFound();
   }
 
+  const ArticleComponent = articleComponents[blog.slug];
+
   return (
-    <>
-      <PageHeader heading={blog.heading} page={"Blog"} />
-      <section className="pb_120">
-        <div className="container max-w-[800px]">
-          <div className="flex items-center gap-3 mb-8">
-            <span className="text-sm text-clr_base border border-clr_base rounded-full py-1 px-3">
-              {blog.category}
-            </span>
-            <span className="text-clr_pra text-sm">{blog.date}</span>
-            <span className="text-clr_pra text-sm">{blog.readTime} read</span>
-          </div>
-          <div className="text-clr_pra text-base leading-relaxed">
-            <p>{blog.para}</p>
-            <p className="mt-6 text-white text-lg">Full article coming soon.</p>
-          </div>
+    <section className="pt_120">
+      {/* Breadcrumbs */}
+      <div className="container max-w-[800px] mb-8">
+        <nav className="flex items-center gap-2 text-sm text-clr_pra">
+          <Link href="/" className="hover:text-white transition-colors">
+            Home
+          </Link>
+          <span>/</span>
+          <Link href="/all-blog" className="hover:text-white transition-colors">
+            Blog
+          </Link>
+          <span>/</span>
+          <span className="text-white">{blog.category}</span>
+        </nav>
+      </div>
+
+      {ArticleComponent ? (
+        <ArticleComponent />
+      ) : (
+        <div className="container max-w-[800px] pb_120">
+          <h1 className="text-3xl md:text-4xl text-white font-bold mb-6">
+            {blog.heading}
+          </h1>
+          <p className="text-clr_pra text-lg leading-relaxed mb-6">
+            {blog.para}
+          </p>
+          <p className="text-white text-lg">Full article coming soon.</p>
         </div>
-      </section>
-    </>
+      )}
+    </section>
   );
 };
 
