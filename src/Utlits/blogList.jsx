@@ -1,38 +1,47 @@
 export const blogsList = [
   {
     id: 1,
-    image: "/img/blog/bblog1.png",
-    date: "March 15, 2025",
-    heading: "Why your business needs a website in 2025",
-    para: `A professional website isn't a luxury - it's the foundation of your
-      digital presence. Learn why local businesses that invest in web see
-      3x more customer inquiries.`,
+    slug: "improve-website-seo",
+    category: "SEO",
+    date: "February 12, 2026",
+    readTime: "9 min",
+    heading: "How to Improve Your Website SEO — 10 Practical Tips",
+    para: "Specific steps you can take today for better visibility on Google. No technical jargon.",
   },
   {
     id: 2,
-    image: "/img/blog/bblog2.png",
-    date: "February 28, 2025",
-    heading: "How AI chatbots can boost your sales 24/7",
-    para: `AI chatbots trained on your business data work around the clock -
-      answering questions, explaining services, and capturing leads while
-      you sleep.`,
+    slug: "ai-chatbot-for-business",
+    category: "AI",
+    date: "February 12, 2026",
+    readTime: "8 min",
+    heading: "AI Chatbot for Business — How to Automate Customer Support",
+    para: "What is an AI chatbot, how does it work, and why does your business need one. Real-world examples and an implementation guide.",
   },
   {
     id: 3,
-    image: "/img/blog/bblog3.png",
-    date: "January 20, 2025",
-    heading: "SEO basics: getting found on Google in Slovakia",
-    para: `PageSpeed, meta tags, structured data - the essentials of SEO that
-      help your website rank higher and bring in organic traffic from
-      local searches.`,
+    slug: "website-cost-2025",
+    category: "Pricing",
+    date: "February 12, 2026",
+    readTime: "8 min",
+    heading: "How Much Does a Website Cost in 2025?",
+    para: "A complete overview of website pricing in Slovakia. Comparison of agencies, freelancers, and website builders. Find out how much you should invest.",
   },
   {
     id: 4,
-    image: "/img/blog/bblog4.png",
-    date: "December 10, 2024",
-    heading: "Landing page vs multi-page site: which do you need?",
-    para: `Choosing the right website type for your business goals. When a
-      single landing page outperforms a full site - and when you need
-      the complete package.`,
+    slug: "website-for-entrepreneurs",
+    category: "Guides",
+    date: "February 12, 2026",
+    readTime: "10 min",
+    heading: "Website for Entrepreneurs — Complete Guide",
+    para: "A practical guide for entrepreneurs and small businesses. What your website should include, how much to invest, and how to get started.",
+  },
+  {
+    id: 5,
+    slug: "wordpress-vs-modern-website",
+    category: "Technology",
+    date: "February 12, 2026",
+    readTime: "7 min",
+    heading: "WordPress vs Modern Website — What's Better for Small Business?",
+    para: "A comparison of WordPress with modern technologies. Advantages, disadvantages, and which solution is ideal for whom.",
   },
 ];

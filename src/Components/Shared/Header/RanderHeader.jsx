@@ -35,7 +35,7 @@ const RanderHeader = () => {
 
   return (
     <header
-      className={` ${fixdHeader ? "fixed top-0 left-0 z-50 bg-black" : "relative"
+      className={` ${fixdHeader ? "lg:fixed lg:top-0 lg:left-0 z-50 lg:bg-black relative" : "relative"
         } w-full z-10`}
     >
       <div className="xxl:max-w-[1805px] container mx-auto px-3">
