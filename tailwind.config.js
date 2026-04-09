@@ -51,10 +51,15 @@ export default {
             transform: "scale(1.5)",
             opacity: "0"
           }
-        }
+        },
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
-        "scales": "scales 2s linear infinite"
+        "scales": "scales 2s linear infinite",
+        "marquee": "marquee 25s linear infinite",
       },
       screens: {
         ...defaultTheme.screens,

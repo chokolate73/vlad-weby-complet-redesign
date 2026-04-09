@@ -1,68 +1,44 @@
 'use client'
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 
-import { Pagination, Autoplay, Navigation } from "swiper/modules";
-
-const partnerList = [
-  {
-    id: 1,
-    image: "/img/testimonial/partner1.png",
-  },
-  {
-    id: 2,
-    image: "/img/testimonial/partner2.png",
-  },
-  {
-    id: 3,
-    image: "/img/testimonial/partner3.png",
-  },
-  {
-    id: 4,
-    image: "/img/testimonial/partner4.png",
-  },
-  {
-    id: 5,
-    image: "/img/testimonial/partner1.png",
-  },
+const clients = [
+  { name: "Dobry Vodár", image: "/img/clients/dobry-vodar.png" },
+  { name: "TopSicher Umzüge", image: "/img/clients/topsicher-umzuge.png" },
+  { name: "ManželPro", image: "/img/clients/manzelpro.png" },
+  { name: "Massage Traunstein", image: "/img/clients/massage-traunstein.png" },
+  { name: "OST-West Travel", image: "/img/clients/ost-west-travel.png" },
+  { name: "dokto.sk", image: "/img/clients/dokto-sk.png" },
 ];
+
 const Partner = () => {
+  // Duplicate list for seamless infinite scroll
+  const doubled = [...clients, ...clients];
+
   return (
-    <>
-      <div className="pt_120">
-        <h4
-          className="text-center mx-auto mb-[60px] text-white text-2xl font-semibold leading-[130%]"
-          data-aos="fade-down"
-          data-aos-duration="1000"
-        >
-          Serving clients across the world
-        </h4>
-        <div className="swiper justify-between">
-          <Swiper
-            spaceBetween={50}
-            slidesPerView={5}
-            loop={true}
-            modules={[Pagination, Autoplay, Navigation]}
-          >
-            {partnerList.map(({ id, image }) => {
-              return (
-                <SwiperSlide key={id}>
-                  <div
-                    key={id}
-                    className="swiper-slide text-center flex justify-center relative"
-                  >
-                    <img src={image} alt="img" />
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
+    <div className="pt_120">
+      <h4
+        className="text-center mx-auto mb-[60px] text-white text-2xl font-semibold leading-[130%]"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+      >
+        Serving clients across the world
+      </h4>
+      <div className="overflow-hidden">
+        <div className="flex animate-marquee w-max gap-8 sm:gap-12">
+          {doubled.map(({ name, image }, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 sm:w-[150px] sm:h-[60px] w-[120px] h-[50px] rounded-lg bg-[#1e1e1e] border border-[#333] flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-500 cursor-default"
+            >
+              {/* Replace placeholder with <img src={image} alt={name} className="max-w-[120px] max-h-[40px] object-contain" /> when logos are ready */}
+              <span className="text-[#666] text-xs sm:text-sm font-medium text-center px-2 select-none">
+                {name}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
