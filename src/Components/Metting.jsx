@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { Envelope, Telephone, Clock, ChatDots } from "react-bootstrap-icons";
+import { Envelope, Telephone, Clock } from "react-bootstrap-icons";
 import TitleSecond from "./Shared/TitleSecond";
 
 const Metting = () => {
@@ -97,23 +97,6 @@ const Metting = () => {
                   </span>
                   <span className="text-white md:text-xl text-base font-medium">
                     Reply within 24 hours
-                  </span>
-                </span>
-              </div>
-              <div
-                className="flex items-center md:gap-5 gap-4 lg:pt-[30px] pt-[20px]"
-                data-aos="fade-up"
-                data-aos-duration="2000"
-              >
-                <span className="w-[60px] h-[60px] rounded-full bg-clr_base flex justify-center items-center shrink-0">
-                  <ChatDots className="text-[26px] text-clr_title" />
-                </span>
-                <span>
-                  <span className="text-clr_pra md:text-lg text-base mb-1 block">
-                    Free Consultation
-                  </span>
-                  <span className="text-white md:text-xl text-base font-medium">
-                    Free initial consultation
                   </span>
                 </span>
               </div>
