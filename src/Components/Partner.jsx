@@ -24,7 +24,7 @@ const Partner = () => {
         Serving clients across the world
       </h4>
       <div className="overflow-hidden">
-        <div className="flex animate-marquee w-max gap-8 sm:gap-12">
+        <div className="flex animate-marquee w-max gap-2 sm:gap-4">
           {doubled.map(({ name, image }, index) => (
             <div
               key={index}
