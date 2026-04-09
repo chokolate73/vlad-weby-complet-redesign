@@ -4,10 +4,12 @@ import Link from "next/link";
 import { blogsList } from "../../../Utlits/blogList";
 import AiChatbotArticle from "../../../Components/Articles/AiChatbotArticle";
 import SeoArticle from "../../../Components/Articles/SeoArticle";
+import EntrepreneursArticle from "../../../Components/Articles/EntrepreneursArticle";
 
 const articleComponents = {
   "ai-chatbot-for-business": AiChatbotArticle,
   "improve-website-seo": SeoArticle,
+  "website-for-entrepreneurs": EntrepreneursArticle,
 };
 
 export function generateStaticParams() {
