@@ -1,4 +1,3 @@
-import Link from "next/link";
 import React from "react";
 import { ArrowUpRight } from "react-bootstrap-icons";
 
@@ -15,22 +14,21 @@ const Service = ({ heading, subHeading, para, id }) => {
           <div>
             <h5 className="text-base lg:text-xl font-semibold text-white mb-2">{subHeading}</h5>
             <h2 className="text-[26px] xl:text-[40px] lg:text-3xl font-semibold lg:leading-[120%]">
-              <Link href={"/service-details"} className="text-white duration-500">
+              <span className="text-white">
                 {" "}
                 {heading}{" "}
-              </Link>
+              </span>
             </h2>
           </div>
         </div>
         <p className="text-clr_pra text-base lg:w-[400px] w-[300px]">{para}</p>
       </div>
 
-      <Link
-        href={"/service-details"}
-        className="h-[45px] w-[45px] sm:w-[60px] sm:h-[60px] rounded-md bg-[#1D1D1D] flex justify-center items-center duration-500 group-hover:bg-clr_base cursor-pointer"
+      <span
+        className="h-[45px] w-[45px] sm:w-[60px] sm:h-[60px] rounded-md bg-[#1D1D1D] flex justify-center items-center duration-500 group-hover:bg-clr_base"
       >
         <ArrowUpRight className="duration-500 group-hover:text-clr_title text-lg sm:text-xl text-white " />
-      </Link>
+      </span>
     </div>
   );
 };
