@@ -550,8 +550,8 @@ const AiChatbotArticle = () => {
       {/*  6. Without Chatbot vs With Chatbot                          */}
       {/* ------------------------------------------------------------ */}
       <section className="mb-16" data-aos="fade-up" data-aos-duration="800">
-        <div className="bg-white rounded-2xl p-8 md:p-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-clr_title">
+        <div className="bg-[rgb(30,30,30)] rounded-2xl p-8 md:p-12">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center text-white">
             Without Chatbot vs With Chatbot
           </h2>
 
@@ -565,7 +565,7 @@ const AiChatbotArticle = () => {
                 {withoutChatbot.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-3 text-clr_title/70"
+                    className="flex items-start gap-3 text-clr_pra"
                   >
                     <XCircleFill className="text-red-500 shrink-0 mt-0.5" />
                     <span>{item}</span>
@@ -575,7 +575,7 @@ const AiChatbotArticle = () => {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2 text-green-500">
+              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2 text-clr_base">
                 <CheckCircleFill />
                 With AI Chatbot
               </h3>
@@ -583,9 +583,9 @@ const AiChatbotArticle = () => {
                 {withChatbot.map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-3 text-clr_title/70"
+                    className="flex items-start gap-3 text-clr_pra"
                   >
-                    <CheckCircleFill className="text-green-500 shrink-0 mt-0.5" />
+                    <CheckCircleFill className="text-clr_base shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </li>
                 ))}
