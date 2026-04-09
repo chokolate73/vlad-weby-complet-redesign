@@ -23,8 +23,8 @@ export const projectList = [
     {
       id: 4,
       image: "/img/project/pro2.png",
-      heading: "Landing Page",
-      subHeading: "OstWesttravel - Travel Agency Service Landing",
+      heading: "AI & Payment Integration",
+      subHeading: "Beauty in Perfection - AI & Payment System Integration",
       category:["landing_page", "website", "all"]
     },
     {
