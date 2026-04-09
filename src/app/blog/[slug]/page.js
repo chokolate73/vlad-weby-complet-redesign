@@ -5,11 +5,13 @@ import { blogsList } from "../../../Utlits/blogList";
 import AiChatbotArticle from "../../../Components/Articles/AiChatbotArticle";
 import SeoArticle from "../../../Components/Articles/SeoArticle";
 import EntrepreneursArticle from "../../../Components/Articles/EntrepreneursArticle";
+import WordpressVsModernArticle from "../../../Components/Articles/WordpressVsModernArticle";
 
 const articleComponents = {
   "ai-chatbot-for-business": AiChatbotArticle,
   "improve-website-seo": SeoArticle,
   "website-for-entrepreneurs": EntrepreneursArticle,
+  "wordpress-vs-modern-website": WordpressVsModernArticle,
 };
 
 export function generateStaticParams() {
