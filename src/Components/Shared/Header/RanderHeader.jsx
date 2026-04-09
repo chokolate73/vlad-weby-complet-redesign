@@ -41,7 +41,7 @@ const RanderHeader = () => {
       <div className="xxl:max-w-[1805px] container mx-auto px-3">
         <div className="flex justify-between items-center w-full relative py-5">
           <div className="main__logo">
-            <Link href={"/"} className="block xl:w-[150px] w-[100px]">
+            <Link href={"/"} className="block xl:w-[100px] w-[70px]">
               <img
                 src={"/img/logo/logo.png"}
                 alt="logo"
