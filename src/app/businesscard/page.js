@@ -45,8 +45,8 @@ const BusinessCard = () => {
         <div className="flex justify-center">
           <div className="w-full max-w-[480px]">
             <div className="bg-[rgb(29_29_29)] rounded-[20px] overflow-hidden border border-clr_cusborder">
-              <div className="relative bg-common_bg flex justify-center pt-10 pb-16">
-                <div className="w-[160px] h-[160px] sm:w-[200px] sm:h-[200px] rounded-full overflow-hidden border-4 border-clr_base">
+              <div className="flex justify-center pt-8 sm:pt-10 pb-4">
+                <div className="w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] rounded-full overflow-hidden border-4 border-clr_base">
                   <img
                     src="/img/banner/banner-man.png"
                     alt="Vladislav Khvorov"
@@ -54,11 +54,11 @@ const BusinessCard = () => {
                   />
                 </div>
               </div>
-              <div className="text-center -mt-6">
+              <div className="text-center pb-2">
                 <h1 className="text-white text-2xl sm:text-3xl font-bold">
                   Vladislav Khvorov
                 </h1>
-                <p className="text-clr_base text-base sm:text-lg mt-1 font-caveat text-xl">
+                <p className="text-clr_base mt-1 font-caveat text-xl sm:text-2xl">
                   Web Developer & AI Specialist
                 </p>
               </div>
