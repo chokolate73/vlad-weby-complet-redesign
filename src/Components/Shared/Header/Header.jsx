@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 
 const Header = () => {
   const pathname = usePathname()
+
   return (
     <>
       {pathname === "/" ? (

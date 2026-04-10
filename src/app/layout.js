@@ -1,7 +1,6 @@
 import "./globals.css";
 import AddAnimation from "@/Components/Shared/AddAnimation";
-import Footer from "@/Components/Shared/Footer";
-import Header from "@/Components/Shared/Header/Header";
+import LayoutShell from "@/Components/Shared/LayoutShell";
 
 
 export const metadata = {
@@ -14,9 +13,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <AddAnimation/>
-        <Header/>
-        {children}
-        <Footer/>
+        <LayoutShell>
+          {children}
+        </LayoutShell>
       </body>
     </html>
   );
