@@ -41,7 +41,7 @@ const Banner = () => {
   };
 
   return (
-    <section id="home">
+    <section id="home" className="relative">
       <div className="container">
         <div className="grid md:grid-cols-[70%_auto] gap-5">
           <div>
@@ -58,7 +58,7 @@ const Banner = () => {
                   Earn Money
                 </span>
               </h1>
-              <div className="flex items-center gap-3 sm:gap-4 md:gap-6">
+              <div className="md:flex hidden items-center gap-3 sm:gap-4 md:gap-6">
                 <img src={"/img/banner/bn-arrow.png"} alt="img" className="w-[24px] sm:w-[30px] md:w-[40px]" />
                 <div onClick={openLightbox} className="cursor-pointer relative xl:w-[60px] xl:h-[60px] md:w-[46px] md:h-[46px] sm:w-[38px] sm:h-[38px] w-[32px] h-[32px] flex justify-center items-center rounded-full border border-clr_white before:absolute before:border-2 before:border-clr_white before:w-full before:h-full before:content:[''] before:rounded-full before:animate-scales  ">
                   <i className="text-clr_white md:text-[32px] sm:text-[24px] text-[18px]">
@@ -79,6 +79,15 @@ const Banner = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="md:hidden flex items-center gap-3 absolute bottom-[16px] left-[12px] z-10">
+        <img src={"/img/banner/bn-arrow.png"} alt="img" className="w-[24px] sm:w-[30px]" />
+        <div onClick={openLightbox} className="cursor-pointer relative sm:w-[38px] sm:h-[38px] w-[32px] h-[32px] flex justify-center items-center rounded-full border border-clr_white before:absolute before:border-2 before:border-clr_white before:w-full before:h-full before:content:[''] before:rounded-full before:animate-scales  ">
+          <i className="text-clr_white sm:text-[24px] text-[18px]">
+            <PlayFill />
+          </i>
+        </div>
+        <span className="sm:text-sm text-xs text-clr_white w-[50px] sm:w-[60px]">Work Process</span>
       </div>
       <div className="hidden absolute -left-[40px] top-1/2 -translate-y-1/2 xl:grid gap-[220px] ">
         <div className="rotate-90 flex items-center justify-center gap-[16px] ">
