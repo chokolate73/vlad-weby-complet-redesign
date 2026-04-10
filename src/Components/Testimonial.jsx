@@ -135,7 +135,7 @@ const Testimonial = () => {
             <img src={"/img/testimonial/testi-arrow.png"} alt="img" />
           </div>
         </div>
-        <Partner />
+        {/* <Partner /> */}
       </div>
     </section>
   );
