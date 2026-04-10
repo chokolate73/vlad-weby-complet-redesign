@@ -111,7 +111,6 @@ body {
   color: transparent;
   transition: all 0.5s;
   position: relative;
-  white-space: nowrap;
 }
 
 .designers::before {
@@ -120,10 +119,16 @@ body {
   color: #c9f31d;
   width: 0px;
   overflow: hidden;
-  white-space: nowrap;
   animation: pulse-width 3s ease-in infinite;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #c9f31d;
+}
+
+@media (min-width: 640px) {
+  .designers,
+  .designers::before {
+    white-space: nowrap;
+  }
 }
 
 @keyframes pulse-width {

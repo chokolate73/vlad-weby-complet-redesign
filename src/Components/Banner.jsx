@@ -46,7 +46,7 @@ const Banner = () => {
         <div className="grid md:grid-cols-[70%_auto] gap-5">
           <div>
             <div className="xl:pt-[145px] xl:pb-[180px] lg:pt-[120px] lg:pb-[150px] md:pt-[90px] md:pb-[100px] sm:pt-[80px] sm:pb-[85px] py-[60px] xl:pl-10 pl-0">
-              <Link href={"https://calendar.app.google/uvuY4SVfiJS92eRB6"} target="_blank" className="md:text-[24px] text-base leading-[140%] md:mb-[50px] mb-6  border-b border-b-clr_white text-clr_white inline-block pb-4 hover:text-clr_base hover:border-b-clr_base capitalize">
+              <Link href={"https://calendar.app.google/uvuY4SVfiJS92eRB6"} target="_blank" className="md:text-[24px] text-base leading-[140%] md:mb-[50px] mb-6  border-b border-b-clr_white text-clr_white hidden sm:inline-block pb-4 hover:text-clr_base hover:border-b-clr_base capitalize">
                 <span className="inline-flex items-center gap-2">
                   Available for projects - free consultation
                   <ArrowUpRight />
@@ -58,18 +58,18 @@ const Banner = () => {
                   Earn Money
                 </span>
               </h1>
-              <div className="flex items-center gap-6">
-                <img src={"/img/banner/bn-arrow.png"} alt="img" />
-                <div onClick={openLightbox} className="cursor-pointer relative xl:w-20 xl:h-20 sm:w-[60px] sm:h-[60px] w-[50px] h-[50px] flex justify-center items-center rounded-full border border-clr_white before:absolute before:border-2 before:border-clr_white before:w-full before:h-full before:content:[''] before:rounded-full before:animate-scales  ">
-                  <i className="text-clr_white sm:text-[42px] text-[30px]">
+              <div className="flex items-center gap-4 sm:gap-6">
+                <img src={"/img/banner/bn-arrow.png"} alt="img" className="hidden sm:block" />
+                <div onClick={openLightbox} className="cursor-pointer relative xl:w-20 xl:h-20 sm:w-[60px] sm:h-[60px] w-[44px] h-[44px] flex justify-center items-center rounded-full border border-clr_white before:absolute before:border-2 before:border-clr_white before:w-full before:h-full before:content:[''] before:rounded-full before:animate-scales  ">
+                  <i className="text-clr_white sm:text-[42px] text-[24px]">
                     <PlayFill />
                   </i>
                 </div>
-                <span className="sm:text-xl text-base text-clr_white w-[67px]">Work Process</span>
+                <span className="sm:text-xl text-sm text-clr_white">Work Process</span>
               </div>
             </div>
           </div>
-          <div>
+          <div className="hidden md:block">
             <div
               className={`absolute xxl:left-[calc(50%--120px)] left-[calc(50%--80px)] bottom-0 ${position ? "right_up_animat" : "right_up"
                 }`}
