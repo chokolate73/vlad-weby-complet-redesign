@@ -45,7 +45,7 @@ const Banner = () => {
       <div className="container">
         <div className="grid md:grid-cols-[70%_auto] gap-5">
           <div>
-            <div className="xl:pt-[145px] xl:pb-[180px] lg:pt-[120px] lg:pb-[150px] md:pt-[90px] md:pb-[100px] sm:pt-[40px] sm:pb-[42px] py-[30px] xl:pl-10 pl-0">
+            <div className="xl:pt-[145px] xl:pb-[180px] lg:pt-[120px] lg:pb-[150px] md:pt-[90px] md:pb-[100px] sm:pt-[40px] sm:pb-[180px] pt-[30px] pb-[200px] xl:pl-10 pl-0">
               <Link href={"https://calendar.app.google/uvuY4SVfiJS92eRB6"} target="_blank" className="md:text-[24px] text-sm sm:text-base leading-[140%] md:mb-[50px] mb-4  border-b border-b-clr_white text-clr_white inline-block pb-2 sm:pb-4 hover:text-clr_base hover:border-b-clr_base capitalize">
                 <span className="inline-flex items-center gap-2">
                   Available for projects - free consultation
