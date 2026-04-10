@@ -59,23 +59,23 @@ const Banner = () => {
                 </span>
               </h1>
               <div className="flex items-center gap-6">
-                <img src={"/img/banner/bn-arrow.png"} alt="img" />
-                <div onClick={openLightbox} className="cursor-pointer relative xl:w-20 xl:h-20 sm:w-[60px] sm:h-[60px] w-[50px] h-[50px] flex justify-center items-center rounded-full border border-clr_white before:absolute before:border-2 before:border-clr_white before:w-full before:h-full before:content:[''] before:rounded-full before:animate-scales  ">
-                  <i className="text-clr_white sm:text-[42px] text-[30px]">
+                <img src={"/img/banner/bn-arrow.png"} alt="img" className="w-[35px] sm:w-[40px]" />
+                <div onClick={openLightbox} className="cursor-pointer relative xl:w-[60px] xl:h-[60px] sm:w-[46px] sm:h-[46px] w-[38px] h-[38px] flex justify-center items-center rounded-full border border-clr_white before:absolute before:border-2 before:border-clr_white before:w-full before:h-full before:content:[''] before:rounded-full before:animate-scales  ">
+                  <i className="text-clr_white sm:text-[32px] text-[22px]">
                     <PlayFill />
                   </i>
                 </div>
-                <span className="sm:text-xl text-base text-clr_white w-[67px]">Work Process</span>
+                <span className="sm:text-base text-sm text-clr_white w-[60px]">Work Process</span>
               </div>
             </div>
           </div>
           <div>
             <div
-              className={`absolute xxl:left-[calc(50%--120px)] left-[calc(50%--80px)] bottom-0 ${position ? "right_up_animat" : "right_up"
+              className={`absolute xxl:left-[calc(50%--160px)] left-[calc(50%--120px)] bottom-0 ${position ? "right_up_animat" : "right_up"
                 }`}
 
             >
-              <img src={"/img/banner/banner-man.png"} alt="Vladislav Khvorov" className="w-full" />
+              <img src={"/img/banner/banner-man.png"} alt="Vladislav Khvorov" className="w-full scale-110 origin-bottom" />
             </div>
           </div>
         </div>
