@@ -41,44 +41,53 @@ const Banner = () => {
   };
 
   return (
-    <section id="home">
+    <section id="home" className="relative">
       <div className="container">
         <div className="grid md:grid-cols-[70%_auto] gap-5">
           <div>
-            <div className="xl:pt-[145px] xl:pb-[180px] lg:pt-[120px] lg:pb-[150px] md:pt-[90px] md:pb-[100px] sm:pt-[80px] sm:pb-[85px] py-[60px] xl:pl-10 pl-0">
-              <Link href={"https://calendar.app.google/uvuY4SVfiJS92eRB6"} target="_blank" className="md:text-[24px] text-base leading-[140%] md:mb-[50px] mb-6  border-b border-b-clr_white text-clr_white inline-block pb-4 hover:text-clr_base hover:border-b-clr_base capitalize">
+            <div className="xl:pt-[145px] xl:pb-[180px] lg:pt-[120px] lg:pb-[150px] md:pt-[90px] md:pb-[100px] sm:pt-[40px] sm:pb-[180px] pt-[30px] pb-[200px] xl:pl-10 pl-0">
+              <Link href={"https://calendar.app.google/uvuY4SVfiJS92eRB6"} target="_blank" className="md:text-[24px] text-sm sm:text-base leading-[140%] md:mb-[50px] mb-4  border-b border-b-clr_white text-clr_white inline-block pb-2 sm:pb-4 hover:text-clr_base hover:border-b-clr_base capitalize">
                 <span className="inline-flex items-center gap-2">
                   Available for projects - free consultation
                   <ArrowUpRight />
                 </span>
               </Link>
-              <h1 className="lg:text-[116px] md:text-[68px] sm:text-[48px] text-[34px] font-semibold sm:mb-[50px] mb-[30px] leading-[120%]">
+              <h1 className="lg:text-[116px] md:text-[68px] sm:text-[48px] text-[34px] font-semibold sm:mb-[50px] mb-[16px] leading-[120%]">
                 <span className="text-clr_white"> Websites That</span>
                 <span className="block designers" data-text="Earn Money">
                   Earn Money
                 </span>
               </h1>
-              <div className="flex items-center gap-6">
-                <img src={"/img/banner/bn-arrow.png"} alt="img" />
-                <div onClick={openLightbox} className="cursor-pointer relative xl:w-20 xl:h-20 sm:w-[60px] sm:h-[60px] w-[50px] h-[50px] flex justify-center items-center rounded-full border border-clr_white before:absolute before:border-2 before:border-clr_white before:w-full before:h-full before:content:[''] before:rounded-full before:animate-scales  ">
-                  <i className="text-clr_white sm:text-[42px] text-[30px]">
+              <div className="md:flex hidden items-center gap-3 sm:gap-4 md:gap-6">
+                <img src={"/img/banner/bn-arrow.png"} alt="img" className="w-[24px] sm:w-[30px] md:w-[40px]" />
+                <div onClick={openLightbox} className="cursor-pointer relative xl:w-[60px] xl:h-[60px] md:w-[46px] md:h-[46px] sm:w-[38px] sm:h-[38px] w-[32px] h-[32px] flex justify-center items-center rounded-full border border-clr_white before:absolute before:border-2 before:border-clr_white before:w-full before:h-full before:content:[''] before:rounded-full before:animate-scales  ">
+                  <i className="text-clr_white md:text-[32px] sm:text-[24px] text-[18px]">
                     <PlayFill />
                   </i>
                 </div>
-                <span className="sm:text-xl text-base text-clr_white w-[67px]">Work Process</span>
+                <span className="md:text-base sm:text-sm text-xs text-clr_white w-[50px] sm:w-[60px]">Work Process</span>
               </div>
             </div>
           </div>
           <div>
             <div
-              className={`absolute xxl:left-[calc(50%--120px)] left-[calc(50%--80px)] bottom-0 ${position ? "right_up_animat" : "right_up"
+              className={`absolute xxl:left-[calc(50%--160px)] md:left-[calc(50%--120px)] left-[calc(50%--30px)] bottom-0 ${position ? "right_up_animat" : "right_up"
                 }`}
 
             >
-              <img src={"/img/banner/banner-man.png"} alt="Vladislav Khvorov" className="w-full" />
+              <img src={"/img/banner/banner-man.png"} alt="Vladislav Khvorov" className="w-full md:scale-110 scale-[1.4] origin-bottom" />
             </div>
           </div>
         </div>
+      </div>
+      <div className="md:hidden flex items-center gap-3 absolute bottom-[16px] left-[12px] z-10">
+        <img src={"/img/banner/bn-arrow.png"} alt="img" className="w-[24px] sm:w-[30px]" />
+        <div onClick={openLightbox} className="cursor-pointer relative sm:w-[38px] sm:h-[38px] w-[32px] h-[32px] flex justify-center items-center rounded-full border border-clr_white before:absolute before:border-2 before:border-clr_white before:w-full before:h-full before:content:[''] before:rounded-full before:animate-scales  ">
+          <i className="text-clr_white sm:text-[24px] text-[18px]">
+            <PlayFill />
+          </i>
+        </div>
+        <span className="sm:text-sm text-xs text-clr_white w-[50px] sm:w-[60px]">Work Process</span>
       </div>
       <div className="hidden absolute -left-[40px] top-1/2 -translate-y-1/2 xl:grid gap-[220px] ">
         <div className="rotate-90 flex items-center justify-center gap-[16px] ">
