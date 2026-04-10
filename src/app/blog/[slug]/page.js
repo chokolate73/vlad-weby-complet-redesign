@@ -6,12 +6,14 @@ import AiChatbotArticle from "../../../Components/Articles/AiChatbotArticle";
 import SeoArticle from "../../../Components/Articles/SeoArticle";
 import EntrepreneursArticle from "../../../Components/Articles/EntrepreneursArticle";
 import WordpressVsModernArticle from "../../../Components/Articles/WordpressVsModernArticle";
+import WebsiteCostArticle from "../../../Components/Articles/WebsiteCostArticle";
 
 const articleComponents = {
   "ai-chatbot-for-business": AiChatbotArticle,
   "improve-website-seo": SeoArticle,
   "website-for-entrepreneurs": EntrepreneursArticle,
   "wordpress-vs-modern-website": WordpressVsModernArticle,
+  "website-cost-2025": WebsiteCostArticle,
 };
 
 export function generateStaticParams() {

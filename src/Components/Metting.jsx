@@ -12,19 +12,30 @@ const Metting = () => {
     service: "",
     message: "",
   });
+  const [status, setStatus] = useState("idle"); // idle | sending | success | error
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const { name, email, phone, service, message } = formData;
-    const subject = encodeURIComponent(`Contact from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nPhone: ${phone || "N/A"}\nService: ${service || "N/A"}\n\nMessage:\n${message}`
-    );
-    window.location.href = `mailto:v.hvorov73@gmail.com?subject=${subject}&body=${body}`;
+    setStatus("sending");
+    try {
+      const res = await fetch("https://formspree.io/f/xzznlkne", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      if (res.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -164,10 +175,22 @@ const Metting = () => {
               />
               <button
                 type="submit"
-                className="w-full bg-clr_base text-clr_title font-semibold text-lg py-4 rounded-lg hover:opacity-90 transition-opacity duration-300 mt-1"
+                disabled={status === "sending"}
+                className="w-full bg-clr_base text-clr_title font-semibold text-lg py-4 rounded-lg hover:opacity-90 transition-opacity duration-300 mt-1 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Get My Free Quote
+                {status === "sending" ? "Sending..." : "Get My Free Quote"}
               </button>
+
+              {status === "success" && (
+                <p className="text-clr_base text-center text-sm mt-2">
+                  Thank you! Your message has been sent successfully.
+                </p>
+              )}
+              {status === "error" && (
+                <p className="text-red-500 text-center text-sm mt-2">
+                  Something went wrong. Please try again.
+                </p>
+              )}
             </form>
           </div>
         </div>
