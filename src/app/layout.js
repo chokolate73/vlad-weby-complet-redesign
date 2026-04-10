@@ -6,6 +6,19 @@ import LayoutShell from "@/Components/Shared/LayoutShell";
 export const metadata = {
   title: "Vlad Weby",
   description: "Web developer & AI specialist based in Bratislava. Modern websites that earn - not just look good.",
+  icons: {
+    icon: [
+      { url: "/img/logo/favicon.ico" },
+      { url: "/img/logo/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/img/logo/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: "/img/logo/apple-touch-icon.png",
+    other: [
+      { rel: "android-chrome-192x192", url: "/img/logo/android-chrome-192x192.png" },
+      { rel: "android-chrome-512x512", url: "/img/logo/android-chrome-512x512.png" },
+    ],
+  },
+  manifest: "/img/logo/site.webmanifest",
 };
 
 export default function RootLayout({ children }) {
