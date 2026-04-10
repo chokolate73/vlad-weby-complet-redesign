@@ -7,7 +7,7 @@ const hideLayoutRoutes = ['/businesscard']
 
 const LayoutShell = ({ children }) => {
   const pathname = usePathname()
-  const hideLayout = hideLayoutRoutes.includes(pathname)
+  const hideLayout = hideLayoutRoutes.some(route => pathname.endsWith(route))
 
   return (
     <>

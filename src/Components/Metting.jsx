@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { Envelope, Telephone, Clock } from "react-bootstrap-icons";
 import TitleSecond from "./Shared/TitleSecond";
+import { useTranslations } from 'next-intl';
 
 const Metting = () => {
+  const t = useTranslations('meeting');
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -12,7 +14,7 @@ const Metting = () => {
     service: "",
     message: "",
   });
-  const [status, setStatus] = useState("idle"); // idle | sending | success | error
+  const [status, setStatus] = useState("idle");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -45,13 +47,12 @@ const Metting = () => {
     >
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Left column */}
           <div>
             <div>
               <div className="border-b border-b-[rgb(39,38,38)] hover:border-b-clr_base duration-500 transition-all">
                 <TitleSecond
-                  mainTitle={"Let's build something that earns for you."}
-                  sortTitle={"Need a Website?"}
+                  mainTitle={t('mainTitle')}
+                  sortTitle={t('sortTitle')}
                 />
               </div>
               <div
@@ -64,7 +65,7 @@ const Metting = () => {
                 </span>
                 <span>
                   <span className="text-clr_pra md:text-lg text-base mb-1 block">
-                    Email
+                    {t('email')}
                   </span>
                   <Link
                     href="mailto:v.hvorov73@gmail.com"
@@ -84,7 +85,7 @@ const Metting = () => {
                 </span>
                 <span>
                   <span className="text-clr_pra md:text-lg text-base mb-1 block">
-                    Phone
+                    {t('phone')}
                   </span>
                   <Link
                     href="tel:+421XXX XXX XXX"
@@ -104,17 +105,16 @@ const Metting = () => {
                 </span>
                 <span>
                   <span className="text-clr_pra md:text-lg text-base mb-1 block">
-                    Response Time
+                    {t('responseTime')}
                   </span>
                   <span className="text-white md:text-xl text-base font-medium">
-                    Reply within 24 hours
+                    {t('replyWithin')}
                   </span>
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Right column - Contact Form */}
           <div data-aos="fade-up" data-aos-duration="1500">
             <form
               onSubmit={handleSubmit}
@@ -123,7 +123,7 @@ const Metting = () => {
               <input
                 type="text"
                 name="name"
-                placeholder="Your Name"
+                placeholder={t('yourName')}
                 required
                 value={formData.name}
                 onChange={handleChange}
@@ -132,7 +132,7 @@ const Metting = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="Your Email"
+                placeholder={t('yourEmail')}
                 required
                 value={formData.email}
                 onChange={handleChange}
@@ -141,7 +141,7 @@ const Metting = () => {
               <input
                 type="tel"
                 name="phone"
-                placeholder="Your Phone (optional)"
+                placeholder={t('yourPhone')}
                 value={formData.phone}
                 onChange={handleChange}
                 className="w-full bg-[rgb(20,20,20)] border border-[rgb(50,50,50)] rounded-lg px-5 py-4 text-white placeholder:text-[#666] text-base outline-none focus:border-clr_base transition-colors duration-300"
@@ -157,16 +157,16 @@ const Metting = () => {
                   backgroundPosition: "right 20px center",
                 }}
               >
-                <option value="" disabled className="text-[#666]">What do you need?</option>
-                <option value="landing">Landing page</option>
-                <option value="website">Full website</option>
-                <option value="ai">AI chatbot / automation</option>
-                <option value="seo">SEO &amp; optimization</option>
-                <option value="other">Other</option>
+                <option value="" disabled className="text-[#666]">{t('whatDoYouNeed')}</option>
+                <option value="landing">{t('landingPage')}</option>
+                <option value="website">{t('fullWebsite')}</option>
+                <option value="ai">{t('aiChatbot')}</option>
+                <option value="seo">{t('seoOptimization')}</option>
+                <option value="other">{t('other')}</option>
               </select>
               <textarea
                 name="message"
-                placeholder="Your Message"
+                placeholder={t('yourMessage')}
                 required
                 rows={4}
                 value={formData.message}
@@ -178,17 +178,17 @@ const Metting = () => {
                 disabled={status === "sending"}
                 className="w-full bg-clr_base text-clr_title font-semibold text-lg py-4 rounded-lg hover:opacity-90 transition-opacity duration-300 mt-1 disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                {status === "sending" ? "Sending..." : "Get My Free Quote"}
+                {status === "sending" ? t('sending') : t('getMyFreeQuote')}
               </button>
 
               {status === "success" && (
                 <p className="text-clr_base text-center text-sm mt-2">
-                  Thank you! Your message has been sent successfully.
+                  {t('successMessage')}
                 </p>
               )}
               {status === "error" && (
                 <p className="text-red-500 text-center text-sm mt-2">
-                  Something went wrong. Please try again.
+                  {t('errorMessage')}
                 </p>
               )}
             </form>

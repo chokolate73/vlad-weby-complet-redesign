@@ -4,32 +4,18 @@ import Experience from "./Experience";
 import Education from "./Education";
 import Skills from "./Skills";
 import AboutMe from "./AboutMe";
-
-const tabList = [
-  {
-    id: 1,
-    name: "About",
-    value: "about",
-  },
-  {
-    id: 2,
-    name: "Experience",
-    value: "experience",
-  },
-  {
-    id: 3,
-    name: "Languages",
-    value: "education",
-  },
-  {
-    id: 4,
-    name: "Skills",
-    value: "skills",
-  },
-];
+import { useTranslations } from 'next-intl';
 
 const About = () => {
+  const t = useTranslations('about');
   const [isTabActive, setIsTabAative] = useState("about");
+
+  const tabList = [
+    { id: 1, name: t('tabAbout'), value: "about" },
+    { id: 2, name: t('tabExperience'), value: "experience" },
+    { id: 3, name: t('tabLanguages'), value: "education" },
+    { id: 4, name: t('tabSkills'), value: "skills" },
+  ];
 
   const handleTabClick = (e) => {
     setIsTabAative(e);
@@ -52,9 +38,7 @@ const About = () => {
               data-aos="fade-up"
               data-aos-duration="1500"
             >
-              I build websites that earn - not just look good. Modern development,
-              AI tools, and measurable results at a price that doesn't require
-              agency budgets.
+              {t('intro')}
             </p>
           </div>
           <div>
@@ -83,7 +67,6 @@ const About = () => {
           </div>
         </div>
       </section>
-      {/* <Awards /> */}
     </>
   );
 };

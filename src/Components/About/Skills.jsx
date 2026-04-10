@@ -1,21 +1,24 @@
 import React from "react";
-
-const skillGroups = [
-  {
-    label: "Web Development",
-    tags: ["Next.js", "React", "Tailwind CSS", "Supabase", "Stripe"],
-  },
-  {
-    label: "AI & Automation",
-    tags: ["Claude API", "OpenAI API", "n8n", "Power Automate", "Pinecone"],
-  },
-  {
-    label: "SEO & Tools",
-    tags: ["Google Analytics", "SEO", "HubSpot", "Vercel"],
-  },
-];
+import { useTranslations } from 'next-intl';
 
 const Skills = ({ isTabActive }) => {
+  const t = useTranslations('skills');
+
+  const skillGroups = [
+    {
+      label: t('webDevelopment'),
+      tags: ["Next.js", "React", "Tailwind CSS", "Supabase", "Stripe"],
+    },
+    {
+      label: t('aiAutomation'),
+      tags: ["Claude API", "OpenAI API", "n8n", "Power Automate", "Pinecone"],
+    },
+    {
+      label: t('seoTools'),
+      tags: ["Google Analytics", "SEO", "HubSpot", "Vercel"],
+    },
+  ];
+
   return (
     <div className={`w-full duration-700 ${isTabActive === "skills" ? "z-10 opacity-100 translate-y-0" : "translate-y-20 -z-10 opacity-0 absolute  top-0 "} `}>
       <div className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden sm:p-[60px] py-[30px] px-[10px]">
@@ -27,9 +30,9 @@ const Skills = ({ isTabActive }) => {
           </div>
           <div>
             <div>
-              <h2 className="text-[42px] font-semibold text-clr_white mb-5">Tech Stack</h2>
+              <h2 className="text-[42px] font-semibold text-clr_white mb-5">{t('title')}</h2>
               <p className="text-lg text-clr_pra mb-0">
-                Modern stack for high-performance websites and AI-powered automation.
+                {t('description')}
               </p>
               <div className="mt-10 flex flex-col gap-8">
                 {skillGroups.map(({ label, tags }) => (

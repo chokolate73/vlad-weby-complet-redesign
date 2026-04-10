@@ -3,14 +3,38 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { List, ArrowRight, X } from "react-bootstrap-icons";
 import Drawer from "./Drawer";
-import { menuList } from "@/Utlits/menuList";
-
+import { useTranslations, useLocale } from 'next-intl';
+import LanguageSwitcher from "../LanguageSwitcher";
 
 const RanderHeader = () => {
+  const t = useTranslations('nav');
+  const locale = useLocale();
   const [isSidebarActive, setIsSidebarActive] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
   const [dropDownId, setDropDownId] = useState(null);
   const [fixdHeader, setFixedHeader] = useState(false);
+
+  const menuList = [
+    { id: 1, path: `/${locale}`, name: t('home') },
+    { id: 2, path: `/${locale}`, section: "#portfolio", name: t('portfolio') },
+    { id: 3, path: `/${locale}`, section: "#pricing", name: t('pricing') },
+    {
+      id: 4, path: `/${locale}`, section: "#services", name: t('services'),
+      dropDown: [
+        { id: 1, path: `/${locale}/all-services`, name: t('webDesign') },
+        { id: 2, path: `/${locale}/service-details`, name: t('aiChatbot') },
+      ],
+    },
+    { id: 5, path: `/${locale}`, section: "#faq", name: t('faq') },
+    {
+      id: 6, path: `/${locale}`, section: "#blog", name: t('blog'),
+      dropDown: [
+        { id: 1, path: `/${locale}/all-blog`, name: t('allArticles') },
+        { id: 2, path: `/${locale}/blog-details`, name: t('blogDetails') },
+      ],
+    },
+    { id: 7, path: `/${locale}`, section: "#contact", name: t('contact') },
+  ];
 
   useEffect(() => {
     window.addEventListener("scroll", isSticky);
@@ -21,7 +45,6 @@ const RanderHeader = () => {
 
   const isSticky = (e) => {
     const scrollTop = window.scrollY;
-
     scrollTop >= 35 ? setFixedHeader(true) : setFixedHeader(false);
   };
 
@@ -41,7 +64,7 @@ const RanderHeader = () => {
       <div className="xxl:max-w-[1805px] container mx-auto px-3">
         <div className="flex justify-between items-center w-full relative py-5">
           <div className="main__logo">
-            <Link href={"/"} className="block xl:w-[100px] w-[70px]">
+            <Link href={`/${locale}`} className="block xl:w-[100px] w-[70px]">
               <img
                 src={"/img/logo/logo.png"}
                 alt="logo"
@@ -92,13 +115,14 @@ const RanderHeader = () => {
             })}
           </ul>
           <div className="flex items-center gap-4">
+            <LanguageSwitcher />
             <Link
               href="https://calendar.app.google/uvuY4SVfiJS92eRB6"
               target="_blank"
               className="flex items-center gap-2 xxl:px-[26px] xxl:py-[19px] lg:px-[16px] lg:py-[9px] px-[11px] py-[7px] font-medium text-lg  capitalize relative bg-clr_base overflow-hidden rounded-[5px] transition-all text-clr_subtitle max-h-[58px] outline-none border-none  before:absolute before:content-[''] before:bottom-full before:bg-[#aad302] before:left-0 before:w-full before:h-full before:duration-500 before:bg-opacity-80 hover:before:bottom-0"
             >
               <span className="text-sm xl:text-lg z-10 relative duration-500">
-                Free Consultation
+                {t('freeConsultation')}
               </span>
               <span>
                 <ArrowRight className="text-xl z-10 relative duration-500" />

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Instagram, Envelope, Whatsapp, Telephone, PlayFill, ArrowUpRight } from "react-bootstrap-icons";
 import VideoPlay from "./Shared/VideoPlay";
+import { useTranslations } from 'next-intl';
 
 const socalIcon = [
   {
@@ -27,6 +28,7 @@ const socalIcon = [
   },
 ];
 const Banner = () => {
+  const t = useTranslations('banner');
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [position, setPosition] = useState(false);
 
@@ -48,14 +50,14 @@ const Banner = () => {
             <div className="xl:pt-[145px] xl:pb-[180px] lg:pt-[120px] lg:pb-[150px] md:pt-[90px] md:pb-[100px] sm:pt-[40px] sm:pb-[180px] pt-[30px] pb-[200px] xl:pl-10 pl-0">
               <Link href={"https://calendar.app.google/uvuY4SVfiJS92eRB6"} target="_blank" className="md:text-[24px] text-sm sm:text-base leading-[140%] md:mb-[50px] mb-4  border-b border-b-clr_white text-clr_white inline-block pb-2 sm:pb-4 hover:text-clr_base hover:border-b-clr_base capitalize">
                 <span className="inline-flex items-center gap-2">
-                  Available for projects - free consultation
+                  {t('availableForProjects')}
                   <ArrowUpRight />
                 </span>
               </Link>
               <h1 className="lg:text-[116px] md:text-[68px] sm:text-[48px] text-[34px] font-semibold sm:mb-[50px] mb-[16px] leading-[120%]">
-                <span className="text-clr_white"> Websites That</span>
-                <span className="block designers" data-text="Earn Money">
-                  Earn Money
+                <span className="text-clr_white"> {t('websitesThat')}</span>
+                <span className="block designers" data-text={t('earnMoney')}>
+                  {t('earnMoney')}
                 </span>
               </h1>
               <div className="md:flex hidden items-center gap-3 sm:gap-4 md:gap-6">
@@ -65,7 +67,7 @@ const Banner = () => {
                     <PlayFill />
                   </i>
                 </div>
-                <span className="md:text-base sm:text-sm text-xs text-clr_white w-[50px] sm:w-[60px]">Work Process</span>
+                <span className="md:text-base sm:text-sm text-xs text-clr_white w-[50px] sm:w-[60px]">{t('workProcess')}</span>
               </div>
             </div>
           </div>
@@ -87,7 +89,7 @@ const Banner = () => {
             <PlayFill />
           </i>
         </div>
-        <span className="sm:text-sm text-xs text-clr_white w-[50px] sm:w-[60px]">Work Process</span>
+        <span className="sm:text-sm text-xs text-clr_white w-[50px] sm:w-[60px]">{t('workProcess')}</span>
       </div>
       <div className="hidden absolute -left-[40px] top-1/2 -translate-y-1/2 xl:grid gap-[220px] ">
         <div className="rotate-90 flex items-center justify-center gap-[16px] ">
@@ -98,7 +100,7 @@ const Banner = () => {
         </div>
         <div className="flex items-center justify-center gap-[50px] rotate-90 mb-[0px]">
           <Link href={"#portfolio"} className="scroll text-clr_pra uppercase text-[15px]">
-            scroll down
+            {t('scrollDown')}
           </Link>
           <Link href={"#portfolio"} className="-rotate-90">
             <img src={"/img/banner/scroll-down.png"} alt="img" className="w-5" />
@@ -108,7 +110,7 @@ const Banner = () => {
       <div className="hidden absolute right-0 top-[55%] -translate-y-1/2 xl:grid gap-[150px]  ">
         <div className="flex items-center justify-center gap-[50px] rotate-90">
           <Link href={"https://www.instagram.com/vladislav.als"} target="_blank" className="scroll text-clr_pra uppercase text-[15px]">
-            Follow Me
+            {t('followMe')}
           </Link>
           <Link href={"https://www.instagram.com/vladislav.als"} target="_blank" className="-rotate-90">
             <img src={"/img/banner/scroll-down.png"} alt="img" className="w-5" />

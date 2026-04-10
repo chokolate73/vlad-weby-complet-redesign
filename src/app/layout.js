@@ -1,8 +1,5 @@
 import "./globals.css";
 import AddAnimation from "@/Components/Shared/AddAnimation";
-import LayoutShell from "@/Components/Shared/LayoutShell";
-import CookieConsent from "@/Components/Shared/CookieConsent";
-
 
 export const metadata = {
   title: "Vlad Weby",
@@ -24,13 +21,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html>
       <body>
-        <AddAnimation/>
-        <LayoutShell>
-          {children}
-        </LayoutShell>
-        <CookieConsent />
+        <AddAnimation />
+        {children}
       </body>
     </html>
   );

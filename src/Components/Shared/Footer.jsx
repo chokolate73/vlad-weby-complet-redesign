@@ -1,6 +1,8 @@
+'use client'
 import Link from "next/link";
 import React from "react";
 import { ArrowUpShort, ArrowRight } from "react-bootstrap-icons";
+import { useTranslations } from 'next-intl';
 
 const socalList = [
   {
@@ -29,6 +31,8 @@ const socalList = [
   },
 ];
 const Footer = () => {
+  const t = useTranslations('footer');
+
   return (
     <footer>
       <div className="container">
@@ -38,14 +42,13 @@ const Footer = () => {
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            Get In Touch
+            {t('getInTouch')}
           </div>
           <div className="flex md:flex-row flex-col justify-between gap-4">
             <div className="basis-1/2 shrink">
               <div>
                 <p className="xl:mb-[60px] lg:mb-10 mb-[10px]  lg:text-2xl sm:text-lg text-[17px] text-white max-w-lg">
-                  Helping local businesses grow with modern, high-performance
-                  websites. Based in Bratislava.
+                  {t('description')}
                 </p>
                 <Link
                   href={""}
@@ -85,14 +88,14 @@ const Footer = () => {
               <Link href={"/"} className="text-clr_base">
                 VladWeby.
               </Link>{" "}
-              All rights reserved.
+              {t('copyright')}
             </p>
             <ul className="terms flex gap-[38px]">
               <li>
-                <Link href={"/cookies"} className="text-lg text-white duration-500 hover:text-clr_base"> Cookie Policy </Link>
+                <Link href={"/cookies"} className="text-lg text-white duration-500 hover:text-clr_base"> {t('cookiePolicy')} </Link>
               </li>
               <li>
-                <Link href={"/cookies"} className="text-lg text-white duration-500 hover:text-clr_base"> Privacy Policy </Link>
+                <Link href={"/cookies"} className="text-lg text-white duration-500 hover:text-clr_base"> {t('privacyPolicy')} </Link>
               </li>
             </ul>
             <Link href={""} className="w-10 h-[50px] bg-clr_base rounded-[5px] flex justify-center items-center">

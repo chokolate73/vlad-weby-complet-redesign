@@ -2,8 +2,11 @@ import React from "react";
 import { XLg, ChevronRight } from "react-bootstrap-icons";
 import { socialIcons } from "../../../Utlits/socilIcons";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 
 const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
+  const t = useTranslations('drawer');
+
   return (
     <div
       className={`w-80 h-full fixed z-50  top-0 duration-500 overflow-y-scroll bg-black ${
@@ -23,25 +26,24 @@ const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
           <img src={"/img/logo/logo.png"} alt="img" />
         </Link>
         <p className="text-sm mb-10 text-clr_pra break-words leading-normal">
-          Web developer & AI specialist based in Bratislava. Modern websites
-          that earn - not just look good. Fast delivery, fair pricing.
+          {t('description')}
         </p>
         <div className="grid gap-6 mb-10">
           <div>
             <div>
-              <span className="block mb-2 uppercase text-clr_pra font-bold text-sm"> address </span>
+              <span className="block mb-2 uppercase text-clr_pra font-bold text-sm"> {t('address')} </span>
               <span className="textp capitalize text-white font-medium leading-[120%]"> Bottova 2A, Bratislava </span>
             </div>
           </div>
           <div>
             <div>
-              <span className="block mb-2 uppercase text-clr_pra font-bold text-sm"> email </span>
+              <span className="block mb-2 uppercase text-clr_pra font-bold text-sm"> {t('email')} </span>
               <Link href={"mailto:v.hvorov73@gmail.com"} className="textp text-white font-medium leading-[120%]"> v.hvorov73@gmail.com </Link>
             </div>
           </div>
           <div>
             <div>
-              <span className="block mb-2 uppercase text-clr_pra font-bold text-sm"> call now </span>
+              <span className="block mb-2 uppercase text-clr_pra font-bold text-sm"> {t('callNow')} </span>
               <Link href={"tel:+421919208426"} className="textp capitalize text-white font-medium leading-[120%]"> +421 919 208 426 </Link>
             </div>
           </div>
@@ -69,7 +71,7 @@ const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
               <ChevronRight />
             </i>
           </span>
-          <span className="z-10 relative duration-500"> Let's Talk </span>
+          <span className="z-10 relative duration-500"> {t('letsTalk')} </span>
         </Link>
       </div>
     </div>

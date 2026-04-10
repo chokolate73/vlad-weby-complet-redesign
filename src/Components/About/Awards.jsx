@@ -1,35 +1,18 @@
+'use client'
 import React from "react";
 import { ArrowRight } from "react-bootstrap-icons";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 
-
-const awardList = [
-  {
-    id: 1,
-    awardName: "AI Chatbot Integration",
-    contest: "Web & Social Media",
-    year: "2025",
-  },
-  {
-    id: 2,
-    awardName: "18+ Projects Delivered",
-    contest: "Landing Pages & Web Apps",
-    year: "2025",
-  },
-  {
-    id: 3,
-    awardName: "5.0 Star Rating",
-    contest: "Google Reviews",
-    year: "2025",
-  },
-  {
-    id: 4,
-    awardName: "4 Markets Served",
-    contest: "SK · DE · AT · UA",
-    year: "2025",
-  },
-];
 const Awards = () => {
+  const t = useTranslations('awards');
+
+  const awardList = [
+    { id: 1, awardName: t('items.chatbot.name'), contest: t('items.chatbot.contest'), year: "2025" },
+    { id: 2, awardName: t('items.projects.name'), contest: t('items.projects.contest'), year: "2025" },
+    { id: 3, awardName: t('items.rating.name'), contest: t('items.rating.contest'), year: "2025" },
+    { id: 4, awardName: t('items.markets.name'), contest: t('items.markets.contest'), year: "2025" },
+  ];
 
   return (
     <div className="bg-common_bg bg-center bg-no-repeat bg-cover rounded-[10px] overflow-hidden xxl:py-[120px] xl:py-[100px] py-[60px] ">
@@ -42,14 +25,14 @@ const Awards = () => {
             <tbody>
               <tr>
                 <td className="bg-transparent lg:text-xl md:text-lg text-base font-medium text-white py-[30px] border-b border-b-[#2c3030]">
-                  <span className="md:text-[42px] sm:text-[28px] text-lg">Achievements</span>
+                  <span className="md:text-[42px] sm:text-[28px] text-lg">{t('title')}</span>
                 </td>
                 <td className="bg-transparent lg:text-xl md:text-lg text-base font-medium text-white py-[30px] border-b border-b-[#2c3030]"></td>
                 <td className="text-end bg-transparent lg:text-xl md:text-lg text-base font-medium text-white py-[30px] border-b border-b-[#2c3030]">
                   <Link href={""}
                     className="md:text-lg sm:text-base text-sm  flex justify-end items-center text-clr_base gap-2"
                   >
-                    <span className="whitespace-nowrap">View My Work</span>
+                    <span className="whitespace-nowrap">{t('viewMyWork')}</span>
                     <i>
                       <ArrowRight />
                     </i>

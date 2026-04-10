@@ -1,59 +1,35 @@
+'use client'
 import React from "react";
 import Price from "./Price";
 import Title from "../Shared/Title";
+import { useTranslations } from 'next-intl';
 
-const planData = [
-  {
-    id: 1,
-    planName: "Landing Page",
-    price: "€390",
-    time: "one-time",
-    fetcher: [
-      "Custom One-Page Design",
-      "SEO Optimization",
-      "Fast Speed",
-      "Contact Form",
-      "Mobile Responsive",
-    ],
-    image: "/img/project/basic.png",
-  },
-  {
-    id: 2,
-    planName: "Multi-Page Website",
-    price: "€599",
-    time: "Best Value",
-    fetcher: [
-      "Up to 5 Custom Pages",
-      "Advanced SEO",
-      "CMS for Easy Editing",
-      "Blog / News Section",
-      "Google Maps & Analytics",
-    ],
-    image: "/img/project/warranty.png",
-  },
-  {
-    id: 3,
-    planName: "AI Growth Engine",
-    price: "€999",
-    time: "AI Powered",
-    fetcher: [
-      "Everything in Multi-Page",
-      "Custom AI Chatbot",
-      "Client Conversions",
-      "Web & Social Media",
-      "Auto-Booking System",
-    ],
-    image: "/img/project/premium-quality.png",
-  },
-];
+const planKeys = ['landing', 'multipage', 'ai'];
 
 const Pricing = () => {
+  const t = useTranslations('pricing');
+
+  const planData = planKeys.map((key, index) => ({
+    id: index + 1,
+    planName: t(`plans.${key}.name`),
+    price: t(`plans.${key}.price`),
+    time: t(`plans.${key}.time`),
+    fetcher: [
+      t(`plans.${key}.features.f1`),
+      t(`plans.${key}.features.f2`),
+      t(`plans.${key}.features.f3`),
+      t(`plans.${key}.features.f4`),
+      t(`plans.${key}.features.f5`),
+    ],
+    image: ["/img/project/basic.png", "/img/project/warranty.png", "/img/project/premium-quality.png"][index],
+  }));
+
   return (
     <section className="pt_120 pb_120">
       <div className="container">
         <Title
-          mainTitle={"Transparent pricing. High ROI. No hidden agency fees."}
-          sortTitle={"Invest in Your Growth"}
+          mainTitle={t('mainTitle')}
+          sortTitle={t('sortTitle')}
         />
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 justify-center">
           {planData.map(({ id, image, planName, fetcher, price, time }) => (

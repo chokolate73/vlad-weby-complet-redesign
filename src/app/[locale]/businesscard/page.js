@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Telephone, Envelope, Whatsapp, Globe } from "react-bootstrap-icons";
-import AddContactButton from "../../Components/AddContactButton";
+import AddContactButton from "@/Components/AddContactButton";
 
 export const metadata = {
   title: "Vlad Weby - Business Card",

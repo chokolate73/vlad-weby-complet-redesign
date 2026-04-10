@@ -1,0 +1,428 @@
+{
+  "metadata": {
+    "title": "Vlad Weby",
+    "description": "Webový vývojár a AI špecialista so sídlom v Bratislave. Moderné webstránky, ktoré zarábajú - nielen dobre vyzerajú."
+  },
+  "nav": {
+    "home": "Domov",
+    "portfolio": "Portfólio",
+    "pricing": "Cenník",
+    "services": "Služby",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "webDesign": "Webový dizajn",
+    "aiChatbot": "AI Chatbot",
+    "allArticles": "Všetky články",
+    "blogDetails": "Detail článku",
+    "freeConsultation": "Bezplatná konzultácia"
+  },
+  "banner": {
+    "availableForProjects": "Dostupný na projekty - bezplatná konzultácia",
+    "websitesThat": "Webstránky, ktoré",
+    "earnMoney": "Zarábajú",
+    "workProcess": "Pracovný postup",
+    "scrollDown": "posunúť nadol",
+    "followMe": "Sledujte ma"
+  },
+  "about": {
+    "intro": "Tvorím webstránky, ktoré zarábajú - nielen dobre vyzerajú. Moderný vývoj, AI nástroje a merateľné výsledky za cenu, ktorá nevyžaduje agentúrne rozpočty.",
+    "tabAbout": "O mne",
+    "tabExperience": "Skúsenosti",
+    "tabLanguages": "Jazyky",
+    "tabSkills": "Zručnosti",
+    "aboutMe": "O mne",
+    "aboutMeText": "Každý projekt riešim osobne - od prvého hovoru po spustenie. Dobrá webstránka nie je o pixeloch - je o tom, koľko zákazníkov vám prinesie. Štyri jazyky, jeden kontakt, nulová réžia.",
+    "email": "E-mail",
+    "phone": "Telefón",
+    "address": "Adresa",
+    "languages": "Jazyky"
+  },
+  "experience": {
+    "title": "Profesionálne skúsenosti",
+    "description": "AI automatizácia a vysokovýkonný webový vývoj pre firmy v strednej Európe.",
+    "items": {
+      "lenovo": {
+        "date": "2024–teraz",
+        "position": "Lenovo · Bratislava",
+        "role": "AI Automation Analyst"
+      },
+      "chatbot": {
+        "date": "2024",
+        "position": "Web & sociálne médiá",
+        "role": "Prvý AI Chatbot nasadený"
+      },
+      "freelance": {
+        "date": "2022–teraz",
+        "position": "vlad-weby.sk · 18+ projektov",
+        "role": "Freelance webový vývojár"
+      },
+      "founded": {
+        "date": "2022",
+        "position": "Freelance · 4 trhy",
+        "role": "Vlad Weby založený"
+      }
+    }
+  },
+  "education": {
+    "title": "Jazyky a trhy",
+    "description": "Štyri jazyky, viacero trhov. Tvorím viacjazyčné webstránky pre stredoeurópsky trh a ďalšie.",
+    "sk": "Slovenčina",
+    "en": "Angličtina",
+    "de": "Nemčina",
+    "ru": "Ruština"
+  },
+  "skills": {
+    "title": "Technológie",
+    "description": "Moderný stack pre vysokovýkonné webstránky a automatizáciu pomocou AI.",
+    "webDevelopment": "Webový vývoj",
+    "aiAutomation": "AI a automatizácia",
+    "seoTools": "SEO a nástroje"
+  },
+  "awards": {
+    "title": "Úspechy",
+    "viewMyWork": "Pozrite si moju prácu",
+    "items": {
+      "chatbot": {
+        "name": "Integrácia AI Chatbota",
+        "contest": "Web & sociálne médiá"
+      },
+      "projects": {
+        "name": "18+ doručených projektov",
+        "contest": "Landing pages & web aplikácie"
+      },
+      "rating": {
+        "name": "5.0 hviezdičkové hodnotenie",
+        "contest": "Google recenzie"
+      },
+      "markets": {
+        "name": "4 obsluhované trhy",
+        "contest": "SK · DE · AT · UA"
+      }
+    }
+  },
+  "projects": {
+    "mainTitle": "Príklady kvality, ktorú dostanete.",
+    "sortTitle": "Nedávne práce a ukážky",
+    "items": {
+      "pro1": {
+        "heading": "Webový dizajn",
+        "subHeading": "Dobrý Vodár - Profesionálna webstránka inštalatéra"
+      },
+      "pro2": {
+        "heading": "Webový dizajn",
+        "subHeading": "Anti-Aging masáže a holistická práca s telom v Traunsteine"
+      },
+      "pro3": {
+        "heading": "Webový vývoj",
+        "subHeading": "TopSicher Umzug - Sťahovacie služby v Nemecku"
+      },
+      "pro4": {
+        "heading": "AI & platobná integrácia",
+        "subHeading": "Beauty in Perfection - Integrácia AI a platobného systému"
+      },
+      "pro5": {
+        "heading": "Technické služby",
+        "subHeading": "Irsava Tech - Odborná oprava mobilov a notebookov"
+      },
+      "pro6": {
+        "heading": "Webový dizajn",
+        "subHeading": "ManzelPro - Viacjazyčná servisná webstránka"
+      }
+    }
+  },
+  "meeting": {
+    "mainTitle": "Poďme vytvoriť niečo, čo vám zarobí.",
+    "sortTitle": "Potrebujete webstránku?",
+    "email": "E-mail",
+    "phone": "Telefón",
+    "responseTime": "Doba odozvy",
+    "replyWithin": "Odpoveď do 24 hodín",
+    "yourName": "Vaše meno",
+    "yourEmail": "Váš e-mail",
+    "yourPhone": "Váš telefón (nepovinné)",
+    "whatDoYouNeed": "Čo potrebujete?",
+    "landingPage": "Landing page",
+    "fullWebsite": "Kompletná webstránka",
+    "aiChatbot": "AI chatbot / automatizácia",
+    "seoOptimization": "SEO a optimalizácia",
+    "other": "Iné",
+    "yourMessage": "Vaša správa",
+    "sending": "Odosielam...",
+    "getMyFreeQuote": "Získať bezplatnú cenovú ponuku",
+    "successMessage": "Ďakujeme! Vaša správa bola úspešne odoslaná.",
+    "errorMessage": "Niečo sa pokazilo. Skúste to prosím znova."
+  },
+  "services": {
+    "mainTitle": "Podnikateľské myslenie, AI odbornosť a flexibilita freelancera - za férovú cenu.",
+    "sortTitle": "Nie som ďalšia webová agentúra",
+    "items": {
+      "ai": {
+        "heading": "AI a automatizácia",
+        "subHeading": "Vaša konkurenčná výhoda",
+        "para": "AI chatboty, ktoré riešia otázky zákazníkov, automatizácia pracovných postupov, ktorá eliminuje opakujúce sa úlohy, a API integrácie, ktoré prepoja vaše nástroje. Menej manuálnej práce, viac klientov, rýchlejší rast."
+      },
+      "languages": {
+        "heading": "4 jazyky, 3+ trhy",
+        "subHeading": "SK · EN · DE · RU",
+        "para": "Viacjazyčné webstránky pre stredoeurópsky trh. Oslovte zákazníkov na Slovensku, v Nemecku, Rakúsku a ďalších krajinách."
+      },
+      "speed": {
+        "heading": "Týždne, nie mesiace",
+        "subHeading": "Rýchle dodanie",
+        "para": "Landing pages spustíme za dni. Kompletné webstránky sú live za 1–2 týždne. Rýchle, pretože proces je efektívny — nie preto, že sa šetrí na kvalite."
+      },
+      "seo": {
+        "heading": "SEO a výkon zabudované",
+        "subHeading": "Nájdený na Google",
+        "para": "Každý web je od prvého dňa optimalizovaný pre vyhľadávače — rýchle načítanie, mobile-first, správna štruktúra. Nie ako dodatok, nie ako príplatok."
+      },
+      "direct": {
+        "heading": "Priama komunikácia",
+        "subHeading": "Žiadni prostredníci",
+        "para": "Žiadny account manager. Hovoríte priamo s človekom, ktorý vám stránku tvorí. Jeden kontakt, nulová réžia."
+      },
+      "earn": {
+        "heading": "Webstránky, ktoré zarábajú",
+        "subHeading": "Nielen pekný dizajn",
+        "para": "Landing pages, firemné weby, webové aplikácie — navrhnuté tak, aby premieňali návštevníkov na zákazníkov. Čistý dizajn, ktorý pracuje pre váš biznis, nielen dobre vyzerá v portfóliu."
+      }
+    }
+  },
+  "faqSection": {
+    "mainTitle": "Odpovede na časté otázky",
+    "sortTitle": "FAQ",
+    "items": {
+      "pricing": {
+        "title": "Ceny",
+        "info": "Musím platiť mesačné poplatky?",
+        "list1": "Dizajn webstránky je jednorazový poplatok",
+        "list2": "Voliteľný balík starostlivosti: 25 €/mesiac",
+        "list3": "Zahŕňa aktualizácie, bezpečnosť a hosting"
+      },
+      "changes": {
+        "title": "Zmeny",
+        "info": "Čo ak potrebujem neskôr zmeniť texty alebo fotky?",
+        "list1": "Balík starostlivosti: postaráme sa o to za vás",
+        "list2": "Stačí poslať správu so zmenami",
+        "list3": "Stockové fotky a texty zahrnuté zadarmo"
+      },
+      "speed": {
+        "title": "Rýchlosť",
+        "info": "Ako rýchlo to bude hotové?",
+        "list1": "Zvyčajne 3 až 5 pracovných dní",
+        "list2": "Kompletné nastavenie a obsah vybavené",
+        "list3": "Mobile-first, funguje na každom zariadení"
+      }
+    }
+  },
+  "testimonial": {
+    "sortTitle": "Referencie",
+    "mainTitle": "Čo hovoria klienti",
+    "reviews": {
+      "stanislav": {
+        "name": "Stanislav Zavydniak",
+        "position": "Miestny sprievodca · Slovensko \ud83c\uddf8\ud83c\uddf0",
+        "review": "Dobrá skúsenosť. Webstránka hotová za 3 dni. Príjemná cena v porovnaní s ostatnými. Odporúčam."
+      },
+      "oleg": {
+        "name": "Tsapenko Oleg",
+        "position": "Slovensko \ud83c\uddf8\ud83c\uddf0",
+        "review": "Obrovská vďaka Vladovi! Vytvoril nám webstránku a pomohol propagovať firmu - výsledok prekonal všetky očakávania. Vlad je skutočný profesionál, pozorný k detailom, vždy dostupný a pripravený ponúknuť najlepšie riešenia. Veľmi spokojní so spoluprácou, určite odporúčame!"
+      },
+      "katerina": {
+        "name": "Katerina Fetisova",
+        "position": "Nemecko \ud83c\udde9\ud83c\uddea",
+        "review": "Prišla som k Vladovi s komplexnou požiadavkou. Vlad bol veľmi trpezlivý so všetkými mojimi nápadmi, implementoval rýchlo, navrhoval vlastné riešenia, robil opravy. Vlad zostane mojím spoľahlivým partnerom, pretože sa ukázal ako profesionál pripravený zodpovedne a rýchlo riešiť úlohy. Ďakujem z celého srdca!"
+      }
+    }
+  },
+  "pricing": {
+    "mainTitle": "Transparentné ceny. Vysoká návratnosť. Žiadne skryté agentúrne poplatky.",
+    "sortTitle": "Investujte do svojho rastu",
+    "startProject": "Začať môj projekt teraz",
+    "plans": {
+      "landing": {
+        "name": "Landing Page",
+        "price": "€390",
+        "time": "jednorazovo",
+        "features": {
+          "f1": "Vlastný jednostránkový dizajn",
+          "f2": "SEO optimalizácia",
+          "f3": "Rýchla rýchlosť",
+          "f4": "Kontaktný formulár",
+          "f5": "Responzívny na mobiloch"
+        }
+      },
+      "multipage": {
+        "name": "Viacstránková webstránka",
+        "price": "€599",
+        "time": "Najlepšia hodnota",
+        "features": {
+          "f1": "Až 5 vlastných stránok",
+          "f2": "Pokročilé SEO",
+          "f3": "CMS na jednoduchú úpravu",
+          "f4": "Blog / sekcia noviniek",
+          "f5": "Google Mapy a analytika"
+        }
+      },
+      "ai": {
+        "name": "AI Growth Engine",
+        "price": "€999",
+        "time": "Poháňané AI",
+        "features": {
+          "f1": "Všetko z viacstránkovej",
+          "f2": "Vlastný AI chatbot",
+          "f3": "Konverzie klientov",
+          "f4": "Web & sociálne médiá",
+          "f5": "Auto-rezervačný systém"
+        }
+      }
+    }
+  },
+  "blogs": {
+    "sortTitle": "Blog",
+    "mainTitle": "Najnovšie články",
+    "allArticles": "Všetky články",
+    "readMore": "Čítať viac",
+    "items": {
+      "seo": {
+        "category": "SEO",
+        "date": "12. februára 2026",
+        "readTime": "9 min",
+        "heading": "Ako zlepšiť SEO vašej webstránky — 10 praktických tipov",
+        "para": "Konkrétne kroky, ktoré môžete urobiť ešte dnes pre lepšiu viditeľnosť na Google. Žiadny technický žargón."
+      },
+      "chatbot": {
+        "category": "AI",
+        "date": "12. februára 2026",
+        "readTime": "8 min",
+        "heading": "AI Chatbot pre firmy — Ako automatizovať zákaznícku podporu",
+        "para": "Čo je AI chatbot, ako funguje a prečo ho vaša firma potrebuje. Príklady z praxe a návod na implementáciu."
+      },
+      "cost": {
+        "category": "Ceny",
+        "date": "12. februára 2026",
+        "readTime": "8 min",
+        "heading": "Koľko stojí webstránka v roku 2025?",
+        "para": "Kompletný prehľad cien webstránok na Slovensku. Porovnanie agentúr, freelancerov a website builderov. Zistite, koľko by ste mali investovať."
+      },
+      "entrepreneurs": {
+        "category": "Návody",
+        "date": "12. februára 2026",
+        "readTime": "10 min",
+        "heading": "Webstránka pre podnikateľov — Kompletný sprievodca",
+        "para": "Praktický návod pre podnikateľov a malé firmy. Čo by mala vaša webstránka obsahovať, koľko investovať a ako začať."
+      },
+      "wordpress": {
+        "category": "Technológie",
+        "date": "12. februára 2026",
+        "readTime": "7 min",
+        "heading": "WordPress vs moderná webstránka — Čo je lepšie pre malú firmu?",
+        "para": "Porovnanie WordPressu s modernými technológiami. Výhody, nevýhody a ktoré riešenie je ideálne pre koho."
+      }
+    }
+  },
+  "footer": {
+    "getInTouch": "Kontaktujte nás",
+    "description": "Pomáham miestnym firmám rásť s modernými, vysokovýkonnými webstránkami. So sídlom v Bratislave.",
+    "copyright": "Všetky práva vyhradené.",
+    "cookiePolicy": "Zásady cookies",
+    "privacyPolicy": "Ochrana súkromia"
+  },
+  "drawer": {
+    "description": "Webový vývojár a AI špecialista so sídlom v Bratislave. Moderné webstránky, ktoré zarábajú - nielen dobre vyzerajú. Rýchle dodanie, férové ceny.",
+    "address": "adresa",
+    "email": "e-mail",
+    "callNow": "zavolajte",
+    "letsTalk": "Poďme sa porozprávať"
+  },
+  "cookie": {
+    "message": "Táto webstránka používa cookies, aby vám zabezpečila najlepší zážitok.",
+    "policy": "Zásady cookies",
+    "decline": "Odmietnuť",
+    "accept": "Prijať"
+  },
+  "pages": {
+    "contact": {
+      "heading": "Pošlite mi správu",
+      "page": "Kontakt",
+      "respondTime": "Odpoviem do 24 hodín",
+      "email": "E-mail",
+      "phone": "Telefón",
+      "address": "Adresa"
+    },
+    "allBlog": {
+      "heading": "Blog",
+      "page": "Blog"
+    },
+    "allServices": {
+      "heading": "Všetky služby",
+      "page": "Všetky služby"
+    },
+    "portfolio": {
+      "heading": "Moja práca a portfólio",
+      "page": "Práca"
+    },
+    "cookies": {
+      "title": "Zásady cookies | Vlad Weby",
+      "description": "Zásady cookies pre vladweby.com. Zistite, ako používame cookies na našej webstránke.",
+      "heading": "Zásady cookies",
+      "page": "Cookies",
+      "lastUpdated": "Posledná aktualizácia: 10. apríla 2026",
+      "s1title": "1. Čo sú cookies",
+      "s1text": "Cookies sú malé textové súbory, ktoré sa ukladajú na vašom zariadení (počítač, tablet alebo mobilný telefón) pri návšteve webstránky. Sú široko používané na zabezpečenie efektívnejšieho fungovania webstránok a na poskytovanie informácií vlastníkom webstránok. Tieto zásady cookies vysvetľujú, aké cookies používame, prečo ich používame a vaše možnosti ohľadom ich používania.",
+      "s2title": "2. Ako používame cookies",
+      "s2text": "Cookies používame na nasledujúce účely:",
+      "s2essential": "Nevyhnutné cookies",
+      "s2essentialText": "— Tieto sú nevyhnutné pre správne fungovanie webstránky. Umožňujú základné funkcie ako navigácia po stránkach a prístup k zabezpečeným oblastiam. Webstránka nemôže správne fungovať bez týchto cookies.",
+      "s2preference": "Preferenčné cookies",
+      "s2preferenceText": "— Tieto cookies umožňujú webstránke zapamätať si vaše voľby (napríklad vašu preferenciu súhlasu s cookies) a poskytovať vylepšené, viac personalizované funkcie.",
+      "s2analytics": "Analytické cookies",
+      "s2analyticsText": "— Tieto cookies nám pomáhajú pochopiť, ako návštevníci interagujú s našou webstránkou, zhromažďovaním a nahlasovaním informácií anonymne. To nám pomáha zlepšovať zážitok z webstránky.",
+      "s3title": "3. Cookies, ktoré používame",
+      "s3cookieName": "Názov cookie",
+      "s3type": "Typ",
+      "s3duration": "Trvanie",
+      "s3purpose": "Účel",
+      "s3essential": "Nevyhnutný",
+      "s3persistent": "Trvalý",
+      "s3consentPurpose": "Ukladá vašu preferenciu súhlasu s cookies",
+      "s4title": "4. Vaše práva podľa GDPR",
+      "s4text": "Ako návštevník z Európskej únie máte určité práva podľa Všeobecného nariadenia o ochrane údajov (GDPR) a smernice ePrivacy. Tieto zahŕňajú:",
+      "s4right1": "Právo byť informovaný o tom, ako sa vaše údaje zhromažďujú a používajú",
+      "s4right2": "Právo na prístup k osobným údajom, ktoré o vás uchovávame",
+      "s4right3": "Právo požiadať o opravu nepresných osobných údajov",
+      "s4right4": "Právo požiadať o vymazanie vašich osobných údajov",
+      "s4right5": "Právo kedykoľvek odvolať svoj súhlas",
+      "s4right6": "Právo podať sťažnosť na Úrad na ochranu osobných údajov Slovenskej republiky",
+      "s5title": "5. Správa cookies",
+      "s5text": "Cookies môžete kontrolovať a spravovať niekoľkými spôsobmi:",
+      "s5banner": "Banner súhlasu s cookies",
+      "s5bannerText": "— Pri prvej návšteve našej webstránky si môžete vybrať, či prijmete alebo odmietnete nenevyhnutné cookies.",
+      "s5browser": "Nastavenia prehliadača",
+      "s5browserText": "— Väčšina webových prehliadačov vám umožňuje spravovať cookies cez ich nastavenia. Môžete nastaviť prehliadač tak, aby odmietol cookies alebo vymazal cookies, ktoré už boli nastavené. Upozorňujeme, že vypnutie cookies môže ovplyvniť funkčnosť webstránky.",
+      "s5clear": "Vymazanie úložiska",
+      "s5clearText": "— Môžete kedykoľvek vymazať lokálne úložisko prehliadača a resetovať tak svoju preferenciu súhlasu s cookies.",
+      "s6title": "6. Cookies tretích strán",
+      "s6text": "Môžeme používať služby tretích strán, ktoré nastavujú vlastné cookies (napríklad vložený obsah alebo analytika). Nad týmito cookies nemáme kontrolu. Ďalšie informácie o tom, ako používajú cookies, nájdete v príslušných zásadách ochrany súkromia tretích strán.",
+      "s7title": "7. Správca údajov",
+      "s7text": "Správca údajov zodpovedný za túto webstránku je:",
+      "s8title": "8. Zmeny týchto zásad",
+      "s8text": "Tieto zásady cookies môžeme z času na čas aktualizovať. Všetky zmeny budú zverejnené na tejto stránke s aktualizovaným dátumom revízie. Odporúčame vám pravidelne kontrolovať túto stránku, aby ste boli informovaní o tom, ako používame cookies.",
+      "s9title": "9. Kontaktujte nás",
+      "s9text": "Ak máte akékoľvek otázky týkajúce sa týchto zásad cookies alebo nášho používania cookies, prosím kontaktujte nás:"
+    }
+  },
+  "form": {
+    "leaveReply": "Zanechať odpoveď",
+    "emailNotPublished": "Vaša e-mailová adresa nebude zverejnená. Povinné polia sú označené *",
+    "name": "Meno",
+    "email": "E-mail",
+    "writeComments": "Napíšte komentár",
+    "submitComment": "Odoslať komentár"
+  },
+  "pageHeader": {
+    "home": "Domov"
+  }
+}

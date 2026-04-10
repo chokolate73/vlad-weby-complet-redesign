@@ -1,31 +1,17 @@
 import React from "react";
 import { Facebook, Twitter, Linkedin, Globe, Instagram } from "react-bootstrap-icons";
 import Link from "next/link";
+import { useTranslations } from 'next-intl';
 
-const contactInfo = [
-  {
-    id: 1,
-    system: "Email",
-    contact: "v.hvorov73@gmail.com",
-  },
-  {
-    id: 2,
-    system: "Phone",
-    contact: "+421 919 208 426",
-  },
-  {
-    id: 3,
-    system: "Address",
-    contact: "Bottova 2A, Bratislava",
-  },
-  {
-    id: 4,
-    system: "Languages",
-    socalContact: null,
-    contact: "SK · EN · DE · RU",
-  },
-];
 const AboutMe = ({ isTabActive }) => {
+  const t = useTranslations('about');
+
+  const contactInfo = [
+    { id: 1, system: t('email'), contact: "v.hvorov73@gmail.com" },
+    { id: 2, system: t('phone'), contact: "+421 919 208 426" },
+    { id: 3, system: t('address'), contact: "Bottova 2A, Bratislava" },
+    { id: 4, system: t('languages'), socalContact: null, contact: "SK · EN · DE · RU" },
+  ];
 
   return (
     <div className={`w-full duration-700 ${isTabActive === "about" ? "z-10 opacity-100 translate-y-0" : "translate-y-20 -z-10 opacity-0 absolute  top-0 "} `}>
@@ -47,16 +33,14 @@ const AboutMe = ({ isTabActive }) => {
                 data-aos="fade-up"
                 data-aos-duration="500"
               >
-                About Me
+                {t('aboutMe')}
               </h2>
               <p
                 className="text-lg text-clr_pra mb-0"
                 data-aos="fade-up"
                 data-aos-duration="500"
               >
-                I handle every project personally - from the first call to launch.
-                A good website isn't about pixels - it's about how many customers
-                it brings you. Four languages, one contact, zero overhead.
+                {t('aboutMeText')}
               </p>
               <div className="mt-10">
                 <div className="grid xl:grid-cols-2 lg:grid-cols-1 md:grid-cols-2 grid-cols-1 justify-between  gap-6">
