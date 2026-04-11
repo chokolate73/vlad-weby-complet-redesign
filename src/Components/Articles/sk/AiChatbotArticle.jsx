@@ -643,7 +643,7 @@ const AiChatbotArticle = () => {
             <ArrowRight />
           </Link>
           <Link
-            href="/all-blog"
+            href="/sk/all-blog"
             className="inline-flex items-center gap-2 px-8 py-4 bg-[rgb(30,30,30)] text-white rounded-full font-medium hover:bg-[rgb(40,40,40)] transition-colors"
           >
             All Articles

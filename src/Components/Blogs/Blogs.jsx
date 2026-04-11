@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowRight } from "react-bootstrap-icons";
 import Blog from "./Blog";
 import TitleSecond from "../Shared/TitleSecond";
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const blogKeys = ['seo', 'chatbot', 'cost', 'entrepreneurs', 'wordpress'];
 const blogSlugs = [
@@ -17,6 +17,7 @@ const blogSlugs = [
 
 const Blogs = () => {
   const t = useTranslations('blogs');
+  const locale = useLocale();
 
   const blogsList = blogKeys.map((key, index) => ({
     id: index + 1,
@@ -35,7 +36,7 @@ const Blogs = () => {
           <div>
             <TitleSecond mainTitle={t('mainTitle')} sortTitle={t('sortTitle')} />
             <Link
-              href="/all-blog"
+              href={`/${locale}/all-blog`}
               className="md:w-52 md:h-52 w-32 h-32 bg-clr_base rounded-full flex justify-center items-center text-center relative before:w-full before:h-full before:rounded-full before:border before:border-clr_base before:content-[''] before:absolute before:top-[10px] before:-left-[7px] before:duration-500 hover:before:-top-[10px]"
               data-aos="zoom-out-down"
               data-aos-duration="2000"

@@ -448,25 +448,25 @@ const EntrepreneursArticle = () => {
           </h3>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/blog/website-cost-2025"
+              href="/sk/blog/website-cost-2025"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               Ceny webových stránok <ArrowRight />
             </Link>
             <Link
-              href="/blog/improve-website-seo"
+              href="/sk/blog/improve-website-seo"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               Ako zlepšiť SEO <ArrowRight />
             </Link>
             <Link
-              href="/blog/ai-chatbot-for-business"
+              href="/sk/blog/ai-chatbot-for-business"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               AI Chatbot pre firmy <ArrowRight />
             </Link>
             <Link
-              href="/all-blog"
+              href="/sk/all-blog"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               Všetky články <ArrowRight />

@@ -629,19 +629,19 @@ const WebsiteCostArticle = () => {
         </h2>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/all-services"
+            href="/ru/all-services"
             className="inline-flex items-center gap-2 text-clr_base hover:underline"
           >
             Website Creation <ArrowRight />
           </Link>
           <Link
-            href="/blog/website-for-entrepreneurs"
+            href="/ru/blog/website-for-entrepreneurs"
             className="inline-flex items-center gap-2 text-clr_base hover:underline"
           >
             Website for Entrepreneurs <ArrowRight />
           </Link>
           <Link
-            href="/blog/improve-website-seo"
+            href="/ru/blog/improve-website-seo"
             className="inline-flex items-center gap-2 text-clr_base hover:underline"
           >
             How to Improve SEO <ArrowRight />
