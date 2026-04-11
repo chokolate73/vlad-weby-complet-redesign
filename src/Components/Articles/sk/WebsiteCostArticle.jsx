@@ -9,231 +9,184 @@ import {
   Clock,
   Person,
   ArrowRight,
-  Globe2,
-  PaletteFill,
-  GearFill,
-  PhoneFill,
-  Search,
   CurrencyEuro,
+  Shop,
+  Laptop,
+  Phone,
+  Briefcase,
+  Rocket,
+  HouseDoor,
+  ClockHistory,
+  ShieldCheck,
+  Tools,
 } from "react-bootstrap-icons";
 
 /* ------------------------------------------------------------------ */
 /*  Data                                                               */
 /* ------------------------------------------------------------------ */
 
-const pricingOverview = [
+const budgetOverview = [
+  {
+    provider: "Svojpomocne (Wix, Webnode)",
+    price: "0\u2013200 \u20AC/rok",
+    note: "Investujete vlastn\u00FD \u010Das, v\u00FDsledok \u010Dasto vyzer\u00E1 amat\u00E9rsky",
+    accent: "border-gray-500/20",
+  },
   {
     provider: "Freelancer",
-    startPrice: "from \u20AC390",
-    landing: "\u20AC390 \u2013 \u20AC800",
-    corporate: "\u20AC599 \u2013 \u20AC1,500",
-    eshop: "\u20AC999 \u2013 \u20AC3,000",
+    price: "390\u20131 500 \u20AC",
+    note: "Profesion\u00E1lny v\u00FDsledok bez agent\u00FArnej r\u00E9\u017Eie, hotov\u00E9 do 1\u20133 t\u00FD\u017Ed\u0148ov",
     accent: "border-clr_base/20",
   },
   {
-    provider: "Small Agency",
-    startPrice: "from \u20AC1,500",
-    landing: "\u20AC800 \u2013 \u20AC2,000",
-    corporate: "\u20AC1,500 \u2013 \u20AC5,000",
-    eshop: "\u20AC3,000 \u2013 \u20AC10,000",
+    provider: "Agent\u00FAra",
+    price: "1 500\u20135 000+ \u20AC",
+    note: "Kompletn\u00FD servis, dlh\u0161\u00ED proces (4\u20138 t\u00FD\u017Ed\u0148ov)",
     accent: "border-blue-500/20",
   },
+];
+
+const onepagePricing = [
   {
-    provider: "Large Agency",
-    startPrice: "from \u20AC5,000",
-    landing: "\u20AC2,000 \u2013 \u20AC5,000",
-    corporate: "\u20AC5,000 \u2013 \u20AC15,000",
-    eshop: "\u20AC10,000 \u2013 \u20AC50,000+",
-    accent: "border-purple-500/20",
+    provider: "Builder (Webnode, Wix)",
+    price: "0\u2013100 \u20AC/rok",
+    includes: "\u0160abl\u00F3na, vlastn\u00E1 dom\u00E9na, z\u00E1kladn\u00E9 SEO",
+  },
+  {
+    provider: "Freelancer",
+    price: "290\u2013590 \u20AC",
+    includes:
+      "Dizajn na mieru, responz\u00EDvny k\u00F3d, SEO z\u00E1klad, kontaktn\u00FD formul\u00E1r",
+  },
+  {
+    provider: "Agent\u00FAra",
+    price: "800\u20132 000 \u20AC",
+    includes: "Kompletn\u00FD branding, copywriting, fotky",
   },
 ];
 
-const priceFactors = [
+const multipagePricing = [
   {
-    icon: Globe2,
-    title: "Project Scope",
-    description:
-      "The number of pages directly affects the price. A single-page landing is significantly cheaper than a site with 10+ subpages, a blog, and multilingual content.",
+    range: "3\u20135 podstr\u00E1nok",
+    freelancer: "490\u2013799 \u20AC",
+    agency: "1 500\u20132 500 \u20AC",
   },
   {
-    icon: PaletteFill,
-    title: "Design",
-    description:
-      "A template (ready-made design) costs less than a custom design. However, a unique design will better distinguish your brand from competitors.",
+    range: "6\u201310 podstr\u00E1nok",
+    freelancer: "799\u20131 200 \u20AC",
+    agency: "2 500\u20134 000 \u20AC",
   },
   {
-    icon: GearFill,
-    title: "Functionality",
-    description:
-      "A contact form is the basic minimum. An online store, booking system, payment gateway, or CRM integration increase the cost depending on complexity.",
-  },
-  {
-    icon: PhoneFill,
-    title: "Responsiveness",
-    description:
-      "Mobile-first design is today\u2019s standard. If a developer doesn\u2019t optimize your site for mobile devices by default, look for another one \u2014 60% of visits come from smartphones.",
-  },
-  {
-    icon: Search,
-    title: "SEO Optimization",
-    description:
-      "Basic SEO (meta tags, speed, structure) should be included in the price. Advanced SEO (keywords, link building, content strategy) is a separate service.",
-  },
-  {
-    icon: CurrencyEuro,
-    title: "CMS System",
-    description:
-      "A content management system allows you to change texts and images without a developer. WordPress is cheaper, while a custom CMS offers greater flexibility.",
+    range: "10+ podstr\u00E1nok + blog",
+    freelancer: "1 200\u20132 000 \u20AC",
+    agency: "4 000\u20138 000 \u20AC",
   },
 ];
 
-const detailedPricing = [
+const freelancerServices = [
   {
-    type: "Landing Page",
-    description:
-      "A single-page website for advertising campaigns, new services, or a quick start to your online presence.",
-    freelancer: "\u20AC390 \u2013 \u20AC800",
-    agency: "\u20AC800 \u2013 \u20AC2,000",
-    includes: [
-      "1 page with multiple sections",
-      "Contact form",
-      "Responsive design",
-      "Basic SEO",
-      "Delivery within 5 days",
-    ],
+    service: "Jednostr\u00E1nkov\u00FD web (landing page)",
+    price: "290\u2013590 \u20AC",
   },
   {
-    type: "Corporate Website (5\u201310 pages)",
-    description:
-      "A full corporate presentation with service pages, about us, contacts, and a blog.",
-    freelancer: "\u20AC599 \u2013 \u20AC1,500",
-    agency: "\u20AC1,500 \u2013 \u20AC5,000",
-    includes: [
-      "5\u201310 custom pages",
-      "CMS for content management",
-      "Blog / news section",
-      "Advanced SEO and analytics",
-      "Delivery within 2 weeks",
-    ],
+    service: "Firemn\u00FD web (5 podstr\u00E1nok)",
+    price: "490\u2013999 \u20AC",
   },
   {
-    type: "Online Store",
-    description:
-      "An e-commerce site with a product catalog, shopping cart, and payment gateway.",
-    freelancer: "\u20AC999 \u2013 \u20AC3,000",
-    agency: "\u20AC3,000 \u2013 \u20AC15,000",
-    includes: [
-      "Product catalog with filters",
-      "Shopping cart and checkout process",
-      "Payment gateway (Stripe, GoPay)",
-      "Order management",
-      "Responsive design + SEO",
-    ],
+    service: "Web s blogom a CMS",
+    price: "699\u20131 500 \u20AC",
+  },
+  {
+    service: "Jednoduch\u00FD e-shop",
+    price: "1 200\u20133 000 \u20AC",
+  },
+  {
+    service: "Mesa\u010Dn\u00E1 spr\u00E1va a \u00FAdr\u017Eba",
+    price: "25\u201350 \u20AC/mes",
   },
 ];
 
-const oneTimeCosts = [
-  { item: "Domain registration (.sk)", price: "\u20AC10 \u2013 \u20AC15/year", note: "Domain is paid annually, but it\u2019s a minimal expense" },
-  { item: "SSL certificate", price: "\u20AC0 (Let\u2019s Encrypt)", note: "Most hosting providers offer SSL for free" },
-  { item: "Professional photos", price: "\u20AC0 \u2013 \u20AC200", note: "Stock photos are free, custom photography from \u20AC100" },
-  { item: "Copywriting (texts)", price: "\u20AC0 \u2013 \u20AC300", note: "Many freelancers include texts in the price" },
+const hiddenCosts = [
+  {
+    item: "Platen\u00E9 pluginy a roz\u0161\u00EDrenia pre WordPress",
+    price: "50\u2013200 \u20AC/rok",
+  },
+  {
+    item: "Zmeny obsahu po odovzdan\u00ED (bez CMS)",
+    price: "20\u201350 \u20AC/zmena",
+  },
+  {
+    item: "Obnova webu po hackerskom \u00FAtoku",
+    price: "200\u2013500 \u20AC",
+  },
+  {
+    item: "Migr\u00E1cia na in\u00FA platformu",
+    price: "300\u2013800 \u20AC",
+  },
 ];
 
 const monthlyCosts = [
-  { item: "Hosting (server storage)", price: "\u20AC0 \u2013 \u20AC20/mo", note: "Modern websites: Vercel/Netlify free. WordPress: \u20AC5\u2013\u20AC20/mo" },
-  { item: "Maintenance and updates", price: "\u20AC0 \u2013 \u20AC25/mo", note: "WordPress requires regular maintenance. Modern websites \u2014 minimal" },
-  { item: "Support package", price: "\u20AC25/mo (optional)", note: "Hosting + maintenance + minor content edits \u2014 all in one" },
-  { item: "Monthly SEO (advanced)", price: "\u20AC99 \u2013 \u20AC500/mo", note: "Optional. Basic SEO is included in website creation" },
-];
-
-const freelancerPros = [
-  "Low prices (no overhead for office and managers)",
-  "Direct communication without intermediaries",
-  "Fast delivery (3\u201314 days)",
-  "Flexibility in revisions and iterations",
-  "Individual approach to each project",
-];
-
-const freelancerCons = [
-  "Limited bandwidth (1 person)",
-  "Narrower specialization",
-  "Less team support for large projects",
-];
-
-const agencyPros = [
-  "Large team of specialists (designer, developer, copywriter)",
-  "Ability to handle enterprise projects",
-  "Established processes and documentation",
-  "More references and a long track record",
-];
-
-const agencyCons = [
-  "High prices (3\u201310x more than freelancers)",
-  "Communication through a project manager \u2014 slower",
-  "Long delivery times (4\u201312 weeks)",
-  "Less flexibility for small changes",
-  "Often rigid contract terms",
-];
-
-const dontSaveOn = [
+  { item: "Webhosting", price: "3\u20138 \u20AC" },
+  { item: "Dom\u00E9na (.sk)", price: "~1 \u20AC (12 \u20AC/rok)" },
+  { item: "SSL certifik\u00E1t", price: "0 \u20AC (Let\u2019s Encrypt)" },
   {
-    title: "Loading Speed",
+    item: "Spr\u00E1va a \u00FAdr\u017Eba (volite\u013En\u00E9)",
+    price: "25\u201350 \u20AC",
+  },
+  { item: "SEO / marketing (volite\u013En\u00E9)", price: "50\u2013200 \u20AC" },
+];
+
+const summaryTable = [
+  {
+    type: "Jednostr\u00E1nkov\u00FD web",
+    freelancer: "290\u2013590 \u20AC",
+    agency: "800\u20132 000 \u20AC",
+    builder: "0\u2013100 \u20AC/rok",
+  },
+  {
+    type: "Firemn\u00FD web (5 str\u00E1nok)",
+    freelancer: "490\u2013999 \u20AC",
+    agency: "1 500\u20134 000 \u20AC",
+    builder: "100\u2013200 \u20AC/rok",
+  },
+  {
+    type: "Web s blogom + CMS",
+    freelancer: "699\u20131 500 \u20AC",
+    agency: "2 500\u20135 000 \u20AC",
+    builder: "200\u2013300 \u20AC/rok",
+  },
+  {
+    type: "E-shop",
+    freelancer: "1 200\u20133 000 \u20AC",
+    agency: "4 000\u201310 000+ \u20AC",
+    builder: "300\u2013500 \u20AC/rok",
+  },
+  {
+    type: "Mesa\u010Dn\u00E1 spr\u00E1va",
+    freelancer: "25\u201350 \u20AC/mes",
+    agency: "100\u2013300 \u20AC/mes",
+    builder: "0 \u20AC (rob\u00EDte sami)",
+  },
+];
+
+const startupBudgets = [
+  {
+    icon: Rocket,
+    title: "Minim\u00E1lny \u017Eivotaschopn\u00FD web (do 500 \u20AC)",
     description:
-      "A slow website loses customers. Every extra second reduces conversion by 7%. Google considers speed when ranking positions.",
+      "Jednostr\u00E1nkov\u00FD web u freelancera (350\u2013500 \u20AC) + dom\u00E9na (12 \u20AC) + hosting (50 \u20AC). Celkom: pribli\u017Ene 400\u2013560 \u20AC. Toto sta\u010D\u00ED na prv\u00FDch 6\u201312 mesiacov podnikania.",
   },
   {
-    title: "Mobile-First Design",
+    icon: Briefcase,
+    title: "Sol\u00EDdny firemn\u00FD web (do 1 000 \u20AC)",
     description:
-      "Over 60% of visits come from mobile devices. A website that doesn\u2019t work on a smartphone is useless for most visitors.",
+      "Viacstr\u00E1nkov\u00FD web s blogom (700\u20131 000 \u20AC) + SEO z\u00E1klad + Google Business Profile. Celkom: pribli\u017Ene 800\u20131 100 \u20AC. Invest\u00EDcia, ktor\u00E1 sa vr\u00E1ti v podobe organick\u00FDch z\u00E1kazn\u00EDkov z Google.",
   },
   {
-    title: "Basic SEO",
+    icon: Laptop,
+    title: "Plne vybaven\u00FD web (do 2 000 \u20AC)",
     description:
-      "A website without SEO is like a store without a sign. Meta tags, proper heading structure, speed, and technical SEO should be part of every project.",
-  },
-  {
-    title: "Security (SSL)",
-    description:
-      "HTTPS is mandatory today. Without an SSL certificate, browsers flag your site as insecure, and customers leave.",
-  },
-];
-
-const businessTypes = [
-  {
-    business: "Entrepreneur / Freelancer",
-    budget: "\u20AC390 \u2013 \u20AC599",
-    recommendation:
-      "A landing page or simple corporate website is enough. Invest in quality design and SEO. You don\u2019t need 10 pages \u2014 one well-made page with a clear CTA is more effective.",
-  },
-  {
-    business: "Beauty Salon / Hair Salon",
-    budget: "\u20AC499 \u2013 \u20AC799",
-    recommendation:
-      "A website with a price list, work gallery, and online booking. Local SEO is critical \u2014 most clients search through Google Maps. Invest in your own photos.",
-  },
-  {
-    business: "Repair Company (plumber, electrician, painter)",
-    budget: "\u20AC399 \u2013 \u20AC699",
-    recommendation:
-      "A corporate presentation with contacts, services, and reviews. These companies benefit the most from SEO \u2014 online competition is low, while demand is high.",
-  },
-  {
-    business: "Restaurant / Cafe",
-    budget: "\u20AC499 \u2013 \u20AC799",
-    recommendation:
-      "A website with a menu, opening hours, photo gallery, and reservation options. A connection with Google Business Profile is a must.",
-  },
-  {
-    business: "Small Online Store (up to 100 products)",
-    budget: "\u20AC999 \u2013 \u20AC2,500",
-    recommendation:
-      "A full online store with a catalog, cart, and payment gateway. Invest in speed and a mobile version \u2014 70% of purchases are made from a phone.",
-  },
-  {
-    business: "IT Company / Startup",
-    budget: "\u20AC799 \u2013 \u20AC2,000",
-    recommendation:
-      "A modern website with an emphasis on technical professionalism. Speed, clean code, and good UX design are priorities. A blog for content marketing is a bonus.",
+      "Web na mieru + AI chatbot + SEO optimaliz\u00E1cia + napojenie na CRM alebo booking syst\u00E9m. Celkom: 1 500\u20132 000 \u20AC. Ide\u00E1lne pre firmy, ktor\u00E9 chc\u00FA automatizova\u0165 komunik\u00E1ciu so z\u00E1kazn\u00EDkmi od prv\u00E9ho d\u0148a.",
   },
 ];
 
@@ -249,11 +202,11 @@ const WebsiteCostArticle = () => {
         <div className="flex flex-wrap items-center gap-4 text-sm text-clr_pra mb-6">
           <span className="inline-flex items-center gap-1.5">
             <Calendar3 className="text-xs" />
-            February 12, 2026
+            11. apr&iacute;la 2026
           </span>
           <span className="inline-flex items-center gap-1.5">
             <Clock className="text-xs" />
-            8 min read
+            12 min &ccaron;&iacute;tania
           </span>
           <span className="inline-flex items-center gap-1.5">
             <Person className="text-xs" />
@@ -262,41 +215,43 @@ const WebsiteCostArticle = () => {
         </div>
 
         <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold mb-6 leading-tight">
-          How Much Does a Website Cost in{" "}
-          <span className="text-clr_base">2025?</span>
+          Ko&lcaron;ko stoj&iacute; webstr&aacute;nka v{" "}
+          <span className="text-clr_base">2026</span> &mdash; kompletn&yacute;
+          cenn&iacute;k pre Slovensko
         </h1>
 
         <p className="text-lg text-clr_pra leading-relaxed mb-4">
-          The cost of creating a website in Slovakia ranges from &euro;390 to
-          tens of thousands of euros. Why is the range so wide? It all depends
-          on the type of website, the provider, design, functionality, and
-          other factors. In this article, I will give you a concrete price
-          overview, compare freelancers with agencies, and advise how much you
-          should realistically invest in a website.
-        </p>
-        <p className="text-clr_pra leading-relaxed mb-4">
-          If you are an entrepreneur or small business owner, you probably
-          don&apos;t want to spend thousands of euros on a website, but at the
-          same time, you need a professional page that actually works. The good
-          news is that in 2025, a quality website is more affordable than ever.
+          Pl&aacute;nujete nov&uacute; webstr&aacute;nku pre firmu a neviete,
+          ko&lcaron;ko by ste mali investova&tcaron;? Ceny sa na Slovensku
+          pohybuj&uacute; od 0&nbsp;&euro; (ak si ju vytvor&iacute;te sami cez
+          builder) a&zcaron; po tis&iacute;ce eur za rie&scaron;enie na mieru.
         </p>
         <p className="text-clr_pra leading-relaxed">
-          This article is based on real prices from the Slovak market. All
-          figures are taken from my own practice and competitor price analysis
-          over the past 3 years.
+          V tomto &ccaron;l&aacute;nku v&aacute;m uk&aacute;&zcaron;em
+          re&aacute;lne ceny, vysvetl&iacute;m rozdiely medzi jednotliv&yacute;mi
+          pr&iacute;stupmi a pom&ocirc;&zcaron;em v&aacute;m vybra&tcaron; ten
+          spr&aacute;vny pre v&aacute;&scaron; rozpo&ccaron;et.
         </p>
       </div>
 
       {/* ------------------------------------------------------------ */}
-      {/*  1. Pricing Overview in Slovakia                              */}
+      {/*  1. Rozpočet na prvú firemnú webstránku                       */}
       {/* ------------------------------------------------------------ */}
       <section className="mb-16" data-aos="fade-up" data-aos-duration="800">
-        <h2 className="text-2xl md:text-3xl text-white font-bold mb-8">
-          Pricing Overview in Slovakia
+        <h2 className="text-2xl md:text-3xl text-white font-bold mb-4">
+          Ak&yacute; rozpo&ccaron;et si pripravit&rsquo; na prv&uacute;
+          firemn&uacute; webstr&aacute;nku
         </h2>
+        <p className="text-clr_pra mb-8 leading-relaxed">
+          Predtým, ako začnete porovnávať ponuky, potrebujete vedieť, z čoho sa
+          celková cena skladá. Nejde len o samotný vývoj &mdash; pripočítajte si
+          doménu (10&ndash;15&nbsp;&euro;/rok), webhosting
+          (30&ndash;100&nbsp;&euro;/rok), SSL certifikát (väčšinou zadarmo cez
+          Let&apos;s Encrypt) a prípadné stockové fotografie alebo tvorbu loga.
+        </p>
 
         <div className="grid md:grid-cols-3 gap-4">
-          {pricingOverview.map((tier) => (
+          {budgetOverview.map((tier) => (
             <div
               key={tier.provider}
               className={`rounded-xl border ${tier.accent} bg-[rgb(30,30,30)] p-6`}
@@ -304,318 +259,652 @@ const WebsiteCostArticle = () => {
               <h3 className="text-lg font-semibold text-white mb-1">
                 {tier.provider}
               </h3>
-              <p className="text-2xl font-bold text-clr_base mb-4">
-                {tier.startPrice}
+              <p className="text-2xl font-bold text-clr_base mb-3">
+                {tier.price}
               </p>
-              <ul className="space-y-3 text-sm">
-                <li>
-                  <span className="block font-medium text-clr_pra">Landing Page</span>
-                  <span className="text-white">{tier.landing}</span>
-                </li>
-                <li>
-                  <span className="block font-medium text-clr_pra">Corporate Website</span>
-                  <span className="text-white">{tier.corporate}</span>
-                </li>
-                <li>
-                  <span className="block font-medium text-clr_pra">Online Store</span>
-                  <span className="text-white">{tier.eshop}</span>
-                </li>
-              </ul>
+              <p className="text-sm text-clr_pra">{tier.note}</p>
             </div>
           ))}
+        </div>
+
+        <div className="bg-clr_base/5 border border-clr_base/10 rounded-xl p-6 mt-6">
+          <p className="text-clr_pra leading-relaxed">
+            Pre živnostníka alebo malú firmu s rozpočtom do 1&nbsp;000&nbsp;&euro;
+            je <strong className="text-white">freelancer najlepšia voľba</strong>{" "}
+            &mdash; dostanete profesionálny výsledok bez agentúrnej réžie.
+          </p>
         </div>
       </section>
 
       {/* ------------------------------------------------------------ */}
-      {/*  2. What Affects the Price                                    */}
-      {/* ------------------------------------------------------------ */}
-      <section className="mb-16" data-aos="fade-up" data-aos-duration="800">
-        <h2 className="text-2xl md:text-3xl text-white font-bold mb-8">
-          What Affects Website Cost?
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-4">
-          {priceFactors.map((factor) => (
-            <div
-              key={factor.title}
-              className="bg-[rgb(30,30,30)] rounded-xl p-6"
-            >
-              <div className="w-12 h-12 bg-clr_base/10 rounded-xl flex items-center justify-center mb-4">
-                <factor.icon className="text-clr_base text-xl" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">
-                {factor.title}
-              </h3>
-              <p className="text-sm text-clr_pra leading-relaxed">
-                {factor.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ------------------------------------------------------------ */}
-      {/*  3. Specific Price Ranges                                     */}
-      {/* ------------------------------------------------------------ */}
-      <section className="mb-16" data-aos="fade-up" data-aos-duration="800">
-        <h2 className="text-2xl md:text-3xl text-white font-bold mb-8">
-          Specific Price Ranges
-        </h2>
-
-        <div className="space-y-6">
-          {detailedPricing.map((item) => (
-            <div
-              key={item.type}
-              className="bg-clr_base/5 border border-clr_base/10 rounded-xl p-6 md:p-8"
-            >
-              <h3 className="text-xl font-bold text-white mb-2">
-                {item.type}
-              </h3>
-              <p className="text-clr_pra mb-4">{item.description}</p>
-
-              <div className="grid sm:grid-cols-2 gap-4 mb-4">
-                <div className="bg-[rgb(20,20,20)] rounded-xl p-4">
-                  <span className="block text-sm font-medium text-clr_pra mb-1">
-                    Freelancer
-                  </span>
-                  <span className="text-xl font-bold text-clr_base">
-                    {item.freelancer}
-                  </span>
-                </div>
-                <div className="bg-[rgb(20,20,20)] rounded-xl p-4">
-                  <span className="block text-sm font-medium text-clr_pra mb-1">
-                    Agency
-                  </span>
-                  <span className="text-xl font-bold text-white">
-                    {item.agency}
-                  </span>
-                </div>
-              </div>
-
-              <ul className="space-y-2">
-                {item.includes.map((inc) => (
-                  <li
-                    key={inc}
-                    className="flex items-center gap-2 text-sm text-clr_pra"
-                  >
-                    <CheckCircleFill className="text-clr_base shrink-0" />
-                    {inc}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* ------------------------------------------------------------ */}
-      {/*  3b. Hidden Costs and Monthly Expenses                        */}
+      {/*  2. Jednostránková webstránka (one-page)                      */}
       {/* ------------------------------------------------------------ */}
       <section className="mb-16" data-aos="fade-up" data-aos-duration="800">
         <h2 className="text-2xl md:text-3xl text-white font-bold mb-4">
-          Hidden Costs That Agencies Won&apos;t Tell You About
+          Koľko stojí jednoduchá jednostránková webstránka
         </h2>
-        <p className="text-clr_pra mb-8">
-          The cost of building a website is just the beginning. There are
-          recurring expenses that need to be factored into your budget. Here
-          is a complete overview:
+        <p className="text-clr_pra mb-8 leading-relaxed">
+          Jednostránkový web je ideálny pre remeselníkov, kozmetické salóny,
+          osobných trénerov alebo malé prevádzky, kde stačí prezentovať služby,
+          kontakt a pár referencií na jednej stránke.
+        </p>
+
+        <div className="space-y-4">
+          {onepagePricing.map((item) => (
+            <div
+              key={item.provider}
+              className="bg-[rgb(30,30,30)] rounded-xl p-6"
+            >
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                <h3 className="text-lg font-semibold text-white">
+                  {item.provider}
+                </h3>
+                <span className="text-clr_base font-bold">{item.price}</span>
+              </div>
+              <p className="text-sm text-clr_pra">{item.includes}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-clr_pra text-sm mt-6 leading-relaxed">
+          Pri freelancerovi za 390&nbsp;&euro; typicky dostanete: moderný
+          responzívny dizajn, optimalizáciu pre mobily, napojenie na Google
+          Analytics, kontaktný formulár, mapu a základnú SEO optimalizáciu. Web
+          je hotový do 3&ndash;5 pracovných dní.
+        </p>
+      </section>
+
+      {/* ------------------------------------------------------------ */}
+      {/*  3. Viacstránkový firemný web                                 */}
+      {/* ------------------------------------------------------------ */}
+      <section className="mb-16" data-aos="fade-up" data-aos-duration="800">
+        <h2 className="text-2xl md:text-3xl text-white font-bold mb-4">
+          Cenník pre viacstránkový firemný web
+        </h2>
+        <p className="text-clr_pra mb-8 leading-relaxed">
+          Ak potrebujete viac podstránok &mdash; napríklad úvod, o nás, služby,
+          portfólio, blog a kontakt &mdash; ide o klasický firemný web. Tento typ
+          je najčastejší pre malé a stredné firmy.
+        </p>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-white/10">
+                <th className="text-left text-clr_pra font-medium py-3 pr-4">
+                  Rozsah
+                </th>
+                <th className="text-left text-clr_pra font-medium py-3 pr-4">
+                  Freelancer
+                </th>
+                <th className="text-left text-clr_pra font-medium py-3">
+                  Agentúra
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {multipagePricing.map((row) => (
+                <tr key={row.range} className="border-b border-white/5">
+                  <td className="py-3 pr-4 text-white font-medium">
+                    {row.range}
+                  </td>
+                  <td className="py-3 pr-4 text-clr_base font-semibold">
+                    {row.freelancer}
+                  </td>
+                  <td className="py-3 text-clr_pra">{row.agency}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <p className="text-clr_pra text-sm mt-6 leading-relaxed">
+          Cena rastie hlavne s počtom podstránok, zložitosťou dizajnu a
+          špeciálnymi funkciami (rezervačný systém, e-shop modul,
+          viacjazyčnosť). Jednoduchý firemný web s 5 podstránkami u freelancera
+          v Bratislave vás vyjde na približne 500&ndash;700&nbsp;&euro;.
+        </p>
+      </section>
+
+      {/* ------------------------------------------------------------ */}
+      {/*  4. Porovnanie: agentúra vs. freelancer vs. svojpomocne       */}
+      {/* ------------------------------------------------------------ */}
+      <section className="mb-16" data-aos="fade-up" data-aos-duration="800">
+        <h2 className="text-2xl md:text-3xl text-white font-bold mb-8">
+          Porovnanie cien: agentúra vs. freelancer vs. svojpomocne
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* Freelancer */}
+          <div className="bg-[rgb(30,30,30)] rounded-xl p-6">
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Freelancer
+            </h3>
+            <p className="text-clr_pra text-sm mb-4 leading-relaxed">
+              Najlepšia voľba, ak máte jasné požiadavky a rozpočet do
+              1&nbsp;500&nbsp;&euro;. Komunikujete priamo s človekom, ktorý váš
+              web aj reálne vytvára.
+            </p>
+            <div className="space-y-2">
+              {[
+                "Nižšia cena (žiadna réžia)",
+                "Rýchlejšie dodanie",
+                "Osobný prístup",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-2">
+                  <CheckCircleFill className="text-clr_base shrink-0 mt-0.5" />
+                  <span className="text-sm text-clr_pra">{item}</span>
+                </div>
+              ))}
+              {["Menej kapacít na veľké projekty", "Závislosť na jednej osobe"].map(
+                (item) => (
+                  <div key={item} className="flex items-start gap-2">
+                    <XCircleFill className="text-red-500 shrink-0 mt-0.5" />
+                    <span className="text-sm text-clr_pra">{item}</span>
+                  </div>
+                )
+              )}
+            </div>
+          </div>
+
+          {/* Agentúra */}
+          <div className="bg-[rgb(30,30,30)] rounded-xl p-6">
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Agentúra
+            </h3>
+            <p className="text-clr_pra text-sm mb-4 leading-relaxed">
+              Dáva zmysel pri väčších projektoch (e-shopy, portály, korporátne
+              weby) alebo ak potrebujete kompletný balík vrátane stratégie.
+            </p>
+            <div className="space-y-2">
+              {["Tím špecialistov", "Procesne riadený projekt"].map((item) => (
+                <div key={item} className="flex items-start gap-2">
+                  <CheckCircleFill className="text-clr_base shrink-0 mt-0.5" />
+                  <span className="text-sm text-clr_pra">{item}</span>
+                </div>
+              ))}
+              {[
+                "Vyššia cena (2\u20135\u00D7 oproti freelancerovi)",
+                "Dlhšie dodacie lehoty",
+                "Komunikácia cez account managera",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-2">
+                  <XCircleFill className="text-red-500 shrink-0 mt-0.5" />
+                  <span className="text-sm text-clr_pra">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Svojpomocne */}
+          <div className="bg-[rgb(30,30,30)] rounded-xl p-6">
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Svojpomocne (Builder)
+            </h3>
+            <p className="text-clr_pra text-sm mb-4 leading-relaxed">
+              Funguje pre osobné projekty alebo ak naozaj nemáte rozpočet.
+            </p>
+            <div className="space-y-2">
+              {["Nulové alebo minimálne náklady"].map((item) => (
+                <div key={item} className="flex items-start gap-2">
+                  <CheckCircleFill className="text-clr_base shrink-0 mt-0.5" />
+                  <span className="text-sm text-clr_pra">{item}</span>
+                </div>
+              ))}
+              {[
+                "Šablónový dizajn",
+                "Obmedzené SEO možnosti",
+                "Stráca sa profesionalita",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-2">
+                  <XCircleFill className="text-red-500 shrink-0 mt-0.5" />
+                  <span className="text-sm text-clr_pra">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------------ */}
+      {/*  5. Cenník freelancera v Bratislave                            */}
+      {/* ------------------------------------------------------------ */}
+      <section className="mb-16" data-aos="fade-up" data-aos-duration="800">
+        <h2 className="text-2xl md:text-3xl text-white font-bold mb-4">
+          Koľko stojí webstránka v Bratislave u freelancera
+        </h2>
+        <p className="text-clr_pra mb-8 leading-relaxed">
+          Bratislava má najvyššiu koncentráciu freelance web developerov na
+          Slovensku. Hodinová sadzba sa pohybuje medzi
+          20&ndash;50&nbsp;&euro;/hod. V praxi sa však väčšina freelancerov
+          dohodne na fixnej cene za projekt.
+        </p>
+
+        <div className="space-y-3">
+          {freelancerServices.map((item) => (
+            <div
+              key={item.service}
+              className="flex flex-col sm:flex-row sm:items-center justify-between bg-[rgb(30,30,30)] rounded-xl p-5"
+            >
+              <span className="text-white font-medium">{item.service}</span>
+              <span className="text-clr_base font-bold mt-1 sm:mt-0">
+                {item.price}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-clr_pra text-sm mt-6 leading-relaxed">
+          Pri výbere freelancera sa pozerajte na tri veci:{" "}
+          <strong className="text-white">portfólio</strong> (má referencie z
+          vášho odvetvia?),{" "}
+          <strong className="text-white">Google recenzie</strong> (reálna spätná
+          väzba od klientov) a{" "}
+          <strong className="text-white">komunikáciu</strong> (odpovedá rýchlo a
+          jasne?).
+        </p>
+      </section>
+
+      {/* ------------------------------------------------------------ */}
+      {/*  6. Fixná cena vs. hodinová sadzba                            */}
+      {/* ------------------------------------------------------------ */}
+      <section className="mb-16" data-aos="fade-up" data-aos-duration="800">
+        <h2 className="text-2xl md:text-3xl text-white font-bold mb-8">
+          Fixná cena vs. hodinová sadzba
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-clr_base/5 border border-clr_base/10 rounded-xl p-6">
+            <h3 className="text-lg font-semibold text-white mb-3">
+              Fixná cena
+            </h3>
+            <p className="text-clr_pra text-sm leading-relaxed mb-3">
+              Vopred sa dohodnete na sume za celý projekt. Viete presne, koľko
+              zaplatíte. Ideálne pre jasne definované projekty.
+            </p>
+            <div className="flex items-start gap-2">
+              <CheckCircleFill className="text-clr_base shrink-0 mt-0.5" />
+              <span className="text-sm text-clr_pra">
+                Odporúčané pre prvý firemný web
+              </span>
+            </div>
+          </div>
+
+          <div className="bg-[rgb(30,30,30)] rounded-xl p-6">
+            <h3 className="text-lg font-semibold text-white mb-3">
+              Hodinová sadzba
+            </h3>
+            <p className="text-clr_pra text-sm leading-relaxed mb-3">
+              Bežnejšia pri dlhodobej spolupráci alebo pri úpravách existujúceho
+              webu. Platíte len za reálne odpracovaný čas.
+            </p>
+            <div className="flex items-start gap-2">
+              <ClockHistory className="text-clr_pra shrink-0 mt-0.5" />
+              <span className="text-sm text-clr_pra">
+                Ťažšie odhadnúť celkovú cenu
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ------------------------------------------------------------ */}
+      {/*  7. Skryté náklady                                             */}
+      {/* ------------------------------------------------------------ */}
+      <section className="mb-16" data-aos="fade-up" data-aos-duration="800">
+        <h2 className="text-2xl md:text-3xl text-white font-bold mb-4">
+          Skryté náklady, na ktoré sa často zabúda
+        </h2>
+        <p className="text-clr_pra mb-8 leading-relaxed">
+          Samotná tvorba webu je jednorazový náklad. Ale web potrebuje aj
+          pravidelnú starostlivosť.
         </p>
 
         <div className="bg-[rgb(30,30,30)] rounded-xl p-6 md:p-8 mb-6">
           <h3 className="text-lg font-semibold text-white mb-4">
-            One-Time Costs (pay once)
+            Povinné ročné náklady
           </h3>
-          <div className="grid md:grid-cols-2 gap-4">
-            {oneTimeCosts.map((cost) => (
-              <div key={cost.item} className="bg-[rgb(20,20,20)] rounded-xl p-4">
-                <div className="flex items-center justify-between mb-1">
-                  <span className="font-medium text-white text-sm">{cost.item}</span>
-                  <span className="text-clr_base font-semibold text-sm">{cost.price}</span>
-                </div>
-                <p className="text-xs text-clr_pra">{cost.note}</p>
-              </div>
-            ))}
+          <div className="grid sm:grid-cols-3 gap-4">
+            <div className="bg-[rgb(20,20,20)] rounded-xl p-4">
+              <span className="block font-medium text-white text-sm mb-1">
+                Doména (.sk)
+              </span>
+              <span className="text-clr_base font-semibold">
+                10&ndash;15&nbsp;&euro;/rok
+              </span>
+            </div>
+            <div className="bg-[rgb(20,20,20)] rounded-xl p-4">
+              <span className="block font-medium text-white text-sm mb-1">
+                Webhosting
+              </span>
+              <span className="text-clr_base font-semibold">
+                30&ndash;100&nbsp;&euro;/rok
+              </span>
+            </div>
+            <div className="bg-[rgb(20,20,20)] rounded-xl p-4">
+              <span className="block font-medium text-white text-sm mb-1">
+                SSL certifikát
+              </span>
+              <span className="text-clr_base font-semibold">
+                zadarmo
+              </span>
+            </div>
           </div>
+          <p className="text-clr_pra text-sm mt-4">
+            Dokopy približne 50&ndash;120&nbsp;&euro; ročne.
+          </p>
         </div>
 
         <div className="bg-[rgb(30,30,30)] rounded-xl p-6 md:p-8">
           <h3 className="text-lg font-semibold text-white mb-4">
-            Monthly Costs After Launch
+            Náklady, ktoré vás prekvapia
           </h3>
           <div className="grid md:grid-cols-2 gap-4">
-            {monthlyCosts.map((cost) => (
-              <div key={cost.item} className="bg-[rgb(20,20,20)] rounded-xl p-4">
+            {hiddenCosts.map((cost) => (
+              <div
+                key={cost.item}
+                className="bg-[rgb(20,20,20)] rounded-xl p-4"
+              >
                 <div className="flex items-center justify-between mb-1">
-                  <span className="font-medium text-white text-sm">{cost.item}</span>
-                  <span className="text-clr_base font-semibold text-sm">{cost.price}</span>
+                  <span className="font-medium text-white text-sm">
+                    {cost.item}
+                  </span>
+                  <span className="text-clr_base font-semibold text-sm ml-2 whitespace-nowrap">
+                    {cost.price}
+                  </span>
                 </div>
-                <p className="text-xs text-clr_pra">{cost.note}</p>
               </div>
             ))}
           </div>
         </div>
 
         <p className="text-clr_pra text-sm mt-4">
-          <strong className="text-white">Real example:</strong> If you order a
-          corporate website from a freelancer for &euro;599 + domain &euro;12/year
-          + hosting free (Vercel), your total annual cost is &euro;611 in the
-          first year and just &euro;12 in subsequent years. That&apos;s less than
-          &euro;1 per month for a professional online presence.
+          <strong className="text-white">Celkový ročný náklad</strong> na
+          prevádzku jednoduchého firemného webu je
+          100&ndash;600&nbsp;&euro;, v závislosti od toho, či si správu robíte
+          sami alebo ju zveríte odborníkovi.
         </p>
       </section>
 
       {/* ------------------------------------------------------------ */}
-      {/*  4. Freelancer vs Agency                                      */}
+      {/*  8. Mesačné náklady na prevádzku                               */}
       {/* ------------------------------------------------------------ */}
       <section className="mb-16" data-aos="fade-up" data-aos-duration="800">
         <h2 className="text-2xl md:text-3xl text-white font-bold mb-8">
-          Freelancer vs Agency &mdash; Which Is Better?
+          Mesačné náklady na prevádzku webstránky
+        </h2>
+
+        <div className="bg-[rgb(30,30,30)] rounded-xl p-6 md:p-8">
+          <div className="space-y-3">
+            {monthlyCosts.map((cost) => (
+              <div
+                key={cost.item}
+                className="flex items-center justify-between py-2 border-b border-white/5 last:border-0"
+              >
+                <span className="text-white text-sm">{cost.item}</span>
+                <span className="text-clr_base font-semibold text-sm">
+                  {cost.price}
+                </span>
+              </div>
+            ))}
+            <div className="flex items-center justify-between py-2 border-t border-white/20 mt-2">
+              <span className="text-white font-bold">
+                Celkom (bez marketingu)
+              </span>
+              <span className="text-clr_base font-bold">4&ndash;59&nbsp;&euro;</span>
+            </div>
+            <div className="flex items-center justify-between py-2">
+              <span className="text-white font-bold">
+                Celkom (so správou a SEO)
+              </span>
+              <span className="text-clr_base font-bold">
+                79&ndash;259&nbsp;&euro;
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <p className="text-clr_pra text-sm mt-6 leading-relaxed">
+          Ak máte jednoduchý web bez blogu a nerobíte aktívne SEO, vaše mesačné
+          náklady budú pod 10&nbsp;&euro;. Ak chcete, aby vám web reálne
+          prinášal zákazníkov, počítajte s investíciou
+          80&ndash;250&nbsp;&euro;/mesačne do správy a optimalizácie.
+        </p>
+      </section>
+
+      {/* ------------------------------------------------------------ */}
+      {/*  9. Web na mieru vs. šablóna                                   */}
+      {/* ------------------------------------------------------------ */}
+      <section className="mb-16" data-aos="fade-up" data-aos-duration="800">
+        <h2 className="text-2xl md:text-3xl text-white font-bold mb-8">
+          Webstránka na mieru vs. šablóna &mdash; kedy sa oplatí čo
         </h2>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {/* Freelancer */}
           <div className="bg-[rgb(30,30,30)] rounded-xl p-6">
-            <h3 className="text-lg font-semibold text-white mb-4">
-              Freelancer
+            <h3 className="text-lg font-semibold text-white mb-3">
+              Šablóna (WordPress theme, builder)
             </h3>
-            <div className="space-y-3 mb-6">
-              {freelancerPros.map((item) => (
-                <div key={item} className="flex items-start gap-2">
-                  <CheckCircleFill className="text-clr_base shrink-0 mt-0.5" />
-                  <span className="text-sm text-clr_pra">{item}</span>
-                </div>
-              ))}
-            </div>
-            <div className="space-y-3">
-              {freelancerCons.map((item) => (
+            <p className="text-2xl font-bold text-clr_pra mb-4">
+              0&ndash;60&nbsp;&euro;
+            </p>
+            <div className="space-y-2 mb-4">
+              {["Rýchle spustenie", "Nízka cena", "Overený dizajn"].map(
+                (item) => (
+                  <div key={item} className="flex items-start gap-2">
+                    <CheckCircleFill className="text-clr_base shrink-0 mt-0.5" />
+                    <span className="text-sm text-clr_pra">{item}</span>
+                  </div>
+                )
+              )}
+              {[
+                "Vyzerá podobne ako stovky iných stránok",
+                "Obmedzené úpravy",
+                "Pomalšie načítanie",
+              ].map((item) => (
                 <div key={item} className="flex items-start gap-2">
                   <XCircleFill className="text-red-500 shrink-0 mt-0.5" />
                   <span className="text-sm text-clr_pra">{item}</span>
                 </div>
               ))}
             </div>
+            <p className="text-xs text-clr_pra">
+              Ideálne pre: osobné stránky, blogy, testovanie nápadu.
+            </p>
           </div>
 
-          {/* Agency */}
-          <div className="bg-[rgb(30,30,30)] rounded-xl p-6">
-            <h3 className="text-lg font-semibold text-white mb-4">
-              Agency
+          <div className="bg-clr_base/5 border border-clr_base/10 rounded-xl p-6">
+            <h3 className="text-lg font-semibold text-white mb-3">
+              Web na mieru
             </h3>
-            <div className="space-y-3 mb-6">
-              {agencyPros.map((item) => (
+            <p className="text-2xl font-bold text-clr_base mb-4">
+              od 490&nbsp;&euro;
+            </p>
+            <div className="space-y-2 mb-4">
+              {[
+                "Unikátny dizajn",
+                "Rýchle načítanie",
+                "Presne prispôsobený biznisu",
+                "Lepšie SEO",
+              ].map((item) => (
                 <div key={item} className="flex items-start gap-2">
                   <CheckCircleFill className="text-clr_base shrink-0 mt-0.5" />
                   <span className="text-sm text-clr_pra">{item}</span>
                 </div>
               ))}
-            </div>
-            <div className="space-y-3">
-              {agencyCons.map((item) => (
+              {["Vyššia počiatočná investícia", "Dlhší vývoj"].map((item) => (
                 <div key={item} className="flex items-start gap-2">
                   <XCircleFill className="text-red-500 shrink-0 mt-0.5" />
                   <span className="text-sm text-clr_pra">{item}</span>
                 </div>
               ))}
             </div>
+            <p className="text-xs text-clr_pra">
+              Ideálne pre: firmy, ktoré chcú profesionálny dojem a reálne
+              výsledky z webu.
+            </p>
           </div>
         </div>
 
         <div className="bg-clr_base/5 border border-clr_base/10 rounded-xl p-6 mt-6">
           <p className="text-clr_pra leading-relaxed">
-            <strong className="text-white">Verdict:</strong> For small and
-            medium businesses in Slovakia, a freelancer is usually the better
-            choice &mdash; you get the same quality at a fraction of an
-            agency&apos;s cost. An agency is justified for large enterprise
-            projects with budgets starting at &euro;10,000, where an entire
-            team of specialists is needed.
+            Pre firmu, ktorá zarába peniaze, je{" "}
+            <strong className="text-white">
+              web na mieru investícia, nie náklad
+            </strong>
+            . Ak vám web prinesie čo i len jedného zákazníka mesačne naviac,
+            investícia sa vráti behom pár týždňov.
           </p>
         </div>
       </section>
 
       {/* ------------------------------------------------------------ */}
-      {/*  5. What Not to Save On                                       */}
+      {/*  10. Prenájom vs. jednorazová platba                           */}
       {/* ------------------------------------------------------------ */}
       <section className="mb-16" data-aos="fade-up" data-aos-duration="800">
-        <h2 className="text-2xl md:text-3xl text-white font-bold mb-8">
-          What You Shouldn&apos;t Save On
+        <h2 className="text-2xl md:text-3xl text-white font-bold mb-4">
+          Prenájom webstránky vs. jednorazová platba
         </h2>
+        <p className="text-clr_pra mb-8 leading-relaxed">
+          Niektoré agentúry na Slovensku ponúkajú &bdquo;prenájom webu&ldquo;
+          &mdash; platíte 30&ndash;90&nbsp;&euro; mesačne a web vlastníte až po
+          splatení, alebo nevlastníte vôbec.
+        </p>
 
-        <div className="bg-[rgb(30,30,30)] rounded-2xl p-8 md:p-12">
-          <p className="text-clr_pra mb-6">
-            A cheap website isn&apos;t necessarily bad. But there are areas
-            where saving ends up costing more than what you save:
-          </p>
-          <div className="grid md:grid-cols-2 gap-6">
-            {dontSaveOn.map((item) => (
-              <div key={item.title}>
-                <h3 className="text-lg font-semibold text-white mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-clr_pra text-sm leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-clr_base/5 border border-clr_base/10 rounded-xl p-6">
+            <h3 className="text-lg font-semibold text-white mb-3">
+              Jednorazová platba
+            </h3>
+            <p className="text-clr_pra text-sm leading-relaxed">
+              Web je po zaplatení váš. Dostanete prístupové údaje, zdrojový kód
+              aj doménu na svoje meno. Ak sa rozhodnete zmeniť dodávateľa,
+              jednoducho si web presuniete.
+            </p>
+            <div className="flex items-start gap-2 mt-3">
+              <CheckCircleFill className="text-clr_base shrink-0 mt-0.5" />
+              <span className="text-sm text-white font-medium">
+                Odporúčaná voľba
+              </span>
+            </div>
+          </div>
+
+          <div className="bg-[rgb(30,30,30)] rounded-xl p-6">
+            <h3 className="text-lg font-semibold text-white mb-3">
+              Prenájom (mesačné splátky)
+            </h3>
+            <p className="text-clr_pra text-sm leading-relaxed">
+              30&nbsp;&euro; mesačne znie lákavo, ale za 20 mesiacov zaplatíte to
+              isté. Ak chcete odísť pred koncom zmluvy, web vám nepatrí.
+              Niektoré firmy používajú proprietárne systémy, odkiaľ sa nedá
+              migrovať.
+            </p>
+            <div className="flex items-start gap-2 mt-3">
+              <XCircleFill className="text-red-500 shrink-0 mt-0.5" />
+              <span className="text-sm text-clr_pra">
+                Riziko vendor lock-in
+              </span>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ------------------------------------------------------------ */}
-      {/*  6. How Much to Invest Based on Business Type                  */}
+      {/*  11. Koľko investovať ako startup                              */}
       {/* ------------------------------------------------------------ */}
       <section className="mb-16" data-aos="fade-up" data-aos-duration="800">
         <h2 className="text-2xl md:text-3xl text-white font-bold mb-4">
-          How Much to Invest Based on Business Type
+          Koľko investovať do webstránky ako startup
         </h2>
-        <p className="text-clr_pra mb-8">
-          Not every business needs the same website. Here are specific
-          recommendations for different types of businesses in Slovakia:
+        <p className="text-clr_pra mb-8 leading-relaxed">
+          Ak ste na začiatku podnikania, web nemusí byť váš najväčší náklad.
+          Ale musí existovať a musí vyzerať profesionálne &mdash; je to prvá
+          vec, ktorú si o vás potenciálny zákazník overí.
         </p>
 
         <div className="space-y-4">
-          {businessTypes.map((item) => (
+          {startupBudgets.map((item) => (
             <div
-              key={item.business}
+              key={item.title}
               className="bg-[rgb(30,30,30)] rounded-xl p-6"
             >
-              <div className="flex flex-col md:flex-row md:items-center justify-between mb-2">
-                <h3 className="text-lg font-semibold text-white">
-                  {item.business}
-                </h3>
-                <span className="text-clr_base font-bold">{item.budget}</span>
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-clr_base/10 rounded-xl flex items-center justify-center shrink-0">
+                  <item.icon className="text-clr_base text-xl" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-semibold text-white mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-clr_pra leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
               </div>
-              <p className="text-sm text-clr_pra">{item.recommendation}</p>
             </div>
           ))}
+        </div>
+
+        <div className="bg-clr_base/5 border border-clr_base/10 rounded-xl p-6 mt-6">
+          <p className="text-clr_pra leading-relaxed">
+            <strong className="text-white">Pravidlo pre startup:</strong>{" "}
+            investujte 3&ndash;5&nbsp;% z predpokladaného ročného obratu do webu
+            a online prezentácie. Ak plánujete zarábať
+            30&nbsp;000&nbsp;&euro;/rok, investícia
+            900&ndash;1&nbsp;500&nbsp;&euro; do webu je rozumná.
+          </p>
         </div>
       </section>
 
       {/* ------------------------------------------------------------ */}
-      {/*  7. Summary                                                    */}
+      {/*  12. Prehľadná tabuľka cien                                   */}
       {/* ------------------------------------------------------------ */}
       <section className="mb-16" data-aos="fade-up" data-aos-duration="800">
-        <h2 className="text-2xl md:text-3xl text-white font-bold mb-4">
-          Summary: How Much Does a Website Actually Cost?
+        <h2 className="text-2xl md:text-3xl text-white font-bold mb-8">
+          Zhrnutie &mdash; prehľadná tabuľka cien
         </h2>
-        <div className="bg-clr_base/5 border border-clr_base/10 rounded-xl p-6 md:p-8">
-          <p className="text-clr_pra leading-relaxed mb-4">
-            For most small businesses and entrepreneurs in Slovakia, the optimal
-            investment in a website is between{" "}
-            <strong className="text-white">&euro;399 and &euro;999</strong>.
-            For this amount, you get a professional website with modern design,
-            mobile version, SEO optimization, and a contact form.
-          </p>
-          <p className="text-clr_pra leading-relaxed mb-4">
-            The key is not to save on speed, mobile-first design, and basic SEO.
-            A website is an investment, not an expense. A quality website pays
-            for itself through new customers who would never have found you on
-            Google otherwise.
-          </p>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-white/10">
+                <th className="text-left text-clr_pra font-medium py-3 pr-4">
+                  Typ webstránky
+                </th>
+                <th className="text-left text-clr_pra font-medium py-3 pr-4">
+                  Freelancer
+                </th>
+                <th className="text-left text-clr_pra font-medium py-3 pr-4">
+                  Agentúra
+                </th>
+                <th className="text-left text-clr_pra font-medium py-3">
+                  Builder (DIY)
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {summaryTable.map((row) => (
+                <tr key={row.type} className="border-b border-white/5">
+                  <td className="py-3 pr-4 text-white font-medium">
+                    {row.type}
+                  </td>
+                  <td className="py-3 pr-4 text-clr_base font-semibold">
+                    {row.freelancer}
+                  </td>
+                  <td className="py-3 pr-4 text-clr_pra">{row.agency}</td>
+                  <td className="py-3 text-clr_pra">{row.builder}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div className="bg-clr_base/5 border border-clr_base/10 rounded-xl p-6 mt-6">
           <p className="text-clr_pra leading-relaxed">
-            If you&apos;re unsure whether you need a landing page for &euro;390
-            or a corporate website for &euro;599 &mdash; write to me. I will
-            advise you based on your situation and prepare a free price quote
-            within 24 hours.
+            Najdôležitejšie nie je koľko zaplatíte, ale{" "}
+            <strong className="text-white">koľko vám web zarobí</strong>. Lacný
+            web, ktorý neprináša zákazníkov, je drahší ako kvalitný web, ktorý
+            sa zaplatí sám.
           </p>
         </div>
       </section>
@@ -625,26 +914,26 @@ const WebsiteCostArticle = () => {
       {/* ------------------------------------------------------------ */}
       <section className="mb-16" data-aos="fade-up" data-aos-duration="800">
         <h2 className="text-xl text-white font-bold mb-4">
-          Related Articles
+          Súvisiace články
         </h2>
         <div className="flex flex-wrap gap-4">
           <Link
             href="/all-services"
             className="inline-flex items-center gap-2 text-clr_base hover:underline"
           >
-            Website Creation <ArrowRight />
+            Tvorba webstránok <ArrowRight />
           </Link>
           <Link
             href="/blog/website-for-entrepreneurs"
             className="inline-flex items-center gap-2 text-clr_base hover:underline"
           >
-            Website for Entrepreneurs <ArrowRight />
+            Webstránka pre podnikateľov <ArrowRight />
           </Link>
           <Link
             href="/blog/improve-website-seo"
             className="inline-flex items-center gap-2 text-clr_base hover:underline"
           >
-            How to Improve SEO <ArrowRight />
+            Ako zlepšiť SEO <ArrowRight />
           </Link>
         </div>
       </section>
@@ -658,19 +947,30 @@ const WebsiteCostArticle = () => {
         data-aos-duration="800"
       >
         <h2 className="text-2xl md:text-3xl text-white font-bold mb-4">
-          Want to Know the Exact Cost of Your Website?
+          Hľadáte freelancera na tvorbu webstránky v Bratislave?
         </h2>
         <p className="text-clr_pra mb-8 max-w-xl mx-auto">
-          Write to me about your project, and within 24 hours you&apos;ll
-          receive a free price quote. Free, accurate, and personalized.
+          Pozrite si moje portfólio alebo si rovno rezervujte bezplatnú
+          konzultáciu. Odpoviem do 24 hodín.
         </p>
-        <Link
-          href="/#contact"
-          className="inline-flex items-center gap-2 px-8 py-4 bg-clr_base text-clr_title rounded-full font-medium hover:opacity-90 transition-opacity"
-        >
-          I Want a Price Quote
-          <ArrowRight />
-        </Link>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link
+            href="/portfolio"
+            className="inline-flex items-center gap-2 px-8 py-4 border border-clr_base text-clr_base rounded-full font-medium hover:bg-clr_base/10 transition-colors"
+          >
+            Portfólio
+            <ArrowRight />
+          </Link>
+          <a
+            href="https://calendar.app.google/uvuY4SVfiJS92eRB6"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-clr_base text-clr_title rounded-full font-medium hover:opacity-90 transition-opacity"
+          >
+            Bezplatná konzultácia
+            <ArrowRight />
+          </a>
+        </div>
       </section>
     </article>
   );
