@@ -3,6 +3,8 @@ import React from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { useTranslations, useLocale } from 'next-intl';
+
+// English articles (always available as fallback)
 import AiChatbotArticle from "@/Components/Articles/AiChatbotArticle";
 import SeoArticle from "@/Components/Articles/SeoArticle";
 import EntrepreneursArticle from "@/Components/Articles/EntrepreneursArticle";
@@ -28,6 +30,7 @@ const blogSlugs = [
 
 const BlogArticle = ({ params }) => {
   const t = useTranslations('blogs');
+  const pt = useTranslations('pageHeader');
   const locale = useLocale();
 
   const slugIndex = blogSlugs.indexOf(params.slug);
@@ -51,7 +54,7 @@ const BlogArticle = ({ params }) => {
       <div className="container max-w-[800px] mb-8">
         <nav className="flex items-center gap-2 text-sm text-clr_pra">
           <Link href={`/${locale}`} className="hover:text-white transition-colors">
-            {locale === 'sk' ? 'Domov' : locale === 'ru' ? 'Главная' : 'Home'}
+            {pt('home')}
           </Link>
           <span>/</span>
           <Link href={`/${locale}/all-blog`} className="hover:text-white transition-colors">
