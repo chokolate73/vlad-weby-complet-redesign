@@ -1,17 +1,39 @@
+'use client'
 import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "react-bootstrap-icons";
 import Blog from "./Blog";
-import { blogsList } from "../../Utlits/blogList";
 import TitleSecond from "../Shared/TitleSecond";
+import { useTranslations } from 'next-intl';
+
+const blogKeys = ['seo', 'chatbot', 'cost', 'entrepreneurs', 'wordpress'];
+const blogSlugs = [
+  'improve-website-seo',
+  'ai-chatbot-for-business',
+  'website-cost-2025',
+  'website-for-entrepreneurs',
+  'wordpress-vs-modern-website',
+];
 
 const Blogs = () => {
+  const t = useTranslations('blogs');
+
+  const blogsList = blogKeys.map((key, index) => ({
+    id: index + 1,
+    slug: blogSlugs[index],
+    category: t(`items.${key}.category`),
+    date: t(`items.${key}.date`),
+    readTime: t(`items.${key}.readTime`),
+    heading: t(`items.${key}.heading`),
+    para: t(`items.${key}.para`),
+  }));
+
   return (
     <section className="bg-common_bg bg-no-repeat bg-cover bg-center overflow-hidden pt_120 pb_120" id="blog">
       <div className="container">
         <div className="grid xl:grid-cols-[33%_auto] lg:grid-cols-[28%_auto] grid-cols-1 gap-12">
           <div>
-            <TitleSecond mainTitle={"Latest Articles"} sortTitle={"Blog"} />
+            <TitleSecond mainTitle={t('mainTitle')} sortTitle={t('sortTitle')} />
             <Link
               href="/all-blog"
               className="md:w-52 md:h-52 w-32 h-32 bg-clr_base rounded-full flex justify-center items-center text-center relative before:w-full before:h-full before:rounded-full before:border before:border-clr_base before:content-[''] before:absolute before:top-[10px] before:-left-[7px] before:duration-500 hover:before:-top-[10px]"
@@ -23,7 +45,7 @@ const Blogs = () => {
                   <ArrowRight />
                 </i>
                 <span className="text-[#282828] md:text-lg text-sm font-medium leading-[30px] capitalize transition-all">
-                  All Articles
+                  {t('allArticles')}
                 </span>
               </span>
             </Link>

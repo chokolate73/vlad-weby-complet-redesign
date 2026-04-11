@@ -3,14 +3,16 @@ import React from 'react'
 import RanderHeader from './RanderHeader'
 import Banner from '@/Components/Banner'
 import { usePathname } from 'next/navigation'
+import { useLocale } from 'next-intl'
 
 const Header = () => {
   const pathname = usePathname()
+  const locale = useLocale()
+  const isHome = pathname === `/${locale}` || pathname === `/${locale}/`
 
   return (
     <>
-      {pathname === "/" ? (
-
+      {isHome ? (
         <div className={`bg-banner_image bg-no-repeat bg-center bg-cover bg-fixed relative overflow-hidden`}>
           <RanderHeader />
           <Banner />

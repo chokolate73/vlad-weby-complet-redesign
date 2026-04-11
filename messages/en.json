@@ -1,0 +1,428 @@
+{
+  "metadata": {
+    "title": "Vlad Weby",
+    "description": "Web developer & AI specialist based in Bratislava. Modern websites that earn - not just look good."
+  },
+  "nav": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "pricing": "Pricing",
+    "services": "Services",
+    "faq": "FAQ",
+    "blog": "Blog",
+    "contact": "Contact",
+    "webDesign": "Web Design",
+    "aiChatbot": "AI Chatbot",
+    "allArticles": "All Articles",
+    "blogDetails": "Blog Details",
+    "freeConsultation": "Free Consultation"
+  },
+  "banner": {
+    "availableForProjects": "Available for projects - free consultation",
+    "websitesThat": "Websites That",
+    "earnMoney": "Earn Money",
+    "workProcess": "Work Process",
+    "scrollDown": "scroll down",
+    "followMe": "Follow Me"
+  },
+  "about": {
+    "intro": "I build websites that earn - not just look good. Modern development, AI tools, and measurable results at a price that doesn't require agency budgets.",
+    "tabAbout": "About",
+    "tabExperience": "Experience",
+    "tabLanguages": "Languages",
+    "tabSkills": "Skills",
+    "aboutMe": "About Me",
+    "aboutMeText": "I handle every project personally - from the first call to launch. A good website isn't about pixels - it's about how many customers it brings you. Four languages, one contact, zero overhead.",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "languages": "Languages"
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "description": "AI automation and high-performance web development for businesses across Central Europe.",
+    "items": {
+      "lenovo": {
+        "date": "2024–Now",
+        "position": "Lenovo · Bratislava",
+        "role": "AI Automation Analyst"
+      },
+      "chatbot": {
+        "date": "2024",
+        "position": "Web & Social Media",
+        "role": "First AI Chatbot Deployed"
+      },
+      "freelance": {
+        "date": "2022–Now",
+        "position": "vlad-weby.sk · 18+ projects",
+        "role": "Freelance Web Developer"
+      },
+      "founded": {
+        "date": "2022",
+        "position": "Freelance · 4 markets",
+        "role": "Vlad Weby Founded"
+      }
+    }
+  },
+  "education": {
+    "title": "Languages & Markets",
+    "description": "Four languages, multiple markets. I build multilingual websites for the Central European market and beyond.",
+    "sk": "Slovak",
+    "en": "English",
+    "de": "German",
+    "ru": "Russian"
+  },
+  "skills": {
+    "title": "Tech Stack",
+    "description": "Modern stack for high-performance websites and AI-powered automation.",
+    "webDevelopment": "Web Development",
+    "aiAutomation": "AI & Automation",
+    "seoTools": "SEO & Tools"
+  },
+  "awards": {
+    "title": "Achievements",
+    "viewMyWork": "View My Work",
+    "items": {
+      "chatbot": {
+        "name": "AI Chatbot Integration",
+        "contest": "Web & Social Media"
+      },
+      "projects": {
+        "name": "18+ Projects Delivered",
+        "contest": "Landing Pages & Web Apps"
+      },
+      "rating": {
+        "name": "5.0 Star Rating",
+        "contest": "Google Reviews"
+      },
+      "markets": {
+        "name": "4 Markets Served",
+        "contest": "SK · DE · AT · UA"
+      }
+    }
+  },
+  "projects": {
+    "mainTitle": "Examples of the quality you will get.",
+    "sortTitle": "Recent Work & Demos",
+    "items": {
+      "pro1": {
+        "heading": "Web Design",
+        "subHeading": "Dobry Vodar - Professional plumber website"
+      },
+      "pro2": {
+        "heading": "Web Design",
+        "subHeading": "Anti-Aging Massage & Holistic Bodywork in Traunstein"
+      },
+      "pro3": {
+        "heading": "Web Development",
+        "subHeading": "TopSicher Umzug - Relocation services in Germany"
+      },
+      "pro4": {
+        "heading": "AI & Payment Integration",
+        "subHeading": "Beauty in Perfection - AI & Payment System Integration"
+      },
+      "pro5": {
+        "heading": "Tech Services",
+        "subHeading": "Irsava Tech - Expert Mobile & Laptop Repair"
+      },
+      "pro6": {
+        "heading": "Web Design",
+        "subHeading": "ManzelPro - Multilingual Service Website"
+      }
+    }
+  },
+  "meeting": {
+    "mainTitle": "Let's build something that earns for you.",
+    "sortTitle": "Need a Website?",
+    "email": "Email",
+    "phone": "Phone",
+    "responseTime": "Response Time",
+    "replyWithin": "Reply within 24 hours",
+    "yourName": "Your Name",
+    "yourEmail": "Your Email",
+    "yourPhone": "Your Phone (optional)",
+    "whatDoYouNeed": "What do you need?",
+    "landingPage": "Landing page",
+    "fullWebsite": "Full website",
+    "aiChatbot": "AI chatbot / automation",
+    "seoOptimization": "SEO & optimization",
+    "other": "Other",
+    "yourMessage": "Your Message",
+    "sending": "Sending...",
+    "getMyFreeQuote": "Get My Free Quote",
+    "successMessage": "Thank you! Your message has been sent successfully.",
+    "errorMessage": "Something went wrong. Please try again."
+  },
+  "services": {
+    "mainTitle": "Business thinking, AI expertise, and freelance flexibility - at a fair price.",
+    "sortTitle": "I'm not another web agency",
+    "items": {
+      "ai": {
+        "heading": "AI & Automation",
+        "subHeading": "Your competitive edge",
+        "para": "AI chatbots that handle customer inquiries, workflow automation that eliminates repetitive tasks, and API integrations that connect your tools. Less manual work, more clients, faster growth."
+      },
+      "languages": {
+        "heading": "4 Languages, 3+ Markets",
+        "subHeading": "SK · EN · DE · RU",
+        "para": "Multilingual websites for the Central European market. Reach customers in Slovakia, Germany, Austria, and beyond."
+      },
+      "speed": {
+        "heading": "Weeks, Not Months",
+        "subHeading": "Fast turnaround",
+        "para": "Landing pages launch in days. Full websites go live in 1–2 weeks. Fast because the process is efficient — not because corners are cut."
+      },
+      "seo": {
+        "heading": "SEO & Performance Built In",
+        "subHeading": "Found on Google",
+        "para": "Every site is built for search engines from day one — fast loading, mobile-first, proper structure. Not an afterthought, not an upsell."
+      },
+      "direct": {
+        "heading": "Direct Communication",
+        "subHeading": "No middlemen",
+        "para": "No account manager. You talk directly with the person building your website. One contact, zero overhead."
+      },
+      "earn": {
+        "heading": "Websites That Earn",
+        "subHeading": "Not just pretty design",
+        "para": "Landing pages, business websites, web apps — designed to convert visitors into customers. Clean design that works for your business, not just looks good in a portfolio."
+      }
+    }
+  },
+  "faqSection": {
+    "mainTitle": "Answers to Common Questions",
+    "sortTitle": "FAQ",
+    "items": {
+      "pricing": {
+        "title": "Pricing",
+        "info": "Do I have to pay monthly fees?",
+        "list1": "Website design is a one-time fee",
+        "list2": "Optional Care Package: €25/month",
+        "list3": "Covers updates, security & hosting"
+      },
+      "changes": {
+        "title": "Changes",
+        "info": "What if I need to change text or photos later?",
+        "list1": "Care Package: we handle it for you",
+        "list2": "Just send a message with changes",
+        "list3": "Stock photos & text included free"
+      },
+      "speed": {
+        "title": "Speed",
+        "info": "How fast will it be ready?",
+        "list1": "Typically 3 to 5 business days",
+        "list2": "Full setup and content handled",
+        "list3": "Mobile-first, works on every device"
+      }
+    }
+  },
+  "testimonial": {
+    "sortTitle": "Testimonial",
+    "mainTitle": "What Clients Say",
+    "reviews": {
+      "stanislav": {
+        "name": "Stanislav Zavydniak",
+        "position": "Local Guide · Slovakia \ud83c\uddf8\ud83c\uddf0",
+        "review": "Good experience. Website done in 3 days. Nice price compared to others. Recommend."
+      },
+      "oleg": {
+        "name": "Tsapenko Oleg",
+        "position": "Slovakia \ud83c\uddf8\ud83c\uddf0",
+        "review": "Huge thanks to Vlad! He built our website and helped promote the company - the result exceeded all expectations. Vlad is a true professional, attentive to details, always available and ready to offer the best solutions. Very happy with the collaboration, definitely recommend!"
+      },
+      "katerina": {
+        "name": "Katerina Fetisova",
+        "position": "Germany \ud83c\udde9\ud83c\uddea",
+        "review": "Came to Vlad with a complex request. Vlad was very patient with all my ideas, implemented quickly, suggested his own options, made corrections. Vlad will remain my reliable partner, as he proved himself a professional ready to responsibly and quickly solve tasks. Thank you from the bottom of my heart!"
+      }
+    }
+  },
+  "pricing": {
+    "mainTitle": "Transparent pricing. High ROI. No hidden agency fees.",
+    "sortTitle": "Invest in Your Growth",
+    "startProject": "Start My Project Now",
+    "plans": {
+      "landing": {
+        "name": "Landing Page",
+        "price": "€390",
+        "time": "one-time",
+        "features": {
+          "f1": "Custom One-Page Design",
+          "f2": "SEO Optimization",
+          "f3": "Fast Speed",
+          "f4": "Contact Form",
+          "f5": "Mobile Responsive"
+        }
+      },
+      "multipage": {
+        "name": "Multi-Page Website",
+        "price": "€599",
+        "time": "Best Value",
+        "features": {
+          "f1": "Up to 5 Custom Pages",
+          "f2": "Advanced SEO",
+          "f3": "CMS for Easy Editing",
+          "f4": "Blog / News Section",
+          "f5": "Google Maps & Analytics"
+        }
+      },
+      "ai": {
+        "name": "AI Growth Engine",
+        "price": "€999",
+        "time": "AI Powered",
+        "features": {
+          "f1": "Everything in Multi-Page",
+          "f2": "Custom AI Chatbot",
+          "f3": "Client Conversions",
+          "f4": "Web & Social Media",
+          "f5": "Auto-Booking System"
+        }
+      }
+    }
+  },
+  "blogs": {
+    "sortTitle": "Blog",
+    "mainTitle": "Latest Articles",
+    "allArticles": "All Articles",
+    "readMore": "Read More",
+    "items": {
+      "seo": {
+        "category": "SEO",
+        "date": "February 12, 2026",
+        "readTime": "9 min",
+        "heading": "How to Improve Your Website SEO — 10 Practical Tips",
+        "para": "Specific steps you can take today for better visibility on Google. No technical jargon."
+      },
+      "chatbot": {
+        "category": "AI",
+        "date": "February 12, 2026",
+        "readTime": "8 min",
+        "heading": "AI Chatbot for Business — How to Automate Customer Support",
+        "para": "What is an AI chatbot, how does it work, and why does your business need one. Real-world examples and an implementation guide."
+      },
+      "cost": {
+        "category": "Pricing",
+        "date": "February 12, 2026",
+        "readTime": "8 min",
+        "heading": "How Much Does a Website Cost in 2025?",
+        "para": "A complete overview of website pricing in Slovakia. Comparison of agencies, freelancers, and website builders. Find out how much you should invest."
+      },
+      "entrepreneurs": {
+        "category": "Guides",
+        "date": "February 12, 2026",
+        "readTime": "10 min",
+        "heading": "Website for Entrepreneurs — Complete Guide",
+        "para": "A practical guide for entrepreneurs and small businesses. What your website should include, how much to invest, and how to get started."
+      },
+      "wordpress": {
+        "category": "Technology",
+        "date": "February 12, 2026",
+        "readTime": "7 min",
+        "heading": "WordPress vs Modern Website — What's Better for Small Business?",
+        "para": "A comparison of WordPress with modern technologies. Advantages, disadvantages, and which solution is ideal for whom."
+      }
+    }
+  },
+  "footer": {
+    "getInTouch": "Get In Touch",
+    "description": "Helping local businesses grow with modern, high-performance websites. Based in Bratislava.",
+    "copyright": "All rights reserved.",
+    "cookiePolicy": "Cookie Policy",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "drawer": {
+    "description": "Web developer & AI specialist based in Bratislava. Modern websites that earn - not just look good. Fast delivery, fair pricing.",
+    "address": "address",
+    "email": "email",
+    "callNow": "call now",
+    "letsTalk": "Let's Talk"
+  },
+  "cookie": {
+    "message": "This website uses cookies to ensure you get the best experience.",
+    "policy": "Cookie Policy",
+    "decline": "Decline",
+    "accept": "Accept"
+  },
+  "pages": {
+    "contact": {
+      "heading": "Send Me a Message",
+      "page": "Contact",
+      "respondTime": "I'll respond within 24 hours",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address"
+    },
+    "allBlog": {
+      "heading": "Blog",
+      "page": "Blog"
+    },
+    "allServices": {
+      "heading": "Services All",
+      "page": "Services All"
+    },
+    "portfolio": {
+      "heading": "My Work & Portfolio",
+      "page": "Work"
+    },
+    "cookies": {
+      "title": "Cookie Policy | Vlad Weby",
+      "description": "Cookie policy for vladweby.com. Learn how we use cookies on our website.",
+      "heading": "Cookie Policy",
+      "page": "Cookies",
+      "lastUpdated": "Last updated: April 10, 2026",
+      "s1title": "1. What Are Cookies",
+      "s1text": "Cookies are small text files that are stored on your device (computer, tablet, or mobile phone) when you visit a website. They are widely used to make websites work more efficiently and to provide information to the website owners. This Cookie Policy explains what cookies we use, why we use them, and your choices regarding their use.",
+      "s2title": "2. How We Use Cookies",
+      "s2text": "We use cookies for the following purposes:",
+      "s2essential": "Essential cookies",
+      "s2essentialText": "— These are necessary for the website to function properly. They enable basic features such as page navigation and access to secure areas. The website cannot function properly without these cookies.",
+      "s2preference": "Preference cookies",
+      "s2preferenceText": "— These cookies allow the website to remember your choices (such as your cookie consent preference) and provide enhanced, more personalized features.",
+      "s2analytics": "Analytics cookies",
+      "s2analyticsText": "— These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. This helps us improve the website experience.",
+      "s3title": "3. Cookies We Use",
+      "s3cookieName": "Cookie Name",
+      "s3type": "Type",
+      "s3duration": "Duration",
+      "s3purpose": "Purpose",
+      "s3essential": "Essential",
+      "s3persistent": "Persistent",
+      "s3consentPurpose": "Stores your cookie consent preference",
+      "s4title": "4. Your Rights Under GDPR",
+      "s4text": "As a visitor from the European Union, you have certain rights under the General Data Protection Regulation (GDPR) and the ePrivacy Directive. These include:",
+      "s4right1": "The right to be informed about how your data is collected and used",
+      "s4right2": "The right to access the personal data we hold about you",
+      "s4right3": "The right to request correction of inaccurate personal data",
+      "s4right4": "The right to request deletion of your personal data",
+      "s4right5": "The right to withdraw your consent at any time",
+      "s4right6": "The right to lodge a complaint with the Slovak Data Protection Authority (Urad na ochranu osobnych udajov Slovenskej republiky)",
+      "s5title": "5. Managing Cookies",
+      "s5text": "You can control and manage cookies in several ways:",
+      "s5banner": "Cookie consent banner",
+      "s5bannerText": "— When you first visit our website, you can choose to accept or decline non-essential cookies.",
+      "s5browser": "Browser settings",
+      "s5browserText": "— Most web browsers allow you to manage cookies through their settings. You can set your browser to refuse cookies or to delete cookies that have already been set. Note that disabling cookies may affect the functionality of the website.",
+      "s5clear": "Clear storage",
+      "s5clearText": "— You can clear your browser's local storage at any time to reset your cookie consent preference.",
+      "s6title": "6. Third-Party Cookies",
+      "s6text": "We may use third-party services that set their own cookies (for example, embedded content or analytics). We do not have control over these cookies. Please refer to the respective third-party privacy policies for more information about how they use cookies.",
+      "s7title": "7. Data Controller",
+      "s7text": "The data controller responsible for this website is:",
+      "s8title": "8. Changes to This Policy",
+      "s8text": "We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this page periodically to stay informed about how we use cookies.",
+      "s9title": "9. Contact Us",
+      "s9text": "If you have any questions about this Cookie Policy or our use of cookies, please contact us:"
+    }
+  },
+  "form": {
+    "leaveReply": "Leave a Reply",
+    "emailNotPublished": "Your email address will not be published. Required fields are marked *",
+    "name": "Name",
+    "email": "Eamil",
+    "writeComments": "Write Comments",
+    "submitComment": "Submit Comment"
+  },
+  "pageHeader": {
+    "home": "Home"
+  }
+}

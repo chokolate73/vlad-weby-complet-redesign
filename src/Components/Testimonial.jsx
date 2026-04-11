@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
-import Partner from "./Partner";
 import Rating from "./Shared/Rating";
+import { useTranslations } from 'next-intl';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
@@ -9,42 +9,19 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-
-
-const reviewList = [
-  {
-    id: 1,
-    name: "Stanislav Zavydniak",
-    position: "Local Guide · Slovakia 🇸🇰",
-    review: `Good experience. Website done in 3 days. Nice price compared
-    to others. Recommend.`,
-    stars: 5,
-  },
-  {
-    id: 2,
-    name: "Tsapenko Oleg",
-    position: "Slovakia 🇸🇰",
-    review: `Huge thanks to Vlad! He built our website and helped promote
-    the company - the result exceeded all expectations. Vlad is a true
-    professional, attentive to details, always available and ready to
-    offer the best solutions. Very happy with the collaboration,
-    definitely recommend!`,
-    stars: 5,
-  },
-  {
-    id: 3,
-    name: "Katerina Fetisova",
-    position: "Germany 🇩🇪",
-    review: `Came to Vlad with a complex request. Vlad was very patient
-    with all my ideas, implemented quickly, suggested his own options,
-    made corrections. Vlad will remain my reliable partner, as he proved
-    himself a professional ready to responsibly and quickly solve tasks.
-    Thank you from the bottom of my heart!`,
-    stars: 5,
-  },
-];
+const reviewKeys = ['stanislav', 'oleg', 'katerina'];
 
 const Testimonial = () => {
+  const t = useTranslations('testimonial');
+
+  const reviewList = reviewKeys.map((key, index) => ({
+    id: index + 1,
+    name: t(`reviews.${key}.name`),
+    position: t(`reviews.${key}.position`),
+    review: t(`reviews.${key}.review`),
+    stars: 5,
+  }));
+
   return (
     <section
       className="overflow-hidden pt_120 pb_120"
@@ -58,7 +35,7 @@ const Testimonial = () => {
             data-aos-duration="1000"
           >
             <span className="sm:w-20 w-[50px] h-[1px] bg-clr_base"></span>
-            <span>Testimonial</span>
+            <span>{t('sortTitle')}</span>
             <span className="sm:w-20 w-[50px] h-[1px] bg-clr_base"></span>
           </span>
           <h2
@@ -66,7 +43,7 @@ const Testimonial = () => {
             data-aos="fade-down"
             data-aos-duration="1000"
           >
-            What Clients Say
+            {t('mainTitle')}
           </h2>
         </div>
         <div
@@ -91,7 +68,6 @@ const Testimonial = () => {
                   loop={true}
                   modules={[Pagination, Autoplay]}
                 >
-                  {/* <div className="swiper-wrapper"> */}
                   {reviewList.map(({ id, name, position, review, stars }) => {
                     return (
                       <SwiperSlide key={id}>
@@ -112,7 +88,6 @@ const Testimonial = () => {
                       </SwiperSlide>
                     );
                   })}
-                  {/* </div> */}
                 </Swiper>
 
                 <div className="swiper-pagination3"></div>
@@ -135,7 +110,6 @@ const Testimonial = () => {
             <img src={"/img/testimonial/testi-arrow.png"} alt="img" />
           </div>
         </div>
-        {/* <Partner /> */}
       </div>
     </section>
   );

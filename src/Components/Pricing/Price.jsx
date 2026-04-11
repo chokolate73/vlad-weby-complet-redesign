@@ -1,8 +1,11 @@
 import Link from "next/link";
 import React from "react";
 import { ArrowRight } from "react-bootstrap-icons";
+import { useTranslations } from 'next-intl';
 
 const Price = ({ image, planName, price, time, fetcher, id }) => {
+  const t = useTranslations('pricing');
+
   return (
     <div data-aos="fade-up" data-aos-duration="1000">
       <div
@@ -55,7 +58,7 @@ const Price = ({ image, planName, price, time, fetcher, id }) => {
               id === 2 ? "text-white" : "text-black"
             } relative z-10 duration-500`}
           >
-            Start My Project Now
+            {t('startProject')}
           </span>
           <span>
             <i
