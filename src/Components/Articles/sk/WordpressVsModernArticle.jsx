@@ -80,7 +80,7 @@ const wordpressUseCases = [
       "Ak píšete desiatky článkov týždenne a potrebujete jednoduchý spôsob správy obsahu bez vývojára.",
   },
   {
-    title: "Projekty „urob si sám" s minimálnym rozpočtom",
+    title: "Projekty \u201Eurob si s\u00E1m\u201C s minim\u00E1lnym rozpo\u010Dtom",
     description:
       "Ak chcete vytvoriť web sami za pár eur mesačne a nepotrebujete výnimočný výkon.",
   },
