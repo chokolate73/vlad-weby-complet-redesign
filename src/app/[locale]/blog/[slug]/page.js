@@ -51,7 +51,7 @@ const BlogArticle = ({ params }) => {
       <div className="container max-w-[800px] mb-8">
         <nav className="flex items-center gap-2 text-sm text-clr_pra">
           <Link href={`/${locale}`} className="hover:text-white transition-colors">
-            {locale === 'sk' ? 'Domov' : 'Home'}
+            {locale === 'sk' ? 'Domov' : locale === 'ru' ? 'Главная' : 'Home'}
           </Link>
           <span>/</span>
           <Link href={`/${locale}/all-blog`} className="hover:text-white transition-colors">
