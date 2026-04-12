@@ -1,0 +1,139 @@
+{
+  "_meta": {
+    "generated": "2026-04-12",
+    "source": "https://www.vlad-weby.sk",
+    "crawl_method": "Google Search index snippets (WebSearch)",
+    "crawl_limitations": "Direct HTTP fetch of vlad-weby.sk was blocked at the sandbox proxy (403 CONNECT tunnel failed) for every URL attempted, including /sitemap.xml and /robots.txt, across both WebFetch and curl with browser User-Agents. As a result, full HTML bodies, complete heading trees, full hreflang tags, JSON-LD structured data, and complete image alt text could NOT be extracted. The inventory below is assembled from URLs and snippets that Google returned for site:vlad-weby.sk queries, which is a reliable proxy for indexable, SEO-relevant pages but is NOT a complete crawl. Before pointing the domain at the new site, this audit must be re-run from an environment that can actually fetch the live HTML.",
+    "locales_marketed": ["sk", "en", "de", "ru"],
+    "locales_found_indexed": ["sk", "en", "ru"]
+  },
+  "pages": [
+    {
+      "url": "https://www.vlad-weby.sk/sk/",
+      "locale": "sk",
+      "meta_title": "Vlad Weby (SK homepage) — full <title> not fetched",
+      "meta_description": null,
+      "indexed": true,
+      "source": "WebSearch"
+    },
+    {
+      "url": "https://www.vlad-weby.sk/sk/tvorba-web-stranok/",
+      "locale": "sk",
+      "meta_title": "Tvorba web stránok Bratislava | od 390 - Vlad Weby",
+      "meta_description": null,
+      "snippet_keywords": ["Tvorba web stránok", "Bratislava", "od 390€"],
+      "indexed": true,
+      "source": "WebSearch"
+    },
+    {
+      "url": "https://www.vlad-weby.sk/sk/seo-optimalizacia/",
+      "locale": "sk",
+      "meta_title": "SEO Optimalizácia Bratislava | Vlad Weby",
+      "snippet": "SEO optimalizácia pre firmy v Bratislave. Zvýšte viditeľnosť v Google a získajte viac zákazníkov z vyhľadávania. Jednorazový SEO audit od 149€, mesačná správa od 249€/mes.",
+      "indexed": true,
+      "source": "WebSearch"
+    },
+    {
+      "url": "https://vlad-weby.sk/sk/web/trnava",
+      "locale": "sk",
+      "meta_title": "Tvorba web stránok Trnava | Moderný Webdizajn - Vlad Weby",
+      "meta_description": null,
+      "indexed": true,
+      "source": "WebSearch"
+    },
+    {
+      "url": "https://vlad-weby.sk/sk/web/nitra",
+      "locale": "sk",
+      "meta_title": "Tvorba web stránok Nitra | Moderný Webdizajn - Vlad Weby",
+      "meta_description": null,
+      "indexed": true,
+      "source": "WebSearch"
+    },
+    {
+      "url": "https://www.vlad-weby.sk/en/",
+      "locale": "en",
+      "meta_title": "Web Design Bratislava | Vlad Weby",
+      "meta_description": "Professional website development for expats and international businesses in Slovakia and Austria. Multilingual staff, experience with European markets. Built in React, Next.js, Tailwind.",
+      "indexed": true,
+      "source": "WebSearch"
+    },
+    {
+      "url": "https://www.vlad-weby.sk/en/ai-chatbot/",
+      "locale": "en",
+      "meta_title": "AI Chatbot for Business | 24/7 Support | Vlad Weby",
+      "meta_description": "AI chatbot for business — automated 24/7 customer support and lead capture. Ideal for salons, restaurants, auto services. Website chatbot from €490 one-time, social-media integration from €690, monthly AI cost €29–49.",
+      "indexed": true,
+      "source": "WebSearch"
+    },
+    {
+      "url": "https://www.vlad-weby.sk/en/why-seo/",
+      "locale": "en",
+      "meta_title": "Why SEO is Important for Your Business | Vlad Weby",
+      "snippet": "Basic SEO optimization included with every website. Advanced SEO (link building, content strategy) from €149/month.",
+      "indexed": true,
+      "source": "WebSearch"
+    },
+    {
+      "url": "https://www.vlad-weby.sk/en/blog/how-much-does-a-website-cost/",
+      "locale": "en",
+      "meta_title": "How Much Does a Website Cost in 2025? | Vlad Weby",
+      "snippet": "The cost of creating a website in Slovakia ranges from €390 to tens of thousands of euros, with detailed pricing breakdowns. For most small businesses the optimal investment is between €399 and €999.",
+      "indexed": true,
+      "source": "WebSearch"
+    },
+    {
+      "url": "https://www.vlad-weby.sk/en/blog/how-to-improve-seo/",
+      "locale": "en",
+      "meta_title": "How to Improve Your Website SEO — 10 Practical Tips | Vlad Weby",
+      "snippet": "Practical SEO tips including image optimization, schema markup, mobile-friendly design, Google Mobile-Friendly Test, title tags, meta descriptions, heading structure.",
+      "indexed": true,
+      "source": "WebSearch"
+    },
+    {
+      "url": "https://vlad-weby.sk/ru/seo-prodvizhenie",
+      "locale": "ru",
+      "meta_title": "SEO продвижение и оптимизация - Vlad Weby",
+      "meta_description": null,
+      "indexed": true,
+      "source": "WebSearch"
+    },
+    {
+      "url": "https://www.vlad-weby.sk/works/",
+      "locale": "_nonlocalized_",
+      "meta_title": "Web Design Portfolio | Website Projects | Vlad Weby",
+      "snippet": "10+ completed websites for businesses across Europe. Modern design, fast loading, high-converting layouts for services, e-commerce, and more.",
+      "note": "Served without a locale prefix — the page also appears indexed with a Russian title 'Портфолио | Примеры сайтов | Vlad Weby' suggesting it uses content negotiation or a single page serves multiple languages.",
+      "indexed": true,
+      "source": "WebSearch"
+    }
+  ],
+  "pages_suspected_but_not_confirmed_indexed": [
+    {
+      "url_pattern": "https://www.vlad-weby.sk/de/*",
+      "reason": "Site copy markets 'SK · EN · DE · RU' locales. No German pages were returned by Google site:vlad-weby.sk/de searches, but the locale may exist and be noindex'd, newly launched, or indexed under a non-obvious slug."
+    },
+    {
+      "url_pattern": "https://www.vlad-weby.sk/sk/kontakt, /en/contact, /ru/kontakty",
+      "reason": "A live business site almost certainly has contact pages; none surfaced in search."
+    },
+    {
+      "url_pattern": "https://www.vlad-weby.sk/sk/blog/*",
+      "reason": "The EN site has a /blog/ subtree. It is reasonable to expect /sk/blog/* and /ru/blog/* to exist as indexed articles — none returned by search."
+    }
+  ],
+  "inferred_business_content": {
+    "services": [
+      "Tvorba web stránok / Web Design (from €390)",
+      "SEO optimalizácia / SEO Services (audit from €149, monthly from €249/mo)",
+      "AI Chatbot (from €490 one-time, €29–49/mo runtime)",
+      "n8n workflow automation",
+      "ChatGPT Shopping integration"
+    ],
+    "city_landing_pages_sk": ["Bratislava (tvorba-web-stranok)", "Trnava (web/trnava)", "Nitra (web/nitra)"],
+    "contact": {
+      "email": "v.hvorov73@gmail.com",
+      "phone": "+421 919 208 426",
+      "address": "Bottova 2A, 811 09 Bratislava"
+    }
+  }
+}

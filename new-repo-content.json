@@ -1,0 +1,171 @@
+{
+  "_meta": {
+    "generated": "2026-04-12",
+    "source": "/home/user/vlad-weby-complet-redesign (branch claude/audit-content-migration-cw8dt)",
+    "framework": "Next.js App Router + next-intl",
+    "locales_configured": ["en", "sk", "ru"],
+    "default_locale": "en",
+    "middleware_matcher": "['/', '/(sk|en|ru)/:path*']",
+    "notes": "Locales defined in src/i18n/routing.js — German ('de') is NOT present despite live-site marketing. No redirects configured in next.config.mjs. No app/sitemap.*, app/robots.*, or JSON-LD components anywhere in src/."
+  },
+  "root_metadata": {
+    "file": "src/app/layout.js",
+    "title": "Vlad Weby",
+    "description": "Web developer & AI specialist based in Bratislava. Modern websites that earn - not just look good.",
+    "icons": "configured",
+    "manifest": "/img/logo/site.webmanifest",
+    "robots": "not set",
+    "alternates": "not set",
+    "openGraph": "not set"
+  },
+  "routes": [
+    {
+      "path_pattern": "/[locale]/",
+      "file": "src/app/[locale]/page.js",
+      "type": "server",
+      "page_metadata": null,
+      "h1_source": "Components/Banner — 'Websites That {earnMoney}' via t('banner.*')",
+      "sections": ["MarqueeWapper", "About", "Awards", "Projects", "Metting", "Services", "WorkeProcess", "Testimonial", "Blogs"]
+    },
+    {
+      "path_pattern": "/[locale]/all-services",
+      "file": "src/app/[locale]/all-services/page.js",
+      "type": "client",
+      "page_metadata": null,
+      "h1_source": "PageHeader heading={t('pages.allServices.heading')} — 'Services All' / 'Všetky služby' / 'Все услуги'",
+      "sections": ["PageHeader", "Services", "Metting", "Pricing", "WorkeProcess"]
+    },
+    {
+      "path_pattern": "/[locale]/contact",
+      "file": "src/app/[locale]/contact/page.js",
+      "type": "client",
+      "page_metadata": null,
+      "h1_source": "t('pages.contact.heading') — 'Send Me a Message' / 'Pošlite mi správu' / 'Отправьте мне сообщение'",
+      "contact_info_hardcoded": {
+        "email": "v.hvorov73@gmail.com",
+        "phone": "+421 919 208 426",
+        "address": "Bottova 2A, 811 09 Bratislava"
+      }
+    },
+    {
+      "path_pattern": "/[locale]/cookies",
+      "file": "src/app/[locale]/cookies/page.js",
+      "type": "client",
+      "page_metadata": null,
+      "h1_source": "t('pages.cookies.heading')"
+    },
+    {
+      "path_pattern": "/[locale]/protfolio",
+      "file": "src/app/[locale]/protfolio/page.js",
+      "type": "client",
+      "page_metadata": null,
+      "h1_source": "t('pages.portfolio.heading') — 'My Work & Portfolio'",
+      "typo_warning": "Route slug is 'protfolio' (missing 'r'). Should be 'portfolio'."
+    },
+    {
+      "path_pattern": "/[locale]/protfolio-details",
+      "file": "src/app/[locale]/protfolio-details/page.js",
+      "type": "server",
+      "page_metadata": null,
+      "content_status": "PLACEHOLDER — hardcoded English 'Brand Identity & Motion Design' + Lorem Ipsum. Not translated, not connected to messages."
+    },
+    {
+      "path_pattern": "/[locale]/all-blog",
+      "file": "src/app/[locale]/all-blog/page.js",
+      "type": "client",
+      "page_metadata": null,
+      "h1_source": "t('pages.allBlog.heading') — 'Blog'"
+    },
+    {
+      "path_pattern": "/[locale]/blog/[slug]",
+      "file": "src/app/[locale]/blog/[slug]/page.js",
+      "type": "client",
+      "page_metadata": null,
+      "static_slugs": [
+        "improve-website-seo",
+        "ai-chatbot-for-business",
+        "website-cost-2025",
+        "website-for-entrepreneurs",
+        "wordpress-vs-modern-website"
+      ],
+      "per_locale_article_components": ["en/", "sk/", "ru/"],
+      "fallback": "Renders generic h1 + paragraph from messages if per-locale component is missing."
+    },
+    {
+      "path_pattern": "/[locale]/blog-details",
+      "file": "src/app/[locale]/blog-details/page.js",
+      "type": "server",
+      "page_metadata": null,
+      "content_status": "PLACEHOLDER — 'Brand design that helps the company grow' + Lorem Ipsum. Hardcoded English. Probably a template page that should be deleted or replaced."
+    },
+    {
+      "path_pattern": "/[locale]/service-details",
+      "file": "src/app/[locale]/service-details/page.js",
+      "type": "server",
+      "page_metadata": null,
+      "content_status": "PLACEHOLDER — 'Business Branding' hardcoded English heading, accordion with placeholder text. No per-service pages."
+    },
+    {
+      "path_pattern": "/[locale]/businesscard",
+      "file": "src/app/[locale]/businesscard/page.js",
+      "type": "server",
+      "page_metadata": {
+        "title": "Vlad Weby - Business Card",
+        "description": "Contact Vladislav Khvorov - Web developer & AI specialist based in Bratislava."
+      }
+    }
+  ],
+  "i18n_messages": {
+    "files": ["messages/en.json", "messages/sk.json", "messages/ru.json"],
+    "missing_locale_file": "messages/de.json",
+    "line_count_per_file": 428,
+    "top_level_keys": ["metadata", "nav", "banner", "about", "experience", "education", "skills", "awards", "projects", "meeting", "services", "faqSection", "testimonial", "pricing", "blogs", "footer", "drawer", "cookie", "pages", "form", "pageHeader"],
+    "pages_keys_present": ["allServices", "contact", "cookies", "portfolio", "allBlog"],
+    "pages_keys_missing": ["serviceDetails", "blogDetails", "protfolioDetails"]
+  },
+  "services_copy": {
+    "source": "messages/*.json → services.{ai,languages,speed,seo,direct,earn}",
+    "service_names_en": ["AI & Automation", "Multilingual sites (SK/EN/DE/RU)", "Speed & Performance", "SEO & Performance Built In", "Direct work with owner", "Websites That Earn"]
+  },
+  "pricing_plans": [
+    {"name": "Landing", "price_eur": 390},
+    {"name": "Multi-Page", "price_eur": 599},
+    {"name": "AI Growth", "price_eur": 999}
+  ],
+  "portfolio_projects_in_messages": [
+    "Dobrý Vodár — Professional plumber website",
+    "Anti-Aging Massage & Holistic Bodywork in Traunstein",
+    "TopSicher Umzug — Relocation services in Germany",
+    "Beauty in Perfection — AI & Payment System Integration",
+    "Irsava (project pro5)",
+    "ManzelPro (project pro6)"
+  ],
+  "structured_data_json_ld": {
+    "found": false,
+    "note": "No <script type=\"application/ld+json\"> and no JsonLd component anywhere in src/. Live site status unknown — could not fetch."
+  },
+  "hreflang_canonical_alternates": {
+    "found": false,
+    "note": "No metadata.alternates, no hreflang, no canonical set anywhere. Multi-locale Next site without hreflang is a known duplicate-content risk."
+  },
+  "sitemap_robots": {
+    "app_sitemap": false,
+    "app_robots": false,
+    "public_sitemap_xml": false,
+    "public_robots_txt": "unknown — check public/ directory"
+  },
+  "alt_text_summary": {
+    "total_img_with_alt_found": 25,
+    "good_examples": [
+      "/img/banner/banner-man.png alt=\"Vladislav Khvorov\"",
+      "Partner.jsx alt={name} (dynamic)"
+    ],
+    "bad_examples": "15+ instances of alt=\"img\" in testimonials, blog cards, pricing cards, drawer logo, projects, header logo (alt=\"logo\"). No alt text is translated.",
+    "severity": "medium — hurts accessibility and image search, but not core rankings"
+  },
+  "redirects_config": {
+    "file": "next.config.mjs",
+    "redirects": [],
+    "note": "Empty config — no redirects wired from legacy URLs (/sk/tvorba-web-stranok, /sk/seo-optimalizacia, /sk/web/trnava, /sk/web/nitra, /en/ai-chatbot, /en/why-seo, /ru/seo-prodvizhenie, /works, /en/blog/how-much-does-a-website-cost, /en/blog/how-to-improve-seo). This is the single most critical gap for SEO continuity."
+  }
+}
