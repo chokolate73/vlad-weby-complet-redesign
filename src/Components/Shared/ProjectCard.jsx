@@ -17,7 +17,7 @@ const ProjectCard = ({
       data-aos-duration="1000"
     >
       <div onClick={() => openLightbox(index)} className="overflow-hidden lg:mb-[30px] mb-[20px] block w-full cursor-pointer">
-        <img src={image} alt="img" className="w-full overflow-hidden duration-500 rounded-[10px] group-hover:scale-105" />
+        <img src={image} alt={subHeading || heading || "Project screenshot"} className="w-full overflow-hidden duration-500 rounded-[10px] group-hover:scale-105" />
       </div>
       <div className="flex items-center justify-between gap-1">
         <Link href={navigate} className="left__cont">

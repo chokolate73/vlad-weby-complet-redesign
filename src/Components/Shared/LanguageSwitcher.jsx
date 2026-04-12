@@ -5,6 +5,7 @@ import { usePathname, useRouter } from 'next/navigation'
 const locales = [
   { code: 'en', label: 'EN' },
   { code: 'sk', label: 'SK' },
+  { code: 'de', label: 'DE' },
   { code: 'ru', label: 'RU' },
 ]
 

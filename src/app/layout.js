@@ -2,7 +2,11 @@ import "./globals.css";
 import AddAnimation from "@/Components/Shared/AddAnimation";
 
 export const metadata = {
-  title: "Vlad Weby",
+  metadataBase: new URL("https://www.vlad-weby.sk"),
+  title: {
+    default: "Vlad Weby",
+    template: "%s",
+  },
   description: "Web developer & AI specialist based in Bratislava. Modern websites that earn - not just look good.",
   icons: {
     icon: [
@@ -21,7 +25,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html>
+    <html lang="en">
       <body>
         <AddAnimation />
         {children}

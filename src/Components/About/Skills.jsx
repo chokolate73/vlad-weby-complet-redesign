@@ -25,7 +25,7 @@ const Skills = ({ isTabActive }) => {
         <div className="grid lg:grid-cols-[41%_auto] gap-6 lg:items-start items-center">
           <div>
             <div>
-              <img src={"/img/about/personal-infothumb.png"} alt="img" />
+              <img src={"/img/about/personal-infothumb.png"} alt="Vladislav Khvorov — tech stack and skills" />
             </div>
           </div>
           <div>

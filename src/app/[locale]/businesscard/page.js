@@ -2,11 +2,12 @@ import React from "react";
 import Link from "next/link";
 import { Telephone, Envelope, Whatsapp, Globe } from "react-bootstrap-icons";
 import AddContactButton from "@/Components/AddContactButton";
+import { getPageMetadata } from "@/lib/seo";
 
-export const metadata = {
-  title: "Vlad Weby - Business Card",
-  description: "Contact Vladislav Khvorov - Web developer & AI specialist based in Bratislava.",
-};
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  return getPageMetadata('businesscard', locale);
+}
 
 const contactInfo = [
   {

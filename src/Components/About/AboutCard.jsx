@@ -6,7 +6,7 @@ const AboutCard = ({ title, para, info }) => {
       <div className="grid lg:grid-cols-[41%_auto] gap-6 lg:items-start items-center">
         <div>
           <div>
-            <img src={"/img/about/personal-infothumb.png"} alt="img" />
+            <img src={"/img/about/personal-infothumb.png"} alt={title} />
           </div>
         </div>
         <div>

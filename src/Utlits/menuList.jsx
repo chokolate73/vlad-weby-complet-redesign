@@ -18,21 +18,8 @@ export const menuList = [
     },
     {
         id: 4,
-        path: "/",
-        section: "#services",
+        path: "/all-services",
         name: "Services",
-        dropDown: [
-            {
-                id: 1,
-                path: "/all-services",
-                name: "Web Design",
-            },
-            {
-                id: 2,
-                path: "/service-details",
-                name: "AI Chatbot",
-            },
-        ],
     },
     {
         id: 5,
@@ -42,21 +29,8 @@ export const menuList = [
     },
     {
         id: 6,
-        path: "/",
-        section: "#blog",
+        path: "/all-blog",
         name: "Blog",
-        dropDown: [
-            {
-                id: 1,
-                path: "/all-blog",
-                name: "All Articles",
-            },
-            {
-                id: 2,
-                path: "/blog-details",
-                name: "Blog Details",
-            },
-        ],
     },
     {
         id: 7,

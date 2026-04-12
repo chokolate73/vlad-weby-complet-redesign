@@ -105,7 +105,7 @@ const BlogSidebar = () => {
                 href="/"
                 className="flex items-center flex-wrap xl:flex-nowrap xl:gap-5 gap-[10px]"
               >
-                <img src={image} alt="img" />
+                <img src={image} alt={title} />
                 <div>
                   <span className="text-white text-xl font-medium mb-[14px] block">
                     {title}

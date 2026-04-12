@@ -84,7 +84,7 @@ const ProfolioTab = () => {
                                     subHeading={subHeading}
                                     openLightbox={openLightbox}
                                     index={index}
-                                    navigate="/protfolio-details"
+                                    navigate="/portfolio-details"
                                 />
                             )
                         )}
