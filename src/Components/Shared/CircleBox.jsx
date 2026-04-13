@@ -6,7 +6,7 @@ const CircleBox = () => {
   return (
     <div>
       <Link
-        href={"/protfolio"}
+        href={"/portfolio"}
         className="md:w-52 md:h-52 w-32 h-32 bg-clr_base rounded-full flex justify-center items-center text-center relative before:w-full before:h-full before:rounded-full before:border before:border-clr_base before:content-[''] before:absolute before:top-[10px] before:-left-[7px]  before:duration-500 hover:before:-top-[10px] "
         data-aos="zoom-out-down"
         data-aos-duration="2000"

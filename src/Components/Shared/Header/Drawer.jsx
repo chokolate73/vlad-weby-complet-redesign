@@ -23,7 +23,7 @@ const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
       </div>
       <div className="grid py-10 px-5">
         <Link href={""} className="mb-5">
-          <img src={"/img/logo/logo.png"} alt="img" />
+          <img src={"/img/logo/logo.png"} alt="Vlad Weby logo" />
         </Link>
         <p className="text-sm mb-10 text-clr_pra break-words leading-normal">
           {t('description')}

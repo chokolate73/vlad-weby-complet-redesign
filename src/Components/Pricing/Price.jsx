@@ -18,7 +18,7 @@ const Price = ({ image, planName, price, time, fetcher, id }) => {
             id === 2 ? "bg-clr_title" : "bg-clr_base"
           }  mb-10`}
         >
-          <img src={image} alt="img" />
+          <img src={image} alt={planName || "Pricing plan icon"} />
         </div>
         <h4 className="text-white lg:mb-6 mb-4 text-2xl font-semibold">
           {planName}

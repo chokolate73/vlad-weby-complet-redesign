@@ -9,11 +9,19 @@ import Testimonial from "../../Components/Testimonial";
 import Blogs from "../../Components/Blogs/Blogs";
 import MarqueeWapper from "../../Components/Shared/MarqueeWapper";
 import Awards from "../../Components/About/Awards";
+import LocalBusinessJsonLd from "@/Components/Seo/LocalBusinessJsonLd";
+import { getPageMetadata } from "@/lib/seo";
 
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  return getPageMetadata('home', locale);
+}
 
-const Home = () => {
+const Home = async ({ params }) => {
+  const { locale } = await params;
   return (
     <>
+      <LocalBusinessJsonLd locale={locale} />
       <MarqueeWapper direction="left" images={images} />
       <About />
       <MarqueeWapper direction="right" images={images2} />

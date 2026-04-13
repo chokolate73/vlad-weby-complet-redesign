@@ -23,7 +23,7 @@ const AboutMe = ({ isTabActive }) => {
               data-aos="zoom-in"
               data-aos-duration="500"
             >
-              <img src={"/img/about/personal-infothumb.png"} alt="img" className="w-full" />
+              <img src={"/img/about/personal-infothumb.png"} alt="Vladislav Khvorov — web developer portrait" className="w-full" />
             </div>
           </div>
           <div>

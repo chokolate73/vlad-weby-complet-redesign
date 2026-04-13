@@ -62,7 +62,7 @@ const Projects = () => {
               subHeading={subHeading}
               openLightbox={openLightbox}
               index={index}
-              navigate="/protfolio"
+              navigate="/portfolio"
             />
           ))}
         </div>
