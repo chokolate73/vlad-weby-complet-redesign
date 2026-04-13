@@ -88,10 +88,10 @@ const Metting = () => {
                     {t('phone')}
                   </span>
                   <Link
-                    href="tel:+421XXX XXX XXX"
+                    href="tel:+421919208426"
                     className="text-white md:text-xl text-base font-medium"
                   >
-                    +421 XXX XXX XXX
+                    +421 919 208 426
                   </Link>
                 </span>
               </div>
