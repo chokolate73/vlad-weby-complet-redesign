@@ -150,7 +150,9 @@
     "yourMessage": "Vaša správa",
     "sending": "Odosielam...",
     "getMyFreeQuote": "Získať bezplatnú cenovú ponuku",
-    "successMessage": "Ďakujeme! Vaša správa bola úspešne odoslaná.",
+    "successTitle": "Správa odoslaná!",
+    "successMessage": "Ďakujeme! Ozvem sa vám do 24 hodín.",
+    "sendAnother": "Odoslať ďalšiu správu",
     "errorMessage": "Niečo sa pokazilo. Skúste to prosím znova."
   },
   "services": {
