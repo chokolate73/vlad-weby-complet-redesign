@@ -26,6 +26,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="impact-site-verification" value="d42433c2-b7ae-4524-a0f2-da6dfd3f90e0" />
+      </head>
       <body>
         <AddAnimation />
         {children}
