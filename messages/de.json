@@ -150,7 +150,9 @@
     "yourMessage": "Your Message",
     "sending": "Sending...",
     "getMyFreeQuote": "Get My Free Quote",
-    "successMessage": "Thank you! Your message has been sent successfully.",
+    "successTitle": "Nachricht gesendet!",
+    "successMessage": "Vielen Dank! Ich melde mich innerhalb von 24 Stunden bei Ihnen.",
+    "sendAnother": "Weitere Nachricht senden",
     "errorMessage": "Something went wrong. Please try again."
   },
   "services": {
