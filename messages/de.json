@@ -422,6 +422,27 @@
     "writeComments": "Write Comments",
     "submitComment": "Submit Comment"
   },
+  "workProcessModal": {
+    "label": "SO ARBEITEN WIR",
+    "title": "Arbeitsprozess",
+    "step1Title": "Kostenlose Beratung",
+    "step1Desc": "Wir besprechen Ihre Ziele, Zielgruppe und den Projektumfang. Innerhalb von 24 Stunden erhalten Sie ein klares Angebot.",
+    "step1Time": "Tag 0",
+    "step2Title": "Design-Konzept",
+    "step2Desc": "Sie erhalten einen visuellen Prototyp Ihrer Website. Wir verfeinern, bis es perfekt ist — unbegrenzte Revisionen.",
+    "step2Time": "Tag 1",
+    "step3Title": "Entwicklung",
+    "step3Desc": "Sauberer Code, Mobile-First, SEO-optimiert. KI-Integrationen und Chatbots bei Bedarf.",
+    "step3Time": "Tag 2–4",
+    "step4Title": "Testing & Launch",
+    "step4Desc": "Cross-Browser-Tests, Geschwindigkeitsoptimierung, Analytics-Einrichtung. Ihre Website geht in 3–5 Werktagen live.",
+    "step4Time": "Tag 5",
+    "step5Title": "Support & Wachstum",
+    "step5Desc": "Laufende Updates, Performance-Monitoring und neue Features, wenn Ihr Geschäft wächst.",
+    "step5Time": "Laufend",
+    "primaryCta": "Kostenlose Beratung",
+    "secondaryCta": "Unsere Arbeiten"
+  },
   "pageHeader": {
     "home": "Home"
   }

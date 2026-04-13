@@ -422,6 +422,27 @@
     "writeComments": "Write Comments",
     "submitComment": "Submit Comment"
   },
+  "workProcessModal": {
+    "label": "HOW WE WORK",
+    "title": "Work process",
+    "step1Title": "Free consultation",
+    "step1Desc": "We discuss your goals, target audience, and project scope. You get a clear quote within 24 hours.",
+    "step1Time": "Day 0",
+    "step2Title": "Design concept",
+    "step2Desc": "You receive a visual prototype of your website. We refine until you love it — unlimited revisions at this stage.",
+    "step2Time": "Day 1",
+    "step3Title": "Development",
+    "step3Desc": "Clean code, mobile-first, SEO-optimized. AI integrations and chatbots wired in if needed.",
+    "step3Time": "Day 2–4",
+    "step4Title": "Testing & launch",
+    "step4Desc": "Cross-browser testing, speed optimization, analytics setup. Your site goes live in 3–5 business days.",
+    "step4Time": "Day 5",
+    "step5Title": "Support & growth",
+    "step5Desc": "Ongoing updates, performance monitoring, and new features as your business evolves.",
+    "step5Time": "Ongoing",
+    "primaryCta": "Get free consultation",
+    "secondaryCta": "View our work"
+  },
   "pageHeader": {
     "home": "Home"
   }

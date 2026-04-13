@@ -422,6 +422,27 @@
     "writeComments": "Napíšte komentár",
     "submitComment": "Odoslať komentár"
   },
+  "workProcessModal": {
+    "label": "AKO PRACUJEME",
+    "title": "Pracovný proces",
+    "step1Title": "Bezplatná konzultácia",
+    "step1Desc": "Preberieme vaše ciele, cieľovú skupinu a rozsah projektu. Do 24 hodín dostanete jasnú cenovú ponuku.",
+    "step1Time": "Deň 0",
+    "step2Title": "Dizajn koncept",
+    "step2Desc": "Dostanete vizuálny prototyp vašej stránky. Upravujeme, kým nebudete spokojní — neobmedzené revízie.",
+    "step2Time": "Deň 1",
+    "step3Title": "Vývoj",
+    "step3Desc": "Čistý kód, mobile-first, SEO optimalizácia. AI integrácie a chatboty podľa potreby.",
+    "step3Time": "Deň 2–4",
+    "step4Title": "Testovanie a spustenie",
+    "step4Desc": "Testovanie vo všetkých prehliadačoch, optimalizácia rýchlosti, nastavenie analytiky. Stránka je online za 3–5 dní.",
+    "step4Time": "Deň 5",
+    "step5Title": "Podpora a rast",
+    "step5Desc": "Priebežné aktualizácie, monitoring výkonu a nové funkcie podľa rastu vášho podnikania.",
+    "step5Time": "Priebežne",
+    "primaryCta": "Bezplatná konzultácia",
+    "secondaryCta": "Pozrite si naše práce"
+  },
   "pageHeader": {
     "home": "Domov"
   }
