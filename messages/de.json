@@ -15,7 +15,13 @@
     "aiChatbot": "KI-Chatbot",
     "allArticles": "Alle Artikel",
     "blogDetails": "Blog Details",
-    "freeConsultation": "Kostenlose Beratung"
+    "freeConsultation": "Kostenlose Beratung",
+    "servicesDropdown": {
+      "webDesign": "Webdesign",
+      "seo": "SEO-Dienstleistungen",
+      "aiChatbot": "KI-Chatbot",
+      "chatgptShopping": "ChatGPT Shopping"
+    }
   },
   "banner": {
     "availableForProjects": "Verfügbar für Projekte — kostenlose Beratung",
@@ -447,5 +453,245 @@
   },
   "pageHeader": {
     "home": "Home"
+  },
+  "servicePages": {
+    "common": {
+      "includedTitle": "Inklusive",
+      "pricingTitle": "Transparente Preise",
+      "audienceTitle": "Für wen ist das geeignet",
+      "faqTitle": "Häufig gestellte Fragen",
+      "finalCtaTitle": "Bereit durchzustarten?",
+      "finalCtaDesc": "Buchen Sie eine kostenlose 30-minütige Beratung. Ich antworte innerhalb von 24 Stunden mit einem individuellen Vorschlag.",
+      "finalCtaButton": "Kostenlose Beratung buchen",
+      "secondaryCta": "Alle Leistungen",
+      "from": "ab",
+      "oneTime": "einmalig",
+      "perMonth": "/Monat",
+      "mostPopular": "Beliebteste"
+    },
+    "webDesign": {
+      "heroTitle": "Professionelles Webdesign",
+      "heroHighlight": "ab 390 €",
+      "heroSubtitle": "Moderne, responsive Webseiten, die in unter 2 Sekunden laden, bei Google gefunden werden und Besucher in Kunden verwandeln. Fertig in 3–5 Werktagen.",
+      "heroCta": "Kostenloses Angebot anfordern",
+      "included": [
+        "Vollständig responsives Design — perfekt auf Mobil, Tablet und Desktop",
+        "SEO-ready Struktur mit sauberem semantischem HTML und schema.org",
+        "Kostenloses SSL-Zertifikat und HTTPS-gesicherter Hosting",
+        "Ladezeit unter 2 Sekunden mit optimierten Bildern (WebP/AVIF)",
+        "Einfach zu verwaltendes CMS, damit Sie Inhalte selbst aktualisieren können",
+        "Kontaktformulare mit Spam-Schutz und E-Mail-Benachrichtigungen",
+        "Mehrsprachiges Setup (SK/EN/DE/RU) bei Bedarf",
+        "Google Analytics 4 und Search Console Integration"
+      ],
+      "plans": [
+        {
+          "name": "Landingpage",
+          "price": "390 €",
+          "period": "einmalig",
+          "description": "Eine Single-Page-Webseite mit Fokus auf Konversion. Perfekt für die Einführung eines Produkts, einer Dienstleistung oder Kampagne.",
+          "features": [
+            "Bis zu 6 konversionsoptimierte Sektionen",
+            "Kontaktformular und Buchungsintegration",
+            "Responsive Design + SEO-Grundlagen",
+            "Lieferung in 3–5 Werktagen"
+          ]
+        },
+        {
+          "name": "Firmenwebseite",
+          "price": "599 €",
+          "period": "einmalig",
+          "description": "Eine vollständige mehrseitige Webseite mit CMS für Firmen, die mehr als nur eine Landingpage brauchen.",
+          "features": [
+            "Bis zu 8 Seiten (Start, Über uns, Leistungen, Blog, Kontakt…)",
+            "CMS zur einfachen Bearbeitung",
+            "Blog-Modul und mehrsprachige Unterstützung",
+            "Erweitertes SEO-Setup + schema.org"
+          ],
+          "highlight": true
+        }
+      ],
+      "audience": [
+        "Kleine Unternehmen, die online starten oder ihre Präsenz neu aufbauen",
+        "Unternehmer und Solo-Gründer, die eine Profi-Webseite ohne Agenturkosten brauchen",
+        "Dienstleister (Salons, Restaurants, Autowerkstätten, Coaches)",
+        "Firmen, die in slowakische, tschechische, deutsche oder englische Märkte expandieren"
+      ],
+      "faqs": [
+        { "q": "Wie lange dauert die Erstellung einer Webseite?", "a": "Eine Landingpage ist in 3–5 Werktagen fertig. Eine Firmenwebseite mit CMS dauert 7–14 Tage, abhängig vom Umfang der Inhalte und Revisionen." },
+        { "q": "Muss ich den Inhalt liefern?", "a": "Sie können eigene Texte und Bilder liefern, oder ich helfe beim Erstellen SEO-freundlicher Inhalte und hochwertiger Bilder." },
+        { "q": "Sind Hosting und Domain inklusive?", "a": "Hosting und Domain laufen separat — üblicherweise 5–15 €/Monat. Ich helfe bei der Auswahl und richte alles ein." },
+        { "q": "Kann ich die Webseite später selbst bearbeiten?", "a": "Ja. Jede Seite wird mit einem einfachen CMS geliefert, sodass Sie Texte, Bilder und Blog-Beiträge ohne Code aktualisieren können." },
+        { "q": "Was ist mit SEO?", "a": "Jede Seite ist SEO-ready: saubere URLs, Meta-Tags, schema.org, Sitemap, schnelle Ladezeit. Für laufende SEO-Arbeit siehe das SEO-Dienstleistungen-Paket." }
+      ]
+    },
+    "seo": {
+      "heroTitle": "SEO-Dienstleistungen",
+      "heroHighlight": "ab 149 €/Monat",
+      "heroSubtitle": "Werden Sie bei Google gefunden. Lokales und technisches SEO für kleine Unternehmen in Mitteleuropa. Erste Ergebnisse in 2–3 Monaten.",
+      "heroCta": "Kostenloses SEO-Audit anfordern",
+      "included": [
+        "Keyword-Recherche mit Fokus auf Kauf-Intent-Anfragen in Ihrem Markt",
+        "Technisches SEO-Audit (Core Web Vitals, Indexierung, Crawlability)",
+        "Lokales SEO-Setup — Google Business Profile und lokale Zitationen",
+        "Schema.org Markup (LocalBusiness, FAQ, Product, Service)",
+        "On-Page-Optimierung — Titel, Meta, Überschriften, interne Links",
+        "Monatliche transparente Berichte mit Rankings und Traffic-Daten",
+        "Content-Empfehlungen und On-Demand-Artikeloptimierung",
+        "Konkurrenzanalyse und Chancenermittlung"
+      ],
+      "plans": [
+        {
+          "name": "SEO Starter",
+          "price": "149 €",
+          "period": "/Monat",
+          "description": "Ideal für kleine lokale Unternehmen, die auf Google Maps erscheinen und stetigen organischen Traffic wollen.",
+          "features": [
+            "Bis zu 10 Ziel-Keywords",
+            "Google Business Profile Optimierung",
+            "Monatlicher Ranking- und Traffic-Bericht",
+            "On-Page-Optimierung für 5 Seiten"
+          ]
+        },
+        {
+          "name": "SEO Growth",
+          "price": "299 €",
+          "period": "/Monat",
+          "description": "Für Firmen, die ihre Nische dominieren und langfristigen organischen Traffic aufbauen wollen.",
+          "features": [
+            "Bis zu 30 Ziel-Keywords",
+            "Technisches SEO + Page-Speed-Fixes",
+            "Content-Plan + 2 optimierte Artikel/Monat",
+            "Linkaufbau und lokale Zitationen"
+          ],
+          "highlight": true
+        }
+      ],
+      "audience": [
+        "Lokale Unternehmen, die auf Google Maps in ihrer Stadt ranken wollen",
+        "Dienstleistungsunternehmen, die um hoch-intent-Keywords konkurrieren",
+        "Online-Shops, die mehr organischen Traffic ohne bezahlte Anzeigen brauchen",
+        "Firmen, die in eine Webseite investiert haben, aber keine Besucher bekommen"
+      ],
+      "faqs": [
+        { "q": "Wie schnell sehe ich Ergebnisse?", "a": "Lokales SEO kann erste Ranking-Verbesserungen in 4–6 Wochen zeigen. Breiteres SEO braucht typischerweise 2–3 Monate für messbares Traffic-Wachstum und 6+ Monate für signifikante Ergebnisse." },
+        { "q": "Gibt es eine Mindestvertragslaufzeit?", "a": "Keine langfristige Bindung. Die Leistung läuft monatlich. Die meisten Kunden bleiben, weil sich die Ergebnisse über die Zeit akkumulieren." },
+        { "q": "Garantieren Sie erste-Seite-Rankings?", "a": "Kein seriöser SEO-Profi garantiert Rankings — der Google-Algorithmus entscheidet. Ich garantiere eine klare Strategie, messbare Arbeit und transparente Reports." },
+        { "q": "Was ist im monatlichen Report enthalten?", "a": "Keyword-Rankings, organischer Traffic, Top-Landing-Seiten, Google Business Profile Insights und eine klare Liste, was gemacht wurde und was kommt." },
+        { "q": "Können Sie SEO auf meiner bestehenden Webseite machen?", "a": "Ja. Ich beginne mit einem vollständigen Audit, behebe dann technische Probleme, optimiere Inhalte und baue Autorität auf. Funktioniert mit WordPress, Shopify, Custom-Sites, etc." }
+      ]
+    },
+    "aiChatbot": {
+      "heroTitle": "KI-Chatbot für Unternehmen",
+      "heroHighlight": "ab 999 €",
+      "heroSubtitle": "24/7 Kundensupport, automatisierte Buchungen und mehrsprachige Konversationen — auf Ihrer Webseite, Instagram, Facebook und Telegram.",
+      "heroCta": "Kostenlose Demo buchen",
+      "included": [
+        "24/7 KI-Kundensupport, trainiert auf Ihre Geschäftsdaten",
+        "Integriertes Buchungssystem — Termine direkt in Ihren Kalender",
+        "Multi-Plattform: Website-Widget, Instagram DM, Facebook Messenger, Telegram",
+        "Mehrsprachige Konversationen in SK, CZ, EN, DE, RU",
+        "Lead-Erfassung mit automatischen E-Mail-/SMS-Benachrichtigungen",
+        "Konversationsverlauf und Analytics-Dashboard",
+        "Reibungslose Übergabe an Menschen, wenn der Bot an seine Grenzen stößt",
+        "DSGVO-konform mit EU-Datenhosting"
+      ],
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "999 €",
+          "period": "einmalig",
+          "description": "Starten Sie Ihren KI-Chatbot auf Ihrer Webseite und einem sozialen Kanal. Inklusive Training auf Ihre Inhalte.",
+          "features": [
+            "1 Website-Widget + 1 Kanal (IG/FB/Telegram)",
+            "Training auf Ihre FAQ und Leistungen",
+            "Buchungsintegration",
+            "Setup und Launch in 5–7 Tagen"
+          ]
+        },
+        {
+          "name": "Growth",
+          "price": "29–49 €",
+          "period": "/Monat",
+          "description": "Laufendes Hosting, Modell-Updates und kontinuierliche Verbesserungen auf Basis echter Gespräche.",
+          "features": [
+            "Unbegrenzte Konversationen",
+            "Monatliche Optimierung und Retraining",
+            "Alle Kanäle inklusive",
+            "Priority Support"
+          ],
+          "highlight": true
+        }
+      ],
+      "audience": [
+        "Salons, Kliniken und Studios, die 24/7 Buchungen brauchen",
+        "Restaurants und Cafés, die Reservierungen und FAQs abwickeln",
+        "Autowerkstätten, Reparaturbetriebe und lokale Dienstleister",
+        "Online-Shops, die Support-Aufwand reduzieren und Leads erfassen wollen"
+      ],
+      "faqs": [
+        { "q": "Was unterscheidet das von einem normalen Chatbot?", "a": "Das ist ein echter KI-Chatbot, angetrieben von GPT-Klasse-Modellen — er versteht Kontext, bewältigt nuancierte Fragen und lernt aus Ihren spezifischen Geschäftsdaten. Kein starrer Skriptbaum." },
+        { "q": "Wie lange dauert das Setup?", "a": "Typisches Setup dauert 5–7 Werktage — inklusive Training auf Ihre Inhalte, Integrationen und Tests über alle Kanäle." },
+        { "q": "Ersetzt er mein Team?", "a": "Er übernimmt repetitive Fragen, Buchungen und Anfragen außerhalb der Geschäftszeiten. Komplexe Fälle werden nahtlos mit vollem Kontext an einen Menschen übergeben." },
+        { "q": "Was ist mit Datenschutz und DSGVO?", "a": "Alle Konversationen werden auf EU-Servern gespeichert, verschlüsselt bei Übertragung und Speicherung. Nutzer erhalten einen klaren Hinweis und die Datenspeicherung folgt der DSGVO." },
+        { "q": "Kann der Chatbot Termine in meinen Kalender buchen?", "a": "Ja. Er integriert sich mit Google Calendar, Outlook und den meisten Buchungssystemen. Kunden buchen direkt im Chat — keine Anrufe nötig." }
+      ]
+    },
+    "chatgptShopping": {
+      "heroTitle": "ChatGPT Shopping Integration",
+      "heroHighlight": "499 € Starter",
+      "heroSubtitle": "Machen Sie Ihre Produkte in ChatGPT und Bing auffindbar. Produktfeed-Integration, schema.org und OpenAI Merchant Setup für WooCommerce, Shopify, PrestaShop und Magento.",
+      "heroCta": "Meinen Shop registrieren",
+      "included": [
+        "Bing Merchant Center Account-Setup und Produktfeed-Einreichung",
+        "Schema.org Product, Offer und Review Markup auf jeder Produktseite",
+        "OpenAI Merchant Registrierung und ChatGPT Shopping Listing",
+        "Google Analytics 4 Setup mit E-Commerce-Event-Tracking",
+        "Feed-Optimierung — Titel, Beschreibungen, Kategorien, Bilder",
+        "Technisches SEO für AI-Suche (GEO-Optimierung)",
+        "Integration mit WooCommerce, Shopify, PrestaShop oder Magento",
+        "Monatlicher Performance-Report und laufende Feed-Prüfungen"
+      ],
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "499 €",
+          "period": "einmalig",
+          "description": "Vollständige Initial-Integration — Ihre Produkte erscheinen in 2–4 Wochen in ChatGPT Shopping und Bing.",
+          "features": [
+            "Vollständiges Bing Merchant Center Setup",
+            "Schema.org + OpenAI Merchant Registrierung",
+            "GA4 E-Commerce Tracking",
+            "Funktioniert mit WooCommerce / Shopify / Prestashop / Magento"
+          ]
+        },
+        {
+          "name": "Growth",
+          "price": "299 €",
+          "period": "/Monat",
+          "description": "Laufende Optimierung: Feed-Qualität, neue Produkte, Schema-Updates und AI-Such-Monitoring.",
+          "features": [
+            "Monatliche Feed-Optimierung",
+            "Onboarding neuer Produkte",
+            "Performance-Monitoring in ChatGPT & Bing",
+            "Priority Support"
+          ],
+          "highlight": true
+        }
+      ],
+      "audience": [
+        "Online-Shops auf WooCommerce, Shopify, PrestaShop oder Magento",
+        "Marken, die in AI-generierten Shopping-Antworten erscheinen wollen",
+        "Shops, die Google Shopping bereits nutzen und auf AI-Kanäle erweitern wollen",
+        "Händler mit Fokus auf mittel- und westeuropäischen Märkten"
+      ],
+      "faqs": [
+        { "q": "Brauche ich einen Google Shopping Feed?", "a": "Nicht erforderlich — aber wenn Sie einen haben, geht das Setup schneller. Falls nicht, baue ich den Feed von Grund auf basierend auf Ihrem Produktkatalog." },
+        { "q": "Wie schnell erscheinen meine Produkte in ChatGPT?", "a": "Typischerweise 2–4 Wochen nach Integration. Der volle Effekt auf AI-getriebenen Traffic zeigt sich nach 1–2 Monaten, sobald sich die Indexierung stabilisiert." },
+        { "q": "Funktioniert es für den europäischen Markt?", "a": "Ja. ChatGPT Shopping wird europaweit ausgerollt — Ihre Produkte erscheinen basierend auf der Relevanz der Nutzeranfragen, unabhängig vom Land." },
+        { "q": "Muss ich meine Webseite ändern?", "a": "Normalerweise nein. Ich füge technisches Markup hinzu (schema.org, robots.txt, Feeds) ohne Ihr Design oder UX zu verändern." },
+        { "q": "Ist der Monatsplan erforderlich?", "a": "Nein. Der Starter ist eine einmalige Integration. Der Growth-Plan ist optional — für Händler, die laufende Feed-Optimierung und Monitoring wollen." }
+      ]
+    }
   }
 }

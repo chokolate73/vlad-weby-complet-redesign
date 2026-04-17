@@ -53,6 +53,30 @@ export const routeMap = {
     de: '/de/businesscard',
     ru: '/ru/businesscard',
   },
+  'service-web-design': {
+    sk: '/sk/services/web-design',
+    en: '/en/services/web-design',
+    de: '/de/services/web-design',
+    ru: '/ru/services/web-design',
+  },
+  'service-seo': {
+    sk: '/sk/services/seo',
+    en: '/en/services/seo',
+    de: '/de/services/seo',
+    ru: '/ru/services/seo',
+  },
+  'service-ai-chatbot': {
+    sk: '/sk/services/ai-chatbot',
+    en: '/en/services/ai-chatbot',
+    de: '/de/services/ai-chatbot',
+    ru: '/ru/services/ai-chatbot',
+  },
+  'service-chatgpt-shopping': {
+    sk: '/sk/services/chatgpt-shopping',
+    en: '/en/services/chatgpt-shopping',
+    de: '/de/services/chatgpt-shopping',
+    ru: '/ru/services/chatgpt-shopping',
+  },
 };
 
 // Blog posts that exist as localized articles under /[locale]/blog/[slug].
@@ -239,6 +263,94 @@ const PAGE_META = {
       title: 'Визитка — Владислав Хворов | Vlad Weby',
       description:
         'Цифровая визитка Владислава Хворова — веб-разработчик и AI-специалист из Братиславы. Телефон, email, WhatsApp и сайт в одном месте.',
+    },
+  },
+  'service-web-design': {
+    sk: {
+      title: 'Tvorba webstránok od 390 € | Vlad Weby',
+      description:
+        'Profesionálna tvorba webstránok pre firmy v SR a Rakúsku. Responzívny dizajn, SEO optimalizácia, rýchlosť pod 2 s. Dodanie za 3–5 dní.',
+    },
+    en: {
+      title: 'Web Design Services from €390 | Vlad Weby',
+      description:
+        'Professional web design for businesses in Slovakia and Austria. Responsive, SEO-ready, sub-2 second load. Ready in 3–5 days.',
+    },
+    de: {
+      title: 'Webdesign ab 390 € | Vlad Weby',
+      description:
+        'Professionelles Webdesign für Firmen in SK, DE und AT. Responsive, SEO-ready, Ladezeit unter 2 Sekunden. Fertig in 3–5 Tagen.',
+    },
+    ru: {
+      title: 'Разработка сайтов от 390 € | Vlad Weby',
+      description:
+        'Профессиональная разработка сайтов для бизнеса в Словакии и Австрии. Адаптивный, SEO-ready, загрузка до 2 с. Готово за 3–5 дней.',
+    },
+  },
+  'service-seo': {
+    sk: {
+      title: 'SEO služby od 149 €/mesiac | Vlad Weby',
+      description:
+        'SEO služby pre firmy v SR a strednej Európe. Zvyšujeme viditeľnosť v Googli a získavame viac zákazníkov z vyhľadávania.',
+    },
+    en: {
+      title: 'SEO Services from €149/month | Vlad Weby',
+      description:
+        'SEO services for businesses in Slovakia and Central Europe. Increase Google visibility, get more customers from search. First results in 2–3 months.',
+    },
+    de: {
+      title: 'SEO-Dienstleistungen ab 149 €/Monat | Vlad Weby',
+      description:
+        'SEO für Firmen in Mitteleuropa. Mehr Sichtbarkeit bei Google und mehr Kunden aus der Suche. Erste Ergebnisse in 2–3 Monaten.',
+    },
+    ru: {
+      title: 'SEO-услуги от 149 €/мес. | Vlad Weby',
+      description:
+        'SEO для бизнеса в Словакии и Центральной Европе. Повышаем видимость в Google и приводим клиентов из поиска. Первые результаты за 2–3 месяца.',
+    },
+  },
+  'service-ai-chatbot': {
+    sk: {
+      title: 'AI Chatbot pre firmy od 999 € | Vlad Weby',
+      description:
+        'AI chatbot 24/7 pre firmy. Automatizovaná zákaznícka podpora, rezervácie, viacjazyčné konverzácie na webe, IG, FB a Telegrame.',
+    },
+    en: {
+      title: 'AI Chatbot for Business from €999 | Vlad Weby',
+      description:
+        'AI chatbot for businesses. 24/7 support, bookings, multilingual conversations on website, Instagram, Facebook and Telegram.',
+    },
+    de: {
+      title: 'KI-Chatbot für Unternehmen ab 999 € | Vlad Weby',
+      description:
+        'KI-Chatbot für Unternehmen. 24/7 Support, Buchungen, mehrsprachige Konversationen auf Webseite, Instagram, Facebook und Telegram.',
+    },
+    ru: {
+      title: 'AI-чатбот для бизнеса от 999 € | Vlad Weby',
+      description:
+        'AI-чатбот для бизнеса. Поддержка 24/7, бронирования, мультиязычные диалоги на сайте, в Instagram, Facebook и Telegram.',
+    },
+  },
+  'service-chatgpt-shopping': {
+    sk: {
+      title: 'ChatGPT Shopping integrácia | Vlad Weby',
+      description:
+        'Dostaňte svoje produkty do ChatGPT Shopping. Bing Merchant Center, schema.org, OpenAI Merchant, GA4 pre WooCommerce, Shopify a Magento.',
+    },
+    en: {
+      title: 'ChatGPT Shopping Integration for E-shops | Vlad Weby',
+      description:
+        'Get your products into ChatGPT Shopping. Bing Merchant Center, schema.org, OpenAI Merchant, GA4 for WooCommerce, Shopify, Prestashop and Magento.',
+    },
+    de: {
+      title: 'ChatGPT Shopping Integration für Shops | Vlad Weby',
+      description:
+        'Ihre Produkte in ChatGPT Shopping. Bing Merchant Center, schema.org, OpenAI Merchant, GA4 für WooCommerce, Shopify, Prestashop und Magento.',
+    },
+    ru: {
+      title: 'Интеграция ChatGPT Shopping для магазинов | Vlad Weby',
+      description:
+        'Ваши товары в ChatGPT Shopping. Bing Merchant Center, schema.org, OpenAI Merchant, GA4 для WooCommerce, Shopify, Prestashop и Magento.',
     },
   },
 };
