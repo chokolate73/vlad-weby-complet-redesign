@@ -19,7 +19,16 @@ const RanderHeader = () => {
     { id: 2, path: `/${locale}`, section: "#portfolio", name: t('portfolio') },
     { id: 3, path: `/${locale}`, section: "#pricing", name: t('pricing') },
     {
-      id: 4, path: `/${locale}/all-services`, section: "", name: t('services'),
+      id: 4,
+      path: `/${locale}/all-services`,
+      section: "",
+      name: t('services'),
+      dropDown: [
+        { id: 41, path: `/${locale}/services/web-design`, name: t('servicesDropdown.webDesign') },
+        { id: 42, path: `/${locale}/services/seo`, name: t('servicesDropdown.seo') },
+        { id: 43, path: `/${locale}/services/ai-chatbot`, name: t('servicesDropdown.aiChatbot') },
+        { id: 44, path: `/${locale}/services/chatgpt-shopping`, name: t('servicesDropdown.chatgptShopping') },
+      ],
     },
     { id: 5, path: `/${locale}`, section: "#faq", name: t('faq') },
     {

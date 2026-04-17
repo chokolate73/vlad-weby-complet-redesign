@@ -3,6 +3,10 @@ import { BASE_URL, LOCALES, routeMap, BLOG_SLUGS } from "@/lib/seo";
 const STATIC_PAGES = [
   { key: 'home', priority: 1.0, changeFrequency: 'weekly' },
   { key: 'services', priority: 0.9, changeFrequency: 'monthly' },
+  { key: 'service-web-design', priority: 0.85, changeFrequency: 'monthly' },
+  { key: 'service-seo', priority: 0.85, changeFrequency: 'monthly' },
+  { key: 'service-ai-chatbot', priority: 0.85, changeFrequency: 'monthly' },
+  { key: 'service-chatgpt-shopping', priority: 0.85, changeFrequency: 'monthly' },
   { key: 'portfolio', priority: 0.8, changeFrequency: 'monthly' },
   { key: 'blog', priority: 0.8, changeFrequency: 'weekly' },
   { key: 'contact', priority: 0.7, changeFrequency: 'monthly' },

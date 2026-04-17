@@ -15,7 +15,13 @@
     "aiChatbot": "AI Chatbot",
     "allArticles": "Všetky články",
     "blogDetails": "Detail článku",
-    "freeConsultation": "Bezplatná konzultácia"
+    "freeConsultation": "Bezplatná konzultácia",
+    "servicesDropdown": {
+      "webDesign": "Tvorba webstránok",
+      "seo": "SEO služby",
+      "aiChatbot": "AI Chatbot",
+      "chatgptShopping": "ChatGPT Shopping"
+    }
   },
   "banner": {
     "availableForProjects": "Dostupný na projekty - bezplatná konzultácia",
@@ -447,5 +453,245 @@
   },
   "pageHeader": {
     "home": "Domov"
+  },
+  "servicePages": {
+    "common": {
+      "includedTitle": "Čo je v cene",
+      "pricingTitle": "Transparentné ceny",
+      "audienceTitle": "Pre koho je to vhodné",
+      "faqTitle": "Často kladené otázky",
+      "finalCtaTitle": "Pripravení začať?",
+      "finalCtaDesc": "Rezervujte si bezplatnú 30-minútovú konzultáciu. Odpoviem do 24 hodín s návrhom na mieru.",
+      "finalCtaButton": "Rezervovať bezplatnú konzultáciu",
+      "secondaryCta": "Všetky služby",
+      "from": "od",
+      "oneTime": "jednorazovo",
+      "perMonth": "/mesiac",
+      "mostPopular": "Najobľúbenejšie"
+    },
+    "webDesign": {
+      "heroTitle": "Profesionálna tvorba webstránok",
+      "heroHighlight": "od 390 €",
+      "heroSubtitle": "Moderné responzívne webstránky, ktoré sa načítajú do 2 sekúnd, umiestňujú sa v Googli a menia návštevníkov na zákazníkov. Hotové za 3–5 pracovných dní.",
+      "heroCta": "Získať bezplatnú cenovú ponuku",
+      "included": [
+        "Plne responzívny dizajn — perfektný na mobile, tablete aj desktope",
+        "SEO-ready štruktúra s čistým sémantickým HTML a schema.org",
+        "Bezplatný SSL certifikát a hosting zabezpečený cez HTTPS",
+        "Načítanie do 2 sekúnd s optimalizovanými obrázkami (WebP/AVIF)",
+        "Jednoduchý CMS, aby ste obsah mohli meniť sami",
+        "Kontaktné formuláre s ochranou proti spamu a e-mailovými notifikáciami",
+        "Viacjazyčné nastavenie (SK/EN/DE/RU) podľa potreby",
+        "Integrácia Google Analytics 4 a Search Console"
+      ],
+      "plans": [
+        {
+          "name": "Landing Page",
+          "price": "390 €",
+          "period": "jednorazovo",
+          "description": "Jednostránkový web zameraný na konverzie. Ideálny pre spustenie produktu, služby alebo kampane.",
+          "features": [
+            "Až 6 konverzných sekcií",
+            "Kontaktný formulár a rezervácie",
+            "Responzívny dizajn + základy SEO",
+            "Dodanie za 3–5 pracovných dní"
+          ]
+        },
+        {
+          "name": "Firemný web",
+          "price": "599 €",
+          "period": "jednorazovo",
+          "description": "Plnohodnotný viacstránkový web s CMS pre firmy, ktoré potrebujú viac ako jednu landing page.",
+          "features": [
+            "Až 8 stránok (Domov, O nás, Služby, Blog, Kontakt…)",
+            "CMS na jednoduchú úpravu obsahu",
+            "Blog modul a viacjazyčnosť",
+            "Pokročilé SEO nastavenie + schema.org"
+          ],
+          "highlight": true
+        }
+      ],
+      "audience": [
+        "Malé firmy, ktoré spúšťajú alebo obnovujú svoju online prezentáciu",
+        "Podnikatelia a samostatní zakladatelia, ktorí potrebujú profi web bez agentúrnej ceny",
+        "Poskytovatelia služieb (salóny, reštaurácie, autoservisy, koučovia)",
+        "Firmy rozširujúce sa na slovenský, český, nemecký alebo anglický trh"
+      ],
+      "faqs": [
+        { "q": "Ako dlho trvá tvorba webstránky?", "a": "Landing page je hotová za 3–5 pracovných dní. Firemný web s CMS trvá 7–14 dní v závislosti od objemu obsahu a revízií." },
+        { "q": "Musím dodať obsah?", "a": "Môžete dodať vlastné texty a fotky, alebo pomôžem s SEO-friendly obsahom a kvalitnými obrázkami." },
+        { "q": "Je hosting a doména v cene?", "a": "Hosting a doména sú samostatne — zvyčajne 5–15 €/mesiac. Pomôžem vybrať poskytovateľa a všetko nastaviť." },
+        { "q": "Budem môcť web neskôr upravovať?", "a": "Áno. Každý web má jednoduchý CMS, takže môžete meniť texty, obrázky a blogové články bez programovania." },
+        { "q": "Ako je to so SEO?", "a": "Každý web je SEO-ready: čisté URL, meta tagy, schema.org, sitemap, rýchle načítanie. Pre priebežnú SEO prácu pozrite balík SEO služby." }
+      ]
+    },
+    "seo": {
+      "heroTitle": "SEO služby",
+      "heroHighlight": "od 149 €/mesiac",
+      "heroSubtitle": "Nájdite sa v Googli. Lokálne a technické SEO pre malé firmy v SR a strednej Európe. Prvé výsledky za 2–3 mesiace.",
+      "heroCta": "Získať bezplatný SEO audit",
+      "included": [
+        "Výskum kľúčových slov zameraný na nákupné dopyty na vašom trhu",
+        "Technický SEO audit (Core Web Vitals, indexácia, crawlability)",
+        "Lokálne SEO — Google Business Profile a lokálne citácie",
+        "Schema.org markup (LocalBusiness, FAQ, Product, Service)",
+        "On-page optimalizácia — titulky, meta, nadpisy, interné odkazy",
+        "Mesačné transparentné reporty s umiestneniami a návštevnosťou",
+        "Odporúčania k obsahu a optimalizácia článkov",
+        "Analýza konkurencie a hľadanie príležitostí"
+      ],
+      "plans": [
+        {
+          "name": "SEO Starter",
+          "price": "149 €",
+          "period": "/mesiac",
+          "description": "Ideálne pre malé lokálne firmy, ktoré chcú byť na Google Mapách a mať stabilnú organickú návštevnosť.",
+          "features": [
+            "Až 10 cielených kľúčových slov",
+            "Optimalizácia Google Business Profile",
+            "Mesačný report pozícií a návštevnosti",
+            "On-page optimalizácia 5 stránok"
+          ]
+        },
+        {
+          "name": "SEO Growth",
+          "price": "299 €",
+          "period": "/mesiac",
+          "description": "Pre firmy, ktoré chcú dominovať vo svojej nike a budovať dlhodobú organickú návštevnosť.",
+          "features": [
+            "Až 30 cielených kľúčových slov",
+            "Technické SEO + opravy rýchlosti",
+            "Obsahový plán + 2 optimalizované články mesačne",
+            "Link building a lokálne citácie"
+          ],
+          "highlight": true
+        }
+      ],
+      "audience": [
+        "Lokálne firmy, ktoré chcú byť na Google Mapách vo svojom meste",
+        "Služobné firmy, ktoré súťažia o kľúčové slová s vysokým zámerom",
+        "E-shopy, ktoré potrebujú viac organickej návštevnosti bez platenej reklamy",
+        "Firmy, ktoré investovali do webu, ale nechodia im návštevníci"
+      ],
+      "faqs": [
+        { "q": "Ako rýchlo uvidím výsledky?", "a": "Lokálne SEO môže ukázať prvé zlepšenia za 4–6 týždňov. Širšie SEO zvyčajne potrebuje 2–3 mesiace na merateľný rast návštevnosti a 6+ mesiacov na výrazné výsledky." },
+        { "q": "Je minimálna viazanosť?", "a": "Žiadna dlhodobá zmluva. Služba beží mesiac po mesiaci. Väčšina klientov ostáva, lebo výsledky sa časom znásobujú." },
+        { "q": "Garantujete prvú stranu v Googli?", "a": "Žiadny seriózny SEO profesionál negarantuje pozície — rozhoduje algoritmus Googlu. Garantujem jasnú stratégiu, merateľnú prácu a transparentné reporty." },
+        { "q": "Čo je v mesačnom reporte?", "a": "Pozície kľúčových slov, organická návštevnosť, top stránky, štatistiky Google Business Profile a prehľad toho, čo sa urobilo a čo nasleduje." },
+        { "q": "Môžete robiť SEO na mojom existujúcom webe?", "a": "Áno. Začínam plným auditom, potom opravujem technické problémy, optimalizujem obsah a budujem autoritu. Funguje s WordPress, Shopify, custom weby a pod." }
+      ]
+    },
+    "aiChatbot": {
+      "heroTitle": "AI Chatbot pre firmy",
+      "heroHighlight": "od 999 €",
+      "heroSubtitle": "24/7 zákaznícka podpora, automatizované rezervácie a viacjazyčné konverzácie — na vašom webe, Instagrame, Facebooku a Telegrame.",
+      "heroCta": "Rezervovať bezplatné demo",
+      "included": [
+        "24/7 AI zákaznícka podpora natrénovaná na vašich dátach",
+        "Integrovaný rezervačný systém — termíny priamo do vášho kalendára",
+        "Multiplatformne: widget na webe, Instagram DM, Facebook Messenger, Telegram",
+        "Viacjazyčné konverzácie v SK, CZ, EN, DE, RU",
+        "Zber leadov s automatickými e-mailovými/SMS notifikáciami",
+        "História konverzácií a analytický dashboard",
+        "Plynulé odovzdanie človeku, keď bot naráža na limity",
+        "GDPR compliant s hostingom v EÚ"
+      ],
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "999 €",
+          "period": "jednorazovo",
+          "description": "Spustenie AI chatbota na vašom webe a jednom sociálnom kanáli. Vrátane trénovania na vašom obsahu.",
+          "features": [
+            "1 webový widget + 1 kanál (IG/FB/Telegram)",
+            "Trénovanie na vašich FAQ a službách",
+            "Integrácia rezervácií",
+            "Nasadenie za 5–7 dní"
+          ]
+        },
+        {
+          "name": "Growth",
+          "price": "29–49 €",
+          "period": "/mesiac",
+          "description": "Priebežný hosting, aktualizácie modelov a zlepšovanie na základe reálnych konverzácií.",
+          "features": [
+            "Neobmedzené konverzácie",
+            "Mesačná optimalizácia a pretrénovanie",
+            "Všetky kanály v cene",
+            "Prioritná podpora"
+          ],
+          "highlight": true
+        }
+      ],
+      "audience": [
+        "Salóny, kliniky a štúdiá, ktoré potrebujú 24/7 rezervácie",
+        "Reštaurácie a kaviarne spracúvajúce rezervácie a FAQ",
+        "Autoservisy, opravovne a lokálne služby",
+        "E-shopy, ktoré chcú znížiť záťaž podpory a zbierať leady"
+      ],
+      "faqs": [
+        { "q": "Čím sa líši od bežného chatbota?", "a": "Je to skutočný AI chatbot poháňaný modelmi triedy GPT — chápe kontext, zvláda zložité otázky a učí sa na vašich dátach. Nie je to rigidný strom scenárov." },
+        { "q": "Ako dlho trvá nasadenie?", "a": "Bežné nasadenie trvá 5–7 pracovných dní vrátane trénovania, integrácií a testovania vo všetkých kanáloch." },
+        { "q": "Nahradí môj tím?", "a": "Zvládne opakované otázky, rezervácie a požiadavky mimo pracovnej doby. Zložité prípady plynulo odovzdá človeku s plným kontextom." },
+        { "q": "Ako je to s GDPR?", "a": "Všetky konverzácie sú uložené na EÚ serveroch, šifrované pri prenose aj uložení. Používatelia dostanú jasné oznámenie a retencia dát spĺňa GDPR." },
+        { "q": "Vie chatbot rezervovať termíny do kalendára?", "a": "Áno. Integruje sa s Google Calendar, Outlook a s väčšinou rezervačných systémov. Zákazníci si termín rezervujú priamo v chate." }
+      ]
+    },
+    "chatgptShopping": {
+      "heroTitle": "ChatGPT Shopping integrácia",
+      "heroHighlight": "499 € štart",
+      "heroSubtitle": "Dostaňte svoje produkty do výsledkov ChatGPT a Bing. Integrácia feedu, schema.org a registrácia v OpenAI Merchant pre WooCommerce, Shopify, PrestaShop a Magento.",
+      "heroCta": "Registrovať môj e-shop",
+      "included": [
+        "Nastavenie Bing Merchant Center a odoslanie produktového feedu",
+        "Schema.org Product, Offer a Review markup na každej produktovej stránke",
+        "Registrácia v OpenAI Merchant a zaradenie do ChatGPT Shopping",
+        "Nastavenie Google Analytics 4 s e-commerce udalosťami",
+        "Optimalizácia feedu — názvy, popisy, kategórie, obrázky",
+        "Technické SEO pre AI vyhľadávanie (GEO optimalizácia)",
+        "Integrácia s WooCommerce, Shopify, PrestaShop alebo Magento",
+        "Mesačný report výkonu a priebežná kontrola feedu"
+      ],
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "499 €",
+          "period": "jednorazovo",
+          "description": "Kompletná úvodná integrácia — vaše produkty sa v ChatGPT Shopping a Bing objavia do 2–4 týždňov.",
+          "features": [
+            "Plné nastavenie Bing Merchant Center",
+            "Schema.org + registrácia v OpenAI Merchant",
+            "GA4 e-commerce tracking",
+            "Funguje s WooCommerce / Shopify / Prestashop / Magento"
+          ]
+        },
+        {
+          "name": "Growth",
+          "price": "299 €",
+          "period": "/mesiac",
+          "description": "Priebežná optimalizácia: kvalita feedu, nové produkty, aktualizácie schema a monitoring AI vyhľadávania.",
+          "features": [
+            "Mesačná optimalizácia feedu",
+            "Pridávanie nových produktov",
+            "Monitoring výkonu v ChatGPT & Bing",
+            "Prioritná podpora"
+          ],
+          "highlight": true
+        }
+      ],
+      "audience": [
+        "E-shopy na WooCommerce, Shopify, PrestaShop alebo Magento",
+        "Značky, ktoré chcú byť v AI-generovaných nákupných odpovediach",
+        "Obchody už používajúce Google Shopping, ktoré chcú expandovať do AI kanálov",
+        "Obchodníci cielení na stredoeurópske a západoeurópske trhy"
+      ],
+      "faqs": [
+        { "q": "Potrebujem Google Shopping feed?", "a": "Nie je potrebný — ale ak ho máte, nastavenie je rýchlejšie. Ak nie, feed vytvorím od nuly podľa vášho katalógu." },
+        { "q": "Ako rýchlo sa produkty objavia v ChatGPT?", "a": "Zvyčajne do 2–4 týždňov od integrácie. Plný efekt na AI návštevnosť je vidno po 1–2 mesiacoch, keď sa indexácia ustáli." },
+        { "q": "Funguje to pre európsky trh?", "a": "Áno. ChatGPT Shopping sa zavádza naprieč Európou — vaše produkty sa zobrazujú na základe relevantnosti dopytu používateľa." },
+        { "q": "Musím meniť svoj web?", "a": "Zvyčajne nie. Pridávam len technické úpravy (schema.org, robots.txt, feedy) bez zmeny dizajnu alebo UX." },
+        { "q": "Je mesačný plán povinný?", "a": "Nie. Starter je jednorazová integrácia. Growth plán je voliteľný — pre obchodníkov, ktorí chcú priebežnú optimalizáciu feedu a monitoring." }
+      ]
+    }
   }
 }
