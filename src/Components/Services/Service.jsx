@@ -1,13 +1,10 @@
 import React from "react";
+import Link from "next/link";
 import { ArrowUpRight } from "react-bootstrap-icons";
 
-const Service = ({ heading, subHeading, para, id }) => {
-  return (
-    <div
-      className="lg:pb-10 pb-[30px] lg:pt-10 pt-[30px] flex justify-between items-center sm:gap-[14px] gap-5 sm:flex-nowrap flex-wrap border-b duration-500 border-b-[rgb(38_37_37)] first:border-t first:border-t-[rgb(38_37_37)] hover:border-b-clr_base hover:first:border-t-clr_base group"
-      data-aos="fade-up"
-      data-aos-duration="1000"
-    >
+const Service = ({ heading, subHeading, para, id, href }) => {
+  const content = (
+    <>
       <div className="w-[1062px] flex items-center justify-between md:flex-nowrap flex-wrap md:gap-[14px] gap-2 ">
         <div className="flex lg:gap-[60px] gap-[16px]">
           <span className="text-xl text-white"> {id} </span>
@@ -29,6 +26,32 @@ const Service = ({ heading, subHeading, para, id }) => {
       >
         <ArrowUpRight className="duration-500 group-hover:text-clr_title text-lg sm:text-xl text-white " />
       </span>
+    </>
+  );
+
+  const wrapperClass =
+    "lg:pb-10 pb-[30px] lg:pt-10 pt-[30px] flex justify-between items-center sm:gap-[14px] gap-5 sm:flex-nowrap flex-wrap border-b duration-500 border-b-[rgb(38_37_37)] first:border-t first:border-t-[rgb(38_37_37)] hover:border-b-clr_base hover:first:border-t-clr_base group";
+
+  if (href) {
+    return (
+      <Link
+        href={href}
+        className={wrapperClass}
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <div
+      className={wrapperClass}
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      {content}
     </div>
   );
 };
