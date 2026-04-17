@@ -47,6 +47,12 @@ export const routeMap = {
     de: '/de/cookies',
     ru: '/ru/cookies',
   },
+  'privacy-policy': {
+    sk: '/sk/privacy-policy',
+    en: '/en/privacy-policy',
+    de: '/de/privacy-policy',
+    ru: '/ru/privacy-policy',
+  },
   businesscard: {
     sk: '/sk/businesscard',
     en: '/en/businesscard',
@@ -241,6 +247,28 @@ const PAGE_META = {
       title: 'Политика использования cookies | Vlad Weby',
       description:
         'Какие cookies используются на этом сайте и как управлять настройками в соответствии с GDPR и директивой ePrivacy.',
+    },
+  },
+  'privacy-policy': {
+    sk: {
+      title: 'Ochrana osobných údajov | Vlad Weby',
+      description:
+        'Zásady ochrany osobných údajov podľa GDPR a zákona č. 18/2018 Z. z. Ako spracúvame údaje klientov v Bratislave a na Slovensku.',
+    },
+    en: {
+      title: 'Privacy Policy | Vlad Weby',
+      description:
+        'GDPR-compliant privacy policy for Vlad Weby in Bratislava. How we collect, use, store, and protect your personal data.',
+    },
+    de: {
+      title: 'Datenschutzerklärung | Vlad Weby',
+      description:
+        'DSGVO-konforme Datenschutzerklärung von Vlad Weby in Bratislava. Wie wir Ihre personenbezogenen Daten erheben, verwenden, speichern und schützen.',
+    },
+    ru: {
+      title: 'Политика конфиденциальности | Vlad Weby',
+      description:
+        'Политика конфиденциальности Vlad Weby в Братиславе согласно GDPR. Как мы собираем, используем, храним и защищаем ваши персональные данные.',
     },
   },
   businesscard: {
