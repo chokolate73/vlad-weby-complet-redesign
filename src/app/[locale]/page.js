@@ -28,7 +28,7 @@ const Home = async ({ params }) => {
       <Awards />
       <Projects />
       <Metting />
-      <Services isHeading={false} />
+      <Services isHeading={true} />
       <WorkeProcess />
       <Testimonial />
       <Blogs />
