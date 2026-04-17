@@ -51,11 +51,25 @@ const Footer = () => {
                   {t('description')}
                 </p>
                 <Link
-                  href={""}
+                  href={"mailto:v.hvorov73@gmail.com"}
                   className="text-white lg:text-4xl sm:text-[28px] text-lg underline"
                 >
                   v.hvorov73@gmail.com
                 </Link>
+                <address className="not-italic mt-8 text-clr_pra text-base leading-relaxed">
+                  <p className="text-white font-semibold">Bc. Vladislav Khvorov</p>
+                  <p className="text-white font-semibold mb-2">Vlad Weby</p>
+                  <p>Bottova 2A, 811 09 Staré Mesto, Bratislava</p>
+                  <p>
+                    Tel:{" "}
+                    <Link
+                      href="tel:+421919208426"
+                      className="hover:text-clr_base transition-colors"
+                    >
+                      +421 919 208 426
+                    </Link>
+                  </p>
+                </address>
               </div>
             </div>
             <div className="basis-1/2 shrink">
