@@ -14,7 +14,7 @@ const AllServices = () => {
   return (
     <>
       <PageHeader heading={t('heading')} page={t('page')} />
-      <Services isHeading={false} variant="linked" />
+      <Services isHeading={false} />
       <Metting />
       <Pricing />
       <WorkeProcess />
