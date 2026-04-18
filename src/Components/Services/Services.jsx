@@ -2,19 +2,25 @@
 import React from "react";
 import Service from "./Service";
 import PageHeader from "../Shared/PageHeader";
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const serviceKeys = ['ai', 'languages', 'speed', 'seo', 'direct', 'earn'];
+
+const serviceHrefs = {
+  seo: 'services/seo',
+};
 
 const Services = ({ isHeading }) => {
   const t = useTranslations('services');
   const tPage = useTranslations('pages.allServices');
+  const locale = useLocale();
 
   const serviceList = serviceKeys.map((key, index) => ({
     id: String(index + 1).padStart(2, '0'),
     heading: t(`items.${key}.heading`),
     subHeading: t(`items.${key}.subHeading`),
     para: t(`items.${key}.para`),
+    href: serviceHrefs[key] ? `/${locale}/${serviceHrefs[key]}` : undefined,
   }));
 
   return (
@@ -24,13 +30,14 @@ const Services = ({ isHeading }) => {
       )}
       <div className="container">
         <div>
-          {serviceList.map(({ id, heading, subHeading, para }) => (
+          {serviceList.map(({ id, heading, subHeading, para, href }) => (
             <Service
               key={id}
               id={id}
               heading={heading}
               subHeading={subHeading}
               para={para}
+              href={href}
             />
           ))}
         </div>
