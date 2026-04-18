@@ -18,6 +18,9 @@ const LanguageSwitcher = () => {
     if (newLocale === locale) return
     const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/'
     router.push(`/${newLocale}${pathWithoutLocale}`)
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    }
   }
 
   return (
