@@ -7,6 +7,7 @@ import { useTranslations, useLocale } from 'next-intl';
 const serviceKeys = ['ai', 'languages', 'speed', 'seo', 'direct', 'earn'];
 
 const serviceHrefs = {
+  ai: 'services/ai-chatbot',
   seo: 'services/seo',
   earn: 'services/web-design',
 };
