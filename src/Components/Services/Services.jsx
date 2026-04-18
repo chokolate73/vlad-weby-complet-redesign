@@ -8,6 +8,7 @@ const serviceKeys = ['ai', 'languages', 'speed', 'seo', 'direct', 'earn'];
 
 const serviceHrefs = {
   seo: 'services/seo',
+  earn: 'services/web-design',
 };
 
 const Services = ({ isHeading }) => {
