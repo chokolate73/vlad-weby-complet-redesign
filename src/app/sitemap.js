@@ -12,6 +12,7 @@ const STATIC_PAGES = [
   { key: 'contact', priority: 0.7, changeFrequency: 'monthly' },
   { key: 'businesscard', priority: 0.4, changeFrequency: 'yearly' },
   { key: 'cookies', priority: 0.2, changeFrequency: 'yearly' },
+  { key: 'privacy-policy', priority: 0.3, changeFrequency: 'yearly' },
 ];
 
 export default function sitemap() {

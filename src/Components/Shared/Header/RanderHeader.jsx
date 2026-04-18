@@ -20,8 +20,8 @@ const RanderHeader = () => {
     { id: 3, path: `/${locale}`, section: "#pricing", name: t('pricing') },
     {
       id: 4,
-      path: `/${locale}/all-services`,
-      section: "",
+      path: `/${locale}`,
+      section: "#services",
       name: t('services'),
       dropDown: [
         { id: 41, path: `/${locale}/services/web-design`, name: t('servicesDropdown.webDesign') },

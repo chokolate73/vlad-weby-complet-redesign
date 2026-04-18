@@ -170,10 +170,10 @@
         "subHeading": "Your competitive edge",
         "para": "AI chatbots that handle customer inquiries, workflow automation that eliminates repetitive tasks, and API integrations that connect your tools. Less manual work, more clients, faster growth."
       },
-      "languages": {
-        "heading": "4 Languages, 3+ Markets",
-        "subHeading": "SK · EN · DE · RU",
-        "para": "Multilingual websites for the Central European market. Reach customers in Slovakia, Germany, Austria, and beyond."
+      "chatgptShopping": {
+        "heading": "ChatGPT Shopping",
+        "subHeading": "AI-first Commerce",
+        "para": "Registrieren Sie Ihren Online-Shop in ChatGPT und Bing, damit Ihre Produkte direkt in der KI-Suche erscheinen. Produkt-Feed, schema.org und OpenAI Merchant für WooCommerce, Shopify, PrestaShop und Magento."
       },
       "speed": {
         "heading": "Weeks, Not Months",
@@ -420,6 +420,90 @@
       "s8text": "We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated revision date. We encourage you to review this page periodically to stay informed about how we use cookies.",
       "s9title": "9. Contact Us",
       "s9text": "If you have any questions about this Cookie Policy or our use of cookies, please contact us:"
+    },
+    "privacyPolicy": {
+      "heading": "Datenschutzerklärung",
+      "page": "Datenschutz",
+      "lastUpdated": "Zuletzt aktualisiert: 17. April 2026",
+      "country": "Slowakische Republik",
+      "phoneLabel": "Telefon",
+      "webLabel": "Web",
+      "s1title": "1. Einleitung",
+      "s1text": "Diese Datenschutzerklärung erläutert, wie Vlad Weby (Vladislav Khvorov) mit Sitz in Bratislava, Slowakei, Ihre personenbezogenen Daten erhebt, nutzt, speichert und schützt, wenn Sie vlad-weby.sk besuchen oder unsere Dienste in Anspruch nehmen. Wir verarbeiten personenbezogene Daten gemäß der Verordnung (EU) 2016/679 (DSGVO) und dem slowakischen Gesetz Nr. 18/2018 über den Schutz personenbezogener Daten.",
+      "s2title": "2. Verantwortlicher",
+      "s2text": "Verantwortlicher für die Verarbeitung Ihrer personenbezogenen Daten ist:",
+      "s3title": "3. Welche personenbezogenen Daten wir erheben",
+      "s3text": "Je nach Art Ihrer Interaktion mit uns können wir folgende Kategorien personenbezogener Daten erheben:",
+      "s3items": [
+        { "label": "Identifikationsdaten", "text": "Vorname, Nachname, Firmenname (falls zutreffend)." },
+        { "label": "Kontaktdaten", "text": "E-Mail-Adresse, Telefonnummer, Postanschrift (nur wenn für Rechnung oder Vertrag relevant)." },
+        { "label": "Kommunikationsdaten", "text": "Inhalt von Nachrichten, die Sie über das Kontaktformular, E-Mail, WhatsApp oder Kalenderbuchung senden." },
+        { "label": "Projektdaten", "text": "Informationen über Ihre Webseite, Ihr Unternehmen oder Ihre Ziele, die Sie während der Beratung teilen." },
+        { "label": "Rechnungsdaten", "text": "Steuer-ID, USt-IdNr., Rechnungsadresse, Zahlungsinformationen." },
+        { "label": "Technische Daten", "text": "IP-Adresse, Browsertyp, Geräteinformationen, Referrer-URL, besuchte Seiten und Zeitstempel — erfasst über Serverlogs und Analyse." },
+        { "label": "Cookie-Daten", "text": "Informationen, die in Cookies und Local Storage gespeichert werden — Details in unserer Cookie-Richtlinie." }
+      ],
+      "s4title": "4. Zwecke der Verarbeitung",
+      "s4text": "Wir verarbeiten Ihre personenbezogenen Daten ausschließlich zu konkreten, legitimen Zwecken:",
+      "s4items": [
+        "Beantwortung Ihrer Anfragen und Erstellung von Angeboten",
+        "Abschluss und Erfüllung eines Vertrags für Webseitenerstellung, SEO, KI-Chatbot oder andere Leistungen",
+        "Rechnungsstellung und Erfüllung buchhalterischer und steuerlicher Pflichten",
+        "Versand dienstbezogener E-Mails und Projekt-Updates",
+        "Verbesserung unserer Webseite, Leistungen und Nutzererfahrung",
+        "Schutz der Webseite vor Betrug, Missbrauch und Sicherheitsbedrohungen",
+        "Erfüllung gesetzlicher Pflichten nach EU- und slowakischem Recht"
+      ],
+      "s5title": "5. Rechtsgrundlage der Verarbeitung",
+      "s5text": "Wir verarbeiten personenbezogene Daten auf einer der folgenden Rechtsgrundlagen gemäß Art. 6 DSGVO:",
+      "s5items": [
+        { "label": "Vertragserfüllung (Art. 6 Abs. 1 lit. b DSGVO)", "text": "wenn wir Ihre Daten benötigen, um die bestellten Leistungen zu erbringen." },
+        { "label": "Rechtliche Verpflichtung (Art. 6 Abs. 1 lit. c DSGVO)", "text": "für Rechnungsstellung, Steuern, Buchhaltung und Aufbewahrung nach slowakischem Recht." },
+        { "label": "Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO)", "text": "zur Gewährleistung der Webseitensicherheit, Betrugsprävention und Verbesserung unserer Leistungen." },
+        { "label": "Einwilligung (Art. 6 Abs. 1 lit. a DSGVO)", "text": "für nicht notwendige Cookies, Analyse und optionale Marketing-Kommunikation. Einwilligungen können jederzeit widerrufen werden." }
+      ],
+      "s6title": "6. Empfänger und Dritte",
+      "s6text": "Wir geben personenbezogene Daten nur an vertrauenswürdige Dienstleister weiter, die uns beim Betrieb unserer Leistungen unterstützen. Diese Auftragsverarbeiter handeln nach unseren Weisungen und sind durch Auftragsverarbeitungsverträge gebunden:",
+      "s6items": [
+        { "label": "Hosting-Anbieter", "text": "speichert Webseitendaten und Serverlogs auf Servern in der Europäischen Union." },
+        { "label": "E-Mail-Anbieter (Google Workspace / Gmail)", "text": "zum Versand und Empfang von E-Mail-Kommunikation." },
+        { "label": "Analytics (Google Analytics 4)", "text": "liefert anonymisierte Nutzungsstatistiken — nur mit Ihrer Einwilligung." },
+        { "label": "Terminbuchung (Google Calendar)", "text": "zur Vereinbarung kostenloser Beratungstermine." },
+        { "label": "Buchhaltungsdienstleister", "text": "verarbeitet Rechnungen und Buchhaltungsunterlagen gemäß slowakischem Recht." }
+      ],
+      "s7title": "7. Speicherdauer",
+      "s7text": "Wir speichern Ihre personenbezogenen Daten nur so lange, wie es für den Zweck erforderlich oder gesetzlich vorgeschrieben ist:",
+      "s7items": [
+        { "label": "Nachrichten aus Kontaktformular und Beratung", "text": "bis zu 12 Monate nach dem letzten Kontakt, sofern kein Vertrag geschlossen wurde." },
+        { "label": "Vertrags- und Kundendaten", "text": "für die Dauer des Vertrags und 10 Jahre danach (slowakisches Steuer- und Buchhaltungsrecht)." },
+        { "label": "Rechnungen und Buchhaltungsunterlagen", "text": "10 Jahre gemäß slowakischem Gesetz Nr. 431/2002 über Buchhaltung." },
+        { "label": "Serverlogs", "text": "bis zu 6 Monate zur Sicherheit und Fehleranalyse." },
+        { "label": "Cookies", "text": "für die in unserer Cookie-Richtlinie festgelegte Dauer oder bis zum Widerruf der Einwilligung." }
+      ],
+      "s8title": "8. Internationale Datenübermittlungen",
+      "s8text": "Ihre personenbezogenen Daten werden primär innerhalb des Europäischen Wirtschaftsraums (EWR) verarbeitet. Sofern ein Unterauftragsverarbeiter (z. B. Google) Daten außerhalb des EWR übermittelt, stützen wir uns auf die Standardvertragsklauseln der Europäischen Kommission oder einen Angemessenheitsbeschluss, um ein gleichwertiges Schutzniveau zu gewährleisten.",
+      "s9title": "9. Ihre Rechte nach der DSGVO",
+      "s9text": "Als betroffene Person haben Sie nach Art. 15–22 DSGVO folgende Rechte:",
+      "s9items": [
+        { "label": "Auskunftsrecht", "text": "zu bestätigen, ob wir Ihre Daten verarbeiten, und eine Kopie zu erhalten." },
+        { "label": "Recht auf Berichtigung", "text": "unrichtige oder unvollständige Daten berichtigen zu lassen." },
+        { "label": "Recht auf Löschung", "text": "die Löschung Ihrer Daten zu verlangen („Recht auf Vergessenwerden\"), vorbehaltlich gesetzlicher Ausnahmen." },
+        { "label": "Recht auf Einschränkung", "text": "die Verarbeitung in bestimmten Situationen einzuschränken." },
+        { "label": "Recht auf Datenübertragbarkeit", "text": "Ihre Daten in einem strukturierten, maschinenlesbaren Format zu erhalten." },
+        { "label": "Widerspruchsrecht", "text": "gegen die Verarbeitung auf Basis berechtigter Interessen, einschließlich Profiling." },
+        { "label": "Recht auf Widerruf der Einwilligung", "text": "jederzeit, ohne dass die Rechtmäßigkeit der früheren Verarbeitung berührt wird." }
+      ],
+      "s9contact": "Um eines dieser Rechte auszuüben, kontaktieren Sie uns unter v.hvorov73@gmail.com. Wir antworten innerhalb von 30 Tagen, wie es die DSGVO verlangt.",
+      "s10title": "10. Beschwerderecht",
+      "s10text": "Wenn Sie der Auffassung sind, dass wir Ihre Daten nicht rechtmäßig verarbeitet haben, haben Sie das Recht, eine Beschwerde bei der slowakischen Aufsichtsbehörde einzureichen:",
+      "s11title": "11. Datensicherheit",
+      "s11text": "Wir setzen angemessene technische und organisatorische Maßnahmen ein, um Ihre Daten vor unbefugtem Zugriff, Verlust, Offenlegung oder Zerstörung zu schützen. Dazu zählen HTTPS/TLS-Verschlüsselung, sicheres Hosting in der EU, Zugriffskontrolle, regelmäßige Backups und Sicherheitsupdates. Trotz unserer Bemühungen ist keine Online-Übertragung oder Speicherung 100 % sicher.",
+      "s12title": "12. Datenschutz für Kinder",
+      "s12text": "Unsere Leistungen richten sich an Unternehmen und Personen ab 16 Jahren. Wir erheben wissentlich keine personenbezogenen Daten von Kindern. Wenn Sie vermuten, dass uns ein Kind Daten übermittelt hat, kontaktieren Sie uns bitte, damit wir diese unverzüglich löschen können.",
+      "s13title": "13. Änderungen dieser Erklärung",
+      "s13text": "Wir können diese Datenschutzerklärung gelegentlich aktualisieren, um Änderungen unserer Leistungen, rechtliche Anforderungen oder Best Practices abzubilden. Änderungen werden auf dieser Seite mit aktualisiertem Datum veröffentlicht. Wir empfehlen regelmäßige Besuche.",
+      "s14title": "14. Kontakt",
+      "s14text": "Wenn Sie Fragen zu dieser Datenschutzerklärung oder zur Verarbeitung Ihrer Daten haben, kontaktieren Sie uns:"
     }
   },
   "form": {

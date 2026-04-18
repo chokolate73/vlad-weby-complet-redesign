@@ -25,7 +25,7 @@
   },
   "banner": {
     "availableForProjects": "Dostupný na projekty - bezplatná konzultácia",
-    "websitesThat": "Webstránky, ktoré",
+    "websitesThat": "Stránky, čo",
     "earnMoney": "Zarábajú",
     "workProcess": "Pracovný postup",
     "scrollDown": "posunúť nadol",
@@ -170,10 +170,10 @@
         "subHeading": "Vaša konkurenčná výhoda",
         "para": "AI chatboty, ktoré riešia otázky zákazníkov, automatizácia pracovných postupov, ktorá eliminuje opakujúce sa úlohy, a API integrácie, ktoré prepoja vaše nástroje. Menej manuálnej práce, viac klientov, rýchlejší rast."
       },
-      "languages": {
-        "heading": "4 jazyky, 3+ trhy",
-        "subHeading": "SK · EN · DE · RU",
-        "para": "Viacjazyčné webstránky pre stredoeurópsky trh. Oslovte zákazníkov na Slovensku, v Nemecku, Rakúsku a ďalších krajinách."
+      "chatgptShopping": {
+        "heading": "ChatGPT Shopping",
+        "subHeading": "AI-first obchod",
+        "para": "Registrujte svoj e-shop do ChatGPT a Bing, aby sa vaše produkty zobrazovali priamo v AI vyhľadávaní. Product feed, schema.org a OpenAI Merchant pre WooCommerce, Shopify, PrestaShop a Magento."
       },
       "speed": {
         "heading": "Týždne, nie mesiace",
@@ -420,6 +420,90 @@
       "s8text": "Tieto zásady cookies môžeme z času na čas aktualizovať. Všetky zmeny budú zverejnené na tejto stránke s aktualizovaným dátumom revízie. Odporúčame vám pravidelne kontrolovať túto stránku, aby ste boli informovaní o tom, ako používame cookies.",
       "s9title": "9. Kontaktujte nás",
       "s9text": "Ak máte akékoľvek otázky týkajúce sa týchto zásad cookies alebo nášho používania cookies, prosím kontaktujte nás:"
+    },
+    "privacyPolicy": {
+      "heading": "Ochrana osobných údajov",
+      "page": "Ochrana osobných údajov",
+      "lastUpdated": "Posledná aktualizácia: 17. apríla 2026",
+      "country": "Slovenská republika",
+      "phoneLabel": "Telefón",
+      "webLabel": "Web",
+      "s1title": "1. Úvod",
+      "s1text": "Tieto zásady ochrany osobných údajov vysvetľujú, ako Vlad Weby (Vladislav Khvorov) so sídlom v Bratislave zbiera, používa, uchováva a chráni vaše osobné údaje pri návšteve stránky vlad-weby.sk a pri využívaní našich služieb. Spracúvame osobné údaje v súlade s Nariadením (EÚ) 2016/679 (GDPR) a zákonom č. 18/2018 Z. z. o ochrane osobných údajov.",
+      "s2title": "2. Prevádzkovateľ",
+      "s2text": "Prevádzkovateľom zodpovedným za spracúvanie vašich osobných údajov je:",
+      "s3title": "3. Aké osobné údaje spracúvame",
+      "s3text": "V závislosti od spôsobu, akým s nami komunikujete, spracúvame nasledujúce kategórie osobných údajov:",
+      "s3items": [
+        { "label": "Identifikačné údaje", "text": "meno, priezvisko, názov firmy (ak je relevantné)." },
+        { "label": "Kontaktné údaje", "text": "e-mailová adresa, telefónne číslo, poštová adresa (ak je potrebná pre faktúru alebo zmluvu)." },
+        { "label": "Komunikačné údaje", "text": "obsah správ odoslaných cez kontaktný formulár, e-mail, WhatsApp alebo rezerváciu konzultácie." },
+        { "label": "Projektové údaje", "text": "informácie o vašom webe, podnikaní alebo cieľoch, ktoré zdieľate počas konzultácie." },
+        { "label": "Fakturačné údaje", "text": "IČO, DIČ, IČ DPH, fakturačná adresa, platobné údaje." },
+        { "label": "Technické údaje", "text": "IP adresa, typ prehliadača, informácie o zariadení, referer, navštívené stránky a časové značky — zbierané cez serverové logy a analytiku." },
+        { "label": "Údaje z cookies", "text": "informácie uložené v cookies a local storage — viac v Zásadách cookies." }
+      ],
+      "s4title": "4. Účely spracúvania",
+      "s4text": "Vaše osobné údaje spracúvame len na konkrétne, legitímne účely:",
+      "s4items": [
+        "Odpovedanie na vaše otázky a vypracovanie cenovej ponuky",
+        "Uzatvorenie a plnenie zmluvy na tvorbu webstránky, SEO, AI chatbot alebo iné služby",
+        "Vystavovanie faktúr a plnenie účtovných a daňových povinností",
+        "Zasielanie prevádzkových e-mailov a aktualizácií k projektu",
+        "Zlepšovanie webu, služieb a používateľskej skúsenosti",
+        "Ochrana webu pred podvodmi, zneužitím a bezpečnostnými hrozbami",
+        "Plnenie zákonných povinností podľa predpisov EÚ a SR"
+      ],
+      "s5title": "5. Právny základ spracúvania",
+      "s5text": "Osobné údaje spracúvame na základe jedného z týchto právnych základov v zmysle článku 6 GDPR:",
+      "s5items": [
+        { "label": "Plnenie zmluvy (čl. 6 ods. 1 písm. b GDPR)", "text": "keď potrebujeme vaše údaje na poskytnutie objednaných služieb." },
+        { "label": "Zákonná povinnosť (čl. 6 ods. 1 písm. c GDPR)", "text": "pre fakturáciu, dane, účtovníctvo a archiváciu podľa slovenského práva." },
+        { "label": "Oprávnený záujem (čl. 6 ods. 1 písm. f GDPR)", "text": "na udržiavanie bezpečnosti webu, prevenciu podvodov a zlepšovanie služieb." },
+        { "label": "Súhlas (čl. 6 ods. 1 písm. a GDPR)", "text": "pre neesenciálne cookies, analytiku a prípadnú marketingovú komunikáciu. Súhlas je možné kedykoľvek odvolať." }
+      ],
+      "s6title": "6. Príjemcovia a tretie strany",
+      "s6text": "Osobné údaje zdieľame len s dôveryhodnými sprostredkovateľmi, ktorí nám pomáhajú prevádzkovať službu. Títo sprostredkovatelia konajú podľa našich pokynov a sú viazaní zmluvou o spracúvaní údajov:",
+      "s6items": [
+        { "label": "Poskytovateľ hostingu", "text": "uchováva údaje webu a serverové logy na serveroch v rámci Európskej únie." },
+        { "label": "Poskytovateľ e-mailu (Google Workspace / Gmail)", "text": "slúži na e-mailovú komunikáciu." },
+        { "label": "Analytika (Google Analytics 4)", "text": "poskytuje anonymizovanú štatistiku návštevnosti — iba s vaším súhlasom." },
+        { "label": "Rezervačný nástroj (Google Calendar)", "text": "slúži na rezervovanie bezplatných konzultácií." },
+        { "label": "Účtovný poskytovateľ", "text": "spracúva faktúry a účtovné záznamy v súlade so slovenským právom." }
+      ],
+      "s7title": "7. Doba uchovávania údajov",
+      "s7text": "Osobné údaje uchovávame len tak dlho, ako je to potrebné na splnenie účelu alebo ako to vyžaduje zákon:",
+      "s7items": [
+        { "label": "Správy z kontaktného formulára a konzultácií", "text": "až 12 mesiacov od posledného kontaktu, ak nebola uzatvorená zmluva." },
+        { "label": "Údaje zo zmluvy a klientske údaje", "text": "počas trvania zmluvy a 10 rokov po jej ukončení (slovenské účtovné a daňové právo)." },
+        { "label": "Faktúry a účtovné záznamy", "text": "10 rokov v súlade so zákonom č. 431/2002 Z. z. o účtovníctve." },
+        { "label": "Serverové logy", "text": "až 6 mesiacov pre bezpečnosť a diagnostiku." },
+        { "label": "Cookies", "text": "po dobu definovanú v Zásadách cookies alebo do odvolania súhlasu." }
+      ],
+      "s8title": "8. Medzinárodný prenos údajov",
+      "s8text": "Vaše osobné údaje sa primárne spracúvajú v Európskom hospodárskom priestore (EHP). Ak subdodávateľ (napríklad Google) prenáša údaje mimo EHP, opierame sa o Štandardné zmluvné doložky Európskej komisie alebo rozhodnutie o primeranosti, aby sa zabezpečila rovnocenná úroveň ochrany.",
+      "s9title": "9. Vaše práva podľa GDPR",
+      "s9text": "Ako dotknutá osoba máte podľa článkov 15–22 GDPR tieto práva:",
+      "s9items": [
+        { "label": "Právo na prístup", "text": "získať potvrdenie, či spracúvame vaše údaje, a ich kópiu." },
+        { "label": "Právo na opravu", "text": "opraviť nepresné alebo neúplné údaje." },
+        { "label": "Právo na vymazanie", "text": "požiadať o výmaz údajov („právo byť zabudnutý\"), s výnimkami stanovenými zákonom." },
+        { "label": "Právo na obmedzenie spracúvania", "text": "obmedziť spracúvanie v určitých situáciách." },
+        { "label": "Právo na prenosnosť", "text": "získať svoje údaje v štruktúrovanom, strojovo čitateľnom formáte." },
+        { "label": "Právo namietať", "text": "proti spracúvaniu na základe oprávneného záujmu, vrátane profilovania." },
+        { "label": "Právo odvolať súhlas", "text": "kedykoľvek, bez vplyvu na zákonnosť predchádzajúceho spracúvania." }
+      ],
+      "s9contact": "Ak chcete uplatniť ktorékoľvek z týchto práv, kontaktujte nás na v.hvorov73@gmail.com. Odpovieme v lehote 30 dní, ako to vyžaduje GDPR.",
+      "s10title": "10. Právo podať sťažnosť",
+      "s10text": "Ak sa domnievate, že s vašimi osobnými údajmi nenakladáme v súlade so zákonom, máte právo podať sťažnosť dozornému orgánu:",
+      "s11title": "11. Bezpečnosť údajov",
+      "s11text": "Uplatňujeme primerané technické a organizačné opatrenia na ochranu vašich osobných údajov pred neoprávneným prístupom, stratou, zverejnením alebo zničením. Medzi tieto opatrenia patrí HTTPS/TLS šifrovanie, bezpečný hosting v EÚ, kontrola prístupu, pravidelné zálohy a bezpečnostné aktualizácie. Napriek tomu žiadny spôsob prenosu ani uchovávania dát nie je 100 % bezpečný.",
+      "s12title": "12. Ochrana detí",
+      "s12text": "Naše služby sú určené firmám a osobám od 16 rokov. Vedome nezbierame osobné údaje od detí. Ak máte dôvodné podozrenie, že nám dieťa poskytlo svoje údaje, kontaktujte nás a bez zbytočného odkladu ich vymažeme.",
+      "s13title": "13. Zmeny týchto zásad",
+      "s13text": "Tieto zásady môžeme z času na čas aktualizovať, aby odrážali zmeny v službách, legislatíve alebo najlepšej praxi. Každá zmena bude zverejnená na tejto stránke s aktualizovaným dátumom. Odporúčame ich pravidelne sledovať.",
+      "s14title": "14. Kontakt",
+      "s14text": "Ak máte akékoľvek otázky k týmto zásadám alebo k spôsobu, akým nakladáme s vašimi údajmi, kontaktujte nás:"
     }
   },
   "form": {

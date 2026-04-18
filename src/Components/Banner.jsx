@@ -4,7 +4,7 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { Instagram, Envelope, Whatsapp, Telephone, PlayFill, ArrowUpRight } from "react-bootstrap-icons";
 import VideoPlay from "./Shared/VideoPlay";
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 
 const WorkProcessModal = dynamic(() => import("./WorkProcessModal"), { ssr: false });
 
@@ -32,6 +32,11 @@ const socalIcon = [
 ];
 const Banner = () => {
   const t = useTranslations('banner');
+  const locale = useLocale();
+  const heroSizeClass =
+    locale === 'ru'
+      ? 'lg:text-[92px] md:text-[56px] sm:text-[40px] text-[28px]'
+      : 'lg:text-[116px] md:text-[68px] sm:text-[48px] text-[34px]';
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [workProcessOpen, setWorkProcessOpen] = useState(false);
   const [position, setPosition] = useState(false);
@@ -58,7 +63,7 @@ const Banner = () => {
                   <ArrowUpRight />
                 </span>
               </Link>
-              <h1 className="lg:text-[116px] md:text-[68px] sm:text-[48px] text-[34px] font-semibold sm:mb-[50px] mb-[16px] leading-[120%]">
+              <h1 className={`${heroSizeClass} font-semibold sm:mb-[50px] mb-[16px] leading-[120%]`}>
                 <span className="text-clr_white"> {t('websitesThat')}</span>
                 <span className="block designers" data-text={t('earnMoney')}>
                   {t('earnMoney')}
