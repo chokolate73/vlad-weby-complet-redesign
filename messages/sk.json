@@ -170,10 +170,10 @@
         "subHeading": "Vaša konkurenčná výhoda",
         "para": "AI chatboty, ktoré riešia otázky zákazníkov, automatizácia pracovných postupov, ktorá eliminuje opakujúce sa úlohy, a API integrácie, ktoré prepoja vaše nástroje. Menej manuálnej práce, viac klientov, rýchlejší rast."
       },
-      "languages": {
-        "heading": "4 jazyky, 3+ trhy",
-        "subHeading": "SK · EN · DE · RU",
-        "para": "Viacjazyčné webstránky pre stredoeurópsky trh. Oslovte zákazníkov na Slovensku, v Nemecku, Rakúsku a ďalších krajinách."
+      "chatgptShopping": {
+        "heading": "ChatGPT Shopping",
+        "subHeading": "AI-first obchod",
+        "para": "Registrujte svoj e-shop do ChatGPT a Bing, aby sa vaše produkty zobrazovali priamo v AI vyhľadávaní. Product feed, schema.org a OpenAI Merchant pre WooCommerce, Shopify, PrestaShop a Magento."
       },
       "speed": {
         "heading": "Týždne, nie mesiace",

@@ -170,10 +170,10 @@
         "subHeading": "Your competitive edge",
         "para": "AI chatbots that handle customer inquiries, workflow automation that eliminates repetitive tasks, and API integrations that connect your tools. Less manual work, more clients, faster growth."
       },
-      "languages": {
-        "heading": "4 Languages, 3+ Markets",
-        "subHeading": "SK · EN · DE · RU",
-        "para": "Multilingual websites for the Central European market. Reach customers in Slovakia, Germany, Austria, and beyond."
+      "chatgptShopping": {
+        "heading": "ChatGPT Shopping",
+        "subHeading": "AI-first commerce",
+        "para": "Register your e-shop in ChatGPT and Bing so your products appear directly in AI search. Feed integration, schema.org and OpenAI Merchant for WooCommerce, Shopify, PrestaShop and Magento."
       },
       "speed": {
         "heading": "Weeks, Not Months",

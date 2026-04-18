@@ -63,7 +63,9 @@ const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
           </ul>
         </div>
         <Link
-          href={"#"}
+          href="https://calendar.app.google/uvuY4SVfiJS92eRB6"
+          target="_blank"
+          rel="noopener noreferrer"
           className="flex justify-center items-center gap-2 font-medium px-[30px] pt-5 pb-[21px] text-lg leading-[120%]  capitalize relative bg-clr_base overflow-hidden rounded-[5px] duration-500 text-clr_subtitle before:absolute before:content-[''] before:bottom-full before:bg-[#aad302] before:left-0 before:w-full before:h-full before:duration-500 before:bg-opacity-80 hover:before:bottom-0"
         >
           <span className="z-10 relative duration-500">

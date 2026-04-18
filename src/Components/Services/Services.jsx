@@ -4,10 +4,11 @@ import Service from "./Service";
 import PageHeader from "../Shared/PageHeader";
 import { useTranslations, useLocale } from 'next-intl';
 
-const serviceKeys = ['ai', 'languages', 'speed', 'seo', 'direct', 'earn'];
+const serviceKeys = ['ai', 'chatgptShopping', 'speed', 'seo', 'direct', 'earn'];
 
 const serviceHrefs = {
   ai: 'services/ai-chatbot',
+  chatgptShopping: 'services/chatgpt-shopping',
   seo: 'services/seo',
   earn: 'services/web-design',
 };
