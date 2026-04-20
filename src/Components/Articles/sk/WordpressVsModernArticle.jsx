@@ -561,19 +561,19 @@ const WordpressVsModernArticle = () => {
           </h3>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/sk/blog/website-cost-2025"
+              href="/blog/kolko-stoji-web-stranka"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               Koľko stojí web? <ArrowRight />
             </Link>
             <Link
-              href="/sk/blog/website-for-entrepreneurs"
+              href="/blog/web-stranka-pre-zivnostnika"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               Web pre podnikateľov <ArrowRight />
             </Link>
             <Link
-              href="/sk/blog/improve-website-seo"
+              href="/blog/ako-zlepsit-seo"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               Ako zlepšiť SEO <ArrowRight />

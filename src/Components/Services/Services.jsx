@@ -3,14 +3,15 @@ import React from "react";
 import Service from "./Service";
 import PageHeader from "../Shared/PageHeader";
 import { useTranslations, useLocale } from 'next-intl';
+import { serviceUrl } from "@/lib/localizedPaths";
 
 const serviceKeys = ['ai', 'chatgptShopping', 'speed', 'seo', 'direct', 'earn'];
 
-const serviceHrefs = {
-  ai: 'services/ai-chatbot',
-  chatgptShopping: 'services/chatgpt-shopping',
-  seo: 'services/seo',
-  earn: 'services/web-design',
+const serviceKeyMap = {
+  ai: 'ai-chatbot',
+  chatgptShopping: 'chatgpt-shopping',
+  seo: 'seo',
+  earn: 'web-design',
 };
 
 const Services = ({ isHeading }) => {
@@ -23,7 +24,7 @@ const Services = ({ isHeading }) => {
     heading: t(`items.${key}.heading`),
     subHeading: t(`items.${key}.subHeading`),
     para: t(`items.${key}.para`),
-    href: serviceHrefs[key] ? `/${locale}/${serviceHrefs[key]}` : undefined,
+    href: serviceKeyMap[key] ? serviceUrl(serviceKeyMap[key], locale) : undefined,
   }));
 
   return (

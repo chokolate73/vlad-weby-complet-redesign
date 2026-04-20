@@ -3,6 +3,7 @@ import React from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { useTranslations, useLocale } from 'next-intl';
+import { canonicalBlogKey } from "@/lib/localizedPaths";
 
 // English articles
 import AiChatbotArticle from "@/Components/Articles/AiChatbotArticle";
@@ -49,46 +50,48 @@ const articleComponents = {
   },
 };
 
-const blogKeys = ['seo', 'chatbot', 'cost', 'entrepreneurs', 'wordpress'];
-const blogSlugs = [
-  'improve-website-seo',
-  'ai-chatbot-for-business',
-  'website-cost-2025',
-  'website-for-entrepreneurs',
-  'wordpress-vs-modern-website',
-];
+const blogKeyByCanonical = {
+  'improve-website-seo': 'seo',
+  'ai-chatbot-for-business': 'chatbot',
+  'website-cost-2025': 'cost',
+  'website-for-entrepreneurs': 'entrepreneurs',
+  'wordpress-vs-modern-website': 'wordpress',
+};
 
 const BlogArticle = ({ params }) => {
   const t = useTranslations('blogs');
   const pt = useTranslations('pageHeader');
   const locale = useLocale();
 
-  const slugIndex = blogSlugs.indexOf(params.slug);
-  const blogKey = slugIndex >= 0 ? blogKeys[slugIndex] : null;
+  const canonical = canonicalBlogKey(params.slug, locale);
+  const translationKey = canonical ? blogKeyByCanonical[canonical] : null;
 
-  if (!blogKey) {
+  if (!canonical || !translationKey) {
     notFound();
   }
 
   const blog = {
-    slug: params.slug,
-    category: t(`items.${blogKey}.category`),
-    heading: t(`items.${blogKey}.heading`),
-    para: t(`items.${blogKey}.para`),
+    slug: canonical,
+    category: t(`items.${translationKey}.category`),
+    heading: t(`items.${translationKey}.heading`),
+    para: t(`items.${translationKey}.para`),
   };
 
   const localeArticles = articleComponents[locale] || articleComponents.en;
-  const ArticleComponent = localeArticles[blog.slug];
+  const ArticleComponent = localeArticles[canonical];
+
+  const blogIndexHref = locale === 'sk' ? '/all-blog' : `/${locale}/all-blog`;
+  const homeHref = locale === 'sk' ? '/' : `/${locale}`;
 
   return (
     <section className="pt_120">
       <div className="container max-w-[800px] mb-8">
         <nav className="flex items-center gap-2 text-sm text-clr_pra">
-          <Link href={`/${locale}`} className="hover:text-white transition-colors">
+          <Link href={homeHref} className="hover:text-white transition-colors">
             {pt('home')}
           </Link>
           <span>/</span>
-          <Link href={`/${locale}/all-blog`} className="hover:text-white transition-colors">
+          <Link href={blogIndexHref} className="hover:text-white transition-colors">
             Blog
           </Link>
           <span>/</span>

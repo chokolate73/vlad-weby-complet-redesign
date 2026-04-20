@@ -1,4 +1,5 @@
 import React from "react";
+import { blogUrl } from "@/lib/localizedPaths";
 
 const BLOG_POSTS = {
   'improve-website-seo': {
@@ -94,7 +95,7 @@ export default function BlogPostingJsonLd({ slug, locale = "en" }) {
     inLanguage: l,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://www.vlad-weby.sk/${l}/blog/${slug}`,
+      "@id": `https://www.vlad-weby.sk${blogUrl(slug, l)}`,
     },
     author: {
       "@type": "Person",

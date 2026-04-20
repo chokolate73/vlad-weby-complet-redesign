@@ -10,11 +10,14 @@ import {
   PersonCheckFill,
   ChatDotsFill,
 } from "react-bootstrap-icons";
+import { localePath } from "@/lib/localizedPaths";
 
 const ServicePage = ({ serviceKey }) => {
   const t = useTranslations(`servicePages.${serviceKey}`);
   const c = useTranslations("servicePages.common");
   const locale = useLocale();
+  const contactHref = localePath('/contact', locale);
+  const allServicesHref = localePath('/all-services', locale);
 
   const included = t.raw("included");
   const plans = t.raw("plans");
@@ -39,14 +42,14 @@ const ServicePage = ({ serviceKey }) => {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
-              href={`/${locale}/contact`}
+              href={contactHref}
               className="inline-flex items-center gap-2 px-8 py-4 bg-clr_base text-clr_title rounded-full font-medium hover:opacity-90 transition-opacity"
             >
               {t("heroCta")}
               <ArrowRight />
             </Link>
             <Link
-              href={`/${locale}/all-services`}
+              href={allServicesHref}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-white hover:border-clr_base hover:text-clr_base transition-colors"
             >
               {c("secondaryCta")}
@@ -129,7 +132,7 @@ const ServicePage = ({ serviceKey }) => {
                   ))}
                 </ul>
                 <Link
-                  href={`/${locale}/contact`}
+                  href={contactHref}
                   className={`mt-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-medium transition-opacity ${
                     plan.highlight
                       ? "bg-clr_base text-clr_title hover:opacity-90"
@@ -217,7 +220,7 @@ const ServicePage = ({ serviceKey }) => {
             {c("finalCtaDesc")}
           </p>
           <Link
-            href={`/${locale}/contact`}
+            href={contactHref}
             className="inline-flex items-center gap-2 px-8 py-4 bg-clr_base text-clr_title rounded-full font-medium hover:opacity-90 transition-opacity"
           >
             {c("finalCtaButton")}

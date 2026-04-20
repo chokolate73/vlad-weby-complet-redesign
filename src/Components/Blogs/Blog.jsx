@@ -3,10 +3,11 @@ import React from "react";
 import Link from "next/link";
 import { ArrowRight, Calendar, Clock } from "react-bootstrap-icons";
 import { useLocale } from 'next-intl';
+import { blogUrl } from "@/lib/localizedPaths";
 
 const Blog = ({ slug, category, date, readTime, heading, para }) => {
   const locale = useLocale();
-  const href = slug ? `/${locale}/blog/${slug}` : "#";
+  const href = slug ? blogUrl(slug, locale) : "#";
   return (
     <Link
       href={href}

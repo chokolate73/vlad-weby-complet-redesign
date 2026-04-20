@@ -3,99 +3,48 @@
  * Used by every page's generateMetadata, the sitemap, and structured-data components.
  */
 
+import { SERVICE_PATHS, BLOG_PATHS, serviceUrl, blogUrl } from './localizedPaths';
+
 export const BASE_URL = 'https://www.vlad-weby.sk';
 export const LOCALES = ['sk', 'en', 'de', 'ru'];
 export const DEFAULT_LOCALE = 'sk';
 
+// Slovak is the default locale and renders at root (no /sk prefix).
+// Helper: prefix the locale unless it's Slovak.
+const withLocale = (locale, path) => (locale === 'sk' ? path : `/${locale}${path}`);
+
+const staticMap = (path) =>
+  Object.fromEntries(LOCALES.map((l) => [l, withLocale(l, path)]));
+
+const servicePageMap = (key) =>
+  Object.fromEntries(LOCALES.map((l) => [l, serviceUrl(key, l)]));
+
 // Map of page keys -> per-locale URL path.
-// Paths are identical across locales today (only the `/:locale` prefix varies),
-// but this structure lets us introduce localized slugs later without refactoring.
 export const routeMap = {
-  home: {
-    sk: '/sk',
-    en: '/en',
-    de: '/de',
-    ru: '/ru',
-  },
-  services: {
-    sk: '/sk/all-services',
-    en: '/en/all-services',
-    de: '/de/all-services',
-    ru: '/ru/all-services',
-  },
-  portfolio: {
-    sk: '/sk/portfolio',
-    en: '/en/portfolio',
-    de: '/de/portfolio',
-    ru: '/ru/portfolio',
-  },
-  blog: {
-    sk: '/sk/all-blog',
-    en: '/en/all-blog',
-    de: '/de/all-blog',
-    ru: '/ru/all-blog',
-  },
-  contact: {
-    sk: '/sk/contact',
-    en: '/en/contact',
-    de: '/de/contact',
-    ru: '/ru/contact',
-  },
-  cookies: {
-    sk: '/sk/cookies',
-    en: '/en/cookies',
-    de: '/de/cookies',
-    ru: '/ru/cookies',
-  },
-  'privacy-policy': {
-    sk: '/sk/privacy-policy',
-    en: '/en/privacy-policy',
-    de: '/de/privacy-policy',
-    ru: '/ru/privacy-policy',
-  },
-  businesscard: {
-    sk: '/sk/businesscard',
-    en: '/en/businesscard',
-    de: '/de/businesscard',
-    ru: '/ru/businesscard',
-  },
-  'service-web-design': {
-    sk: '/sk/services/web-design',
-    en: '/en/services/web-design',
-    de: '/de/services/web-design',
-    ru: '/ru/services/web-design',
-  },
-  'service-seo': {
-    sk: '/sk/services/seo',
-    en: '/en/services/seo',
-    de: '/de/services/seo',
-    ru: '/ru/services/seo',
-  },
-  'service-ai-chatbot': {
-    sk: '/sk/services/ai-chatbot',
-    en: '/en/services/ai-chatbot',
-    de: '/de/services/ai-chatbot',
-    ru: '/ru/services/ai-chatbot',
-  },
-  'service-chatgpt-shopping': {
-    sk: '/sk/services/chatgpt-shopping',
-    en: '/en/services/chatgpt-shopping',
-    de: '/de/services/chatgpt-shopping',
-    ru: '/ru/services/chatgpt-shopping',
-  },
+  home: staticMap(''),
+  services: staticMap('/all-services'),
+  portfolio: staticMap('/portfolio'),
+  blog: staticMap('/all-blog'),
+  contact: staticMap('/contact'),
+  cookies: staticMap('/cookies'),
+  'privacy-policy': staticMap('/privacy-policy'),
+  businesscard: staticMap('/businesscard'),
+  'service-web-design': servicePageMap('web-design'),
+  'service-seo': servicePageMap('seo'),
+  'service-ai-chatbot': servicePageMap('ai-chatbot'),
+  'service-chatgpt-shopping': servicePageMap('chatgpt-shopping'),
 };
 
-// Blog posts that exist as localized articles under /[locale]/blog/[slug].
-export const BLOG_SLUGS = [
-  'improve-website-seo',
-  'ai-chatbot-for-business',
-  'website-cost-2025',
-  'website-for-entrepreneurs',
-  'wordpress-vs-modern-website',
-];
+// Patch the home entry so SK is `/` not empty string.
+routeMap.home.sk = '/';
 
-function blogRouteMap(slug) {
-  return Object.fromEntries(LOCALES.map((l) => [l, `/${l}/blog/${slug}`]));
+// Canonical blog keys (used by article-component lookups and page metadata).
+export const BLOG_SLUGS = Object.keys(BLOG_PATHS);
+
+function blogRouteMap(canonicalSlug) {
+  return Object.fromEntries(
+    LOCALES.map((l) => [l, blogUrl(canonicalSlug, l)])
+  );
 }
 
 export function getAlternates(pageKey, currentLocale, { slug } = {}) {

@@ -5,6 +5,7 @@ import { List, ArrowRight, X } from "react-bootstrap-icons";
 import Drawer from "./Drawer";
 import { useTranslations, useLocale } from 'next-intl';
 import LanguageSwitcher from "../LanguageSwitcher";
+import { serviceUrl, localePath } from "@/lib/localizedPaths";
 
 const RanderHeader = () => {
   const t = useTranslations('nav');
@@ -14,27 +15,28 @@ const RanderHeader = () => {
   const [dropDownId, setDropDownId] = useState(null);
   const [fixdHeader, setFixedHeader] = useState(false);
 
+  const home = localePath('/', locale);
   const menuList = [
-    { id: 1, path: `/${locale}`, name: t('home') },
-    { id: 2, path: `/${locale}`, section: "#portfolio", name: t('portfolio') },
-    { id: 3, path: `/${locale}`, section: "#pricing", name: t('pricing') },
+    { id: 1, path: home, name: t('home') },
+    { id: 2, path: home, section: "#portfolio", name: t('portfolio') },
+    { id: 3, path: home, section: "#pricing", name: t('pricing') },
     {
       id: 4,
-      path: `/${locale}`,
+      path: home,
       section: "#services",
       name: t('services'),
       dropDown: [
-        { id: 41, path: `/${locale}/services/web-design`, name: t('servicesDropdown.webDesign') },
-        { id: 42, path: `/${locale}/services/seo`, name: t('servicesDropdown.seo') },
-        { id: 43, path: `/${locale}/services/ai-chatbot`, name: t('servicesDropdown.aiChatbot') },
-        { id: 44, path: `/${locale}/services/chatgpt-shopping`, name: t('servicesDropdown.chatgptShopping') },
+        { id: 41, path: serviceUrl('web-design', locale), name: t('servicesDropdown.webDesign') },
+        { id: 42, path: serviceUrl('seo', locale), name: t('servicesDropdown.seo') },
+        { id: 43, path: serviceUrl('ai-chatbot', locale), name: t('servicesDropdown.aiChatbot') },
+        { id: 44, path: serviceUrl('chatgpt-shopping', locale), name: t('servicesDropdown.chatgptShopping') },
       ],
     },
-    { id: 5, path: `/${locale}`, section: "#faq", name: t('faq') },
+    { id: 5, path: home, section: "#faq", name: t('faq') },
     {
-      id: 6, path: `/${locale}/all-blog`, section: "", name: t('blog'),
+      id: 6, path: localePath('/all-blog', locale), section: "", name: t('blog'),
     },
-    { id: 7, path: `/${locale}`, section: "#contact", name: t('contact') },
+    { id: 7, path: home, section: "#contact", name: t('contact') },
   ];
 
   useEffect(() => {

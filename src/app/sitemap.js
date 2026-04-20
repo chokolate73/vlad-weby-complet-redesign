@@ -1,4 +1,5 @@
 import { BASE_URL, LOCALES, routeMap, BLOG_SLUGS } from "@/lib/seo";
+import { blogUrl } from "@/lib/localizedPaths";
 
 const STATIC_PAGES = [
   { key: 'home', priority: 1.0, changeFrequency: 'weekly' },
@@ -40,17 +41,16 @@ export default function sitemap() {
   }
 
   for (const slug of BLOG_SLUGS) {
+    const localeUrls = Object.fromEntries(
+      LOCALES.map((l) => [l, `${BASE_URL}${blogUrl(slug, l)}`])
+    );
     for (const locale of LOCALES) {
       entries.push({
-        url: `${BASE_URL}/${locale}/blog/${slug}`,
+        url: localeUrls[locale],
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.6,
-        alternates: {
-          languages: Object.fromEntries(
-            LOCALES.map((l) => [l, `${BASE_URL}/${l}/blog/${slug}`])
-          ),
-        },
+        alternates: { languages: localeUrls },
       });
     }
   }
