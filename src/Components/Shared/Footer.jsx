@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { ArrowUpShort, ArrowRight } from "react-bootstrap-icons";
 import { useTranslations, useLocale } from 'next-intl';
+import { localePath } from "@/lib/localizedPaths";
 
 const socalList = [
   {
@@ -107,10 +108,10 @@ const Footer = () => {
             </p>
             <ul className="terms flex gap-[38px]">
               <li>
-                <Link href={`/${locale}/cookies`} className="text-lg text-white duration-500 hover:text-clr_base"> {t('cookiePolicy')} </Link>
+                <Link href={localePath('/cookies', locale)} className="text-lg text-white duration-500 hover:text-clr_base"> {t('cookiePolicy')} </Link>
               </li>
               <li>
-                <Link href={`/${locale}/privacy-policy`} className="text-lg text-white duration-500 hover:text-clr_base"> {t('privacyPolicy')} </Link>
+                <Link href={localePath('/privacy-policy', locale)} className="text-lg text-white duration-500 hover:text-clr_base"> {t('privacyPolicy')} </Link>
               </li>
             </ul>
             <Link href={""} className="w-10 h-[50px] bg-clr_base rounded-[5px] flex justify-center items-center">

@@ -1,4 +1,5 @@
 import { BASE_URL, LOCALES, routeMap, BLOG_SLUGS } from "@/lib/seo";
+import { blogUrl } from "@/lib/localizedPaths";
 
 const STATIC_PAGES = [
   { key: 'home', priority: 1.0, changeFrequency: 'weekly' },
@@ -13,6 +14,17 @@ const STATIC_PAGES = [
   { key: 'businesscard', priority: 0.4, changeFrequency: 'yearly' },
   { key: 'cookies', priority: 0.2, changeFrequency: 'yearly' },
   { key: 'privacy-policy', priority: 0.3, changeFrequency: 'yearly' },
+  { key: 'landing-preco-web', priority: 0.7, changeFrequency: 'monthly' },
+  { key: 'landing-preco-seo', priority: 0.7, changeFrequency: 'monthly' },
+  { key: 'landing-preco-google-profil', priority: 0.7, changeFrequency: 'monthly' },
+  { key: 'landing-web-pre-maly-biznis', priority: 0.7, changeFrequency: 'monthly' },
+  { key: 'landing-cena-web-stranky', priority: 0.7, changeFrequency: 'monthly' },
+  { key: 'landing-why-website', priority: 0.7, changeFrequency: 'monthly' },
+  { key: 'landing-why-seo', priority: 0.7, changeFrequency: 'monthly' },
+  { key: 'landing-why-google-business', priority: 0.7, changeFrequency: 'monthly' },
+  { key: 'landing-zachem-sait', priority: 0.7, changeFrequency: 'monthly' },
+  { key: 'landing-zachem-seo', priority: 0.7, changeFrequency: 'monthly' },
+  { key: 'landing-zachem-google-biznes', priority: 0.7, changeFrequency: 'monthly' },
 ];
 
 export default function sitemap() {
@@ -40,17 +52,16 @@ export default function sitemap() {
   }
 
   for (const slug of BLOG_SLUGS) {
+    const localeUrls = Object.fromEntries(
+      LOCALES.map((l) => [l, `${BASE_URL}${blogUrl(slug, l)}`])
+    );
     for (const locale of LOCALES) {
       entries.push({
-        url: `${BASE_URL}/${locale}/blog/${slug}`,
+        url: localeUrls[locale],
         lastModified: now,
         changeFrequency: 'monthly',
         priority: 0.6,
-        alternates: {
-          languages: Object.fromEntries(
-            LOCALES.map((l) => [l, `${BASE_URL}/${l}/blog/${slug}`])
-          ),
-        },
+        alternates: { languages: localeUrls },
       });
     }
   }

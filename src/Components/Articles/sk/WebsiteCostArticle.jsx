@@ -918,19 +918,19 @@ const WebsiteCostArticle = () => {
         </h2>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/sk/all-services"
+            href="/all-services"
             className="inline-flex items-center gap-2 text-clr_base hover:underline"
           >
             Tvorba webstránok <ArrowRight />
           </Link>
           <Link
-            href="/sk/blog/website-for-entrepreneurs"
+            href="/blog/web-stranka-pre-zivnostnika"
             className="inline-flex items-center gap-2 text-clr_base hover:underline"
           >
             Webstránka pre podnikateľov <ArrowRight />
           </Link>
           <Link
-            href="/sk/blog/improve-website-seo"
+            href="/blog/ako-zlepsit-seo"
             className="inline-flex items-center gap-2 text-clr_base hover:underline"
           >
             Ako zlepšiť SEO <ArrowRight />

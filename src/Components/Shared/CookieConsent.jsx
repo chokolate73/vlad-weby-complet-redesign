@@ -1,10 +1,12 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
+import { localePath } from "@/lib/localizedPaths"
 
 const CookieConsent = () => {
   const t = useTranslations('cookie')
+  const locale = useLocale()
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
@@ -33,7 +35,7 @@ const CookieConsent = () => {
           <div className="flex-1">
             <p className="text-white text-sm sm:text-base">
               {t('message')}{' '}
-              <Link href="/cookies" className="text-clr_base underline duration-500 hover:opacity-80">
+              <Link href={localePath('/cookies', locale)} className="text-clr_base underline duration-500 hover:opacity-80">
                 {t('policy')}
               </Link>
             </p>

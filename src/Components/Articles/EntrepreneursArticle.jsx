@@ -450,25 +450,25 @@ const EntrepreneursArticle = () => {
           </h3>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/blog/website-cost-2025"
+              href="/en/blog/how-much-does-a-website-cost"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               Website Pricing <ArrowRight />
             </Link>
             <Link
-              href="/blog/improve-website-seo"
+              href="/en/blog/how-to-improve-seo"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               How to Improve SEO <ArrowRight />
             </Link>
             <Link
-              href="/blog/ai-chatbot-for-business"
+              href="/en/blog/ai-chatbot-for-business"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               AI Chatbot for Business <ArrowRight />
             </Link>
             <Link
-              href="/all-blog"
+              href="/en/all-blog"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               All Articles <ArrowRight />

@@ -563,19 +563,19 @@ const WordpressVsModernArticle = () => {
           </h3>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/blog/website-cost-2025"
+              href="/en/blog/how-much-does-a-website-cost"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               How Much Does a Website Cost? <ArrowRight />
             </Link>
             <Link
-              href="/blog/website-for-entrepreneurs"
+              href="/en/blog/website-for-entrepreneurs"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               Website for Entrepreneurs <ArrowRight />
             </Link>
             <Link
-              href="/blog/improve-website-seo"
+              href="/en/blog/how-to-improve-seo"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               How to Improve SEO <ArrowRight />

@@ -3,99 +3,60 @@
  * Used by every page's generateMetadata, the sitemap, and structured-data components.
  */
 
+import { SERVICE_PATHS, BLOG_PATHS, serviceUrl, blogUrl } from './localizedPaths';
+
 export const BASE_URL = 'https://www.vlad-weby.sk';
 export const LOCALES = ['sk', 'en', 'de', 'ru'];
 export const DEFAULT_LOCALE = 'sk';
 
+// Slovak is the default locale and renders at root (no /sk prefix).
+// Helper: prefix the locale unless it's Slovak.
+const withLocale = (locale, path) => (locale === 'sk' ? path : `/${locale}${path}`);
+
+const staticMap = (path) =>
+  Object.fromEntries(LOCALES.map((l) => [l, withLocale(l, path)]));
+
+const servicePageMap = (key) =>
+  Object.fromEntries(LOCALES.map((l) => [l, serviceUrl(key, l)]));
+
 // Map of page keys -> per-locale URL path.
-// Paths are identical across locales today (only the `/:locale` prefix varies),
-// but this structure lets us introduce localized slugs later without refactoring.
 export const routeMap = {
-  home: {
-    sk: '/sk',
-    en: '/en',
-    de: '/de',
-    ru: '/ru',
-  },
-  services: {
-    sk: '/sk/all-services',
-    en: '/en/all-services',
-    de: '/de/all-services',
-    ru: '/ru/all-services',
-  },
-  portfolio: {
-    sk: '/sk/portfolio',
-    en: '/en/portfolio',
-    de: '/de/portfolio',
-    ru: '/ru/portfolio',
-  },
-  blog: {
-    sk: '/sk/all-blog',
-    en: '/en/all-blog',
-    de: '/de/all-blog',
-    ru: '/ru/all-blog',
-  },
-  contact: {
-    sk: '/sk/contact',
-    en: '/en/contact',
-    de: '/de/contact',
-    ru: '/ru/contact',
-  },
-  cookies: {
-    sk: '/sk/cookies',
-    en: '/en/cookies',
-    de: '/de/cookies',
-    ru: '/ru/cookies',
-  },
-  'privacy-policy': {
-    sk: '/sk/privacy-policy',
-    en: '/en/privacy-policy',
-    de: '/de/privacy-policy',
-    ru: '/ru/privacy-policy',
-  },
-  businesscard: {
-    sk: '/sk/businesscard',
-    en: '/en/businesscard',
-    de: '/de/businesscard',
-    ru: '/ru/businesscard',
-  },
-  'service-web-design': {
-    sk: '/sk/services/web-design',
-    en: '/en/services/web-design',
-    de: '/de/services/web-design',
-    ru: '/ru/services/web-design',
-  },
-  'service-seo': {
-    sk: '/sk/services/seo',
-    en: '/en/services/seo',
-    de: '/de/services/seo',
-    ru: '/ru/services/seo',
-  },
-  'service-ai-chatbot': {
-    sk: '/sk/services/ai-chatbot',
-    en: '/en/services/ai-chatbot',
-    de: '/de/services/ai-chatbot',
-    ru: '/ru/services/ai-chatbot',
-  },
-  'service-chatgpt-shopping': {
-    sk: '/sk/services/chatgpt-shopping',
-    en: '/en/services/chatgpt-shopping',
-    de: '/de/services/chatgpt-shopping',
-    ru: '/ru/services/chatgpt-shopping',
-  },
+  home: staticMap(''),
+  services: staticMap('/all-services'),
+  portfolio: staticMap('/portfolio'),
+  blog: staticMap('/all-blog'),
+  contact: staticMap('/contact'),
+  cookies: staticMap('/cookies'),
+  'privacy-policy': staticMap('/privacy-policy'),
+  businesscard: staticMap('/businesscard'),
+  'service-web-design': servicePageMap('web-design'),
+  'service-seo': servicePageMap('seo'),
+  'service-ai-chatbot': servicePageMap('ai-chatbot'),
+  'service-chatgpt-shopping': servicePageMap('chatgpt-shopping'),
+  // Single-locale landing pages (content reused from related service/article pages).
+  'landing-preco-web': { sk: '/preco-web' },
+  'landing-preco-seo': { sk: '/preco-seo' },
+  'landing-preco-google-profil': { sk: '/preco-google-profil' },
+  'landing-web-pre-maly-biznis': { sk: '/web-pre-maly-biznis' },
+  'landing-cena-web-stranky': { sk: '/cena-web-stranky' },
+  'landing-why-website': { en: '/en/why-website' },
+  'landing-why-seo': { en: '/en/why-seo' },
+  'landing-why-google-business': { en: '/en/why-google-business' },
+  'landing-zachem-sait': { ru: '/ru/zachem-sait' },
+  'landing-zachem-seo': { ru: '/ru/zachem-seo' },
+  'landing-zachem-google-biznes': { ru: '/ru/zachem-google-biznes' },
 };
 
-// Blog posts that exist as localized articles under /[locale]/blog/[slug].
-export const BLOG_SLUGS = [
-  'improve-website-seo',
-  'ai-chatbot-for-business',
-  'website-cost-2025',
-  'website-for-entrepreneurs',
-  'wordpress-vs-modern-website',
-];
+// Patch the home entry so SK is `/` not empty string.
+routeMap.home.sk = '/';
 
-function blogRouteMap(slug) {
-  return Object.fromEntries(LOCALES.map((l) => [l, `/${l}/blog/${slug}`]));
+// Canonical blog keys (used by article-component lookups and page metadata).
+export const BLOG_SLUGS = Object.keys(BLOG_PATHS);
+
+function blogRouteMap(canonicalSlug) {
+  return Object.fromEntries(
+    LOCALES.map((l) => [l, blogUrl(canonicalSlug, l)])
+  );
 }
 
 export function getAlternates(pageKey, currentLocale, { slug } = {}) {
@@ -106,10 +67,12 @@ export function getAlternates(pageKey, currentLocale, { slug } = {}) {
   for (const l of LOCALES) {
     if (routes[l]) languages[l] = `${BASE_URL}${routes[l]}`;
   }
-  languages['x-default'] = `${BASE_URL}${routes[DEFAULT_LOCALE]}`;
+  const defaultPath =
+    routes[DEFAULT_LOCALE] || routes[currentLocale] || Object.values(routes)[0];
+  languages['x-default'] = `${BASE_URL}${defaultPath}`;
 
   return {
-    canonical: `${BASE_URL}${routes[currentLocale] || routes[DEFAULT_LOCALE]}`,
+    canonical: `${BASE_URL}${routes[currentLocale] || defaultPath}`,
     languages,
   };
 }
@@ -379,6 +342,83 @@ const PAGE_META = {
       title: 'Интеграция ChatGPT Shopping для магазинов | Vlad Weby',
       description:
         'Ваши товары в ChatGPT Shopping. Bing Merchant Center, schema.org, OpenAI Merchant, GA4 для WooCommerce, Shopify, Prestashop и Magento.',
+    },
+  },
+  'landing-preco-web': {
+    sk: {
+      title: 'Prečo potrebujete webstránku v roku 2026 | Vlad Weby',
+      description:
+        'Hlavné dôvody, prečo každá firma potrebuje vlastnú webstránku. Viditeľnosť v Googli, dôvera zákazníkov, predaj 24/7 — prečo investovať.',
+    },
+  },
+  'landing-preco-seo': {
+    sk: {
+      title: 'Prečo potrebujete SEO? | Vlad Weby',
+      description:
+        'Prečo SEO býva najlepšou investíciou pre malý biznis. Viac zákazníkov z Googlu bez reklám a stabilný prísun klientov z organického vyhľadávania.',
+    },
+  },
+  'landing-preco-google-profil': {
+    sk: {
+      title: 'Prečo potrebujete Google profil firmy | Vlad Weby',
+      description:
+        'Google profil firmy je základ lokálneho SEO. Prečo ho každá firma musí mať, ako ho nastaviť a získavať zákazníkov z Máp a vyhľadávania.',
+    },
+  },
+  'landing-web-pre-maly-biznis': {
+    sk: {
+      title: 'Webstránka pre malý biznis — Kompletný sprievodca | Vlad Weby',
+      description:
+        'Praktický sprievodca pre malé firmy a živnostníkov. Čo má obsahovať vaša webstránka, koľko do nej investovať a ako ju spustiť rýchlo.',
+    },
+  },
+  'landing-cena-web-stranky': {
+    sk: {
+      title: 'Cena webstránky 2026 — Koľko stojí dobrý web? | Vlad Weby',
+      description:
+        'Aktuálne ceny webstránok na Slovensku. Porovnanie agentúr, freelancerov a builderov a koľko by ste mali investovať do webu pre malú firmu.',
+    },
+  },
+  'landing-why-website': {
+    en: {
+      title: 'Why Do You Need a Website in 2026? | Vlad Weby',
+      description:
+        'The real reasons every business needs its own website. Visibility on Google, customer trust, 24/7 sales — why a website is the best investment.',
+    },
+  },
+  'landing-why-seo': {
+    en: {
+      title: 'Why Do You Need SEO? | Vlad Weby',
+      description:
+        'Why SEO is the best long-term investment for small businesses. More customers from Google without paid ads and a steady organic lead pipeline.',
+    },
+  },
+  'landing-why-google-business': {
+    en: {
+      title: 'Why Your Business Needs a Google Business Profile | Vlad Weby',
+      description:
+        'Google Business Profile is the foundation of local SEO. Why every small business must have one and how to set it up for maximum visibility.',
+    },
+  },
+  'landing-zachem-sait': {
+    ru: {
+      title: 'Зачем вашему бизнесу сайт в 2026 году | Vlad Weby',
+      description:
+        'Главные причины, почему каждому бизнесу нужен собственный сайт. Видимость в Google, доверие клиентов, продажи 24/7 — почему сайт окупается.',
+    },
+  },
+  'landing-zachem-seo': {
+    ru: {
+      title: 'Зачем нужно SEO вашему бизнесу? | Vlad Weby',
+      description:
+        'Почему SEO — лучшая долгосрочная инвестиция для малого бизнеса. Больше клиентов из Google без платной рекламы и стабильный поток заявок.',
+    },
+  },
+  'landing-zachem-google-biznes': {
+    ru: {
+      title: 'Зачем бизнесу Google профиль компании | Vlad Weby',
+      description:
+        'Google Business Profile — основа локального SEO. Почему каждому бизнесу нужен этот профиль и как его настроить для максимальной видимости.',
     },
   },
 };

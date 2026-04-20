@@ -433,19 +433,19 @@ const EntrepreneursArticle = () => {
           </h3>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/ru/blog/website-cost-2025"
+              href="/ru/blog/skolko-stoit-sajt"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               Стоимость сайта <ArrowRight />
             </Link>
             <Link
-              href="/ru/blog/improve-website-seo"
+              href="/ru/blog/kak-uluchshit-seo"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               Как улучшить SEO <ArrowRight />
             </Link>
             <Link
-              href="/ru/blog/ai-chatbot-for-business"
+              href="/ru/blog/ai-chatbot-dlya-biznesa"
               className="inline-flex items-center gap-2 text-clr_base hover:underline text-sm"
             >
               AI чат-бот для бизнеса <ArrowRight />
