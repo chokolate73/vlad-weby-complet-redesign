@@ -61,6 +61,8 @@ const legacyRedirects = [
 
   // --- Old works/legacy paths ---
   { source: '/works', destination: '/en/portfolio', permanent: true },
+  { source: '/worksk', destination: '/portfolio', permanent: true },
+  { source: '/worksru', destination: '/ru/portfolio', permanent: true },
 
   // Fix the old misspelled path to the corrected portfolio URL
   { source: '/:locale/protfolio', destination: '/:locale/portfolio', permanent: true },
