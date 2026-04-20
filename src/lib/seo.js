@@ -5,7 +5,7 @@
 
 export const BASE_URL = 'https://www.vlad-weby.sk';
 export const LOCALES = ['sk', 'en', 'de', 'ru'];
-export const DEFAULT_LOCALE = 'en';
+export const DEFAULT_LOCALE = 'sk';
 
 // Map of page keys -> per-locale URL path.
 // Paths are identical across locales today (only the `/:locale` prefix varies),
