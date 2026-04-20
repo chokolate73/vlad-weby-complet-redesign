@@ -45,7 +45,6 @@ const legacyRedirects = [
   { source: '/en/blog/improve-website-seo', destination: '/en/blog/how-to-improve-seo', permanent: true },
   { source: '/en/blog/website-cost-2025', destination: '/en/blog/how-much-does-a-website-cost', permanent: true },
   { source: '/en/ai-chatbot', destination: '/en/blog/ai-chatbot-for-business', permanent: true },
-  { source: '/en/why-seo', destination: '/en/blog/how-to-improve-seo', permanent: true },
 
   // --- Russian: drop /services/ prefix, restore cyrillic blog slugs ---
   { source: '/ru/services/web-design', destination: '/ru/sozdanie-saitov', permanent: true },
