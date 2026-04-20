@@ -3,60 +3,39 @@ import React, { useState } from "react";
 import ProjectCard from "./Shared/ProjectCard";
 import Lightbox from "./Shared/LightBox";
 import { imagesList, projectList } from "@/Utlits/projectList";
+import { useTranslations } from 'next-intl';
 
-const categoryList = [
-    {
-        id: 1,
-        categoryName: "All",
-        value: "all",
-    },
-    {
-        id: 2,
-        categoryName: "Branding-app",
-        value: "branding_app",
-    },
-    {
-        id: 3,
-        categoryName: "Los-App",
-        value: "los_app",
-    },
-    {
-        id: 4,
-        categoryName: "Landing Page",
-        value: "landing_page",
-    },
-    {
-        id: 5,
-        categoryName: "Website",
-        value: "website",
-    },
-];
 const ProfolioTab = () => {
+    const t = useTranslations('pages.portfolio');
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [currentId, setCurrentId] = useState(0);
     const [currentCategory, setCurrentCategory] = useState("all");
 
-    // ---------- Filer project by category
-    let filterProject = [];
+    const categoryList = [
+        { id: 1, categoryName: t('filters.all'), value: "all" },
+        { id: 2, categoryName: t('filters.services'), value: "services" },
+        { id: 3, categoryName: t('filters.business'), value: "business" },
+        { id: 4, categoryName: t('filters.beauty'), value: "beauty" },
+        { id: 5, categoryName: t('filters.personal'), value: "personal" },
+        { id: 6, categoryName: t('filters.demo'), value: "demo" },
+    ];
 
-    for (const iterator of projectList) {
-        for (const cet of iterator.category) {
-            if (cet === currentCategory) {
-                filterProject.push(iterator);
-            }
-        }
-    }
+    const filterProject = projectList.filter((project) =>
+        project.category.includes(currentCategory)
+    );
 
     const openLightbox = (index) => {
-        setCurrentId(index);
+        const imageIndex = imagesList.indexOf(filterProject[index]?.image);
+        setCurrentId(imageIndex >= 0 ? imageIndex : 0);
         setLightboxOpen(true);
     };
+
     return (
         <section className="pb-120">
             <div className="container">
                 <div>
                     <ul
-                        className="border border-clr_cusborder p-[10px] rounded-lg max-w-[683px] mx-auto md:mb-[60px] mb-10 flex items-center md:flex-nowrap flex-wrap md:justify-normal justify-center md:gap-0 gap-[5px] "
+                        className="border border-clr_cusborder p-[10px] rounded-lg max-w-[900px] mx-auto md:mb-[60px] mb-10 flex items-center md:flex-nowrap flex-wrap md:justify-center justify-center md:gap-0 gap-[5px] "
                         data-aos="fade-down"
                         data-aos-duration="2000"
                     >
@@ -76,15 +55,17 @@ const ProfolioTab = () => {
                     </ul>
                     <div className="md:columns-2 col-span-1 xxl:gap-[58px] lg:gap-12 md:gap-[30px]">
                         {filterProject.map(
-                            ({ heading, id, image, subHeading }, index) => (
+                            ({ heading, id, image, subHeading, url, placeholder }, index) => (
                                 <ProjectCard
                                     key={id}
                                     image={image}
+                                    placeholder={placeholder}
                                     heading={heading}
                                     subHeading={subHeading}
                                     openLightbox={openLightbox}
                                     index={index}
                                     navigate="/portfolio-details"
+                                    url={url}
                                 />
                             )
                         )}

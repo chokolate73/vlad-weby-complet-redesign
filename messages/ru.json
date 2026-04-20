@@ -370,7 +370,15 @@
     },
     "portfolio": {
       "heading": "Мои работы и портфолио",
-      "page": "Работы"
+      "page": "Работы",
+      "filters": {
+        "all": "Все",
+        "services": "Услуги",
+        "business": "Бизнес",
+        "beauty": "Красота и здоровье",
+        "personal": "Персональные",
+        "demo": "Демо"
+      }
     },
     "cookies": {
       "title": "Политика cookies | Vlad Weby",
