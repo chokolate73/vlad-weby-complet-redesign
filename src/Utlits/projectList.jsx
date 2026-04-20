@@ -1,47 +1,135 @@
 export const projectList = [
-    {
-      id: 1,
-      image: "/img/project/pro1.png",
-      heading: "Web Design",
-      subHeading: "Dobry Vodar - Professional plumber website",
-      category:["services", "website", "all"]
-    },
-    {
-      id: 2,
-      image: "/img/project/pro3.png",
-      heading: "Web Design",
-      subHeading: "Anti-Aging Massage & Holistic Bodywork in Traunstein",
-      category:["services", "landing_page", "all"]
-    },
-    {
-      id: 3,
-      image: "/img/project/pro5.png",
-      heading: "Web Development",
-      subHeading: "TopSicher Umzug - Relocation services in Germany",
-      category:["website", "services", "all"],
-    },
-    {
-      id: 4,
-      image: "/img/project/pro2.png",
-      heading: "AI & Payment Integration",
-      subHeading: "Beauty in Perfection - AI & Payment System Integration",
-      category:["landing_page", "website", "all"]
-    },
-    {
-      id: 5,
-      image: "/img/project/pro4.png",
-      heading: "Tech Services",
-      subHeading: "Irsava Tech - Expert Mobile & Laptop Repair",
-      category:["services", "website", "all"]
-    },
-    {
-      id: 6,
-      image: "/img/project/pro6.png",
-      heading: "Web Design",
-      subHeading: "ManzelPro - Multilingual Service Website",
-      category:["landing_page", "website", "all"]
-    },
-  ];
+  {
+    id: 1,
+    image: "/img/project/pro1.png",
+    heading: "Web Design",
+    subHeading: "Dobry Vodar - Professional plumber website",
+    url: "https://www.dobryvodar.sk/",
+    category: ["services", "website", "all"],
+  },
+  {
+    id: 2,
+    image: null,
+    placeholder: { label: "SVI Transporter", gradient: "from-[#1e3a8a] to-[#0ea5e9]" },
+    heading: "Web Design",
+    subHeading: "SVI Transporter - Transport & logistics services",
+    url: "https://www.svitransporter.sk/",
+    category: ["services", "website", "all"],
+  },
+  {
+    id: 3,
+    image: "/img/project/pro5.png",
+    heading: "Web Development",
+    subHeading: "TopSicher Umzug - Relocation services in Germany",
+    url: "https://tsumzug.de/",
+    category: ["services", "website", "all"],
+  },
+  {
+    id: 4,
+    image: "/img/project/pro6.png",
+    heading: "Web Design",
+    subHeading: "ManzelPro - Multilingual Service Website",
+    url: "https://www.manzelpro.sk/",
+    category: ["services", "website", "all"],
+  },
+  {
+    id: 5,
+    image: null,
+    placeholder: { label: "Ekaterina Fetisova", gradient: "from-[#be185d] to-[#f472b6]" },
+    heading: "Personal Website",
+    subHeading: "Ekaterina Fetisova - Personal portfolio",
+    url: "https://kfetisova.com/",
+    category: ["personal", "website", "all"],
+  },
+  {
+    id: 6,
+    image: null,
+    placeholder: { label: "MountIQ", gradient: "from-[#0f172a] to-[#6366f1]" },
+    heading: "Technology",
+    subHeading: "MountIQ - Tech platform",
+    url: "https://www.mountiq.eu/",
+    category: ["business", "website", "all"],
+  },
+  {
+    id: 7,
+    image: "/img/project/pro2.png",
+    heading: "AI & Payment Integration",
+    subHeading: "Beauty in Perfection - AI & Payment System Integration",
+    url: "https://www.beautyinperfection-studio.de/",
+    category: ["beauty", "website", "all"],
+  },
+  {
+    id: 8,
+    image: null,
+    placeholder: { label: "Curogram", gradient: "from-[#059669] to-[#34d399]" },
+    heading: "Healthcare",
+    subHeading: "Curogram - Healthcare concept demo",
+    url: null,
+    category: ["business", "demo", "all"],
+  },
+  {
+    id: 9,
+    image: null,
+    placeholder: { label: "BrainCampus", gradient: "from-[#7c3aed] to-[#c4b5fd]" },
+    heading: "Education",
+    subHeading: "BrainCampus - Online learning platform",
+    url: "https://braincampus.uk/",
+    category: ["business", "website", "all"],
+  },
+  {
+    id: 10,
+    image: null,
+    placeholder: { label: "Model FA", gradient: "from-[#0c4a6e] to-[#22d3ee]" },
+    heading: "Finance",
+    subHeading: "Model FA - Financial advisory website",
+    url: "https://modelfa.com/",
+    category: ["business", "website", "all"],
+  },
+  {
+    id: 11,
+    image: null,
+    placeholder: { label: "Propico", gradient: "from-[#b45309] to-[#fbbf24]" },
+    heading: "Real Estate",
+    subHeading: "Propico - Real estate platform",
+    url: "https://propico.in/",
+    category: ["business", "website", "all"],
+  },
+  {
+    id: 12,
+    image: null,
+    placeholder: { label: "Premium Car Rental", gradient: "from-[#7f1d1d] to-[#f87171]" },
+    heading: "Automotive",
+    subHeading: "Premium Car Rental - Demo concept",
+    url: "https://en.carrental.umka.site/",
+    category: ["demo", "website", "all"],
+  },
+  {
+    id: 13,
+    image: "/img/project/pro4.png",
+    heading: "Tech Services",
+    subHeading: "Irsava Tech - Expert Mobile & Laptop Repair",
+    url: "https://www.irsava-tech.sk/",
+    category: ["services", "website", "all"],
+  },
+  {
+    id: 14,
+    image: "/img/project/pro3.png",
+    heading: "Health & Wellness",
+    subHeading: "Massage Traunstein - Anti-Aging Massage & Holistic Bodywork",
+    url: "https://www.massage-traunstein.de/",
+    category: ["beauty", "website", "all"],
+  },
+  {
+    id: 15,
+    image: null,
+    placeholder: { label: "Ost West Travel", gradient: "from-[#134e4a] to-[#5eead4]" },
+    heading: "Travel",
+    subHeading: "Ost West Travel - Tour agency",
+    url: "https://touragent.de/",
+    category: ["services", "website", "all"],
+  },
+];
 
-
-  export const imagesList = ["/img/project/pro1.png", "/img/project/pro3.png", "/img/project/pro5.png", "/img/project/pro2.png", "/img/project/pro4.png", "/img/project/pro6.png"]
+export const imagesList = projectList
+  .filter((p) => p.image)
+  .map((p) => p.image);

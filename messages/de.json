@@ -370,7 +370,15 @@
     },
     "portfolio": {
       "heading": "My Work & Portfolio",
-      "page": "Work"
+      "page": "Work",
+      "filters": {
+        "all": "Alle",
+        "services": "Dienste",
+        "business": "Business",
+        "beauty": "Beauty & Gesundheit",
+        "personal": "Persönlich",
+        "demo": "Demos"
+      }
     },
     "cookies": {
       "title": "Cookie Policy | Vlad Weby",

@@ -370,7 +370,15 @@
     },
     "portfolio": {
       "heading": "Moja práca a portfólio",
-      "page": "Práca"
+      "page": "Práca",
+      "filters": {
+        "all": "Všetko",
+        "services": "Služby",
+        "business": "Biznis",
+        "beauty": "Krása a zdravie",
+        "personal": "Osobné",
+        "demo": "Ukážky"
+      }
     },
     "cookies": {
       "title": "Zásady cookies | Vlad Weby",
