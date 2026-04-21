@@ -8,7 +8,12 @@ import { useLocale } from 'next-intl'
 const Header = () => {
   const pathname = usePathname()
   const locale = useLocale()
-  const isHome = pathname === `/${locale}` || pathname === `/${locale}/`
+  // Slovak is the default locale and renders at root (no /sk prefix),
+  // so the home pathname is `/`. Other locales use /<locale>.
+  const isHome =
+    pathname === '/' ||
+    pathname === `/${locale}` ||
+    pathname === `/${locale}/`
 
   return (
     <>

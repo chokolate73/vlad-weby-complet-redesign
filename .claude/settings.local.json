@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"/c/Users/Lenovo/Desktop/gitrepo/vlad-weby-complet-redesign/src/app/\"*blog*)",
+      "Bash(npx next:*)",
+      "Bash(npm install:*)",
+      "Bash(git reset:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(xargs grep:*)",
+      "Bash(find:*)",
+      "Bash(git add:*)",
+      "Bash(winget upgrade:*)",
+      "Bash(node *)"
+    ]
+  }
+}

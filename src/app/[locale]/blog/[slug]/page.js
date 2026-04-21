@@ -11,6 +11,7 @@ import SeoArticle from "@/Components/Articles/SeoArticle";
 import EntrepreneursArticle from "@/Components/Articles/EntrepreneursArticle";
 import WordpressVsModernArticle from "@/Components/Articles/WordpressVsModernArticle";
 import WebsiteCostArticle from "@/Components/Articles/WebsiteCostArticle";
+import ChatgptShoppingArticle from "@/Components/Articles/ChatgptShoppingArticle";
 
 // Slovak articles
 import SeoArticleSk from "@/Components/Articles/sk/SeoArticle";
@@ -18,6 +19,7 @@ import AiChatbotArticleSk from "@/Components/Articles/sk/AiChatbotArticle";
 import WebsiteCostArticleSk from "@/Components/Articles/sk/WebsiteCostArticle";
 import EntrepreneursArticleSk from "@/Components/Articles/sk/EntrepreneursArticle";
 import WordpressVsModernArticleSk from "@/Components/Articles/sk/WordpressVsModernArticle";
+import ChatgptShoppingArticleSk from "@/Components/Articles/sk/ChatgptShoppingArticle";
 
 // Russian articles
 import SeoArticleRu from "@/Components/Articles/ru/SeoArticle";
@@ -25,6 +27,7 @@ import AiChatbotArticleRu from "@/Components/Articles/ru/AiChatbotArticle";
 import WebsiteCostArticleRu from "@/Components/Articles/ru/WebsiteCostArticle";
 import EntrepreneursArticleRu from "@/Components/Articles/ru/EntrepreneursArticle";
 import WordpressVsModernArticleRu from "@/Components/Articles/ru/WordpressVsModernArticle";
+import ChatgptShoppingArticleRu from "@/Components/Articles/ru/ChatgptShoppingArticle";
 
 const articleComponents = {
   en: {
@@ -33,6 +36,7 @@ const articleComponents = {
     "website-for-entrepreneurs": EntrepreneursArticle,
     "wordpress-vs-modern-website": WordpressVsModernArticle,
     "website-cost-2025": WebsiteCostArticle,
+    "chatgpt-shopping-for-ecommerce": ChatgptShoppingArticle,
   },
   sk: {
     "ai-chatbot-for-business": AiChatbotArticleSk,
@@ -40,6 +44,7 @@ const articleComponents = {
     "website-for-entrepreneurs": EntrepreneursArticleSk,
     "wordpress-vs-modern-website": WordpressVsModernArticleSk,
     "website-cost-2025": WebsiteCostArticleSk,
+    "chatgpt-shopping-for-ecommerce": ChatgptShoppingArticleSk,
   },
   ru: {
     "ai-chatbot-for-business": AiChatbotArticleRu,
@@ -47,6 +52,7 @@ const articleComponents = {
     "website-for-entrepreneurs": EntrepreneursArticleRu,
     "wordpress-vs-modern-website": WordpressVsModernArticleRu,
     "website-cost-2025": WebsiteCostArticleRu,
+    "chatgpt-shopping-for-ecommerce": ChatgptShoppingArticleRu,
   },
 };
 
@@ -56,6 +62,7 @@ const blogKeyByCanonical = {
   'website-cost-2025': 'cost',
   'website-for-entrepreneurs': 'entrepreneurs',
   'wordpress-vs-modern-website': 'wordpress',
+  'chatgpt-shopping-for-ecommerce': 'chatgptShopping',
 };
 
 const BlogArticle = ({ params }) => {

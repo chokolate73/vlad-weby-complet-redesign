@@ -535,6 +535,28 @@ const BLOG_POST_META = {
         'Сравнение WordPress с современными стеками. Плюсы, минусы и какое решение подходит именно вашему малому бизнесу или проекту.',
     },
   },
+  'chatgpt-shopping-for-ecommerce': {
+    sk: {
+      title: 'ChatGPT Shopping pre e-shopy 2026 — kompletný návod | Vlad Weby',
+      description:
+        'Ako dostať produkty vášho e-shopu do ChatGPT. Vysvetlíme Agentic Commerce Protocol, čo je ACP, ako sa pripraviť a prečo je to dôležité práve teraz.',
+    },
+    en: {
+      title: 'ChatGPT Shopping for E-commerce 2026 — Complete Guide | Vlad Weby',
+      description:
+        'How to get your e-commerce products discovered by ChatGPT. Agentic Commerce Protocol explained, what to prepare, and why it matters right now.',
+    },
+    de: {
+      title: 'ChatGPT Shopping für Online-Shops 2026 — Kompletter Guide | Vlad Weby',
+      description:
+        'Wie Ihre Produkte in ChatGPT Shopping auftauchen. Agentic Commerce Protocol erklärt, was vorzubereiten ist und warum es jetzt wichtig wird.',
+    },
+    ru: {
+      title: 'ChatGPT Shopping для магазинов 2026 — Полный гид | Vlad Weby',
+      description:
+        'Как добавить товары вашего магазина в ChatGPT. Agentic Commerce Protocol, что такое ACP, как подготовиться и почему это важно именно сейчас.',
+    },
+  },
 };
 
 export function getPageMetadata(pageKey, locale, { slug } = {}) {

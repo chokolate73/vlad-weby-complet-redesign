@@ -17,7 +17,13 @@ const LanguageSwitcher = () => {
   const switchLocale = (newLocale) => {
     if (newLocale === locale) return
     const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/'
-    router.push(`/${newLocale}${pathWithoutLocale}`)
+    // Persist the user's explicit choice so the geo-based redirect in middleware
+    // doesn't override it on their next visit to the root URL.
+    if (typeof document !== 'undefined') {
+      document.cookie = `vw_locale=${newLocale}; path=/; max-age=${60 * 60 * 24 * 365}; samesite=lax`
+    }
+    const target = newLocale === 'sk' ? (pathWithoutLocale || '/') : `/${newLocale}${pathWithoutLocale}`
+    router.push(target)
     if (typeof window !== 'undefined') {
       window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
     }

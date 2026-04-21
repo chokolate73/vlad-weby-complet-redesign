@@ -75,6 +75,12 @@ export const BLOG_PATHS = {
     de: 'ai-chatbot-for-business',
     ru: 'ai-chatbot-dlya-biznesa',
   },
+  'chatgpt-shopping-for-ecommerce': {
+    sk: 'chatgpt-shopping-pre-eshopy',
+    en: 'chatgpt-shopping-for-ecommerce',
+    de: 'chatgpt-shopping-fuer-online-shops',
+    ru: 'chatgpt-shopping-dlya-magazinov',
+  },
 };
 
 // Prefix an already-canonical path with /<locale> unless the locale is Slovak

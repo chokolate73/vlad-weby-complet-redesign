@@ -7,8 +7,9 @@ import TitleSecond from "../Shared/TitleSecond";
 import { useTranslations, useLocale } from 'next-intl';
 import { localePath } from "@/lib/localizedPaths";
 
-const blogKeys = ['seo', 'chatbot', 'cost', 'entrepreneurs', 'wordpress'];
+const blogKeys = ['chatgptShopping', 'seo', 'chatbot', 'cost', 'entrepreneurs', 'wordpress'];
 const blogSlugs = [
+  'chatgpt-shopping-for-ecommerce',
   'improve-website-seo',
   'ai-chatbot-for-business',
   'website-cost-2025',
