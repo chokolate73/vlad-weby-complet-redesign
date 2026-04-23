@@ -50,7 +50,7 @@ export default function LocalBusinessJsonLd({ locale = "en" }) {
     knowsLanguage: ["sk", "en", "de", "ru"],
     sameAs: [
       "https://www.instagram.com/vladislav.als",
-      "https://share.google/QrkLGsGdk99sRNSDo",
+      "https://www.google.com/maps?cid=12190981435023554892",
     ],
     makesOffer: [
       "Web Development",
