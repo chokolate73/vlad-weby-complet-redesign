@@ -28,17 +28,20 @@ export default function LocalBusinessJsonLd({ locale = "en" }) {
       { "@type": "Country", name: "Ukraine" },
     ],
     priceRange: "€€",
-    inLanguage: ["sk", "en", "de", "ru"],
+    knowsLanguage: ["sk", "en", "de", "ru"],
     sameAs: [
       "https://www.instagram.com/vladislav.als",
     ],
-    serviceType: [
+    makesOffer: [
       "Web Development",
       "SEO Optimization",
       "AI Chatbot Integration",
       "Landing Page Design",
       "Multilingual Websites",
-    ],
+    ].map((name) => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name, serviceType: name },
+    })),
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
