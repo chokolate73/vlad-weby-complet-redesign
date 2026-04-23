@@ -16,11 +16,30 @@ export default function LocalBusinessJsonLd({ locale = "en" }) {
     email: "v.hvorov73@gmail.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Bottova 2A",
+      streetAddress: "Bottova 2a",
       addressLocality: "Bratislava",
       postalCode: "811 09",
       addressCountry: "SK",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 48.1441037718175,
+      longitude: 17.12706263102356,
+    },
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "21:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Saturday", "Sunday"],
+        opens: "10:00",
+        closes: "21:00",
+      },
+    ],
     areaServed: [
       { "@type": "Country", name: "Slovakia" },
       { "@type": "Country", name: "Germany" },
@@ -31,6 +50,7 @@ export default function LocalBusinessJsonLd({ locale = "en" }) {
     knowsLanguage: ["sk", "en", "de", "ru"],
     sameAs: [
       "https://www.instagram.com/vladislav.als",
+      "https://share.google/QrkLGsGdk99sRNSDo",
     ],
     makesOffer: [
       "Web Development",
@@ -45,7 +65,7 @@ export default function LocalBusinessJsonLd({ locale = "en" }) {
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "5.0",
-      reviewCount: "3",
+      reviewCount: "13",
     },
   };
 
