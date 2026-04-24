@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronRight, Clock, Search } from "react-bootstrap-icons";
 
 const categoriesList = [
@@ -105,7 +106,7 @@ const BlogSidebar = () => {
                 href="/"
                 className="flex items-center flex-wrap xl:flex-nowrap xl:gap-5 gap-[10px]"
               >
-                <img src={image} alt={title} />
+                <Image src={image} alt={title} width={100} height={100} />
                 <div>
                   <span className="text-white text-xl font-medium mb-[14px] block">
                     {title}

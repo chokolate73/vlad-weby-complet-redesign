@@ -1,5 +1,6 @@
 'use client'
 import React from "react";
+import Image from "next/image";
 import Marquee from "react-fast-marquee";
 
 
@@ -9,7 +10,16 @@ const MarqueeWapper = ({images, direction}) => {
       <div>
         <Marquee direction={direction}>
           {
-            images?.map(({id, image})=> <img key={id} src={image} alt=""/>)
+            images?.map(({id, image})=> (
+              <Image
+                key={id}
+                src={image}
+                alt=""
+                width={441}
+                height={40}
+                className="mx-4"
+              />
+            ))
           }
         </Marquee>
       </div>

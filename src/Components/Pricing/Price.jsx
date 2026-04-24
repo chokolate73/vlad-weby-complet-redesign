@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import { ArrowRight } from "react-bootstrap-icons";
 import { useTranslations } from 'next-intl';
@@ -18,7 +19,7 @@ const Price = ({ image, planName, price, time, fetcher, id }) => {
             id === 2 ? "bg-clr_title" : "bg-clr_base"
           }  mb-10`}
         >
-          <img src={image} alt={planName || "Pricing plan icon"} />
+          <Image src={image} alt={planName || "Pricing plan icon"} width={60} height={60} />
         </div>
         <h4 className="text-white lg:mb-6 mb-4 text-2xl font-semibold">
           {planName}

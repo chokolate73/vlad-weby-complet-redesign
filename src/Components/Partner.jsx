@@ -1,5 +1,6 @@
 'use client'
 import React from "react";
+import Image from "next/image";
 
 const clients = [
   { name: "Dobry Vodár", image: "/img/clients/dobry-vodar.png" },
@@ -30,7 +31,7 @@ const Partner = () => {
               key={index}
               className="flex-shrink-0 sm:w-[300px] sm:h-[120px] w-[240px] h-[100px] flex items-center justify-center opacity-50 hover:opacity-100 transition-opacity duration-500 cursor-default"
             >
-              <img src={image} alt={name} className="max-w-[240px] max-h-[80px] object-contain grayscale brightness-200 hover:grayscale-0 hover:brightness-100 transition-all duration-500" />
+              <Image src={image} alt={name} width={240} height={80} className="max-w-[240px] max-h-[80px] object-contain grayscale brightness-200 hover:grayscale-0 hover:brightness-100 transition-all duration-500" />
             </div>
           ))}
         </div>

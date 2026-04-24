@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 import { ArrowUpRight } from "react-bootstrap-icons";
 
@@ -46,10 +47,13 @@ const ProjectCard = ({
         className="overflow-hidden lg:mb-[30px] mb-[20px] block w-full cursor-pointer"
       >
         {image ? (
-          <img
+          <Image
             src={image}
             alt={subHeading || heading || "Project screenshot"}
-            className="w-full overflow-hidden duration-500 rounded-[10px] group-hover:scale-105"
+            width={1296}
+            height={760}
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="w-full h-auto overflow-hidden duration-500 rounded-[10px] group-hover:scale-105"
           />
         ) : (
           <div

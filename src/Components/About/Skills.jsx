@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { useTranslations } from 'next-intl';
 
 const Skills = ({ isTabActive }) => {
@@ -25,7 +26,14 @@ const Skills = ({ isTabActive }) => {
         <div className="grid lg:grid-cols-[41%_auto] gap-6 lg:items-start items-center">
           <div>
             <div>
-              <img src={"/img/about/personal-infothumb.png"} alt="Vladislav Khvorov — tech stack and skills" />
+              <Image
+                src="/img/about/personal-infothumb.png"
+                alt="Vladislav Khvorov — tech stack and skills"
+                width={496}
+                height={515}
+                sizes="(max-width: 1024px) 100vw, 41vw"
+                className="w-full h-auto"
+              />
             </div>
           </div>
           <div>

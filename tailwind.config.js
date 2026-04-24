@@ -36,8 +36,8 @@ export default {
         "mainShadow": "rgba(0, 0, 0, 0.15) 0px -1px 34px 0px"
       },
       backgroundImage: {
-        "hero_image": "url('/img/hero/hero-bg.png')",
-        "common_bg": "url('/img/about/about-bg.png')",
+        "hero_image": "url('/img/hero/hero-bg.webp')",
+        "common_bg": "url('/img/about/about-bg.webp')",
       },
       keyframes: {
         scales: {
@@ -67,7 +67,7 @@ export default {
 
       },
       fontFamily: {
-        "caveat": ["Caveat", "cursive"]
+        "caveat": ["var(--font-caveat)", "Caveat", "cursive"]
       },
       
     },
