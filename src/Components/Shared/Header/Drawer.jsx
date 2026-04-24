@@ -2,6 +2,7 @@ import React from "react";
 import { XLg, ChevronRight } from "react-bootstrap-icons";
 import { socialIcons } from "../../../Utlits/socilIcons";
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations } from 'next-intl';
 
 const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
@@ -23,7 +24,7 @@ const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
       </div>
       <div className="grid py-10 px-5">
         <Link href={""} className="mb-5">
-          <img src={"/img/logo/logo.png"} alt="Vlad Weby logo" />
+          <Image src="/img/logo/logo.png" alt="Vlad Weby logo" width={120} height={120} />
         </Link>
         <p className="text-sm mb-10 text-clr_pra break-words leading-normal">
           {t('description')}

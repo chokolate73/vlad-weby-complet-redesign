@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Telephone, Envelope, Whatsapp, Globe } from "react-bootstrap-icons";
 import AddContactButton from "@/Components/AddContactButton";
 import { getPageMetadata } from "@/lib/seo";
@@ -49,9 +50,12 @@ const BusinessCard = () => {
             <div className="bg-[rgb(29_29_29)] rounded-[20px] overflow-hidden border border-clr_cusborder">
               <div className="flex justify-center pt-8 sm:pt-10 pb-4">
                 <div className="w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] rounded-full overflow-hidden border-4 border-clr_base">
-                  <img
+                  <Image
                     src="/img/hero/hero-man.png"
                     alt="Vladislav Khvorov"
+                    width={360}
+                    height={360}
+                    sizes="(max-width: 640px) 140px, 180px"
                     className="w-full h-full object-cover object-top"
                   />
                 </div>

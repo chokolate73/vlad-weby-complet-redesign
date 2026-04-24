@@ -1,6 +1,7 @@
 import React from "react";
 import { Facebook, Twitter, Linkedin, Globe, Instagram } from "react-bootstrap-icons";
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations } from 'next-intl';
 
 const AboutMe = ({ isTabActive }) => {
@@ -23,7 +24,14 @@ const AboutMe = ({ isTabActive }) => {
               data-aos="zoom-in"
               data-aos-duration="500"
             >
-              <img src={"/img/about/personal-infothumb.png"} alt="Vladislav Khvorov — web developer portrait" className="w-full" />
+              <Image
+                src="/img/about/personal-infothumb.png"
+                alt="Vladislav Khvorov — web developer portrait"
+                width={496}
+                height={515}
+                sizes="(max-width: 1024px) 100vw, 41vw"
+                className="w-full h-auto"
+              />
             </div>
           </div>
           <div>

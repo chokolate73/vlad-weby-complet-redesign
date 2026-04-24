@@ -1,5 +1,6 @@
 'use client'
 import React from "react";
+import Image from "next/image";
 import Rating from "./Shared/Rating";
 import { useTranslations } from 'next-intl';
 
@@ -95,19 +96,19 @@ const Testimonial = () => {
             </div>
           </div>
           <div className="absolute top-[99px] xl:left-[291px] lg:left-60 lg:block hidden">
-            <img src={"/img/testimonial/quote.png"} alt="" />
+            <Image src="/img/testimonial/quote.png" alt="" width={134} height={114} />
           </div>
           <div className="absolute top-5 left-5 opacity-10 lg:opacity-100 w-[60px] sm:w-[120px] h-[60px] sm:h-[120px] overflow-hidden rounded-full border-4 border-white">
-            <img src={"/img/testimonial/man1.jpg"} alt="Client testimonial portrait" className="w-full h-full object-cover" />
+            <Image src="/img/testimonial/man1.jpg" alt="Client testimonial portrait" width={240} height={240} sizes="(max-width: 640px) 60px, 120px" className="w-full h-full object-cover" />
           </div>
           <div className="absolute left-5 bottom-5 opacity-10 lg:opacity-100 w-[60px] sm:w-[160px] h-[80px] sm:h-[210px] overflow-hidden">
-            <img src={"/img/testimonial/man3.png"} alt="Client testimonial portrait" className="w-full h-full object-cover" />
+            <Image src="/img/testimonial/man3.png" alt="Client testimonial portrait" width={320} height={420} sizes="(max-width: 640px) 60px, 160px" className="w-full h-full object-cover" />
           </div>
           <div className="absolute top-5 right-5 opacity-10 lg:opacity-100 w-[60px] sm:w-[160px] h-[80px] sm:h-[210px] overflow-hidden">
-            <img src={"/img/testimonial/man2.png"} alt="Client testimonial portrait" className="w-full h-full object-cover" />
+            <Image src="/img/testimonial/man2.png" alt="Client testimonial portrait" width={320} height={420} sizes="(max-width: 640px) 60px, 160px" className="w-full h-full object-cover" />
           </div>
           <div className="absolute lg:bottom-[50px] lg:right-[50px] bottom-[15px] right-[15px] sm:block hidden ">
-            <img src={"/img/testimonial/testi-arrow.png"} alt="" />
+            <Image src="/img/testimonial/testi-arrow.png" alt="" width={67} height={78} />
           </div>
         </div>
       </div>

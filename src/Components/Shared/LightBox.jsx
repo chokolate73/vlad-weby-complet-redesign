@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import { XLg, ChevronRight, ChevronLeft } from "react-bootstrap-icons";
 const Lightbox = ({ images, setLightboxOpen, currentId }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(currentId);
@@ -25,9 +26,13 @@ const Lightbox = ({ images, setLightboxOpen, currentId }) => {
           </i>
         </button>
         <div>
-          <img
+          <Image
             src={images[currentImageIndex]}
             alt={`Image ${currentImageIndex + 1}`}
+            width={1296}
+            height={760}
+            sizes="80vw"
+            className="w-full h-auto max-h-[85vh] object-contain"
           />
         </div>
         <div className="text-sm text-clr_pra absolute right-4 -bottom-5">

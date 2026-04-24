@@ -1,5 +1,13 @@
 import "./globals.css";
+import { Caveat } from "next/font/google";
 import AddAnimation from "@/Components/Shared/AddAnimation";
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  display: "swap",
+  variable: "--font-caveat",
+});
 
 export const metadata = {
   metadataBase: new URL("https://www.vlad-weby.sk"),
@@ -25,7 +33,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={caveat.variable}>
       <head>
         <meta name="impact-site-verification" value="d42433c2-b7ae-4524-a0f2-da6dfd3f90e0" />
       </head>

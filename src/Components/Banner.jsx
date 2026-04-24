@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import Link from "next/link";
 import { Instagram, Envelope, Whatsapp, Telephone, PlayFill, ArrowUpRight } from "react-bootstrap-icons";
 import VideoPlay from "./Shared/VideoPlay";
@@ -70,7 +71,7 @@ const Banner = () => {
                 </span>
               </h1>
               <div className="md:flex hidden items-center gap-3 sm:gap-4 md:gap-6">
-                <img src={"/img/hero/bn-arrow.png"} alt="" className="w-[24px] sm:w-[30px] md:w-[40px]" />
+                <Image src="/img/hero/bn-arrow.png" alt="" width={55} height={68} className="w-[24px] sm:w-[30px] md:w-[40px] h-auto" />
                 <button onClick={() => setWorkProcessOpen(true)} aria-label={t('workProcess')} className="cursor-pointer relative xl:w-[60px] xl:h-[60px] md:w-[46px] md:h-[46px] sm:w-[38px] sm:h-[38px] w-[32px] h-[32px] flex justify-center items-center rounded-full border border-clr_white before:absolute before:border-2 before:border-clr_white before:w-full before:h-full before:content:[''] before:rounded-full before:animate-scales bg-transparent">
                   <i className="text-clr_white md:text-[32px] sm:text-[24px] text-[18px]">
                     <PlayFill />
@@ -86,13 +87,21 @@ const Banner = () => {
                 }`}
 
             >
-              <img src={"/img/hero/hero-man.png"} alt="Vladislav Khvorov" className="w-full md:scale-110 scale-[1.4] origin-bottom" />
+              <Image
+                src="/img/hero/hero-man.png"
+                alt="Vladislav Khvorov"
+                width={563}
+                height={805}
+                priority
+                sizes="(max-width: 768px) 60vw, 30vw"
+                className="w-full h-auto md:scale-110 scale-[1.4] origin-bottom"
+              />
             </div>
           </div>
         </div>
       </div>
       <div className="md:hidden flex items-center gap-3 absolute bottom-[16px] left-[12px] z-10">
-        <img src={"/img/hero/bn-arrow.png"} alt="" className="w-[24px] sm:w-[30px]" />
+        <Image src="/img/hero/bn-arrow.png" alt="" width={55} height={68} className="w-[24px] sm:w-[30px] h-auto" />
         <button onClick={() => setWorkProcessOpen(true)} aria-label={t('workProcess')} className="cursor-pointer relative sm:w-[38px] sm:h-[38px] w-[32px] h-[32px] flex justify-center items-center rounded-full border border-clr_white before:absolute before:border-2 before:border-clr_white before:w-full before:h-full before:content:[''] before:rounded-full before:animate-scales bg-transparent">
           <i className="text-clr_white sm:text-[24px] text-[18px]">
             <PlayFill />
@@ -103,7 +112,7 @@ const Banner = () => {
       <div className="hidden absolute -left-[40px] top-1/2 -translate-y-1/2 xl:grid gap-[220px] ">
         <div className="rotate-90 flex items-center justify-center gap-[16px] ">
           <Link href={"tel:+421919208426"}>
-            <img src={"/img/hero/dial.png"} alt="" className="-rotate-90 w-4" />
+            <Image src="/img/hero/dial.png" alt="" width={18} height={25} className="-rotate-90 w-4 h-auto" />
           </Link>
           <Link href={"tel:+421919208426"} className="text-clr_white">+421 919 208 426</Link>
         </div>
@@ -112,7 +121,7 @@ const Banner = () => {
             {t('scrollDown')}
           </Link>
           <Link href={"#portfolio"} className="-rotate-90">
-            <img src={"/img/hero/scroll-down.png"} alt="" className="w-5" />
+            <Image src="/img/hero/scroll-down.png" alt="" width={44} height={193} className="w-5 h-auto" />
           </Link>
         </div>
       </div>
@@ -122,7 +131,7 @@ const Banner = () => {
             {t('followMe')}
           </Link>
           <Link href={"https://www.instagram.com/vladislav.als"} target="_blank" className="-rotate-90">
-            <img src={"/img/hero/scroll-down.png"} alt="" className="w-5" />
+            <Image src="/img/hero/scroll-down.png" alt="" width={44} height={193} className="w-5 h-auto" />
           </Link>
         </div>
         <div>
