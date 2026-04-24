@@ -8,7 +8,7 @@ export default function LocalBusinessJsonLd({ locale = "en" }) {
     name: "Vlad Weby",
     alternateName: "Vladislav Khvorov",
     url: "https://www.vlad-weby.sk",
-    image: "https://www.vlad-weby.sk/img/banner/banner-man.png",
+    image: "https://www.vlad-weby.sk/img/hero/hero-man.png",
     logo: "https://www.vlad-weby.sk/img/logo/logo.png",
     description:
       "Web development, SEO optimization, and AI chatbot integration for small and mid-sized businesses across Central Europe.",

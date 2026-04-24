@@ -18,7 +18,7 @@ const Header = () => {
   return (
     <>
       {isHome ? (
-        <div className={`bg-banner_image bg-no-repeat bg-center bg-cover bg-fixed relative overflow-hidden`}>
+        <div className={`bg-hero_image bg-no-repeat bg-center bg-cover bg-fixed relative overflow-hidden`}>
           <RanderHeader />
           <Banner />
         </div>

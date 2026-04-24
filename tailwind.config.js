@@ -36,7 +36,7 @@ export default {
         "mainShadow": "rgba(0, 0, 0, 0.15) 0px -1px 34px 0px"
       },
       backgroundImage: {
-        "banner_image": "url('/img/banner/banner-bg.png')",
+        "hero_image": "url('/img/hero/hero-bg.png')",
         "common_bg": "url('/img/about/about-bg.png')",
       },
       keyframes: {
