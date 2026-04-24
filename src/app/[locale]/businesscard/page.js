@@ -50,7 +50,7 @@ const BusinessCard = () => {
               <div className="flex justify-center pt-8 sm:pt-10 pb-4">
                 <div className="w-[140px] h-[140px] sm:w-[180px] sm:h-[180px] rounded-full overflow-hidden border-4 border-clr_base">
                   <img
-                    src="/img/banner/banner-man.png"
+                    src="/img/hero/hero-man.png"
                     alt="Vladislav Khvorov"
                     className="w-full h-full object-cover object-top"
                   />
