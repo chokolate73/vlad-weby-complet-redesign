@@ -82,7 +82,7 @@ const Banner = () => {
           </div>
           <div>
             <div
-              className={`absolute xxl:left-[calc(50%--160px)] md:left-[calc(50%--120px)] left-[calc(50%--30px)] bottom-0 ${position ? "right_up_animat" : "right_up"
+              className={`absolute xxl:left-[calc(50%_+_160px)] md:left-[calc(50%_+_120px)] left-[calc(50%_+_30px)] bottom-0 ${position ? "right_up_animat" : "right_up"
                 }`}
 
             >
