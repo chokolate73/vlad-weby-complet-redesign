@@ -365,7 +365,11 @@
       "respondTime": "Odpoviem do 24 hodín",
       "email": "E-mail",
       "phone": "Telefón",
-      "address": "Adresa"
+      "address": "Adresa",
+      "serviceArea": {
+        "heading": "Oblasť pôsobenia",
+        "body": "Bratislava a okolie · Slovensko · Rakúsko · Nemecko"
+      }
     },
     "allBlog": {
       "heading": "Blog",

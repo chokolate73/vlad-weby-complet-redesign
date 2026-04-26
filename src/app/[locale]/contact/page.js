@@ -31,8 +31,8 @@ const Contact = () => {
                   <Link href={"tel:+421919208426"} className="text-white xl:text-xl text-base block capitalize">+421 919 208 426</Link>
                 </div>
                 <div className="lg:mb-5 mb-4 rounded-[10px] bg-[rgb(29_29_29)] xl:p-[30px] p-4">
-                  <span className="mb-[14px] block text-clr_pra capitalize">{t('address')}</span>
-                  <span className="text-white xl:text-xl text-base block capitalize">Bottova 2A, 811 09 Bratislava</span>
+                  <span className="mb-[14px] block text-clr_pra capitalize">{t('serviceArea.heading')}</span>
+                  <span className="text-white xl:text-xl text-base block">{t('serviceArea.body')}</span>
                 </div>
               </div>
             </div>

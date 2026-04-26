@@ -61,7 +61,6 @@ const Footer = () => {
                 <address className="not-italic mt-8 text-clr_pra text-base leading-relaxed">
                   <p className="text-white font-semibold">Bc. Vladislav Khvorov</p>
                   <p className="text-white font-semibold mb-2">Vlad Weby</p>
-                  <p>Bottova 2A, 811 09 Staré Mesto, Bratislava</p>
                   <p>
                     Tel:{" "}
                     <Link

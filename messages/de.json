@@ -365,7 +365,11 @@
       "respondTime": "I'll respond within 24 hours",
       "email": "Email",
       "phone": "Phone",
-      "address": "Address"
+      "address": "Address",
+      "serviceArea": {
+        "heading": "Einzugsgebiet",
+        "body": "Bratislava und Umgebung · Slowakei · Österreich · Deutschland"
+      }
     },
     "allBlog": {
       "heading": "Blog",

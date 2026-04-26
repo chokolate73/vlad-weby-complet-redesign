@@ -16,9 +16,8 @@ export default function LocalBusinessJsonLd({ locale = "en" }) {
     email: "v.hvorov73@gmail.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Bottova 2a",
       addressLocality: "Bratislava",
-      postalCode: "811 09",
+      addressRegion: "Bratislavský kraj",
       addressCountry: "SK",
     },
     geo: {

@@ -10,7 +10,7 @@ const AboutMe = ({ isTabActive }) => {
   const contactInfo = [
     { id: 1, system: t('email'), contact: "v.hvorov73@gmail.com" },
     { id: 2, system: t('phone'), contact: "+421 919 208 426" },
-    { id: 3, system: t('address'), contact: "Bottova 2A, Bratislava" },
+    { id: 3, system: t('address'), contact: "Bratislava, Slovakia" },
     { id: 4, system: t('languages'), socalContact: null, contact: "SK · EN · DE · RU" },
   ];
 
