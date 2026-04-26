@@ -1,4 +1,4 @@
-import { BASE_URL, LOCALES, routeMap, BLOG_SLUGS } from "@/lib/seo";
+import { BASE_URL, LOCALES, routeMap, BLOG_SLUGS, isBlogNoindex } from "@/lib/seo";
 import { blogUrl } from "@/lib/localizedPaths";
 
 const STATIC_PAGES = [
@@ -43,10 +43,12 @@ export default function sitemap() {
   }
 
   for (const slug of BLOG_SLUGS) {
+    // Build the hreflang map from only the locales we still publish for this slug.
+    const indexableLocales = LOCALES.filter((l) => !isBlogNoindex(slug, l));
     const localeUrls = Object.fromEntries(
-      LOCALES.map((l) => [l, `${BASE_URL}${blogUrl(slug, l)}`])
+      indexableLocales.map((l) => [l, `${BASE_URL}${blogUrl(slug, l)}`])
     );
-    for (const locale of LOCALES) {
+    for (const locale of indexableLocales) {
       entries.push({
         url: localeUrls[locale],
         lastModified: now,

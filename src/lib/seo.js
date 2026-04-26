@@ -487,6 +487,21 @@ const BLOG_POST_META = {
   },
 };
 
+// Blog post × locale combinations whose body content does not match the declared
+// language (audit C5/C6) — these are noindex'd until proper translations land,
+// and excluded from the sitemap and from blog hreflang.
+//
+// Format: Set of `${canonicalSlug}|${locale}` strings.
+export const BLOG_NOINDEX = new Set([
+  // C5: Slovak SeoArticle and AiChatbotArticle render English body
+  'improve-website-seo|sk',
+  'ai-chatbot-for-business|sk',
+]);
+
+export function isBlogNoindex(canonicalSlug, locale) {
+  return BLOG_NOINDEX.has(`${canonicalSlug}|${locale}`);
+}
+
 export function getPageMetadata(pageKey, locale, { slug } = {}) {
   const effectiveLocale = LOCALES.includes(locale) ? locale : DEFAULT_LOCALE;
 
@@ -504,7 +519,7 @@ export function getPageMetadata(pageKey, locale, { slug } = {}) {
   const alternates = getAlternates(pageKey, effectiveLocale, { slug });
   const url = alternates.canonical;
 
-  return {
+  const metadata = {
     title,
     description,
     alternates,
@@ -522,4 +537,10 @@ export function getPageMetadata(pageKey, locale, { slug } = {}) {
       description,
     },
   };
+
+  if (pageKey === 'blog-post' && slug && isBlogNoindex(slug, effectiveLocale)) {
+    metadata.robots = { index: false, follow: true };
+  }
+
+  return metadata;
 }
