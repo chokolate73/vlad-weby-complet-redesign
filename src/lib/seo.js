@@ -36,6 +36,7 @@ export const routeMap = {
   // Single-locale landing pages (content reused from related service/article pages).
   'landing-web-pre-maly-biznis': { sk: '/web-pre-maly-biznis' },
   'landing-cena-web-stranky': { sk: '/cena-web-stranky' },
+  'landing-kolko-stoji-ai-chatbot': { sk: '/kolko-stoji-ai-chatbot' },
 };
 
 // Patch the home entry so SK is `/` not empty string.
@@ -352,6 +353,13 @@ const PAGE_META = {
         'Aktuálne ceny webstránok na Slovensku. Porovnanie agentúr, freelancerov a builderov a koľko by ste mali investovať do webu pre malú firmu.',
     },
   },
+  'landing-kolko-stoji-ai-chatbot': {
+    sk: {
+      title: 'Koľko stojí AI chatbot pre firmu? Reálne ceny 2026 | Vlad Weby',
+      description:
+        'Konkrétne ceny AI chatbotov pre slovenské firmy: od 300 € jednorazovo + 30–50 € mesačne. Bez „kontaktujte nás“ — reálne čísla pre 3 typy firiem.',
+    },
+  },
 };
 
 // Blog-post metadata per slug per locale (slug-aware).
@@ -506,6 +514,10 @@ export const BLOG_NOINDEX = new Set([
   'website-for-entrepreneurs|de',
   'wordpress-vs-modern-website|de',
   'chatgpt-shopping-for-ecommerce|de',
+  // ai-chatbot-cost-2026: only Slovak article exists; non-SK locales render the placeholder.
+  'ai-chatbot-cost-2026|en',
+  'ai-chatbot-cost-2026|de',
+  'ai-chatbot-cost-2026|ru',
 ]);
 
 export function isBlogNoindex(canonicalSlug, locale) {

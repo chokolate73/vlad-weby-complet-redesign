@@ -4,8 +4,9 @@ import PageHeader from "@/Components/Shared/PageHeader";
 import Blog from "@/Components/Blogs/Blog";
 import { useTranslations } from 'next-intl';
 
-const blogKeys = ['chatgptShopping', 'seo', 'chatbot', 'cost', 'entrepreneurs', 'wordpress'];
+const blogKeys = ['aiChatbotCost', 'chatgptShopping', 'seo', 'chatbot', 'cost', 'entrepreneurs', 'wordpress'];
 const blogSlugs = [
+  'ai-chatbot-cost-2026',
   'chatgpt-shopping-for-ecommerce',
   'improve-website-seo',
   'ai-chatbot-for-business',
