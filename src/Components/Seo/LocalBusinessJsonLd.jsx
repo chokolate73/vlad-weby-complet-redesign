@@ -16,9 +16,8 @@ export default function LocalBusinessJsonLd({ locale = "en" }) {
     email: "v.hvorov73@gmail.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Bottova 2a",
       addressLocality: "Bratislava",
-      postalCode: "811 09",
+      addressRegion: "Bratislavský kraj",
       addressCountry: "SK",
     },
     geo: {
@@ -44,7 +43,6 @@ export default function LocalBusinessJsonLd({ locale = "en" }) {
       { "@type": "Country", name: "Slovakia" },
       { "@type": "Country", name: "Germany" },
       { "@type": "Country", name: "Austria" },
-      { "@type": "Country", name: "Ukraine" },
     ],
     priceRange: "€€",
     knowsLanguage: ["sk", "en", "de", "ru"],
@@ -62,11 +60,6 @@ export default function LocalBusinessJsonLd({ locale = "en" }) {
       "@type": "Offer",
       itemOffered: { "@type": "Service", name, serviceType: name },
     })),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "13",
-    },
   };
 
   return (

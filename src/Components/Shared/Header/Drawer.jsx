@@ -33,7 +33,7 @@ const Drawer = ({ isSidebarActive, setIsSidebarActive }) => {
           <div>
             <div>
               <span className="block mb-2 uppercase text-clr_pra font-bold text-sm"> {t('address')} </span>
-              <span className="textp capitalize text-white font-medium leading-[120%]"> Bottova 2A, Bratislava </span>
+              <span className="textp capitalize text-white font-medium leading-[120%]"> Bratislava, Slovakia </span>
             </div>
           </div>
           <div>

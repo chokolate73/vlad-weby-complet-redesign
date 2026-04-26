@@ -34,17 +34,8 @@ export const routeMap = {
   'service-ai-chatbot': servicePageMap('ai-chatbot'),
   'service-chatgpt-shopping': servicePageMap('chatgpt-shopping'),
   // Single-locale landing pages (content reused from related service/article pages).
-  'landing-preco-web': { sk: '/preco-web' },
-  'landing-preco-seo': { sk: '/preco-seo' },
-  'landing-preco-google-profil': { sk: '/preco-google-profil' },
   'landing-web-pre-maly-biznis': { sk: '/web-pre-maly-biznis' },
   'landing-cena-web-stranky': { sk: '/cena-web-stranky' },
-  'landing-why-website': { en: '/en/why-website' },
-  'landing-why-seo': { en: '/en/why-seo' },
-  'landing-why-google-business': { en: '/en/why-google-business' },
-  'landing-zachem-sait': { ru: '/ru/zachem-sait' },
-  'landing-zachem-seo': { ru: '/ru/zachem-seo' },
-  'landing-zachem-google-biznes': { ru: '/ru/zachem-google-biznes' },
 };
 
 // Patch the home entry so SK is `/` not empty string.
@@ -65,7 +56,10 @@ export function getAlternates(pageKey, currentLocale, { slug } = {}) {
 
   const languages = {};
   for (const l of LOCALES) {
-    if (routes[l]) languages[l] = `${BASE_URL}${routes[l]}`;
+    if (!routes[l]) continue;
+    // Skip noindex'd blog × locale combinations from hreflang (audit C5/C6).
+    if (pageKey === 'blog-post' && slug && BLOG_NOINDEX.has(`${slug}|${l}`)) continue;
+    languages[l] = `${BASE_URL}${routes[l]}`;
   }
   const defaultPath =
     routes[DEFAULT_LOCALE] || routes[currentLocale] || Object.values(routes)[0];
@@ -344,27 +338,6 @@ const PAGE_META = {
         'Ваши товары в ChatGPT Shopping. Bing Merchant Center, schema.org, OpenAI Merchant, GA4 для WooCommerce, Shopify, Prestashop и Magento.',
     },
   },
-  'landing-preco-web': {
-    sk: {
-      title: 'Prečo potrebujete webstránku v roku 2026 | Vlad Weby',
-      description:
-        'Hlavné dôvody, prečo každá firma potrebuje vlastnú webstránku. Viditeľnosť v Googli, dôvera zákazníkov, predaj 24/7 — prečo investovať.',
-    },
-  },
-  'landing-preco-seo': {
-    sk: {
-      title: 'Prečo potrebujete SEO? | Vlad Weby',
-      description:
-        'Prečo SEO býva najlepšou investíciou pre malý biznis. Viac zákazníkov z Googlu bez reklám a stabilný prísun klientov z organického vyhľadávania.',
-    },
-  },
-  'landing-preco-google-profil': {
-    sk: {
-      title: 'Prečo potrebujete Google profil firmy | Vlad Weby',
-      description:
-        'Google profil firmy je základ lokálneho SEO. Prečo ho každá firma musí mať, ako ho nastaviť a získavať zákazníkov z Máp a vyhľadávania.',
-    },
-  },
   'landing-web-pre-maly-biznis': {
     sk: {
       title: 'Webstránka pre malý biznis — Kompletný sprievodca | Vlad Weby',
@@ -377,48 +350,6 @@ const PAGE_META = {
       title: 'Cena webstránky 2026 — Koľko stojí dobrý web? | Vlad Weby',
       description:
         'Aktuálne ceny webstránok na Slovensku. Porovnanie agentúr, freelancerov a builderov a koľko by ste mali investovať do webu pre malú firmu.',
-    },
-  },
-  'landing-why-website': {
-    en: {
-      title: 'Why Do You Need a Website in 2026? | Vlad Weby',
-      description:
-        'The real reasons every business needs its own website. Visibility on Google, customer trust, 24/7 sales — why a website is the best investment.',
-    },
-  },
-  'landing-why-seo': {
-    en: {
-      title: 'Why Do You Need SEO? | Vlad Weby',
-      description:
-        'Why SEO is the best long-term investment for small businesses. More customers from Google without paid ads and a steady organic lead pipeline.',
-    },
-  },
-  'landing-why-google-business': {
-    en: {
-      title: 'Why Your Business Needs a Google Business Profile | Vlad Weby',
-      description:
-        'Google Business Profile is the foundation of local SEO. Why every small business must have one and how to set it up for maximum visibility.',
-    },
-  },
-  'landing-zachem-sait': {
-    ru: {
-      title: 'Зачем вашему бизнесу сайт в 2026 году | Vlad Weby',
-      description:
-        'Главные причины, почему каждому бизнесу нужен собственный сайт. Видимость в Google, доверие клиентов, продажи 24/7 — почему сайт окупается.',
-    },
-  },
-  'landing-zachem-seo': {
-    ru: {
-      title: 'Зачем нужно SEO вашему бизнесу? | Vlad Weby',
-      description:
-        'Почему SEO — лучшая долгосрочная инвестиция для малого бизнеса. Больше клиентов из Google без платной рекламы и стабильный поток заявок.',
-    },
-  },
-  'landing-zachem-google-biznes': {
-    ru: {
-      title: 'Зачем бизнесу Google профиль компании | Vlad Weby',
-      description:
-        'Google Business Profile — основа локального SEO. Почему каждому бизнесу нужен этот профиль и как его настроить для максимальной видимости.',
     },
   },
 };
@@ -559,6 +490,28 @@ const BLOG_POST_META = {
   },
 };
 
+// Blog post × locale combinations whose body content does not match the declared
+// language (audit C5/C6) — these are noindex'd until proper translations land,
+// and excluded from the sitemap and from blog hreflang.
+//
+// Format: Set of `${canonicalSlug}|${locale}` strings.
+export const BLOG_NOINDEX = new Set([
+  // C5: Slovak SeoArticle and AiChatbotArticle render English body
+  'improve-website-seo|sk',
+  'ai-chatbot-for-business|sk',
+  // C6: no de/ article components; every DE blog falls back to English
+  'improve-website-seo|de',
+  'ai-chatbot-for-business|de',
+  'website-cost-2025|de',
+  'website-for-entrepreneurs|de',
+  'wordpress-vs-modern-website|de',
+  'chatgpt-shopping-for-ecommerce|de',
+]);
+
+export function isBlogNoindex(canonicalSlug, locale) {
+  return BLOG_NOINDEX.has(`${canonicalSlug}|${locale}`);
+}
+
 export function getPageMetadata(pageKey, locale, { slug } = {}) {
   const effectiveLocale = LOCALES.includes(locale) ? locale : DEFAULT_LOCALE;
 
@@ -576,7 +529,7 @@ export function getPageMetadata(pageKey, locale, { slug } = {}) {
   const alternates = getAlternates(pageKey, effectiveLocale, { slug });
   const url = alternates.canonical;
 
-  return {
+  const metadata = {
     title,
     description,
     alternates,
@@ -594,4 +547,10 @@ export function getPageMetadata(pageKey, locale, { slug } = {}) {
       description,
     },
   };
+
+  if (pageKey === 'blog-post' && slug && isBlogNoindex(slug, effectiveLocale)) {
+    metadata.robots = { index: false, follow: true };
+  }
+
+  return metadata;
 }

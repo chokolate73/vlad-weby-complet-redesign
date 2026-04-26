@@ -1,4 +1,4 @@
-import { BASE_URL, LOCALES, routeMap, BLOG_SLUGS } from "@/lib/seo";
+import { BASE_URL, LOCALES, routeMap, BLOG_SLUGS, isBlogNoindex } from "@/lib/seo";
 import { blogUrl } from "@/lib/localizedPaths";
 
 const STATIC_PAGES = [
@@ -14,17 +14,8 @@ const STATIC_PAGES = [
   { key: 'businesscard', priority: 0.4, changeFrequency: 'yearly' },
   { key: 'cookies', priority: 0.2, changeFrequency: 'yearly' },
   { key: 'privacy-policy', priority: 0.3, changeFrequency: 'yearly' },
-  { key: 'landing-preco-web', priority: 0.7, changeFrequency: 'monthly' },
-  { key: 'landing-preco-seo', priority: 0.7, changeFrequency: 'monthly' },
-  { key: 'landing-preco-google-profil', priority: 0.7, changeFrequency: 'monthly' },
   { key: 'landing-web-pre-maly-biznis', priority: 0.7, changeFrequency: 'monthly' },
   { key: 'landing-cena-web-stranky', priority: 0.7, changeFrequency: 'monthly' },
-  { key: 'landing-why-website', priority: 0.7, changeFrequency: 'monthly' },
-  { key: 'landing-why-seo', priority: 0.7, changeFrequency: 'monthly' },
-  { key: 'landing-why-google-business', priority: 0.7, changeFrequency: 'monthly' },
-  { key: 'landing-zachem-sait', priority: 0.7, changeFrequency: 'monthly' },
-  { key: 'landing-zachem-seo', priority: 0.7, changeFrequency: 'monthly' },
-  { key: 'landing-zachem-google-biznes', priority: 0.7, changeFrequency: 'monthly' },
 ];
 
 export default function sitemap() {
@@ -52,10 +43,12 @@ export default function sitemap() {
   }
 
   for (const slug of BLOG_SLUGS) {
+    // Build the hreflang map from only the locales we still publish for this slug.
+    const indexableLocales = LOCALES.filter((l) => !isBlogNoindex(slug, l));
     const localeUrls = Object.fromEntries(
-      LOCALES.map((l) => [l, `${BASE_URL}${blogUrl(slug, l)}`])
+      indexableLocales.map((l) => [l, `${BASE_URL}${blogUrl(slug, l)}`])
     );
-    for (const locale of LOCALES) {
+    for (const locale of indexableLocales) {
       entries.push({
         url: localeUrls[locale],
         lastModified: now,

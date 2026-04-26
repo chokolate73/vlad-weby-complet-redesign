@@ -102,8 +102,8 @@
         "contest": "Google recenzie"
       },
       "markets": {
-        "name": "4 obsluhované trhy",
-        "contest": "SK · DE · AT · UA"
+        "name": "3 obsluhované trhy",
+        "contest": "SK · DE · AT"
       }
     }
   },
@@ -365,7 +365,11 @@
       "respondTime": "Odpoviem do 24 hodín",
       "email": "E-mail",
       "phone": "Telefón",
-      "address": "Adresa"
+      "address": "Adresa",
+      "serviceArea": {
+        "heading": "Oblasť pôsobenia",
+        "body": "Bratislava a okolie · Slovensko · Rakúsko · Nemecko"
+      }
     },
     "allBlog": {
       "heading": "Blog",

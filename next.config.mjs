@@ -71,6 +71,17 @@ const legacyRedirects = [
   { source: '/:locale/service-details', destination: '/:locale/all-services', permanent: true },
   { source: '/:locale/protfolio-details', destination: '/:locale/portfolio', permanent: true },
   { source: '/:locale/portfolio-details', destination: '/:locale/portfolio', permanent: true },
+
+  // Collapsed doorway landing pages (audit C4) -> closest real service page
+  { source: '/preco-web', destination: '/tvorba-web-stranok', permanent: true },
+  { source: '/preco-seo', destination: '/seo-optimalizacia', permanent: true },
+  { source: '/preco-google-profil', destination: '/seo-optimalizacia', permanent: true },
+  { source: '/en/why-website', destination: '/en/web-design', permanent: true },
+  { source: '/en/why-seo', destination: '/en/seo-services', permanent: true },
+  { source: '/en/why-google-business', destination: '/en/seo-services', permanent: true },
+  { source: '/ru/zachem-sait', destination: '/ru/sozdanie-saitov', permanent: true },
+  { source: '/ru/zachem-seo', destination: '/ru/seo-optimizaciya', permanent: true },
+  { source: '/ru/zachem-google-biznes', destination: '/ru/seo-optimizaciya', permanent: true },
 ];
 
 // Filter out self-redirects (source === destination), then add trailing-slash variants.
