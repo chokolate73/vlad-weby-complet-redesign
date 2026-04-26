@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Caveat } from "next/font/google";
+import { getLocale } from "next-intl/server";
 import AddAnimation from "@/Components/Shared/AddAnimation";
 
 const caveat = Caveat({
@@ -31,9 +32,10 @@ export const metadata = {
   manifest: "/img/logo/site.webmanifest",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children }) {
+  const locale = await getLocale();
   return (
-    <html lang="en" className={caveat.variable}>
+    <html lang={locale} className={caveat.variable}>
       <head>
         <meta name="impact-site-verification" value="d42433c2-b7ae-4524-a0f2-da6dfd3f90e0" />
       </head>
