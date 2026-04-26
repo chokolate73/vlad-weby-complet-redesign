@@ -1,5 +1,6 @@
 import { BASE_URL } from "@/lib/seo";
 
+// SEO audit branch placeholder.
 export default function robots() {
   return {
     rules: {
