@@ -61,11 +61,6 @@ export default function LocalBusinessJsonLd({ locale = "en" }) {
       "@type": "Offer",
       itemOffered: { "@type": "Service", name, serviceType: name },
     })),
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      reviewCount: "13",
-    },
   };
 
   return (
