@@ -43,7 +43,6 @@ export default function LocalBusinessJsonLd({ locale = "en" }) {
       { "@type": "Country", name: "Slovakia" },
       { "@type": "Country", name: "Germany" },
       { "@type": "Country", name: "Austria" },
-      { "@type": "Country", name: "Ukraine" },
     ],
     priceRange: "€€",
     knowsLanguage: ["sk", "en", "de", "ru"],
