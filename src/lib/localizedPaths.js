@@ -75,6 +75,12 @@ export const BLOG_PATHS = {
     de: 'ai-chatbot-for-business',
     ru: 'ai-chatbot-dlya-biznesa',
   },
+  'ai-chatbot-cost-2026': {
+    sk: 'kolko-stoji-ai-chatbot',
+    en: 'ai-chatbot-cost-2026',
+    de: 'ai-chatbot-cost-2026',
+    ru: 'skolko-stoit-ai-chatbot-2026',
+  },
   'chatgpt-shopping-for-ecommerce': {
     sk: 'chatgpt-shopping-pre-eshopy',
     en: 'chatgpt-shopping-for-ecommerce',

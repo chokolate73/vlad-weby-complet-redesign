@@ -16,6 +16,7 @@ const STATIC_PAGES = [
   { key: 'privacy-policy', priority: 0.3, changeFrequency: 'yearly' },
   { key: 'landing-web-pre-maly-biznis', priority: 0.7, changeFrequency: 'monthly' },
   { key: 'landing-cena-web-stranky', priority: 0.7, changeFrequency: 'monthly' },
+  { key: 'landing-kolko-stoji-ai-chatbot', priority: 0.75, changeFrequency: 'monthly' },
 ];
 
 export default function sitemap() {

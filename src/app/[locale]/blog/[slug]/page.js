@@ -20,6 +20,7 @@ import WebsiteCostArticleSk from "@/Components/Articles/sk/WebsiteCostArticle";
 import EntrepreneursArticleSk from "@/Components/Articles/sk/EntrepreneursArticle";
 import WordpressVsModernArticleSk from "@/Components/Articles/sk/WordpressVsModernArticle";
 import ChatgptShoppingArticleSk from "@/Components/Articles/sk/ChatgptShoppingArticle";
+import KolkoStojiAiChatbotArticleSk from "@/Components/Articles/sk/KolkoStojiAiChatbotArticle";
 
 // Russian articles
 import SeoArticleRu from "@/Components/Articles/ru/SeoArticle";
@@ -45,6 +46,7 @@ const articleComponents = {
     "wordpress-vs-modern-website": WordpressVsModernArticleSk,
     "website-cost-2025": WebsiteCostArticleSk,
     "chatgpt-shopping-for-ecommerce": ChatgptShoppingArticleSk,
+    "ai-chatbot-cost-2026": KolkoStojiAiChatbotArticleSk,
   },
   ru: {
     "ai-chatbot-for-business": AiChatbotArticleRu,
@@ -63,6 +65,7 @@ const blogKeyByCanonical = {
   'website-for-entrepreneurs': 'entrepreneurs',
   'wordpress-vs-modern-website': 'wordpress',
   'chatgpt-shopping-for-ecommerce': 'chatgptShopping',
+  'ai-chatbot-cost-2026': 'aiChatbotCost',
 };
 
 const BlogArticle = ({ params }) => {
