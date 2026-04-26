@@ -56,7 +56,10 @@ export function getAlternates(pageKey, currentLocale, { slug } = {}) {
 
   const languages = {};
   for (const l of LOCALES) {
-    if (routes[l]) languages[l] = `${BASE_URL}${routes[l]}`;
+    if (!routes[l]) continue;
+    // Skip noindex'd blog × locale combinations from hreflang (audit C5/C6).
+    if (pageKey === 'blog-post' && slug && BLOG_NOINDEX.has(`${slug}|${l}`)) continue;
+    languages[l] = `${BASE_URL}${routes[l]}`;
   }
   const defaultPath =
     routes[DEFAULT_LOCALE] || routes[currentLocale] || Object.values(routes)[0];
@@ -496,6 +499,13 @@ export const BLOG_NOINDEX = new Set([
   // C5: Slovak SeoArticle and AiChatbotArticle render English body
   'improve-website-seo|sk',
   'ai-chatbot-for-business|sk',
+  // C6: no de/ article components; every DE blog falls back to English
+  'improve-website-seo|de',
+  'ai-chatbot-for-business|de',
+  'website-cost-2025|de',
+  'website-for-entrepreneurs|de',
+  'wordpress-vs-modern-website|de',
+  'chatgpt-shopping-for-ecommerce|de',
 ]);
 
 export function isBlogNoindex(canonicalSlug, locale) {
