@@ -12,6 +12,7 @@ import EntrepreneursArticle from "@/Components/Articles/EntrepreneursArticle";
 import WordpressVsModernArticle from "@/Components/Articles/WordpressVsModernArticle";
 import WebsiteCostArticle from "@/Components/Articles/WebsiteCostArticle";
 import ChatgptShoppingArticle from "@/Components/Articles/ChatgptShoppingArticle";
+import AiChatbotSmallBusinessArticle from "@/Components/Articles/AiChatbotSmallBusinessArticle";
 
 // Slovak articles
 import SeoArticleSk from "@/Components/Articles/sk/SeoArticle";
@@ -21,6 +22,7 @@ import EntrepreneursArticleSk from "@/Components/Articles/sk/EntrepreneursArticl
 import WordpressVsModernArticleSk from "@/Components/Articles/sk/WordpressVsModernArticle";
 import ChatgptShoppingArticleSk from "@/Components/Articles/sk/ChatgptShoppingArticle";
 import KolkoStojiAiChatbotArticleSk from "@/Components/Articles/sk/KolkoStojiAiChatbotArticle";
+import AiChatbotSmallBusinessArticleSk from "@/Components/Articles/sk/AiChatbotSmallBusinessArticle";
 
 // Russian articles
 import SeoArticleRu from "@/Components/Articles/ru/SeoArticle";
@@ -29,6 +31,7 @@ import WebsiteCostArticleRu from "@/Components/Articles/ru/WebsiteCostArticle";
 import EntrepreneursArticleRu from "@/Components/Articles/ru/EntrepreneursArticle";
 import WordpressVsModernArticleRu from "@/Components/Articles/ru/WordpressVsModernArticle";
 import ChatgptShoppingArticleRu from "@/Components/Articles/ru/ChatgptShoppingArticle";
+import AiChatbotSmallBusinessArticleRu from "@/Components/Articles/ru/AiChatbotSmallBusinessArticle";
 
 const articleComponents = {
   en: {
@@ -38,6 +41,7 @@ const articleComponents = {
     "wordpress-vs-modern-website": WordpressVsModernArticle,
     "website-cost-2025": WebsiteCostArticle,
     "chatgpt-shopping-for-ecommerce": ChatgptShoppingArticle,
+    "ai-chatbot-small-business-2026": AiChatbotSmallBusinessArticle,
   },
   sk: {
     "ai-chatbot-for-business": AiChatbotArticleSk,
@@ -47,6 +51,7 @@ const articleComponents = {
     "website-cost-2025": WebsiteCostArticleSk,
     "chatgpt-shopping-for-ecommerce": ChatgptShoppingArticleSk,
     "ai-chatbot-cost-2026": KolkoStojiAiChatbotArticleSk,
+    "ai-chatbot-small-business-2026": AiChatbotSmallBusinessArticleSk,
   },
   ru: {
     "ai-chatbot-for-business": AiChatbotArticleRu,
@@ -55,6 +60,7 @@ const articleComponents = {
     "wordpress-vs-modern-website": WordpressVsModernArticleRu,
     "website-cost-2025": WebsiteCostArticleRu,
     "chatgpt-shopping-for-ecommerce": ChatgptShoppingArticleRu,
+    "ai-chatbot-small-business-2026": AiChatbotSmallBusinessArticleRu,
   },
 };
 
@@ -66,6 +72,7 @@ const blogKeyByCanonical = {
   'wordpress-vs-modern-website': 'wordpress',
   'chatgpt-shopping-for-ecommerce': 'chatgptShopping',
   'ai-chatbot-cost-2026': 'aiChatbotCost',
+  'ai-chatbot-small-business-2026': 'aiChatbotSmallBusiness',
 };
 
 const BlogArticle = ({ params }) => {

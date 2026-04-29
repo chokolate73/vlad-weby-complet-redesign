@@ -518,6 +518,8 @@ export const BLOG_NOINDEX = new Set([
   'ai-chatbot-cost-2026|en',
   'ai-chatbot-cost-2026|de',
   'ai-chatbot-cost-2026|ru',
+  // ai-chatbot-small-business-2026: SK, EN, RU have full articles; DE falls back to placeholder.
+  'ai-chatbot-small-business-2026|de',
 ]);
 
 export function isBlogNoindex(canonicalSlug, locale) {
