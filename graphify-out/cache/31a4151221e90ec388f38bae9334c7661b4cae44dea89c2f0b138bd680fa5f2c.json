@@ -1,0 +1,1 @@
+{"nodes": [{"id": "socilicons", "label": "socilIcons.jsx", "file_type": "code", "source_file": "src\\Utlits\\socilIcons.jsx", "source_location": "L1"}], "edges": [{"source": "socilicons", "target": "react_bootstrap_icons", "relation": "imports_from", "confidence": "EXTRACTED", "source_file": "src\\Utlits\\socilIcons.jsx", "source_location": "L1", "weight": 1.0}]}
