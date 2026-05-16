@@ -526,6 +526,102 @@ export function isBlogNoindex(canonicalSlug, locale) {
   return BLOG_NOINDEX.has(`${canonicalSlug}|${locale}`);
 }
 
+// Localized labels for breadcrumb items. Keep short — these appear in the
+// BreadcrumbList JSON-LD and should mirror the visible breadcrumb text.
+const HOME_LABEL = { sk: 'Domov', en: 'Home', de: 'Home', ru: 'Главная' };
+
+const BREADCRUMB_LABELS = {
+  services: { sk: 'Služby', en: 'Services', de: 'Dienstleistungen', ru: 'Услуги' },
+  portfolio: { sk: 'Portfólio', en: 'Portfolio', de: 'Portfolio', ru: 'Портфолио' },
+  blog: { sk: 'Blog', en: 'Blog', de: 'Blog', ru: 'Блог' },
+  contact: { sk: 'Kontakt', en: 'Contact', de: 'Kontakt', ru: 'Контакты' },
+  cookies: { sk: 'Cookies', en: 'Cookies', de: 'Cookies', ru: 'Cookies' },
+  'privacy-policy': {
+    sk: 'Ochrana údajov',
+    en: 'Privacy Policy',
+    de: 'Datenschutz',
+    ru: 'Конфиденциальность',
+  },
+  'service-web-design': {
+    sk: 'Tvorba webstránok',
+    en: 'Web Design',
+    de: 'Webdesign',
+    ru: 'Разработка сайтов',
+  },
+  'service-seo': { sk: 'SEO', en: 'SEO', de: 'SEO', ru: 'SEO' },
+  'service-ai-chatbot': {
+    sk: 'AI Chatbot',
+    en: 'AI Chatbot',
+    de: 'KI-Chatbot',
+    ru: 'AI-чатбот',
+  },
+  'service-chatgpt-shopping': {
+    sk: 'ChatGPT Shopping',
+    en: 'ChatGPT Shopping',
+    de: 'ChatGPT Shopping',
+    ru: 'ChatGPT Shopping',
+  },
+  'landing-web-pre-maly-biznis': { sk: 'Web pre malý biznis' },
+  'landing-cena-web-stranky': { sk: 'Cena webstránky' },
+  'landing-kolko-stoji-ai-chatbot': { sk: 'Cena AI chatbota' },
+};
+
+// Pages whose breadcrumb trail goes through /all-services rather than directly
+// to the home page.
+const SERVICE_BREADCRUMB_KEYS = new Set([
+  'service-web-design',
+  'service-seo',
+  'service-ai-chatbot',
+  'service-chatgpt-shopping',
+]);
+
+// Build a breadcrumb trail (array of {name, url}) for the given pageKey / locale.
+// Returns null if no breadcrumb labels are configured for this page.
+export function getBreadcrumbs(pageKey, locale, { slug } = {}) {
+  const effectiveLocale = LOCALES.includes(locale) ? locale : DEFAULT_LOCALE;
+
+  const homePath = routeMap.home[effectiveLocale] || '/';
+  const items = [
+    { name: HOME_LABEL[effectiveLocale], url: `${BASE_URL}${homePath}` },
+  ];
+
+  if (pageKey === 'blog-post' && slug) {
+    const blogPath = routeMap.blog[effectiveLocale];
+    if (blogPath) {
+      items.push({
+        name: BREADCRUMB_LABELS.blog[effectiveLocale],
+        url: `${BASE_URL}${blogPath}`,
+      });
+    }
+    const postMeta = BLOG_POST_META[slug]?.[effectiveLocale] || BLOG_POST_META[slug]?.[DEFAULT_LOCALE];
+    if (!postMeta) return null;
+    const postPath = blogRouteMap(slug)[effectiveLocale];
+    if (!postPath) return null;
+    // Strip the " | Vlad Weby" suffix for a cleaner breadcrumb label.
+    const name = postMeta.title.replace(/\s*\|\s*Vlad Weby\s*$/, '');
+    items.push({ name, url: `${BASE_URL}${postPath}` });
+    return items;
+  }
+
+  if (SERVICE_BREADCRUMB_KEYS.has(pageKey)) {
+    const servicesPath = routeMap.services[effectiveLocale];
+    if (servicesPath) {
+      items.push({
+        name: BREADCRUMB_LABELS.services[effectiveLocale],
+        url: `${BASE_URL}${servicesPath}`,
+      });
+    }
+  }
+
+  const labels = BREADCRUMB_LABELS[pageKey];
+  const label = labels?.[effectiveLocale];
+  const path = routeMap[pageKey]?.[effectiveLocale];
+  if (!label || !path) return null;
+
+  items.push({ name: label, url: `${BASE_URL}${path}` });
+  return items;
+}
+
 export function getPageMetadata(pageKey, locale, { slug } = {}) {
   const effectiveLocale = LOCALES.includes(locale) ? locale : DEFAULT_LOCALE;
 
