@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
-import { getPageMetadata } from "@/lib/seo";
+import { getPageMetadata, getBreadcrumbs } from "@/lib/seo";
 import KolkoStojiAiChatbotJsonLd from "@/Components/Seo/KolkoStojiAiChatbotJsonLd";
+import BreadcrumbJsonLd from "@/Components/Seo/BreadcrumbJsonLd";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -14,6 +15,7 @@ export default async function Layout({ children, params }) {
   return (
     <>
       <KolkoStojiAiChatbotJsonLd />
+      <BreadcrumbJsonLd items={getBreadcrumbs('landing-kolko-stoji-ai-chatbot', locale)} />
       {children}
     </>
   );

@@ -16,7 +16,7 @@ const Contact = () => {
           <div className="grid lg:grid-cols-[66.66%_auto] grid-cols-1 gap-6">
             <div data-aos="fade-up" data-aos-duration="1000">
               <div>
-                <Form isColTwo={false} />
+                <Form />
               </div>
             </div>
             <div className="col-lg-4" data-aos="fade-up" data-aos-duration="1500">

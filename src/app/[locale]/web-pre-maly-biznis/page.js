@@ -8,6 +8,7 @@ const WebPreMalyBiznisPage = () => (
     <PageHeader
       heading="Webstránka pre malý biznis"
       page="Web pre malý biznis"
+      isHeading={false}
     />
     <EntrepreneursArticleSk />
   </>

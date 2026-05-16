@@ -9,7 +9,7 @@ const SeoServicePage = () => {
 
   return (
     <>
-      <PageHeader heading={t('seo')} page={t('seo')} />
+      <PageHeader heading={t('seo')} page={t('seo')} isHeading={false} />
       <ServicePage serviceKey="seo" />
     </>
   );

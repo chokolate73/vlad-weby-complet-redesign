@@ -1,5 +1,6 @@
-import { getPageMetadata } from "@/lib/seo";
+import { getPageMetadata, getBreadcrumbs } from "@/lib/seo";
 import ServiceJsonLd from "@/Components/Seo/ServiceJsonLd";
+import BreadcrumbJsonLd from "@/Components/Seo/BreadcrumbJsonLd";
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -11,6 +12,7 @@ export default async function ServicesLayout({ children, params }) {
   return (
     <>
       <ServiceJsonLd locale={locale} />
+      <BreadcrumbJsonLd items={getBreadcrumbs('services', locale)} />
       {children}
     </>
   );

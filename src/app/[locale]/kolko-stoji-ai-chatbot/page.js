@@ -8,6 +8,7 @@ const KolkoStojiAiChatbotPage = () => (
     <PageHeader
       heading="Koľko stojí AI chatbot 2026"
       page="Cena AI chatbota"
+      isHeading={false}
     />
     <KolkoStojiAiChatbotArticleSk />
   </>

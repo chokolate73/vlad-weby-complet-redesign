@@ -9,7 +9,7 @@ const ChatGPTShoppingServicePage = () => {
 
   return (
     <>
-      <PageHeader heading={t('chatgptShopping')} page={t('chatgptShopping')} />
+      <PageHeader heading={t('chatgptShopping')} page={t('chatgptShopping')} isHeading={false} />
       <ServicePage serviceKey="chatgptShopping" />
     </>
   );
