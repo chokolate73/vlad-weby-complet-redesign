@@ -639,6 +639,13 @@ export function getPageMetadata(pageKey, locale, { slug } = {}) {
   const alternates = getAlternates(pageKey, effectiveLocale, { slug });
   const url = alternates.canonical;
 
+  const ogImage = {
+    url: `${BASE_URL}/img/hero/hero-man.png`,
+    width: 1200,
+    height: 630,
+    alt: 'Vlad Weby — moderné weby a AI riešenia',
+  };
+
   const metadata = {
     title,
     description,
@@ -650,11 +657,13 @@ export function getPageMetadata(pageKey, locale, { slug } = {}) {
       siteName: 'Vlad Weby',
       locale: effectiveLocale,
       type: pageKey === 'blog-post' ? 'article' : 'website',
+      images: [ogImage],
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
+      images: [ogImage.url],
     },
   };
 

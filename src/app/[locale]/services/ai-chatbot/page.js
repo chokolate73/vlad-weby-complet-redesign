@@ -9,7 +9,7 @@ const AIChatbotServicePage = () => {
 
   return (
     <>
-      <PageHeader heading={t('aiChatbot')} page={t('aiChatbot')} />
+      <PageHeader heading={t('aiChatbot')} page={t('aiChatbot')} isHeading={false} />
       <ServicePage serviceKey="aiChatbot" />
     </>
   );

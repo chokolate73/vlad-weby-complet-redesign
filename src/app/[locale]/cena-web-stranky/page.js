@@ -5,7 +5,7 @@ import WebsiteCostArticleSk from "@/Components/Articles/sk/WebsiteCostArticle";
 
 const CenaWebStrankyPage = () => (
   <>
-    <PageHeader heading="Cena webstránky 2026" page="Cena webstránky" />
+    <PageHeader heading="Cena webstránky 2026" page="Cena webstránky" isHeading={false} />
     <WebsiteCostArticleSk />
   </>
 );

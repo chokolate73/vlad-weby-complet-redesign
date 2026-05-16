@@ -9,7 +9,7 @@ const WebDesignServicePage = () => {
 
   return (
     <>
-      <PageHeader heading={t('webDesign')} page={t('webDesign')} />
+      <PageHeader heading={t('webDesign')} page={t('webDesign')} isHeading={false} />
       <ServicePage serviceKey="webDesign" />
     </>
   );

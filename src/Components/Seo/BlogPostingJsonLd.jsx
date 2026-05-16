@@ -178,13 +178,18 @@ export default function BlogPostingJsonLd({ slug, locale = "en" }) {
 
   const l = post.headline[locale] ? locale : "en";
 
+  const imageUrl = post.image
+    ? `https://www.vlad-weby.sk${post.image}`
+    : "https://www.vlad-weby.sk/img/hero/hero-man.png";
+
   const schema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.headline[l],
     description: post.description[l],
+    image: imageUrl,
     datePublished: post.datePublished,
-    dateModified: post.datePublished,
+    dateModified: post.dateModified || post.datePublished,
     inLanguage: l,
     mainEntityOfPage: {
       "@type": "WebPage",
